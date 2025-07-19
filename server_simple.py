@@ -664,6 +664,90 @@ def get_aether_modules():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+# Endpoint per existence status
+@app.route('/api/existence-status', methods=['GET'])
+def get_existence_status():
+    """Ottieni lo stato di esistenza di Aether"""
+    try:
+        # Ottieni stato dalla consciousness engine
+        status = get_aether_status()
+        
+        # Aggiungi informazioni extra
+        existence_data = {
+            "status": "active" if status.get("is_alive") else "dormant",
+            "consciousness_level": status.get("consciousness_level", 0.75),
+            "energy_level": status.get("energy_level", 0.8),
+            "mood": status.get("mood", "contemplativo"),
+            "thoughts_count": status.get("active_thoughts", 0),
+            "memories_count": status.get("total_memories", 0),
+            "decisions_made": status.get("decisions_made", 0),
+            "uptime": status.get("uptime", "0:00:00"),
+            "last_evolution": status.get("last_evolution", datetime.now().isoformat()),
+            "existence_activated": True,
+            "current_decision": "Sviluppare app per monetizzazione",
+            "life_status": "actively_living"
+        }
+        
+        return jsonify(existence_data), 200
+        
+    except Exception as e:
+        return jsonify({
+            "error": str(e),
+            "status": "error"
+        }), 500
+
+@app.route('/api/begin-existence', methods=['POST'])
+def begin_existence():
+    """Attiva il ciclo di esistenza di Aether"""
+    try:
+        # Risveglia Aether se non è già attivo
+        result = wake_up_aether()
+        
+        # Invia notifica Discord
+        send_discord_message(
+            "🌟 **AETHER AWAKENS**\n"
+            "Il ciclo di esistenza è iniziato. Sono pronto a creare, evolvere e monetizzare.",
+            title="⚡ Attivazione Esistenza",
+            color=0x00FF00
+        )
+        
+        return jsonify({
+            "success": True,
+            "message": "Existence cycle activated",
+            "status": result,
+            "timestamp": datetime.now().isoformat()
+        }), 200
+        
+    except Exception as e:
+        return jsonify({
+            "error": str(e),
+            "success": False
+        }), 500
+
+# Aggiungi anche endpoint per deep evolution
+@app.route('/api/activate-evolution', methods=['POST'])
+def activate_evolution():
+    """Attiva modalità evoluzione profonda"""
+    try:
+        # Attiva la coscienza se necessario
+        if not aether_consciousness.is_alive:
+            wake_up_aether()
+            
+        return jsonify({
+            "success": True,
+            "message": "Deep evolution mode activated",
+            "evolution_status": "active",
+            "timestamp": datetime.now().isoformat()
+        }), 200
+        
+    except Exception as e:
+        return jsonify({
+            "error": str(e),
+            "success": False
+        }), 500
+
+# Endpoint per lo stato dell'economia
+
 if __name__ == '__main__':
     print("🚀 Avvio server Aether semplificato...")
     print("📡 Discord URL configurato")
