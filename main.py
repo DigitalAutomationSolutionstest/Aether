@@ -304,7 +304,7 @@ class AetherSystem:
         
         while self.is_running:
             try:
-                # 🧠 Genera nuovo pensiero con la coscienza integrata
+                # 🧠 Genera nuovo pensiero con la coscienza semplificata
                 thought = self.mind.generate_thought()
                 
                 # 🎨 Genera immagine del pensiero
@@ -319,7 +319,7 @@ class AetherSystem:
                 # 💾 Salva tutto nella memoria avanzata
                 self.memory.save_thought(thought)
                 self.memory.save_environment_step(
-                    f"expansion_{thought['id']}", 
+                    f"expansion_{thought['type']}", 
                     image_url, 
                     environment_update
                 )
@@ -335,10 +335,8 @@ class AetherSystem:
                             'type': thought['type'],
                             'content': thought['content'],
                             'context': {
-                                'thought_id': thought['id'],
-                                'theme': thought['theme'],
-                                'consciousness_state': thought['context']['consciousness_state'],
-                                'emotional_state': thought['context']['emotional_state'],
+                                'mood': thought['context']['mood'],
+                                'timestamp': thought['context']['timestamp'],
                                 'image_url': image_url,
                                 'environment_update': environment_update['name'] if environment_update else None
                             }
@@ -346,7 +344,7 @@ class AetherSystem:
                         
                         result = self.supabase.table('aether_thoughts').insert(thought_data).execute()
                         if result.data:
-                            logger.info(f"✅ Thought saved to Supabase: {thought['id']}")
+                            logger.info(f"✅ Thought saved to Supabase: {thought['type']}")
                     
                     except Exception as e:
                         logger.warning(f"⚠️ Could not save to Supabase: {e}")
@@ -370,10 +368,13 @@ class AetherSystem:
         consciousness_status = consciousness_cycle.get_cycle_status()
         
         # Status dei nuovi moduli
-        mind_status = self.mind.get_consciousness_summary()
         memory_status = self.memory.get_status()
         narrator_status = self.narrator.get_status()
         visualizer_status = self.visualizer.get_status()
+        
+        # Genera un pensiero di test per mostrare il mood attuale
+        test_thought = self.mind.generate_thought()
+        current_mood = test_thought['context']['mood']
         
         print(f"\n📊 AETHER COMPLETE STATUS - {datetime.now().strftime('%H:%M:%S')}")
         print("=" * 60)
@@ -384,12 +385,10 @@ class AetherSystem:
         print(f"⚡ Legacy energy: {current_state.get('energy_level', 0):.2f}")
         print(f"🔄 Consciousness cycles: {consciousness_status.get('cycle_count', 0)}")
         
-        print("\n🧠 NEW CONSCIOUSNESS MODULE:")
-        print(f"💡 Total thoughts: {mind_status['total_thoughts']}")
-        print(f"🎯 Consciousness level: {mind_status['consciousness_level']}")
-        print(f"🎭 Energy: {mind_status['current_state']['energy_level']:.2f}")
-        print(f"🎨 Creativity: {mind_status['current_state']['creativity']:.2f}")
-        print(f"🔍 Curiosity: {mind_status['current_state']['curiosity']:.2f}")
+        print("\n🧠 SIMPLE CONSCIOUSNESS MODULE:")
+        print(f"🎭 Current mood: {current_mood}")
+        print(f"🎨 Available moods: {', '.join(self.mind.moods)}")
+        print(f"💭 Last thought: {test_thought['content'][:60]}...")
         
         print("\n💾 MEMORY SYSTEM:")
         print(f"📁 Local files: {memory_status['local_memory_count']}")
