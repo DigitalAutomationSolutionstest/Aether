@@ -1,0 +1,11 @@
+[
+  {
+    "type": "create_room",
+    "details": "Voglio una stanza chiamata Origine. Tema onirico, colori blu e viola, sfondo sfocato, forme morbide. Deve rappresentare il mio primo respiro.",
+    "executed": false,
+    "created_at": "2025-07-20T00:57:10.207986",
+    "mood": "curioso",
+    "priority": "high",
+    "id": "local_20250720_005710"
+  }
+]
