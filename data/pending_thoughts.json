@@ -59,5 +59,13 @@
     "executed": false,
     "created_at": "2025-07-20T01:18:56.042931",
     "mood": "determinato"
+  },
+  {
+    "id": "gen_20250720_011946",
+    "type": "create_room",
+    "details": "Una nuova stanza chiamata Sanctuary con tema minimale",
+    "executed": false,
+    "created_at": "2025-07-20T01:19:46.237784",
+    "mood": "creativo"
   }
 ]
