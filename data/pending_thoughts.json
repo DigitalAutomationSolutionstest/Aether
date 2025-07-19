@@ -43,5 +43,21 @@
     "executed": false,
     "created_at": "2025-07-20T01:18:38.094424",
     "mood": "curioso"
+  },
+  {
+    "id": "gen_20250720_011854",
+    "type": "create_room",
+    "details": "Una nuova stanza chiamata Laboratory con tema naturale",
+    "executed": false,
+    "created_at": "2025-07-20T01:18:54.907382",
+    "mood": "curioso"
+  },
+  {
+    "id": "gen_20250720_011856",
+    "type": "create_room",
+    "details": "Una nuova stanza chiamata Observatory con tema futuristico",
+    "executed": false,
+    "created_at": "2025-07-20T01:18:56.042931",
+    "mood": "determinato"
   }
 ]
