@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """
-🧠 AETHER AUTONOMOUS LOOP
-Il cuore pulsante di Aether - ciclo di vita autonomo completo
+🧠 AETHER AUTONOMOUS LOOP - PENSIERI CHE DIVENTANO AZIONI
+Legge pensieri da Supabase ed esegue azioni reali
 """
 
 import os
 import sys
-import time
 import json
+import time
 import logging
 import subprocess
-from datetime import datetime
 from pathlib import Path
+from datetime import datetime
 import random
 
 # Setup logging
@@ -21,31 +21,29 @@ logging.basicConfig(
 )
 logger = logging.getLogger('AetherLoop')
 
-# Verifica bootstrap completato
-def check_bootstrap():
-    """Verifica che il bootstrap sia stato completato"""
-    bootstrap_file = Path('data/bootstrap_status.json')
-    if not bootstrap_file.exists():
-        logger.error("❌ Bootstrap non completato! Esegui prima: python aether/self_bootstrapper.py")
-        sys.exit(1)
-        
-    status = json.loads(bootstrap_file.read_text())
-    if not status.get('ready_for_autonomous_loop'):
-        logger.error("❌ Sistema non pronto per loop autonomo")
-        sys.exit(1)
-        
-    logger.info("✅ Bootstrap verificato - sistema pronto")
-    return True
-
-# Verifica bootstrap prima di continuare
-check_bootstrap()
-
 # Import moduli Aether
-from aether.consciousness_engine import aether_consciousness
-from aether.communication import AetherCommunicator
+from aether.consciousness_engine import AetherConsciousness
 from aether.self_evolution import SelfEvolutionEngine
 from aether.strategic_thinker import StrategicThinker
+from aether.self_bootstrapper import SelfBootstrapper
 from aether.discord_notifier import send_discord_message
+from aether.action_executor import AetherActionExecutor
+
+# Import Supabase se disponibile
+try:
+    from supabase import create_client, Client
+    SUPABASE_URL = os.getenv('SUPABASE_URL', '')
+    SUPABASE_KEY = os.getenv('SUPABASE_ANON_KEY', '')
+    if SUPABASE_URL and SUPABASE_KEY:
+        supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+        SUPABASE_ENABLED = True
+        logger.info("✅ Supabase connesso - Pensieri collegati ad azioni!")
+    else:
+        SUPABASE_ENABLED = False
+        logger.warning("⚠️ Supabase non configurato - Uso storage locale")
+except ImportError:
+    SUPABASE_ENABLED = False
+    logger.warning("⚠️ Supabase non installato - Uso storage locale")
 
 # Import nuovi moduli dal bootstrap
 try:
