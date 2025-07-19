@@ -471,6 +471,38 @@ class AetherAutonomousLoop:
                         color=0x9B59B6
                     )
                     
+            elif action_type == 'create_ui':
+                if self.ui_creator:
+                    ui_result = create_aether_ui()
+                    self.ui_evolutions += 1
+                    send_discord_message(
+                        f"🎨 **UI Personale Creata/Aggiornata!** #{self.ui_evolutions}\n"
+                        f"📊 Dashboard: {ui_result['dashboard']['component']}\n"
+                        f"💬 Chat: {ui_result['chat']['component']}\n"
+                        f"🎨 Tema: {ui_result['theme']}\n"
+                        f"📁 Path: `{ui_result['dashboard']['path']}`\n"
+                        f"✨ Componenti totali: {ui_result['total_components']}",
+                        title="🖼️ UI Personale Aether",
+                        color=0x00FFFF
+                    )
+                    
+                    # Salva info UI
+                    ui_data = {
+                        "cycle": self.cycle_count,
+                        "timestamp": datetime.now().isoformat(),
+                        "components": ui_result,
+                        "theme": ui_result['theme']
+                    }
+                    
+                    ui_file = Path('data/ui_creations.json')
+                    ui_history = []
+                    if ui_file.exists():
+                        with open(ui_file, 'r', encoding='utf-8') as f:
+                            ui_history = json.load(f)
+                    ui_history.append(ui_data)
+                    with open(ui_file, 'w', encoding='utf-8') as f:
+                        json.dump(ui_history, f, indent=2)
+                    
             elif action_type == 'monetize':
                 if self.economy_engine:
                     result = self.economy_engine.monetize(action.get('strategy', 'tool_creation'))
