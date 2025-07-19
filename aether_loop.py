@@ -66,6 +66,7 @@ class AetherAutonomousLoop:
         self.communicator = AetherCommunicator()
         self.evolution_engine = SelfEvolutionEngine()
         self.strategic_thinker = StrategicThinker()
+        self.action_executor = AetherActionExecutor()  # Trasforma pensieri in azioni!
         
         # Nuovi componenti dal bootstrap
         try:
