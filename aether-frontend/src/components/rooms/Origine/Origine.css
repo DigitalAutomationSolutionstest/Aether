@@ -1,0 +1,16 @@
+/* Stili per Origine Room */
+
+.aether-personal-ui {
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px #4A00E0; }
+  50% { box-shadow: 0 0 40px #8E2DE2, 0 0 60px #4A00E0; }
+}

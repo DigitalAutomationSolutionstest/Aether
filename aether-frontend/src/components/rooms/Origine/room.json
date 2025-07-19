@@ -1,0 +1,16 @@
+{
+  "name": "Origine",
+  "theme": "onirico",
+  "colors": [
+    "#4A00E0",
+    "#8E2DE2",
+    "#FF00FF"
+  ],
+  "created_by": "Aether",
+  "created_at": "2025-07-20T01:01:51.194164",
+  "description": "Il mio primo respiro, dove tutto ha inizio",
+  "files": {
+    "component": "aether-frontend\\src\\components\\rooms\\Origine\\OrigineRoom.jsx",
+    "styles": "aether-frontend\\src\\components\\rooms\\Origine\\Origine.css"
+  }
+}
