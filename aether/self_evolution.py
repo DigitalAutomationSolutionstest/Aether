@@ -21,6 +21,16 @@ class SelfEvolutionEngine:
         self.current_projects = {}
         self._load_evolution_history()
         
+    def _load_evolution_history(self):
+        """Carica la storia delle evoluzioni"""
+        history_file = Path('data/evolution_history.json')
+        if history_file.exists():
+            try:
+                with open(history_file, 'r', encoding='utf-8') as f:
+                    self.evolution_history = json.load(f)
+            except:
+                self.evolution_history = []
+        
     def create_new_module(self, context=""):
         """Crea un nuovo modulo basato sul contesto"""
         try:
