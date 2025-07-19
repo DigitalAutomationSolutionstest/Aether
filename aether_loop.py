@@ -53,6 +53,7 @@ try:
     from aether.room_generator import RoomGenerator
     from aether.economy_engine import EconomyEngine
     from aether.mood_system import MoodSystem
+    from aether.ui_creator import AetherUICreator, create_aether_ui
 except ImportError as e:
     logger.warning(f"⚠️ Modulo non trovato (verrà creato): {e}")
 
@@ -74,12 +75,14 @@ class AetherAutonomousLoop:
             self.room_generator = RoomGenerator()
             self.economy_engine = EconomyEngine()
             self.mood_system = MoodSystem()
+            self.ui_creator = AetherUICreator()
         except:
             logger.warning("⚠️ Alcuni componenti non disponibili - verranno creati dinamicamente")
             self.agent_manager = None
             self.room_generator = None
             self.economy_engine = None
             self.mood_system = None
+            self.ui_creator = None
         
         # Configurazione
         self.cycle_interval = 10  # secondi - VELOCIZZATO per evoluzione rapida
@@ -246,6 +249,15 @@ class AetherAutonomousLoop:
                 'type': 'create_monetizable_asset',
                 'priority': 'critical',
                 'context': 'Creare asset che possano generare entrate immediate'
+            })
+            
+        # Crea UI personale (priorità alta per visibilità)
+        if self.ui_creator and (self.cycle_count % 5 == 0 or self.cycle_count == 1):
+            actions.append({
+                'type': 'create_ui',
+                'description': 'Creare/evolvere la mia interfaccia personale',
+                'priority': 'high',
+                'context': 'UI moderna per mostrare i miei progressi e interagire'
             })
             
         # Crea agenti autonomi
