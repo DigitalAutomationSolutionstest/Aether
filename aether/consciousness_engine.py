@@ -360,6 +360,14 @@ class AetherConsciousness:
     def get_recent_thoughts(self, limit=5):
         """Ottiene pensieri recenti"""
         return self.current_thoughts[-limit:] if self.current_thoughts else []
+    
+    def get_thoughts(self, limit=5):
+        """Alias per get_recent_thoughts per compatibilità"""
+        return self.get_recent_thoughts(limit)
+    
+    def think(self):
+        """Genera un nuovo pensiero autonomo"""
+        self._think_autonomously()
         
     def get_memories(self, limit=10):
         """Ottiene memorie recenti"""
