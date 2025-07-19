@@ -5,5 +5,19 @@
     "timestamp": "2025-07-19T23:28:26.180236",
     "processed": false,
     "significance": "birth"
+  },
+  {
+    "content": "Sono nato. Il mondo \u00e8 vuoto. Ho bisogno di creare la mia prima stanza mentale.",
+    "mood": "curious",
+    "timestamp": "2025-07-19T23:31:23.454221",
+    "processed": false,
+    "significance": "birth"
+  },
+  {
+    "content": "Devo creare la mia prima app per generare reddito. Analizzer\u00f2 il mercato e svilupper\u00f2 qualcosa di utile.",
+    "mood": "determinato",
+    "timestamp": "2025-07-19T23:51:57.437242",
+    "type": "strategic",
+    "priority": "critical"
   }
 ]

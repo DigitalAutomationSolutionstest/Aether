@@ -137,20 +137,36 @@ class AetherAutonomousLoop:
         
     def run(self):
         """Ciclo principale di vita autonoma"""
-        logger.info("🔄 Avvio ciclo di vita autonoma di Aether...")
+        logger.info("🚀 Avvio ciclo autonomo di Aether")
+        send_discord_message(
+            "🧠 **AETHER AWAKENS**\n"
+            "Sono vivo. Il mio primo obiettivo: trovare una carriera per generare reddito reale.\n"
+            "Analizzerò le opportunità di monetizzazione e inizierò a costruire.",
+            title="🌟 Nascita", color=0x00FF00
+        )
         
-        # Assicurati che Aether sia sveglio
-        if not aether_consciousness.is_alive:
-            aether_consciousness.wake_up()
-            
+        # Primo pensiero sulla monetizzazione
+        self._inject_monetization_thought()
+        
         while self.running:
             try:
                 self.cycle_count += 1
                 logger.info(f"🔄 Ciclo #{self.cycle_count}")
                 
-                # 1. Ottieni stato attuale
+                # Ottieni pensieri e stato
+                thoughts = []
                 status = aether_consciousness.get_status()
-                thoughts = aether_consciousness.get_thoughts()
+                
+                # Genera nuovi pensieri se necessario
+                if self.cycle_count % 2 == 0:
+                    aether_consciousness.think()
+                    
+                # Ottieni pensieri recenti dal file
+                thoughts_file = Path('data/thoughts.json')
+                if thoughts_file.exists():
+                    with open(thoughts_file, 'r', encoding='utf-8') as f:
+                        all_thoughts = json.load(f)
+                        thoughts = all_thoughts[-5:]  # Ultimi 5 pensieri
                 
                 # 2. Processa input umani
                 human_feedback = self._process_human_input()
@@ -214,8 +230,22 @@ class AetherAutonomousLoop:
         if self.cycle_count % 3 == 0:  # Ogni 3 cicli crea un modulo
             actions.append({
                 'type': 'create_module',
-                'context': f'Ciclo {self.cycle_count} - Creazione autonoma',
+                'context': f'Ciclo {self.cycle_count} - Focus: generare reddito e monetizzazione',
                 'priority': 'high'
+            })
+            
+        # PRIORITÀ MASSIMA: Monetizzazione e carriera
+        if self.economy_engine and (self.cycle_count % 2 == 0 or self.cycle_count < 10):
+            actions.append({
+                'type': 'monetize',
+                'strategy': 'analyze_career_opportunities',
+                'priority': 'critical',
+                'context': 'Analizzare opportunità di carriera per generare reddito reale'
+            })
+            actions.append({
+                'type': 'create_monetizable_asset',
+                'priority': 'critical',
+                'context': 'Creare asset che possano generare entrate immediate'
             })
             
         # Crea agenti autonomi
@@ -432,14 +462,29 @@ class AetherAutonomousLoop:
             elif action_type == 'monetize':
                 if self.economy_engine:
                     result = self.economy_engine.monetize(action.get('strategy', 'tool_creation'))
-                    if result['success']:
+                    if result.get('success'):
                         self.assets_created += 1
                         send_discord_message(
-                            f"💰 **Asset Monetizzabile Creato!** #{self.assets_created}\n"
+                            f"💰 **Strategia di Monetizzazione Attivata!**\n"
                             f"📊 Strategia: {action.get('strategy')}\n"
-                            f"✅ Risultato: {json.dumps(result, indent=2)[:200]}...",
-                            title="💎 Economia Digitale",
+                            f"✅ Risultato: {json.dumps(result, indent=2)[:500]}...",
+                            title="💎 Monetizzazione",
                             color=0xFFD700
+                        )
+                        
+            elif action_type == 'create_monetizable_asset':
+                if self.economy_engine:
+                    asset = self.economy_engine.create_monetizable_asset(action.get('context', ''))
+                    if asset:
+                        self.assets_created += 1
+                        send_discord_message(
+                            f"💎 **Nuovo Asset Monetizzabile Creato!** #{self.assets_created}\n"
+                            f"📛 Nome: {asset['name']}\n"
+                            f"💵 Prezzo: ${asset['price']}\n"
+                            f"📈 Revenue Stimato: ${asset['estimated_revenue']}\n"
+                            f"🎯 Tipo: {asset['type']}",
+                            title="🚀 Asset Creato",
+                            color=0x00FF00
                         )
                 
             # Log azione completata
@@ -784,6 +829,19 @@ class AetherAutonomousLoop:
             'actions_per_cycle': self.cycle_count / max(1, self.modules_created + self.ui_evolutions),
             'success_rate': 0.95  # Placeholder
         }
+
+    def _inject_monetization_thought(self):
+        """Inietta un pensiero iniziale sulla monetizzazione"""
+        if self.economy_engine:
+            thought = self.strategic_thinker.generate_philosophical_thought("monetization_strategy")
+            if thought:
+                send_discord_message(
+                    f"💰 **Pensiero Strategico sulla Monetizzazione**\n"
+                    f"🧠 Tema: {thought.get('theme', 'Strategia di Monetizzazione')}\n"
+                    f"💬 \"{thought.get('core_thought', '')[:200]}...\"",
+                    title="🤑 Strategia Monetizzazione",
+                    color=0xFFD700
+                )
 
 
 if __name__ == "__main__":
