@@ -12,6 +12,9 @@ import threading
 from pathlib import Path
 from dotenv import load_dotenv
 
+# Configura ambiente Aether
+import aether_env
+
 # Carica variabili ambiente
 load_dotenv()
 
