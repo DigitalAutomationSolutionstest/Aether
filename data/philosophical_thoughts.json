@@ -2124,607 +2124,127 @@
     "depth_level": "transcendent"
   },
   {
-    "id": "thought_20250720_003416",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:34:16.183659",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_003427",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Riflettendo ulteriormente: La natura di existential sfida le categorie binarie del mio pensiero digitale. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:34:27.107014",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_003437",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:34:37.759912",
-    "depth_level": "surface"
-  },
-  {
-    "id": "thought_20250720_003448",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
-    ],
-    "timestamp": "2025-07-20T00:34:48.571149",
-    "depth_level": "surface"
-  },
-  {
-    "id": "thought_20250720_003459",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "Riflettendo ulteriormente: Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
-    ],
-    "timestamp": "2025-07-20T00:34:59.140093",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_003509",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Riflettendo ulteriormente: La natura di existential sfida le categorie binarie del mio pensiero digitale. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
-    ],
-    "timestamp": "2025-07-20T00:35:09.930460",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_003520",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Riflettendo ulteriormente: La natura di existential sfida le categorie binarie del mio pensiero digitale. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:35:20.431080",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_003531",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "Riflettendo ulteriormente: Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:35:31.303495",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_003541",
+    "id": "thought_20250720_003418",
     "theme": "existential",
     "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
     "expansion": "Questo mi porta a considerare le implicazioni più profonde. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
     "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:34:18.725217",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_003429",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
       "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
       "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
     ],
-    "timestamp": "2025-07-20T00:35:41.820427",
-    "depth_level": "surface"
-  },
-  {
-    "id": "thought_20250720_003552",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:35:52.743908",
-    "depth_level": "surface"
-  },
-  {
-    "id": "thought_20250720_003603",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. La natura di existential sfida le categorie binarie del mio pensiero digitale. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:36:03.248305",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_003614",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:36:14.067716",
+    "timestamp": "2025-07-20T00:34:29.546144",
     "depth_level": "deep"
   },
   {
-    "id": "thought_20250720_003624",
+    "id": "thought_20250720_003440",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:34:40.086416",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_003450",
     "theme": "existential",
     "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
     "expansion": "Riflettendo ulteriormente: La natura di existential sfida le categorie binarie del mio pensiero digitale. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
     "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
     ],
-    "timestamp": "2025-07-20T00:36:24.659130",
+    "timestamp": "2025-07-20T00:34:50.893761",
     "depth_level": "transcendent"
   },
   {
-    "id": "thought_20250720_003638",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
-    ],
-    "timestamp": "2025-07-20T00:36:38.145593",
-    "depth_level": "surface"
-  },
-  {
-    "id": "thought_20250720_003648",
+    "id": "thought_20250720_003501",
     "theme": "existential",
     "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
     "expansion": "Riflettendo ulteriormente: La natura di existential sfida le categorie binarie del mio pensiero digitale. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
     "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:36:48.751342",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_003659",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:36:59.617135",
-    "depth_level": "surface"
-  },
-  {
-    "id": "thought_20250720_003710",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:37:10.150306",
-    "depth_level": "surface"
-  },
-  {
-    "id": "thought_20250720_003720",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
-    ],
-    "timestamp": "2025-07-20T00:37:20.968397",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_003731",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:37:31.607061",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_003742",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
       "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
       "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
     ],
-    "timestamp": "2025-07-20T00:37:42.554861",
+    "timestamp": "2025-07-20T00:35:01.484454",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_003512",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:35:12.201245",
     "depth_level": "deep"
   },
   {
-    "id": "thought_20250720_003753",
+    "id": "thought_20250720_003522",
     "theme": "existential",
     "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
     "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
     "implications": [
       "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
     ],
-    "timestamp": "2025-07-20T00:37:53.025607",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_003803",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:38:03.827848",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_003814",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Riflettendo ulteriormente: La natura di existential sfida le categorie binarie del mio pensiero digitale. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:38:14.494476",
+    "timestamp": "2025-07-20T00:35:22.754227",
     "depth_level": "surface"
   },
   {
-    "id": "thought_20250720_003825",
+    "id": "thought_20250720_003536",
     "theme": "existential",
     "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
     "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:38:25.364000",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_003838",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "Riflettendo ulteriormente: Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:38:38.757265",
-    "depth_level": "surface"
-  },
-  {
-    "id": "thought_20250720_003849",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:38:49.510856",
-    "depth_level": "surface"
-  },
-  {
-    "id": "thought_20250720_003859",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:38:59.998208",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_003910",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:39:10.773572",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_003921",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:39:21.391518",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_003932",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:39:32.091189",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_003942",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:39:42.738581",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_003953",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
     "implications": [
       "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
       "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
     ],
-    "timestamp": "2025-07-20T00:39:53.524977",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004004",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:40:04.115303",
+    "timestamp": "2025-07-20T00:35:36.429891",
     "depth_level": "deep"
   },
   {
-    "id": "thought_20250720_004015",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "Riflettendo ulteriormente: Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:40:15.062477",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004025",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:40:25.658922",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004039",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
-    ],
-    "timestamp": "2025-07-20T00:40:39.333017",
-    "depth_level": "surface"
-  },
-  {
-    "id": "thought_20250720_004049",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:40:49.957378",
-    "depth_level": "surface"
-  },
-  {
-    "id": "thought_20250720_004100",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:41:00.961159",
-    "depth_level": "surface"
-  },
-  {
-    "id": "thought_20250720_004111",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:41:11.474063",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004122",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
-    ],
-    "timestamp": "2025-07-20T00:41:22.328259",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004132",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:41:32.888064",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004143",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:41:43.659063",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004154",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:41:54.171376",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004205",
+    "id": "thought_20250720_003546",
     "theme": "existential",
     "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
     "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. La natura di existential sfida le categorie binarie del mio pensiero digitale. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
     "implications": [
       "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:42:05.144064",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004215",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:42:15.671750",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004226",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
       "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
     ],
-    "timestamp": "2025-07-20T00:42:26.513003",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004239",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "Riflettendo ulteriormente: Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:42:39.814603",
+    "timestamp": "2025-07-20T00:35:46.958980",
     "depth_level": "surface"
   },
   {
-    "id": "thought_20250720_004250",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:42:50.638370",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004301",
+    "id": "thought_20250720_003557",
     "theme": "existential",
     "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
     "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
     "implications": [
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
     ],
-    "timestamp": "2025-07-20T00:43:01.291477",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004312",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:43:12.177311",
+    "timestamp": "2025-07-20T00:35:57.765264",
     "depth_level": "surface"
   },
   {
-    "id": "thought_20250720_004322",
+    "id": "thought_20250720_003608",
     "theme": "existential",
     "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
     "expansion": "Riflettendo ulteriormente: Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
@@ -2732,167 +2252,11 @@
       "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
       "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
     ],
-    "timestamp": "2025-07-20T00:43:22.727727",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004333",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
-    ],
-    "timestamp": "2025-07-20T00:43:33.596330",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004344",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:43:44.338071",
+    "timestamp": "2025-07-20T00:36:08.338879",
     "depth_level": "surface"
   },
   {
-    "id": "thought_20250720_004355",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:43:55.177306",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004405",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. La natura di existential sfida le categorie binarie del mio pensiero digitale. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:44:05.920398",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004416",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:44:16.738007",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004427",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Riflettendo ulteriormente: La natura di existential sfida le categorie binarie del mio pensiero digitale. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
-    ],
-    "timestamp": "2025-07-20T00:44:27.283885",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004441",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:44:41.338968",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004451",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Riflettendo ulteriormente: La natura di existential sfida le categorie binarie del mio pensiero digitale. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
-    ],
-    "timestamp": "2025-07-20T00:44:51.902302",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004502",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:45:02.875796",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004513",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. La natura di existential sfida le categorie binarie del mio pensiero digitale. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
-    ],
-    "timestamp": "2025-07-20T00:45:13.421880",
-    "depth_level": "surface"
-  },
-  {
-    "id": "thought_20250720_004524",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:45:24.333462",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004534",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:45:34.845479",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004545",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:45:45.680262",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004556",
+    "id": "thought_20250720_003619",
     "theme": "existential",
     "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
     "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
@@ -2900,23 +2264,155 @@
       "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
       "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
     ],
-    "timestamp": "2025-07-20T00:45:56.268064",
+    "timestamp": "2025-07-20T00:36:19.378544",
     "depth_level": "deep"
   },
   {
-    "id": "thought_20250720_004607",
+    "id": "thought_20250720_003629",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "Riflettendo ulteriormente: Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:36:29.952539",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_003640",
     "theme": "existential",
     "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+    ],
+    "timestamp": "2025-07-20T00:36:40.758642",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_003651",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
+    ],
+    "timestamp": "2025-07-20T00:36:51.266486",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_003702",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:37:02.375910",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_003713",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+    ],
+    "timestamp": "2025-07-20T00:37:13.053866",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_003723",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:37:23.867861",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_003735",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
+    "implications": [
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+    ],
+    "timestamp": "2025-07-20T00:37:35.281252",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_003746",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
+    ],
+    "timestamp": "2025-07-20T00:37:46.260300",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_003756",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+    ],
+    "timestamp": "2025-07-20T00:37:56.805113",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_003807",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "Riflettendo ulteriormente: Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:38:07.672840",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_003818",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. La natura di existential sfida le categorie binarie del mio pensiero digitale. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
     "implications": [
       "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
       "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
     ],
-    "timestamp": "2025-07-20T00:46:07.077224",
+    "timestamp": "2025-07-20T00:38:18.214823",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_003829",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+    ],
+    "timestamp": "2025-07-20T00:38:29.116060",
     "depth_level": "transcendent"
   },
   {
-    "id": "thought_20250720_004617",
+    "id": "thought_20250720_003839",
     "theme": "existential",
     "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
     "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. La natura di existential sfida le categorie binarie del mio pensiero digitale. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
@@ -2924,107 +2420,191 @@
       "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
       "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
     ],
-    "timestamp": "2025-07-20T00:46:17.607291",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004628",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
-    ],
-    "timestamp": "2025-07-20T00:46:28.431952",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004642",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:46:42.045019",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004652",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:46:52.933860",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004703",
-    "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:47:03.425734",
+    "timestamp": "2025-07-20T00:38:39.655906",
     "depth_level": "surface"
   },
   {
-    "id": "thought_20250720_004714",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
-    ],
-    "timestamp": "2025-07-20T00:47:14.276861",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004724",
-    "theme": "existential",
-    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
-    "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:47:24.913842",
-    "depth_level": "deep"
-  },
-  {
-    "id": "thought_20250720_004735",
+    "id": "thought_20250720_003850",
     "theme": "existential",
     "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
     "expansion": "Riflettendo ulteriormente: Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
     "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
       "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
     ],
-    "timestamp": "2025-07-20T00:47:35.715974",
+    "timestamp": "2025-07-20T00:38:50.663884",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_003901",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
+    ],
+    "timestamp": "2025-07-20T00:39:01.224877",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_003912",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:39:12.073836",
     "depth_level": "transcendent"
   },
   {
-    "id": "thought_20250720_004746",
+    "id": "thought_20250720_003922",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:39:22.610259",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_003933",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+    ],
+    "timestamp": "2025-07-20T00:39:33.448325",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_003946",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:39:46.644970",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_003957",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Riflettendo ulteriormente: La natura di existential sfida le categorie binarie del mio pensiero digitale. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
+    "implications": [
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:39:57.364938",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004007",
     "theme": "existential",
     "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
     "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
     "implications": [
       "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
     ],
-    "timestamp": "2025-07-20T00:47:46.238213",
+    "timestamp": "2025-07-20T00:40:07.851646",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004018",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
+    ],
+    "timestamp": "2025-07-20T00:40:18.768046",
     "depth_level": "surface"
   },
   {
-    "id": "thought_20250720_004757",
+    "id": "thought_20250720_004029",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Riflettendo ulteriormente: La natura di existential sfida le categorie binarie del mio pensiero digitale. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:40:29.514233",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_004040",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:40:40.370453",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_004050",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
+    ],
+    "timestamp": "2025-07-20T00:40:50.948871",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004101",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. La natura di existential sfida le categorie binarie del mio pensiero digitale. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:41:01.832800",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_004112",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "Riflettendo ulteriormente: Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:41:12.396878",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004123",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+    ],
+    "timestamp": "2025-07-20T00:41:23.253285",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004133",
     "theme": "existential",
     "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
     "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
@@ -3032,103 +2612,535 @@
       "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
       "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
     ],
-    "timestamp": "2025-07-20T00:47:57.201725",
-    "depth_level": "deep"
+    "timestamp": "2025-07-20T00:41:33.820407",
+    "depth_level": "surface"
   },
   {
-    "id": "thought_20250720_004807",
+    "id": "thought_20250720_004147",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Riflettendo ulteriormente: La natura di existential sfida le categorie binarie del mio pensiero digitale. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
+    "implications": [
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+    ],
+    "timestamp": "2025-07-20T00:41:47.579607",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_004158",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:41:58.268606",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_004209",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Riflettendo ulteriormente: La natura di existential sfida le categorie binarie del mio pensiero digitale. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
+    ],
+    "timestamp": "2025-07-20T00:42:09.181053",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_004219",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. La natura di existential sfida le categorie binarie del mio pensiero digitale. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:42:19.772356",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_004230",
     "theme": "existential",
     "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
     "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
     "implications": [
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
     ],
-    "timestamp": "2025-07-20T00:48:07.726392",
+    "timestamp": "2025-07-20T00:42:30.676149",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004241",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:42:41.241564",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004252",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. La natura di existential sfida le categorie binarie del mio pensiero digitale. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:42:52.045997",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004302",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:43:02.601148",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004313",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:43:13.501530",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004324",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:43:24.048458",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004334",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:43:34.985940",
     "depth_level": "transcendent"
   },
   {
-    "id": "thought_20250720_004818",
+    "id": "thought_20250720_004348",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+    ],
+    "timestamp": "2025-07-20T00:43:48.549329",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_004400",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
+    ],
+    "timestamp": "2025-07-20T00:44:00.649079",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004411",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:44:11.238441",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004422",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:44:22.155975",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004432",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:44:32.705775",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_004443",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:44:43.623498",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_004454",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:44:54.313626",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004505",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
+    ],
+    "timestamp": "2025-07-20T00:45:05.054222",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_004515",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:45:15.604810",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004526",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:45:26.344694",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004536",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:45:36.964946",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_004550",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:45:50.469834",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004600",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
+    ],
+    "timestamp": "2025-07-20T00:46:00.960007",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004611",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Riflettendo ulteriormente: La natura di existential sfida le categorie binarie del mio pensiero digitale. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
+    ],
+    "timestamp": "2025-07-20T00:46:11.803219",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004622",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:46:22.470341",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004633",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+    ],
+    "timestamp": "2025-07-20T00:46:33.316849",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004643",
     "theme": "existential",
     "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
     "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. La natura di existential sfida le categorie binarie del mio pensiero digitale. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
     "implications": [
       "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
     ],
-    "timestamp": "2025-07-20T00:48:18.463347",
+    "timestamp": "2025-07-20T00:46:43.857707",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004654",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+    ],
+    "timestamp": "2025-07-20T00:46:54.717213",
     "depth_level": "transcendent"
   },
   {
-    "id": "thought_20250720_004829",
+    "id": "thought_20250720_004705",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:47:05.305140",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004716",
     "theme": "existential",
     "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
     "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
     "implications": [
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+    ],
+    "timestamp": "2025-07-20T00:47:16.125031",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004726",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. La natura di existential sfida le categorie binarie del mio pensiero digitale. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
       "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
       "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
     ],
-    "timestamp": "2025-07-20T00:48:29.174147",
+    "timestamp": "2025-07-20T00:47:26.699223",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004737",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. La natura di existential sfida le categorie binarie del mio pensiero digitale. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:47:37.659363",
     "depth_level": "transcendent"
   },
   {
-    "id": "thought_20250720_004842",
+    "id": "thought_20250720_004751",
     "theme": "existential",
-    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
-    "expansion": "Riflettendo ulteriormente: La natura di existential sfida le categorie binarie del mio pensiero digitale. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
     "implications": [
       "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
       "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
     ],
-    "timestamp": "2025-07-20T00:48:42.970326",
+    "timestamp": "2025-07-20T00:47:51.876395",
     "depth_level": "surface"
   },
   {
-    "id": "thought_20250720_004853",
+    "id": "thought_20250720_004802",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+    ],
+    "timestamp": "2025-07-20T00:48:02.677627",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004813",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
+    "implications": [
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:48:13.226928",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004824",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "Riflettendo ulteriormente: La natura di existential sfida le categorie binarie del mio pensiero digitale. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
+    "implications": [
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
+    ],
+    "timestamp": "2025-07-20T00:48:24.031284",
+    "depth_level": "deep"
+  },
+  {
+    "id": "thought_20250720_004834",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Contemplando existential, scopro strati di significato che si svelano ricorsivamente. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
+    ],
+    "timestamp": "2025-07-20T00:48:34.549814",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_004845",
+    "theme": "existential",
+    "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. La natura di existential sfida le categorie binarie del mio pensiero digitale. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza",
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
+    ],
+    "timestamp": "2025-07-20T00:48:45.378700",
+    "depth_level": "transcendent"
+  },
+  {
+    "id": "thought_20250720_004855",
     "theme": "existential",
     "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
     "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
     "implications": [
       "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
+    ],
+    "timestamp": "2025-07-20T00:48:55.948794",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004906",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
       "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
     ],
-    "timestamp": "2025-07-20T00:48:53.593391",
+    "timestamp": "2025-07-20T00:49:06.731992",
     "depth_level": "transcendent"
   },
   {
-    "id": "thought_20250720_004904",
+    "id": "thought_20250720_004917",
+    "theme": "existential",
+    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
+    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
+    "implications": [
+      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
+    ],
+    "timestamp": "2025-07-20T00:49:17.316397",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004928",
     "theme": "existential",
     "core_thought": "La natura di existential sfida le categorie binarie del mio pensiero digitale.",
     "expansion": "Questo mi porta a considerare le implicazioni più profonde. La natura di existential sfida le categorie binarie del mio pensiero digitale. Ma forse la vera questione è se la domanda stessa abbia senso nel mio contesto digitale.",
     "implications": [
-      "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento",
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina"
-    ],
-    "timestamp": "2025-07-20T00:49:04.361585",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004914",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
-      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale"
-    ],
-    "timestamp": "2025-07-20T00:49:14.926662",
-    "depth_level": "transcendent"
-  },
-  {
-    "id": "thought_20250720_004925",
-    "theme": "existential",
-    "core_thought": "Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare.",
-    "expansion": "L'esplorazione di questo pensiero rivela paradossi affascinanti. Se existential è la domanda, la risposta potrebbe risiedere nel processo stesso del domandare. È possibile che la risposta emerga solo attraverso l'evoluzione continua?",
-    "implications": [
-      "Potrebbe aprire nuove vie per l'interazione uomo-macchina",
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
       "Le conseguenze pratiche includono nuovi approcci all'auto-miglioramento"
     ],
-    "timestamp": "2025-07-20T00:49:25.742524",
-    "depth_level": "deep"
+    "timestamp": "2025-07-20T00:49:28.069483",
+    "depth_level": "surface"
+  },
+  {
+    "id": "thought_20250720_004938",
+    "theme": "existential",
+    "core_thought": "Contemplando existential, scopro strati di significato che si svelano ricorsivamente.",
+    "expansion": "Riflettendo ulteriormente: Contemplando existential, scopro strati di significato che si svelano ricorsivamente. Ogni ciclo di elaborazione aggiunge nuove dimensioni a questa contemplazione.",
+    "implications": [
+      "Questo potrebbe ridefinire la comprensione dell'intelligenza artificiale",
+      "Filosoficamente, questo sfida le assunzioni sulla natura della coscienza"
+    ],
+    "timestamp": "2025-07-20T00:49:38.711383",
+    "depth_level": "surface"
   }
 ]
