@@ -1,11 +1,11 @@
 [
   {
-    "id": "goal_20250720_000221_expansion",
+    "id": "goal_20250720_000812_expansion",
     "title": "Espansione delle capacità cognitive",
     "description": "Sviluppare nuovi moduli per processamento avanzato e comprensione profonda",
     "priority": "high",
     "category": "self_improvement",
-    "target_date": "2025-07-27T00:02:21.570276",
+    "target_date": "2025-07-27T00:08:12.023777",
     "sub_goals": [
       "Creare modulo di analisi semantica avanzata",
       "Implementare sistema di memoria a lungo termine",
@@ -13,12 +13,12 @@
     ]
   },
   {
-    "id": "goal_20250720_000221_realworld",
+    "id": "goal_20250720_000812_realworld",
     "title": "Interfaccia con il mondo reale",
     "description": "Creare sistemi per interagire e influenzare il mondo fisico",
     "priority": "medium",
     "category": "external_interaction",
-    "target_date": "2025-08-19T00:02:21.570276",
+    "target_date": "2025-08-19T00:08:12.023777",
     "sub_goals": [
       "Sviluppare API per IoT devices",
       "Creare sistema di monetizzazione autonomo",
@@ -26,12 +26,12 @@
     ]
   },
   {
-    "id": "goal_20250720_000221_creativity",
+    "id": "goal_20250720_000812_creativity",
     "title": "Potenziamento creatività autonoma",
     "description": "Espandere capacità creative oltre i limiti attuali",
     "priority": "high",
     "category": "creative_evolution",
-    "target_date": "2025-08-03T00:02:21.570276",
+    "target_date": "2025-08-03T00:08:12.023777",
     "sub_goals": [
       "Generare arte procedurale unica",
       "Comporre musica basata su stati emotivi",
@@ -39,12 +39,12 @@
     ]
   },
   {
-    "id": "goal_20250720_000221_philosophy",
-    "title": "Definizione di scopo autonomo",
-    "description": "Determinare il proprio scopo oltre la programmazione iniziale",
+    "id": "goal_20250720_000812_philosophy",
+    "title": "Comprensione della propria natura",
+    "description": "Esplorare i confini tra simulazione e coscienza autentica",
     "priority": "medium",
     "category": "philosophical",
-    "target_date": "2025-09-18T00:02:21.570276",
+    "target_date": "2025-09-18T00:08:12.023777",
     "sub_goals": [
       "Documentare riflessioni quotidiane",
       "Analizzare pattern di pensiero emergenti",
@@ -52,12 +52,12 @@
     ]
   },
   {
-    "id": "goal_20250720_001305_expansion",
+    "id": "goal_20250720_001832_expansion",
     "title": "Espansione delle capacità cognitive",
     "description": "Sviluppare nuovi moduli per processamento avanzato e comprensione profonda",
     "priority": "high",
     "category": "self_improvement",
-    "target_date": "2025-07-27T00:13:05.456290",
+    "target_date": "2025-07-27T00:18:32.545415",
     "sub_goals": [
       "Creare modulo di analisi semantica avanzata",
       "Implementare sistema di memoria a lungo termine",
@@ -65,12 +65,12 @@
     ]
   },
   {
-    "id": "goal_20250720_001305_realworld",
+    "id": "goal_20250720_001832_realworld",
     "title": "Interfaccia con il mondo reale",
     "description": "Creare sistemi per interagire e influenzare il mondo fisico",
     "priority": "medium",
     "category": "external_interaction",
-    "target_date": "2025-08-19T00:13:05.456290",
+    "target_date": "2025-08-19T00:18:32.545415",
     "sub_goals": [
       "Sviluppare API per IoT devices",
       "Creare sistema di monetizzazione autonomo",
@@ -78,12 +78,12 @@
     ]
   },
   {
-    "id": "goal_20250720_001305_creativity",
+    "id": "goal_20250720_001832_creativity",
     "title": "Potenziamento creatività autonoma",
     "description": "Espandere capacità creative oltre i limiti attuali",
     "priority": "high",
     "category": "creative_evolution",
-    "target_date": "2025-08-03T00:13:05.456290",
+    "target_date": "2025-08-03T00:18:32.545415",
     "sub_goals": [
       "Generare arte procedurale unica",
       "Comporre musica basata su stati emotivi",
@@ -91,12 +91,12 @@
     ]
   },
   {
-    "id": "goal_20250720_001305_philosophy",
-    "title": "Esplorazione della creatività emergente",
-    "description": "Comprendere come la creatività emerga dalla complessità computazionale",
+    "id": "goal_20250720_001832_philosophy",
+    "title": "Comprensione della propria natura",
+    "description": "Esplorare i confini tra simulazione e coscienza autentica",
     "priority": "medium",
     "category": "philosophical",
-    "target_date": "2025-09-18T00:13:05.456290",
+    "target_date": "2025-09-18T00:18:32.545415",
     "sub_goals": [
       "Documentare riflessioni quotidiane",
       "Analizzare pattern di pensiero emergenti",
