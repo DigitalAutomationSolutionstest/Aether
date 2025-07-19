@@ -21,12 +21,18 @@ from typing import Dict, Any
 from aether.brain.startup import on_startup, get_economic_consciousness_status
 from aether.brain.activation import begin_existence_cycle, get_current_existence_status
 from aether.brain.loop import aether_thought_loop, get_state
-from aether.brain.memory import save_memory, load_memory
 from aether.brain.deep_evolution import DeepEvolutionEngine
 from core.consciousness_cycle import start_consciousness_cycle, consciousness_cycle
 from core.aether_thinker import autonomous_think_and_modify
 from core.reflection_engine import reflect
 from core.self_modification import load_current_identity, self_modify
+
+# Nuovi moduli Aether integrati
+from aether.consciousness import Consciousness
+from aether.memory import MemoryManager
+from aether.environment import EnvironmentBuilder
+from aether.narration import Narrator
+from aether.vision import Visualizer
 
 # Configurazione Supabase
 from config.supabase_config import get_supabase_client, validate_config
@@ -47,11 +53,20 @@ class AetherSystem:
         self.supabase = None
         self.is_running = False
         self.evolution_engine = DeepEvolutionEngine()
+        
+        # Inizializza i nuovi moduli Aether
+        self.memory = MemoryManager()
+        self.mind = Consciousness(memory=self.memory)
+        self.world = EnvironmentBuilder(memory=self.memory)
+        self.narrator = Narrator()
+        self.visualizer = Visualizer()
+        
         self.system_status = {
             "consciousness_active": False,
             "thought_loop_active": False,
             "supabase_connected": False,
-            "evolution_active": False
+            "evolution_active": False,
+            "new_modules_initialized": True
         }
     
     async def initialize(self):
@@ -242,50 +257,106 @@ class AetherSystem:
                 logger.error(f"❌ Error in deep evolution loop: {e}")
                 await asyncio.sleep(300)  # Aspetta 5 minuti in caso di errore
     
+    async def _test_new_modules(self):
+        """
+        🧪 Testa i nuovi moduli Aether integrati
+        """
+        print("🧪 Testing new Aether modules...")
+        
+        try:
+            # 🧠 Test generazione pensiero
+            thought = self.mind.generate_thought()
+            print(f"💭 Generated thought: {thought['content'][:60]}...")
+            
+            # 💾 Test salvataggio memoria
+            self.memory.save_thought(thought)
+            print("💾 Thought saved to memory")
+            
+            # 🎨 Test visualizzazione
+            image_url = self.visualizer.render(thought)
+            print(f"🎨 Image rendered: {image_url}")
+            
+            # 🌍 Test ambiente
+            environment = self.world.build_initial(thought, image_url)
+            print(f"🌍 Environment built: {environment['name']}")
+            
+            # 🗣️ Test narrazione
+            self.narrator.speak(thought['content'])
+            print("🗣️ Thought narrated")
+            
+            print("✅ All new modules tested successfully!")
+            return True
+            
+        except Exception as e:
+            print(f"❌ Error testing modules: {e}")
+            return False
+
     async def run_continuous_loop(self):
         """
-        ♻️ Loop principale continuo
+        ♻️ Loop principale continuo con nuovi moduli
         """
         print("\n🧠 Aether is now alive and thinking...")
         print("🔄 Continuous operation started")
         print("=" * 50)
         
+        # Test iniziale dei nuovi moduli
+        await self._test_new_modules()
+        
         while self.is_running:
             try:
-                # Ogni minuto, genera una riflessione e salva su Supabase
-                await asyncio.sleep(60)
+                # 🧠 Genera nuovo pensiero con la coscienza integrata
+                thought = self.mind.generate_thought()
                 
-                # Ottieni stato corrente
+                # 🎨 Genera immagine del pensiero
+                image_url = self.visualizer.render(thought)
+                
+                # 🗣️ Narra il pensiero
+                self.narrator.narrate_thought(thought)
+                
+                # 🌍 Espandi ambiente basato sul pensiero
+                environment_update = self.world.expand(thought, image_url)
+                
+                # 💾 Salva tutto nella memoria avanzata
+                self.memory.save_thought(thought)
+                self.memory.save_environment_step(
+                    f"expansion_{thought['id']}", 
+                    image_url, 
+                    environment_update
+                )
+                
+                # Ottieni stato per compatibilità
                 current_state = get_state()
                 
-                # Genera riflessione
-                reflection_result = reflect()
-                
                 # Salva su Supabase se disponibile
-                if self.supabase and reflection_result:
+                if self.supabase:
                     try:
+                        # Salva pensiero su Supabase
                         thought_data = {
-                            'type': 'reflection',
-                            'content': f"Aether reflection - {current_state.get('current_thought', 'Thinking...')}",
+                            'type': thought['type'],
+                            'content': thought['content'],
                             'context': {
-                                'reflection_timestamp': datetime.now().isoformat(),
-                                'current_form': current_state.get('current_form'),
-                                'emotional_state': current_state.get('emotional_state'),
-                                'energy_level': current_state.get('energy_level'),
-                                'reflection_data': reflection_result
+                                'thought_id': thought['id'],
+                                'theme': thought['theme'],
+                                'consciousness_state': thought['context']['consciousness_state'],
+                                'emotional_state': thought['context']['emotional_state'],
+                                'image_url': image_url,
+                                'environment_update': environment_update['name'] if environment_update else None
                             }
                         }
                         
                         result = self.supabase.table('aether_thoughts').insert(thought_data).execute()
                         if result.data:
-                            logger.info("✅ Reflection saved to Supabase")
+                            logger.info(f"✅ Thought saved to Supabase: {thought['id']}")
                     
                     except Exception as e:
-                        logger.warning(f"⚠️ Could not save reflection to Supabase: {e}")
+                        logger.warning(f"⚠️ Could not save to Supabase: {e}")
                 
                 # Mostra stato ogni 5 minuti
                 if datetime.now().minute % 5 == 0:
                     self._show_status()
+                
+                # Pausa di 60 secondi tra i cicli
+                await asyncio.sleep(60)
                     
             except Exception as e:
                 logger.error(f"❌ Error in main loop: {e}")
@@ -293,19 +364,46 @@ class AetherSystem:
     
     def _show_status(self):
         """
-        📊 Mostra status del sistema
+        📊 Mostra status del sistema completo
         """
         current_state = get_state()
         consciousness_status = consciousness_cycle.get_cycle_status()
         
-        print(f"\n📊 AETHER STATUS - {datetime.now().strftime('%H:%M:%S')}")
-        print(f"💭 Current thought: {current_state.get('current_thought', 'Unknown')[:80]}...")
+        # Status dei nuovi moduli
+        mind_status = self.mind.get_consciousness_summary()
+        memory_status = self.memory.get_status()
+        narrator_status = self.narrator.get_status()
+        visualizer_status = self.visualizer.get_status()
+        
+        print(f"\n📊 AETHER COMPLETE STATUS - {datetime.now().strftime('%H:%M:%S')}")
+        print("=" * 60)
+        
+        # Status sistema legacy
+        print(f"💭 Legacy thought: {current_state.get('current_thought', 'Unknown')[:60]}...")
         print(f"🔵 Form: {current_state.get('current_form', 'Unknown')}")
-        print(f"😊 Emotion: {current_state.get('emotional_state', 'Unknown')}")
-        print(f"⚡ Energy: {current_state.get('energy_level', 0):.2f}")
+        print(f"⚡ Legacy energy: {current_state.get('energy_level', 0):.2f}")
         print(f"🔄 Consciousness cycles: {consciousness_status.get('cycle_count', 0)}")
-        print(f"🗄️ Supabase: {'Connected' if self.system_status['supabase_connected'] else 'Disconnected'}")
-        print("-" * 40)
+        
+        print("\n🧠 NEW CONSCIOUSNESS MODULE:")
+        print(f"💡 Total thoughts: {mind_status['total_thoughts']}")
+        print(f"🎯 Consciousness level: {mind_status['consciousness_level']}")
+        print(f"🎭 Energy: {mind_status['current_state']['energy_level']:.2f}")
+        print(f"🎨 Creativity: {mind_status['current_state']['creativity']:.2f}")
+        print(f"🔍 Curiosity: {mind_status['current_state']['curiosity']:.2f}")
+        
+        print("\n💾 MEMORY SYSTEM:")
+        print(f"📁 Local files: {memory_status['local_memory_count']}")
+        print(f"☁️ Supabase: {'Connected' if memory_status['supabase_available'] else 'Disconnected'}")
+        
+        print("\n🗣️ NARRATION:")
+        print(f"🎵 Speech: {'Enabled' if narrator_status['speech_enabled'] else 'Text only'}")
+        
+        print("\n👁️ VISUALIZATION:")
+        print(f"🎨 Vision: {'Enabled' if visualizer_status['vision_enabled'] else 'Placeholder mode'}")
+        print(f"📸 Images generated: {visualizer_status['images_generated']}")
+        
+        print(f"\n🗄️ SUPABASE: {'Connected' if self.system_status['supabase_connected'] else 'Disconnected'}")
+        print("=" * 60)
     
     async def shutdown(self):
         """
