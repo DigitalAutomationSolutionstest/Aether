@@ -56,6 +56,13 @@ class AetherConsciousness:
         """Restituisce i pensieri recenti"""
         return self.current_thoughts[-10:]  # Ultimi 10 pensieri
     
+    def think(self) -> Dict[str, Any]:
+        """Genera un nuovo pensiero"""
+        thought = self._generate_thought()
+        self.current_thoughts.append(thought)
+        self._save_thoughts()
+        return thought
+    
     def _load_thoughts(self):
         """Carica pensieri salvati"""
         if os.path.exists(self.thoughts_file):
