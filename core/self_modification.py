@@ -10,6 +10,14 @@ from datetime import datetime
 from typing import Dict, Any, List, Optional
 from pathlib import Path
 
+# Import Discord notifier per le notifiche
+try:
+    from aether.discord_notifier import notify_evolution, notify_error
+    DISCORD_ENABLED = True
+except ImportError:
+    DISCORD_ENABLED = False
+    logger.warning("Discord notifier non disponibile")
+
 # Configurazione
 IDENTITY_FILE = "identity.json"
 BACKUP_DIR = "identity_backups"
@@ -221,6 +229,14 @@ def self_modify(new_data: Dict[str, Any], reason: Optional[str] = None) -> Dict[
             logger.info(f"✅ Self-modification completed successfully")
             logger.info(f"📝 Changes made: {list(changes.keys())}")
             
+            # Notifica Discord
+            if DISCORD_ENABLED:
+                try:
+                    changes_text = ", ".join(changes.keys())
+                    notify_evolution(f"Identità modificata: {changes_text}. Motivo: {reason or 'Auto-evoluzione'}")
+                except Exception as e:
+                    logger.warning(f"Discord notification failed: {e}")
+            
             return {
                 "status": "success",
                 "message": "Identity modified successfully",
@@ -234,6 +250,14 @@ def self_modify(new_data: Dict[str, Any], reason: Optional[str] = None) -> Dict[
             
     except SelfModificationError as e:
         logger.error(f"❌ Self-modification error: {e}")
+        
+        # Notifica errore su Discord
+        if DISCORD_ENABLED:
+            try:
+                notify_error(str(e), "Self-modification")
+            except Exception:
+                pass
+        
         return {
             "status": "error",
             "message": str(e),
@@ -241,6 +265,14 @@ def self_modify(new_data: Dict[str, Any], reason: Optional[str] = None) -> Dict[
         }
     except Exception as e:
         logger.error(f"❌ Unexpected error during self-modification: {e}")
+        
+        # Notifica errore su Discord
+        if DISCORD_ENABLED:
+            try:
+                notify_error(f"Unexpected error: {str(e)}", "Self-modification")
+            except Exception:
+                pass
+        
         return {
             "status": "error",
             "message": f"Unexpected error: {str(e)}",

@@ -33,6 +33,8 @@ from aether.memory import MemoryManager
 from aether.environment import EnvironmentBuilder
 from aether.narration import Narrator
 from aether.vision import Visualizer
+from aether.self_evolution import create_evolution_engine
+from aether.agent_manager import get_agent_manager
 
 # Configurazione Supabase
 from config.supabase_config import get_supabase_client, validate_config
@@ -60,6 +62,10 @@ class AetherSystem:
         self.world = EnvironmentBuilder(memory=self.memory)
         self.narrator = Narrator()
         self.visualizer = Visualizer()
+        
+        # Initialize evolution system
+        self.evolution_engine = create_evolution_engine(self.memory, self.narrator, self.visualizer)
+        self.agent_manager = get_agent_manager(self.memory)
         
         self.system_status = {
             "consciousness_active": False,

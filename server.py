@@ -17,8 +17,28 @@ from core.goals import GOALS
 from core.memory import add_to_memory
 from core.state import STATE
 
+# Discord notifier
+try:
+    from aether.discord_notifier import notify_system_start, notify_error
+    DISCORD_ENABLED = True
+except ImportError:
+    DISCORD_ENABLED = False
+    print("Discord notifier non disponibile")
+
+# Blueprint imports
+from routes.consciousness_routes_flask import consciousness_bp
+from routes.reflection_routes import reflection_bp
+from routes.entity_routes import entity_bp
+from routes.thinking_routes import thinking_bp
+from routes.self_modification_routes import self_modification_bp
+from routes.frontend_routes import frontend_bp
+
 # Carica le variabili d'ambiente
 load_dotenv()
+
+# Imposta Discord direttamente se il .env non funziona
+if not os.getenv('DISCORD_WEBHOOK_URL'):
+    os.environ['DISCORD_WEBHOOK_URL'] = 'https://discordapp.com/api/webhooks/1396218820808409148/orGucbC2Ydx0eLPEntbXmwYLigX6sY0tA1FIFsnlmbn7CuVp7YXbKFNFxUgM0wxSW7Mr'
 
 app = Flask(__name__, static_folder='frontend/build', static_url_path='')
 socketio = SocketIO(app, cors_allowed_origins="*")
@@ -128,6 +148,14 @@ def start_server():
     print("🚀 Avvio server mondo 3D di Invader...")
     print(f"📡 Server WebSocket su: http://localhost:8000")
     print(f"🌐 Frontend su: http://localhost:3000")
+    
+    # Notifica Discord dell'avvio
+    if DISCORD_ENABLED:
+        try:
+            notify_system_start()
+            print("✅ Notifica Discord inviata")
+        except Exception as e:
+            print(f"⚠️ Discord notification failed: {e}")
     
     # Avvia il server Flask con SocketIO
     socketio.run(app, host='0.0.0.0', port=8000, debug=True)

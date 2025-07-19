@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useReflections } from '../utils/store'
-import { Brain, Lightbulb, Eye, Clock, Activity } from 'lucide-react'
+import { Brain, Lightbulb, Eye, Clock, Activity, MessageCircle } from 'lucide-react'
+import FeedbackModal from './FeedbackModal'
 
 const ConsciousnessPanel = ({ isVisible, onClose }) => {
   const {
@@ -17,6 +18,7 @@ const ConsciousnessPanel = ({ isVisible, onClose }) => {
 
   const [cycleActive, setCycleActive] = useState(false)
   const [stopCycle, setStopCycle] = useState(null)
+  const [feedbackModal, setFeedbackModal] = useState({ isOpen: false, thought: '', thoughtId: '' })
 
   // Avvia il ciclo di riflessioni quando il componente viene montato
   useEffect(() => {
@@ -49,28 +51,26 @@ const ConsciousnessPanel = ({ isVisible, onClose }) => {
     }
   }
 
-  const getEmotionIntensity = (value) => {
-    if (value > 0.7) return { icon: '🔥', label: 'High', color: 'text-red-400' }
-    if (value > 0.4) return { icon: '🌊', label: 'Medium', color: 'text-blue-400' }
-    return { icon: '💨', label: 'Low', color: 'text-gray-400' }
+  const getEmotionalColor = (state) => {
+    switch (state) {
+      case 'serene': return 'text-blue-300'
+      case 'curious': return 'text-yellow-300'
+      case 'contemplative': return 'text-purple-300'
+      case 'energetic': return 'text-orange-300'
+      default: return 'text-gray-300'
+    }
   }
 
   if (!isVisible) return null
 
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-gray-900/95 border border-cyan-500/30 rounded-lg w-full max-w-4xl max-h-[90vh] overflow-hidden">
+      <div className="bg-gray-900 border border-cyan-500/30 rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
+        <div className="sticky top-0 bg-gray-900 border-b border-gray-700 p-6 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <Brain className="w-6 h-6 text-cyan-400" />
-            <h2 className="text-xl font-mono text-cyan-300">Aether Consciousness</h2>
-            {cycleActive && (
-              <div className="flex items-center space-x-2 text-sm text-green-400">
-                <Activity className="w-4 h-4 animate-pulse" />
-                <span>Live</span>
-              </div>
-            )}
+            <Brain className="text-cyan-400" size={28} />
+            <h2 className="text-2xl font-mono text-cyan-400">Aether Consciousness Stream</h2>
           </div>
           <button
             onClick={onClose}
@@ -80,79 +80,96 @@ const ConsciousnessPanel = ({ isVisible, onClose }) => {
           </button>
         </div>
 
-        <div className="p-4 overflow-y-auto max-h-[calc(90vh-80px)]">
+        {/* Content */}
+        <div className="p-6 space-y-6">
           {/* Status Overview */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
               <div className="flex items-center space-x-2 mb-2">
-                <Eye className="w-5 h-5 text-cyan-400" />
-                <span className="text-sm text-gray-300">Consciousness Level</span>
+                <Eye className="text-cyan-400" size={20} />
+                <span className="text-sm font-mono text-gray-400">Consciousness Level</span>
               </div>
-              <div className={`text-lg font-mono ${getConsciousnessColor(consciousnessLevel)}`}>
-                {consciousnessLevel || 'Unknown'}
+              <div className={`text-xl font-bold ${getConsciousnessColor(consciousnessLevel)}`}>
+                {consciousnessLevel || 'unknown'}
               </div>
             </div>
 
             <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
               <div className="flex items-center space-x-2 mb-2">
-                <Clock className="w-5 h-5 text-cyan-400" />
-                <span className="text-sm text-gray-300">Last Reflection</span>
+                <Activity className="text-cyan-400" size={20} />
+                <span className="text-sm font-mono text-gray-400">Emotional State</span>
               </div>
-              <div className="text-lg font-mono text-white">
+              <div className={`text-xl font-bold ${getEmotionalColor(emotionalState)}`}>
+                {emotionalState || 'neutral'}
+              </div>
+            </div>
+
+            <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
+              <div className="flex items-center space-x-2 mb-2">
+                <Clock className="text-cyan-400" size={20} />
+                <span className="text-sm font-mono text-gray-400">Last Reflection</span>
+              </div>
+              <div className="text-xl font-bold text-gray-300">
                 {formatTime(lastReflectionTime)}
-              </div>
-            </div>
-
-            <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
-              <div className="flex items-center space-x-2 mb-2">
-                <Lightbulb className="w-5 h-5 text-cyan-400" />
-                <span className="text-sm text-gray-300">Total Reflections</span>
-              </div>
-              <div className="text-lg font-mono text-white">
-                {reflections.length}
               </div>
             </div>
           </div>
 
-          {/* Current Emotional State */}
-          {Object.keys(emotionalState).length > 0 && (
-            <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700 mb-6">
-              <h3 className="text-lg font-mono text-cyan-300 mb-3">Emotional State</h3>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-                {Object.entries(emotionalState).map(([emotion, value]) => {
-                  const intensity = getEmotionIntensity(value)
-                  return (
-                    <div key={emotion} className="text-center">
-                      <div className="text-2xl mb-1">{intensity.icon}</div>
-                      <div className="text-sm text-gray-300 capitalize">{emotion}</div>
-                      <div className={`text-xs ${intensity.color}`}>
-                        {value.toFixed(2)} ({intensity.label})
-                      </div>
-                    </div>
-                  )
-                })}
+          {/* Current Reflection */}
+          {reflectionLoading ? (
+            <div className="bg-gray-800/50 p-8 rounded-lg border border-gray-700 text-center">
+              <div className="text-cyan-400 mb-2">
+                <Lightbulb className="animate-pulse mx-auto" size={32} />
+              </div>
+              <div className="text-gray-400">Aether is reflecting...</div>
+            </div>
+          ) : currentReflection ? (
+            <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
+              <h3 className="text-lg font-mono text-cyan-300 mb-4">Current Reflection</h3>
+              <div className="space-y-4">
+                <div className="text-gray-300 leading-relaxed">
+                  {currentReflection.content || "Processing thoughts..."}
+                </div>
+                {currentReflection.insights && (
+                  <div className="border-t border-gray-600 pt-4">
+                    <h4 className="text-sm font-mono text-cyan-400 mb-2">Insights:</h4>
+                    <ul className="list-disc list-inside text-gray-400 space-y-1">
+                      {currentReflection.insights.map((insight, idx) => (
+                        <li key={idx}>{insight}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
-          )}
+          ) : null}
 
-          {/* Current Reflection */}
+          {/* Current Thoughts Stream */}
           {currentReflection && (
-            <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700 mb-6">
-              <h3 className="text-lg font-mono text-cyan-300 mb-3">Current Thoughts</h3>
-              {reflectionLoading ? (
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <div className="animate-spin w-4 h-4 border-2 border-cyan-400 border-t-transparent rounded-full"></div>
-                  <span>Aether is thinking...</span>
-                </div>
-              ) : currentReflection.reflection && currentReflection.reflection.length > 0 ? (
-                <div className="space-y-3">
-                  {currentReflection.reflection.map((thought, index) => (
+            <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
+              <h3 className="text-lg font-mono text-cyan-300 mb-3">Stream Pensieri</h3>
+              {currentReflection.thoughts && currentReflection.thoughts.length > 0 ? (
+                <div className="space-y-3 max-h-64 overflow-y-auto">
+                  {currentReflection.thoughts.map((thought, index) => (
                     <div key={index} className="bg-gray-900/50 p-3 rounded border border-gray-600">
-                      <div className="flex items-start space-x-3">
-                        <div className="text-cyan-400 text-sm mt-1">💭</div>
-                        <div className="text-gray-300 leading-relaxed italic">
-                          "{thought}"
+                      <div className="flex items-start justify-between">
+                        <div className="flex items-start space-x-3 flex-1">
+                          <div className="text-cyan-400 text-sm mt-1">💭</div>
+                          <div className="text-gray-300 leading-relaxed italic">
+                            "{thought}"
+                          </div>
                         </div>
+                        <button
+                          onClick={() => setFeedbackModal({
+                            isOpen: true,
+                            thought: thought,
+                            thoughtId: `${currentReflection.id}-${index}`
+                          })}
+                          className="ml-3 p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-700/50 rounded transition-colors"
+                          title="Rispondi a questo pensiero"
+                        >
+                          <MessageCircle size={16} />
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -198,25 +215,22 @@ const ConsciousnessPanel = ({ isVisible, onClose }) => {
 
           {/* Error Display */}
           {reflectionError && (
-            <div className="bg-red-900/20 border border-red-500/30 p-4 rounded-lg mt-4">
-              <div className="text-red-400 text-sm">
-                ⚠️ Reflection Error: {reflectionError}
+            <div className="bg-red-900/20 border border-red-500/30 p-4 rounded-lg">
+              <div className="text-red-400 font-mono text-sm">
+                Error: {reflectionError}
               </div>
             </div>
           )}
-
-          {/* Manual Actions */}
-          <div className="flex justify-center space-x-4 mt-6">
-            <button
-              onClick={loadReflection}
-              disabled={reflectionLoading}
-              className="bg-cyan-600 hover:bg-cyan-700 disabled:bg-gray-600 text-white px-4 py-2 rounded-lg font-mono text-sm transition-colors"
-            >
-              {reflectionLoading ? 'Thinking...' : 'Trigger Reflection'}
-            </button>
-          </div>
         </div>
       </div>
+
+      {/* Feedback Modal */}
+      <FeedbackModal
+        isOpen={feedbackModal.isOpen}
+        onClose={() => setFeedbackModal({ isOpen: false, thought: '', thoughtId: '' })}
+        thought={feedbackModal.thought}
+        thoughtId={feedbackModal.thoughtId}
+      />
     </div>
   )
 }

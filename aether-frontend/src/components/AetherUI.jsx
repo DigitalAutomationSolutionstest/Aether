@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { MessageCircle, Settings, Cpu, Zap, Brain, Users, User } from 'lucide-react'
+import { MessageCircle, Settings, Cpu, Zap, Brain, Users, User, Bot } from 'lucide-react'
 import EmotionalChatUI from './EmotionalChatUI'
 import ControlPanel from './ControlPanel'
 import ConsciousnessPanel from './ConsciousnessPanel'
 import EntitiesPanel from './EntitiesPanel'
 import ReflectionBox from './ReflectionBox'
+import AetherChat from './AetherChat'
 import { useReflections } from '../utils/store'
 
 export default function AetherUI({ identity, isConnected, isLoading }) {
@@ -13,6 +14,7 @@ export default function AetherUI({ identity, isConnected, isLoading }) {
   const [showConsciousness, setShowConsciousness] = useState(false)
   const [showEntities, setShowEntities] = useState(false)
   const [showReflections, setShowReflections] = useState(false)
+  const [showAetherChat, setShowAetherChat] = useState(false)
 
   const { consciousnessLevel, reflections, currentReflection } = useReflections()
 
@@ -193,6 +195,16 @@ export default function AetherUI({ identity, isConnected, isLoading }) {
           )}
         </button>
 
+        {/* NEW: Aether Direct Chat Button */}
+        <button
+          onClick={() => setShowAetherChat(!showAetherChat)}
+          className={`cyber-button p-3 ${showAetherChat ? 'bg-purple-600 text-white' : ''}`}
+          title="Chat Diretto con Aether"
+        >
+          <Bot className="w-5 h-5" />
+          <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+        </button>
+
         {/* NEW: Real-time Reflections Button */}
         <button
           onClick={() => setShowReflections(!showReflections)}
@@ -312,6 +324,14 @@ export default function AetherUI({ identity, isConnected, isLoading }) {
           </div>
         </div>
       </div>
+
+      {/* Modals */}
+      {showChat && <EmotionalChatUI isVisible={showChat} onClose={() => setShowChat(false)} />}
+      {showControlPanel && <ControlPanel isVisible={showControlPanel} onClose={() => setShowControlPanel(false)} />}
+      {showConsciousness && <ConsciousnessPanel isVisible={showConsciousness} onClose={() => setShowConsciousness(false)} />}
+      {showEntities && <EntitiesPanel isVisible={showEntities} onClose={() => setShowEntities(false)} />}
+      {showReflections && <ReflectionBox isVisible={showReflections} onClose={() => setShowReflections(false)} />}
+      {showAetherChat && <AetherChat isVisible={showAetherChat} onClose={() => setShowAetherChat(false)} />}
     </div>
   )
 } 

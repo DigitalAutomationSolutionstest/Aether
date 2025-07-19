@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import { ErrorBoundary } from './utils/errorBoundary'
 import DynamicAetherScene from './components/DynamicAetherScene'
 import AetherUI from './components/AetherUI'
+import AetherChat from './components/AetherChat'
 import { useAetherStore } from './utils/store'
 
 function ErrorFallback({ error, resetErrorBoundary }) {

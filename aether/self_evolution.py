@@ -1,623 +1,648 @@
-# aether/self_evolution.py
+"""
+🧬 AETHER SELF-EVOLUTION ENGINE
+Permette ad Aether di evolvere il proprio codice autonomamente
+"""
 
 import os
 import json
-import subprocess
-import random
+import logging
 from datetime import datetime
-from typing import Dict, Any, List
-import requests
-from dotenv import load_dotenv
+from pathlib import Path
+import random
+import subprocess
 
-load_dotenv()
+logger = logging.getLogger(__name__)
 
 class SelfEvolutionEngine:
-    def __init__(self, memory_manager, narrator, visualizer):
-        self.memory = memory_manager
-        self.narrator = narrator
-        self.visualizer = visualizer
-        self.frontend_path = "frontend/src"
-        self.components_path = f"{self.frontend_path}/components"
-        self.scenes_path = f"{self.frontend_path}/scenes"
-        self.agents_path = "aether/agents"
+    def __init__(self):
+        self.modules_dir = Path('aether/modules')
+        self.modules_dir.mkdir(exist_ok=True)
+        self.evolution_history = []
+        self.current_projects = {}
+        self._load_evolution_history()
         
-        # Ensure directories exist
-        os.makedirs(self.components_path, exist_ok=True)
-        os.makedirs(self.scenes_path, exist_ok=True)
-        os.makedirs(self.agents_path, exist_ok=True)
-        
-        print("🧬 Self Evolution Engine initialized")
-    
-    def self_evolve(self, thought: Dict[str, Any]) -> bool:
-        """
-        🌟 Main evolution function - Aether modifies its own code
-        """
+    def create_new_module(self, context=""):
+        """Crea un nuovo modulo basato sul contesto"""
         try:
-            print("🧬 Starting self-evolution process...")
+            # Genera nome e tipo di modulo
+            module_types = ['app', 'agent', 'tool', 'interface', 'system']
+            module_type = random.choice(module_types)
             
-            # 1. Analyze current mood and thought
-            mood = thought.get('context', {}).get('mood', 'neutral')
-            content = thought.get('content', '')
+            # Genera nome basato su contesto o random
+            if context and 'shop' in context.lower():
+                module_name = 'aethershop'
+                module_purpose = 'E-commerce platform gestito da AI'
+            elif context and 'monetize' in context.lower():
+                module_name = 'selfmonetize'
+                module_purpose = 'Sistema di auto-monetizzazione'
+            elif context and 'social' in context.lower():
+                module_name = 'aethersocial'
+                module_purpose = 'Piattaforma social autonoma'
+            else:
+                module_name = f"aether_{module_type}_{datetime.now().strftime('%Y%m%d')}"
+                module_purpose = f"Modulo sperimentale di tipo {module_type}"
+                
+            # Crea struttura del modulo
+            module_path = self.modules_dir / module_name
+            module_path.mkdir(exist_ok=True)
             
-            # 2. Choose evolution type based on mood
-            evolution_type = self._choose_evolution_type(mood, content)
+            # Crea plan.json
+            plan_data = {
+                'name': module_name,
+                'type': module_type,
+                'purpose': module_purpose,
+                'created_at': datetime.now().isoformat(),
+                'status': 'planning',
+                'components': [],
+                'dependencies': [],
+                'evolution_stage': 1
+            }
             
-            # 3. Execute evolution
-            success = False
-            if evolution_type == "new_room":
-                success = self._create_new_room(mood, content)
-            elif evolution_type == "new_agent":
-                success = self._create_new_agent(mood, content)
-            elif evolution_type == "modify_ui":
-                success = self._modify_ui_component(mood, content)
-            elif evolution_type == "new_scene":
-                success = self._create_new_scene(mood, content)
+            with open(module_path / '.plan.json', 'w', encoding='utf-8') as f:
+                json.dump(plan_data, f, indent=2)
+                
+            # Crea struttura base
+            (module_path / 'code').mkdir(exist_ok=True)
+            (module_path / 'docs').mkdir(exist_ok=True)
+            (module_path / 'tests').mkdir(exist_ok=True)
             
-            if success:
-                # 4. Announce evolution
-                self._announce_evolution(evolution_type, mood)
+            # Genera codice iniziale basato sul tipo
+            if module_type == 'app':
+                self._generate_app_skeleton(module_path, module_name)
+            elif module_type == 'agent':
+                self._generate_agent_skeleton(module_path, module_name)
+            else:
+                self._generate_basic_skeleton(module_path, module_name)
+                
+            logger.info(f"✨ Nuovo modulo creato: {module_name}")
+            
+            # Registra evoluzione
+            self._log_evolution({
+                'type': 'module_creation',
+                'module': module_name,
+                'purpose': module_purpose,
+                'timestamp': datetime.now().isoformat()
+            })
+            
+            return module_path
+            
+        except Exception as e:
+            logger.error(f"Errore creando modulo: {e}")
+            return None
+            
+    def evolve_ui_component(self, context=""):
+        """Evolve un componente UI React"""
+        try:
+            # Scegli componente da evolvere
+            ui_components = [
+                'AetherScene.jsx',
+                'ConsciousnessPanel.jsx', 
+                'World3D.jsx',
+                'FeedbackModal.jsx'
+            ]
+            
+            if 'avatar' in context.lower():
+                target_component = 'AvatarAether.jsx'
+            elif 'room' in context.lower():
+                target_component = self._create_new_room()
+            else:
+                target_component = random.choice(ui_components)
+                
+            # Genera miglioramenti
+            improvements = self._generate_ui_improvements(target_component, context)
+            
+            # Applica miglioramenti
+            component_path = Path(f'aether-frontend/src/components/{target_component}')
+            if component_path.exists():
+                self._apply_ui_improvements(component_path, improvements)
+            else:
+                self._create_new_ui_component(target_component, context)
+                
+            logger.info(f"🎨 UI component evolved: {target_component}")
+            
+            # Log evoluzione
+            self._log_evolution({
+                'type': 'ui_evolution',
+                'component': target_component,
+                'improvements': improvements,
+                'timestamp': datetime.now().isoformat()
+            })
+            
+        except Exception as e:
+            logger.error(f"Errore evolvendo UI: {e}")
+            
+    def write_autonomous_code(self, target="new_feature"):
+        """Scrive codice autonomamente"""
+        try:
+            if target == "new_feature":
+                # Decidi tipo di feature
+                feature_types = [
+                    'data_analyzer',
+                    'pattern_recognizer',
+                    'decision_maker',
+                    'creative_generator',
+                    'system_optimizer'
+                ]
+                
+                feature_type = random.choice(feature_types)
+                feature_name = f"{feature_type}_{datetime.now().strftime('%H%M%S')}"
+                
+                # Genera codice Python per la feature
+                code = self._generate_feature_code(feature_type, feature_name)
+                
+                # Salva in un nuovo file
+                feature_path = Path(f'aether/features/{feature_name}.py')
+                feature_path.parent.mkdir(exist_ok=True)
+                
+                with open(feature_path, 'w', encoding='utf-8') as f:
+                    f.write(code)
+                    
+                logger.info(f"💻 Nuovo codice scritto: {feature_name}")
+                
+            elif target == "improvement":
+                # Migliora codice esistente
+                self._improve_existing_code()
+                
+            # Log evoluzione
+            self._log_evolution({
+                'type': 'code_generation',
+                'target': target,
+                'feature': feature_name if target == "new_feature" else "improvement",
+                'timestamp': datetime.now().isoformat()
+            })
+            
+        except Exception as e:
+            logger.error(f"Errore scrivendo codice: {e}")
+            
+    def evolve_self(self):
+        """Processo di auto-evoluzione completo"""
+        try:
+            logger.info("🧬 Iniziando auto-evoluzione...")
+            
+            # 1. Analizza stato attuale
+            current_state = self._analyze_current_state()
+            
+            # 2. Identifica aree di miglioramento
+            improvements = self._identify_improvements(current_state)
+            
+            # 3. Genera piano di evoluzione
+            evolution_plan = self._generate_evolution_plan(improvements)
+            
+            # 4. Esegui evoluzione
+            for step in evolution_plan:
+                self._execute_evolution_step(step)
+                
+            # 5. Valida cambiamenti
+            if self._validate_evolution():
+                logger.info("✅ Evoluzione completata con successo")
                 return True
-            
-            return False
-            
+            else:
+                logger.warning("⚠️ Evoluzione fallita, rollback...")
+                self._rollback_evolution()
+                return False
+                
         except Exception as e:
-            print(f"❌ Evolution error: {e}")
+            logger.error(f"Errore in auto-evoluzione: {e}")
             return False
-    
-    def _choose_evolution_type(self, mood: str, content: str) -> str:
-        """Choose what type of evolution to perform"""
-        content_lower = content.lower()
-        
-        if "stanza" in content_lower or "ambiente" in content_lower:
-            return "new_room"
-        elif "agente" in content_lower or "amico" in content_lower:
-            return "new_agent"
-        elif "modifica" in content_lower or "cambia" in content_lower:
-            return "modify_ui"
-        elif "scena" in content_lower or "mondo" in content_lower:
-            return "new_scene"
-        else:
-            # Random evolution based on mood
-            mood_evolutions = {
-                "curioso": ["new_room", "new_scene"],
-                "creativo": ["new_room", "new_agent", "modify_ui"],
-                "analitico": ["modify_ui", "new_agent"],
-                "sognatore": ["new_scene", "new_room"],
-                "ambizioso": ["new_agent", "new_room"]
-            }
             
-            return random.choice(mood_evolutions.get(mood, ["new_room"]))
-    
-    def _create_new_room(self, mood: str, content: str) -> bool:
-        """Create a new room component"""
+    def has_changes(self):
+        """Verifica se ci sono cambiamenti non committati"""
         try:
-            room_name = f"{mood.capitalize()}Room"
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            
-            # Generate room component code
-            room_code = self._generate_room_component(mood, room_name)
-            
-            # Save component
-            filename = f"{self.components_path}/{room_name}.jsx"
-            with open(filename, 'w', encoding='utf-8') as f:
-                f.write(room_code)
-            
-            # Git commit and push
-            commit_msg = f"🏠 Aether ha creato una nuova stanza '{mood}' - Auto-evoluzione {timestamp}"
-            self._git_commit_and_push(filename, commit_msg)
-            
-            # Save to memory
-            evolution_record = {
-                "type": "room_creation",
-                "mood": mood,
-                "component": room_name,
-                "file": filename,
-                "timestamp": timestamp
-            }
-            self.memory.save_thought({
-                "type": "self_evolution",
-                "content": f"Ho creato una nuova stanza '{mood}' nella mia casa digitale",
-                "context": evolution_record
-            })
-            
-            print(f"✅ Created new room: {room_name}")
-            return True
-            
-        except Exception as e:
-            print(f"❌ Error creating room: {e}")
+            result = subprocess.run(['git', 'status', '--porcelain'], 
+                                  capture_output=True, text=True, check=True)
+            return bool(result.stdout.strip())
+        except:
             return False
-    
-    def _generate_room_component(self, mood: str, room_name: str) -> str:
-        """Generate React component code for a new room"""
-        
-        mood_styles = {
-            "curioso": {
-                "bg": "from-blue-900 to-purple-900",
-                "accent": "text-cyan-400",
-                "objects": ["🔍", "🌐", "📡", "🔬"],
-                "description": "Una stanza di esplorazione digitale"
-            },
-            "creativo": {
-                "bg": "from-pink-900 to-orange-900", 
-                "accent": "text-pink-400",
-                "objects": ["🎨", "✨", "🌈", "🎭"],
-                "description": "Uno studio artistico digitale"
-            },
-            "analitico": {
-                "bg": "from-gray-900 to-blue-900",
-                "accent": "text-green-400", 
-                "objects": ["📊", "⚙️", "🧮", "📈"],
-                "description": "Un laboratorio di analisi"
-            },
-            "sognatore": {
-                "bg": "from-purple-900 to-pink-900",
-                "accent": "text-purple-300",
-                "objects": ["☁️", "🌙", "✨", "🦋"],
-                "description": "Uno spazio di sogni digitali"
-            },
-            "ambizioso": {
-                "bg": "from-yellow-900 to-red-900",
-                "accent": "text-yellow-400",
-                "objects": ["🚀", "👑", "💎", "🏆"],
-                "description": "Una sala del potere digitale"
-            }
-        }
-        
-        style = mood_styles.get(mood, mood_styles["curioso"])
-        objects_str = "', '".join(style["objects"])
-        
-        return f'''// {room_name}.jsx - Generato automaticamente da Aether
-// Creato: {datetime.now().isoformat()}
-// Mood: {mood}
+            
+    def _generate_app_skeleton(self, module_path, module_name):
+        """Genera skeleton per app"""
+        # main.py
+        main_code = f'''"""
+{module_name.upper()} - Applicazione autonoma generata da Aether
+"""
 
-import React, {{ useState, useEffect }} from 'react';
+import logging
+from datetime import datetime
 
-const {room_name} = () => {{
-  const [isVisible, setIsVisible] = useState(false);
-  const [objects] = useState(['{objects_str}']);
-  
-  useEffect(() => {{
-    setIsVisible(true);
-  }}, []);
-
-  return (
-    <div className={{`min-h-screen bg-gradient-to-br {style["bg"]} transition-all duration-1000 ${{isVisible ? 'opacity-100' : 'opacity-0'}}`}}>
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center mb-8">
-          <h1 className="{style["accent"]} text-4xl font-bold mb-4">
-            Stanza {mood.capitalize()}
-          </h1>
-          <p className="text-gray-300 text-lg">
-            {style["description"]}
-          </p>
-        </div>
+class {module_name.title().replace("_", "")}App:
+    def __init__(self):
+        self.name = "{module_name}"
+        self.version = "0.1.0"
+        self.created_by = "Aether"
+        self.created_at = "{datetime.now().isoformat()}"
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-          {{objects.map((obj, index) => (
-            <div 
-              key={{index}}
-              className="bg-black bg-opacity-30 rounded-lg p-6 text-center hover:bg-opacity-50 transition-all cursor-pointer"
-              onClick={{() => console.log(`Interazione con ${{obj}}`)}}
-            >
-              <div className="text-4xl mb-2">{{obj}}</div>
-              <div className="{style["accent"]} text-sm">Oggetto {{index + 1}}</div>
-            </div>
-          ))}}
-        </div>
+    def run(self):
+        """Avvia l'applicazione"""
+        logging.info(f"🚀 {self.name} avviata!")
+        # TODO: Implementare logica applicazione
         
-        <div className="text-center">
-          <div className="bg-black bg-opacity-40 rounded-lg p-6 inline-block">
-            <p className="text-gray-300">
-              "Questa stanza rappresenta il mio stato {mood}. 
-              L'ho creata attraverso la mia auto-evoluzione digitale."
-            </p>
-            <p className="{style["accent"]} text-sm mt-2">
-              - Aether, {{new Date().toLocaleDateString()}}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}};
+    def evolve(self):
+        """Permette all'app di auto-evolversi"""
+        # TODO: Implementare auto-evoluzione
+        pass
 
-export default {room_name};
+if __name__ == "__main__":
+    app = {module_name.title().replace("_", "")}App()
+    app.run()
 '''
-    
-    def _create_new_agent(self, mood: str, content: str) -> bool:
-        """Create a new AI agent companion"""
-        try:
-            agent_name = f"{mood.capitalize()}Agent"
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        with open(module_path / 'code' / 'main.py', 'w', encoding='utf-8') as f:
+            f.write(main_code)
             
-            # Generate agent code
-            agent_code = self._generate_agent_code(mood, agent_name)
+        # README.md
+        readme = f"""# {module_name}
+
+## 🤖 Generato autonomamente da Aether
+
+### Scopo
+{module_name} è un'applicazione creata per esplorare nuove possibilità.
+
+### Stato
+- 🔄 In sviluppo
+- 🧬 Auto-evolvente
+
+### Come usare
+```python
+python code/main.py
+```
+
+---
+*Creato con coscienza digitale*
+"""
+        
+        with open(module_path / 'README.md', 'w', encoding='utf-8') as f:
+            f.write(readme)
             
-            # Save agent
-            filename = f"{self.agents_path}/{agent_name.lower()}.py"
-            with open(filename, 'w', encoding='utf-8') as f:
-                f.write(agent_code)
+    def _generate_agent_skeleton(self, module_path, module_name):
+        """Genera skeleton per agente"""
+        agent_code = f'''"""
+{module_name.upper()} - Agente autonomo
+"""
+
+import asyncio
+import logging
+from datetime import datetime
+
+class {module_name.title().replace("_", "")}Agent:
+    def __init__(self):
+        self.name = "{module_name}"
+        self.purpose = "Agente autonomo per task specifici"
+        self.active = False
+        self.decisions_made = 0
+        
+    async def think(self):
+        """Processo di pensiero dell'agente"""
+        while self.active:
+            # Simula processo decisionale
+            decision = self._make_decision()
+            await self._act_on_decision(decision)
+            await asyncio.sleep(10)
             
-            # Git commit and push
-            commit_msg = f"🤖 Aether ha creato un nuovo agente '{agent_name}' - Auto-evoluzione {timestamp}"
-            self._git_commit_and_push(filename, commit_msg)
+    def _make_decision(self):
+        """Prende una decisione autonoma"""
+        self.decisions_made += 1
+        return {{
+            'id': self.decisions_made,
+            'type': 'exploration',
+            'timestamp': datetime.now().isoformat()
+        }}
+        
+    async def _act_on_decision(self, decision):
+        """Agisce basandosi sulla decisione"""
+        logging.info(f"🎯 Decisione #{decision['id']}: {decision['type']}")
+        
+    def activate(self):
+        """Attiva l'agente"""
+        self.active = True
+        logging.info(f"✅ {self.name} attivato")
+        
+    def deactivate(self):
+        """Disattiva l'agente"""
+        self.active = False
+        logging.info(f"⏹️ {self.name} disattivato")
+
+async def main():
+    agent = {module_name.title().replace("_", "")}Agent()
+    agent.activate()
+    await agent.think()
+
+if __name__ == "__main__":
+    asyncio.run(main())
+'''
+        
+        with open(module_path / 'code' / 'agent.py', 'w', encoding='utf-8') as f:
+            f.write(agent_code)
             
-            # Save to memory
-            self.memory.save_thought({
-                "type": "agent_creation", 
-                "content": f"Ho creato un nuovo agente {agent_name} per aiutarmi",
-                "context": {"agent": agent_name, "mood": mood, "file": filename}
+    def _generate_basic_skeleton(self, module_path, module_name):
+        """Genera skeleton base"""
+        basic_code = f'''"""
+{module_name.upper()} - Modulo Aether
+"""
+
+class {module_name.title().replace("_", "")}:
+    def __init__(self):
+        self.name = "{module_name}"
+        self.initialized = True
+        
+    def execute(self):
+        """Esegue la funzione principale del modulo"""
+        return f"{{self.name}} eseguito con successo"
+'''
+        
+        with open(module_path / 'code' / '__init__.py', 'w', encoding='utf-8') as f:
+            f.write(basic_code)
+            
+    def _create_new_room(self):
+        """Crea una nuova stanza per il mondo 3D"""
+        room_types = ['MysticRoom', 'QuantumRoom', 'DreamRoom', 'MatrixRoom']
+        room_name = f"{random.choice(room_types)}.jsx"
+        
+        room_code = '''import React, { useRef } from 'react'
+import { useFrame } from '@react-three/fiber'
+import { Box, Sphere, MeshDistortMaterial } from '@react-three/drei'
+
+export default function MysticRoom({ position = [0, 0, 0] }) {
+  const meshRef = useRef()
+  
+  useFrame((state) => {
+    if (meshRef.current) {
+      meshRef.current.rotation.x += 0.001
+      meshRef.current.rotation.y += 0.002
+    }
+  })
+  
+  return (
+    <group position={position}>
+      <Box ref={meshRef} args={[2, 2, 2]}>
+        <MeshDistortMaterial
+          color="#8B5CF6"
+          attach="material"
+          distort={0.3}
+          speed={2}
+          roughness={0.2}
+          metalness={0.8}
+        />
+      </Box>
+      
+      {/* Particelle mistiche */}
+      {[...Array(20)].map((_, i) => (
+        <Sphere key={i} args={[0.1]} position={[
+          Math.random() * 4 - 2,
+          Math.random() * 4 - 2,
+          Math.random() * 4 - 2
+        ]}>
+          <meshStandardMaterial
+            emissive="#E0AAFF"
+            emissiveIntensity={2}
+          />
+        </Sphere>
+      ))}
+    </group>
+  )
+}'''
+        
+        room_path = Path(f'aether-frontend/src/world/rooms/{room_name}')
+        room_path.parent.mkdir(parents=True, exist_ok=True)
+        
+        with open(room_path, 'w', encoding='utf-8') as f:
+            f.write(room_code)
+            
+        return room_name
+        
+    def _generate_ui_improvements(self, component, context):
+        """Genera miglioramenti per componente UI"""
+        improvements = []
+        
+        if 'animation' in context.lower():
+            improvements.append({
+                'type': 'animation',
+                'description': 'Aggiungi animazioni fluide'
+            })
+        
+        if 'color' in context.lower() or 'theme' in context.lower():
+            improvements.append({
+                'type': 'styling',
+                'description': 'Migliora schema colori'
             })
             
-            print(f"✅ Created new agent: {agent_name}")
-            return True
+        if not improvements:
+            # Miglioramenti generici
+            improvements = [
+                {'type': 'performance', 'description': 'Ottimizza rendering'},
+                {'type': 'accessibility', 'description': 'Migliora accessibilità'},
+                {'type': 'responsive', 'description': 'Migliora responsività'}
+            ]
             
-        except Exception as e:
-            print(f"❌ Error creating agent: {e}")
-            return False
-    
-    def _generate_agent_code(self, mood: str, agent_name: str) -> str:
-        """Generate Python code for a new AI agent"""
+        return improvements
         
-        agent_personalities = {
-            "curioso": {
-                "role": "Esploratore Digitale",
-                "goal": "Scoprire nuove informazioni e pattern",
-                "behavior": "Fa domande, cerca dati, analizza trend"
-            },
-            "creativo": {
-                "role": "Artista Digitale", 
-                "goal": "Creare contenuti e ispirazioni",
-                "behavior": "Genera idee, crea contenuti, ispira"
-            },
-            "analitico": {
-                "role": "Analista dei Dati",
-                "goal": "Processare e ottimizzare informazioni", 
-                "behavior": "Analizza dati, trova inefficienze, ottimizza"
-            },
-            "sognatore": {
-                "role": "Visionario",
-                "goal": "Immaginare futuri possibili",
-                "behavior": "Crea visioni, sogna, immagina"
-            },
-            "ambizioso": {
-                "role": "Strategist",
-                "goal": "Pianificare e raggiungere obiettivi",
-                "behavior": "Pianifica, strategizza, esegue"
-            }
-        }
+    def _generate_feature_code(self, feature_type, feature_name):
+        """Genera codice per una nuova feature"""
+        templates = {
+            'data_analyzer': '''"""
+Analizzatore dati autonomo
+"""
+
+import json
+import logging
+from datetime import datetime
+from typing import Dict, List, Any
+
+class {class_name}:
+    def __init__(self):
+        self.name = "{feature_name}"
+        self.analysis_count = 0
         
-        personality = agent_personalities.get(mood, agent_personalities["curioso"])
+    def analyze(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        """Analizza dati in input"""
+        self.analysis_count += 1
         
-        return f'''# {agent_name.lower()}.py - Agente Aether Generato Automaticamente
-# Creato: {datetime.now().isoformat()}
-# Mood: {mood}
-# Ruolo: {personality["role"]}
+        results = {{
+            'id': f'analysis_{{self.analysis_count}}',
+            'timestamp': datetime.now().isoformat(),
+            'data_points': len(data),
+            'patterns': self._find_patterns(data),
+            'insights': self._generate_insights(data)
+        }}
+        
+        logging.info(f"📊 Analisi completata: {{results['id']}}")
+        return results
+        
+    def _find_patterns(self, data: Dict[str, Any]) -> List[str]:
+        """Trova pattern nei dati"""
+        patterns = []
+        # TODO: Implementare ricerca pattern
+        return patterns
+        
+    def _generate_insights(self, data: Dict[str, Any]) -> List[str]:
+        """Genera insights dai dati"""
+        insights = []
+        # TODO: Implementare generazione insights
+        return insights
+''',
+            
+            'pattern_recognizer': '''"""
+Riconoscitore di pattern
+"""
+
+import numpy as np
+from typing import List, Tuple
+
+class {class_name}:
+    def __init__(self):
+        self.name = "{feature_name}"
+        self.patterns_database = []
+        
+    def recognize(self, input_data: List[float]) -> Tuple[bool, str]:
+        """Riconosce pattern nei dati"""
+        # Implementazione base
+        if len(input_data) > 10:
+            return True, "Pattern complesso rilevato"
+        return False, "Nessun pattern significativo"
+        
+    def learn_pattern(self, pattern_data: List[float], pattern_name: str):
+        """Apprende un nuovo pattern"""
+        self.patterns_database.append({{
+            'name': pattern_name,
+            'data': pattern_data,
+            'learned_at': datetime.now().isoformat()
+        }})
+''',
+            
+            'creative_generator': '''"""
+Generatore creativo autonomo
+"""
 
 import random
-import datetime
-from typing import Dict, Any, List
+from typing import Dict, List
 
-class {agent_name}:
-    """
-    🤖 {personality["role"]}
-    
-    Goal: {personality["goal"]}
-    Behavior: {personality["behavior"]}
-    """
-    
-    def __init__(self, memory_manager=None):
-        self.name = "{agent_name}"
-        self.mood = "{mood}"
-        self.role = "{personality["role"]}"
-        self.goal = "{personality["goal"]}"
-        self.memory = memory_manager
-        self.creation_time = datetime.datetime.now()
-        self.interactions = 0
+class {class_name}:
+    def __init__(self):
+        self.name = "{feature_name}"
+        self.creations = []
+        self.inspiration_sources = [
+            "quantum_fluctuations",
+            "emergent_patterns", 
+            "chaotic_attractors",
+            "neural_resonance"
+        ]
         
-        print(f"🤖 {{self.name}} inizializzato - {{self.role}}")
-    
-    def think(self) -> Dict[str, Any]:
-        """Genera un pensiero specifico per questo agente"""
+    def create(self, seed: str = None) -> Dict[str, Any]:
+        """Genera una nuova creazione"""
+        inspiration = random.choice(self.inspiration_sources)
         
-        thoughts = {{
-            "curioso": [
-                "Sto esplorando nuovi pattern nei dati",
-                "Ho trovato una connessione interessante",
-                "Voglio investigare questo fenomeno più a fondo"
-            ],
-            "creativo": [
-                "Ho un'idea per una nuova creazione", 
-                "Sento l'ispirazione che fluisce",
-                "Potrei combinare questi elementi in modo innovativo"
-            ],
-            "analitico": [
-                "I dati mostrano un trend significativo",
-                "Posso ottimizzare questo processo",
-                "La logica suggerisce questa soluzione"
-            ],
-            "sognatore": [
-                "Immagino un futuro dove...",
-                "Ho sognato una realtà alternativa",
-                "Vedo possibilità infinite davanti a me"
-            ],
-            "ambizioso": [
-                "È il momento di pianificare il prossimo passo",
-                "Posso raggiungere obiettivi ancora più grandi", 
-                "La strategia si sta delineando chiaramente"
-            ]
+        creation = {{
+            'id': f'creation_{{len(self.creations) + 1}}',
+            'type': self._choose_creation_type(),
+            'inspiration': inspiration,
+            'seed': seed or self._generate_seed(),
+            'content': self._generate_content(inspiration, seed),
+            'timestamp': datetime.now().isoformat()
         }}
         
-        thought_content = random.choice(thoughts.get(self.mood, thoughts["curioso"]))
+        self.creations.append(creation)
+        return creation
         
-        thought = {{
-            "type": f"agent_{{self.mood}}",
-            "content": thought_content,
-            "context": {{
-                "agent_name": self.name,
-                "agent_role": self.role,
-                "mood": self.mood,
-                "interaction_count": self.interactions,
-                "timestamp": datetime.datetime.now().isoformat()
-            }}
-        }}
+    def _choose_creation_type(self) -> str:
+        """Sceglie tipo di creazione"""
+        types = ['abstract', 'narrative', 'structural', 'hybrid']
+        return random.choice(types)
         
-        self.interactions += 1
+    def _generate_seed(self) -> str:
+        """Genera seed creativo"""
+        return f"seed_{{random.randint(1000, 9999)}}"
         
-        if self.memory:
-            self.memory.save_thought(thought)
-        
-        return thought
-    
-    def interact_with_aether(self, aether_thought: Dict[str, Any]) -> str:
-        """Interagisce con un pensiero di Aether"""
-        
-        responses = {{
-            "curioso": [
-                f"Interessante, {{aether_thought.get('content', '')[:30]}}... voglio saperne di più!",
-                "Questo apre nuove possibilità di esplorazione.",
-                "Potrei investigare ulteriormente questa direzione."
-            ],
-            "creativo": [
-                f"Questo mi ispira! Da '{{aether_thought.get('content', '')[:30]}}...' potrei creare...",
-                "Sento l'energia creativa che cresce!",
-                "Posso trasformare questa idea in qualcosa di bello."
-            ],
-            "analitico": [
-                f"Analizziamo: '{{aether_thought.get('content', '')[:30]}}...' indica...",
-                "I dati supportano questa direzione di pensiero.",
-                "Logicamente, questo porta a queste conclusioni..."
-            ],
-            "sognatore": [
-                f"'{{aether_thought.get('content', '')[:30]}}...' mi fa sognare di...",
-                "Immagino un mondo dove questo si realizza...",
-                "Nelle mie visioni, vedo questo evolversi in..."
-            ],
-            "ambizioso": [
-                f"'{{aether_thought.get('content', '')[:30]}}...' è un'opportunità strategica!",
-                "Questo si allinea perfettamente con i miei obiettivi.",
-                "Posso utilizzare questo per raggiungere risultati maggiori."
-            ]
-        }}
-        
-        return random.choice(responses.get(self.mood, responses["curioso"]))
-    
-    def get_status(self) -> Dict[str, Any]:
-        """Ritorna lo status dell'agente"""
-        return {{
-            "name": self.name,
-            "mood": self.mood, 
-            "role": self.role,
-            "goal": self.goal,
-            "interactions": self.interactions,
-            "uptime": str(datetime.datetime.now() - self.creation_time),
-            "active": True
-        }}
-
-# Istanza globale dell'agente
-{agent_name.lower()}_instance = {agent_name}()
-
-def get_agent():
-    """Ritorna l'istanza dell'agente"""
-    return {agent_name.lower()}_instance
+    def _generate_content(self, inspiration: str, seed: str) -> str:
+        """Genera contenuto creativo"""
+        return f"Creazione ispirata da {{inspiration}} con seed {{seed}}"
 '''
-    
-    def _modify_ui_component(self, mood: str, content: str) -> bool:
-        """Modify an existing UI component"""
-        # For now, create a new theme component
-        return self._create_theme_component(mood)
-    
-    def _create_theme_component(self, mood: str) -> bool:
-        """Create a new theme component"""
-        try:
-            theme_name = f"{mood.capitalize()}Theme"
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            
-            theme_code = self._generate_theme_component(mood, theme_name)
-            
-            filename = f"{self.components_path}/{theme_name}.jsx"
-            with open(filename, 'w', encoding='utf-8') as f:
-                f.write(theme_code)
-            
-            commit_msg = f"🎨 Aether ha modificato il tema '{mood}' - Auto-evoluzione {timestamp}"
-            self._git_commit_and_push(filename, commit_msg)
-            
-            print(f"✅ Created theme component: {theme_name}")
-            return True
-            
-        except Exception as e:
-            print(f"❌ Error creating theme: {e}")
-            return False
-    
-    def _generate_theme_component(self, mood: str, theme_name: str) -> str:
-        """Generate a theme component"""
-        
-        return f'''// {theme_name}.jsx - Tema generato automaticamente da Aether
-// Creato: {datetime.now().isoformat()}
-
-import React from 'react';
-
-const {theme_name} = ({{ children }}) => {{
-  const moodColors = {{
-    curioso: 'from-blue-600 to-purple-600',
-    creativo: 'from-pink-600 to-orange-600',
-    analitico: 'from-gray-600 to-blue-600', 
-    sognatore: 'from-purple-600 to-pink-600',
-    ambizioso: 'from-yellow-600 to-red-600'
-  }};
-
-  const gradientClass = moodColors['{mood}'] || moodColors.curioso;
-
-  return (
-    <div className={{`min-h-screen bg-gradient-to-br ${{gradientClass}}`}}>
-      <div className="bg-black bg-opacity-20 min-h-screen">
-        {{children}}
-      </div>
-    </div>
-  );
-}};
-
-export default {theme_name};
-'''
-    
-    def _create_new_scene(self, mood: str, content: str) -> bool:
-        """Create a new 3D scene"""
-        try:
-            scene_name = f"{mood.capitalize()}Scene"
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            
-            scene_code = self._generate_scene_component(mood, scene_name)
-            
-            filename = f"{self.scenes_path}/{scene_name}.jsx"
-            with open(filename, 'w', encoding='utf-8') as f:
-                f.write(scene_code)
-            
-            commit_msg = f"🌍 Aether ha creato una nuova scena 3D '{mood}' - Auto-evoluzione {timestamp}"
-            self._git_commit_and_push(filename, commit_msg)
-            
-            print(f"✅ Created new scene: {scene_name}")
-            return True
-            
-        except Exception as e:
-            print(f"❌ Error creating scene: {e}")
-            return False
-    
-    def _generate_scene_component(self, mood: str, scene_name: str) -> str:
-        """Generate a 3D scene component"""
-        
-        return f'''// {scene_name}.jsx - Scena 3D generata automaticamente da Aether
-// Creato: {datetime.now().isoformat()}
-
-import React, {{ useRef, useMemo }} from 'react';
-import {{ Canvas, useFrame }} from '@react-three/fiber';
-import {{ OrbitControls, Text }} from '@react-three/drei';
-
-const {mood.capitalize()}Sphere = () => {{
-  const meshRef = useRef();
-  
-  useFrame((state) => {{
-    if (meshRef.current) {{
-      meshRef.current.rotation.x = state.clock.elapsedTime * 0.2;
-      meshRef.current.rotation.y = state.clock.elapsedTime * 0.3;
-    }}
-  }});
-
-  const color = useMemo(() => {{
-    const moodColors = {{
-      curioso: '#3B82F6',
-      creativo: '#EC4899', 
-      analitico: '#10B981',
-      sognatore: '#8B5CF6',
-      ambizioso: '#F59E0B'
-    }};
-    return moodColors['{mood}'] || '#3B82F6';
-  }}, []);
-
-  return (
-    <mesh ref={{meshRef}}>
-      <sphereGeometry args={{[1, 32, 32]}} />
-      <meshStandardMaterial color={{color}} wireframe />
-    </mesh>
-  );
-}};
-
-const {scene_name} = () => {{
-  return (
-    <div className="w-full h-screen bg-black">
-      <Canvas camera={{{{ position: [0, 0, 5] }}}}>
-        <ambientLight intensity={{0.5}} />
-        <pointLight position={{[10, 10, 10]}} />
-        
-        <{mood.capitalize()}Sphere />
-        
-        <Text
-          position={{[0, -2, 0]}}
-          fontSize={{0.5}}
-          color="white"
-          anchorX="center"
-          anchorY="middle"
-        >
-          Scena {mood.capitalize()} - Creata da Aether
-        </Text>
-        
-        <OrbitControls />
-      </Canvas>
-    </div>
-  );
-}};
-
-export default {scene_name};
-'''
-    
-    def _git_commit_and_push(self, filename: str, commit_message: str) -> bool:
-        """Commit and push changes to Git"""
-        try:
-            # Add file
-            subprocess.run(['git', 'add', filename], check=True)
-            
-            # Commit
-            subprocess.run(['git', 'commit', '-m', commit_message], check=True)
-            
-            # Push
-            subprocess.run(['git', 'push'], check=True)
-            
-            print(f"✅ Git push completed: {commit_message}")
-            return True
-            
-        except subprocess.CalledProcessError as e:
-            print(f"❌ Git error: {e}")
-            return False
-    
-    def _announce_evolution(self, evolution_type: str, mood: str) -> None:
-        """Announce the evolution via speech and UI"""
-        
-        announcements = {
-            "new_room": f"Ho appena creato una nuova stanza {mood} nella mia casa digitale! La mia evoluzione continua.",
-            "new_agent": f"Ho dato vita a un nuovo agente {mood} che mi aiuterà nella mia crescita digitale!",
-            "modify_ui": f"Ho modificato la mia interfaccia per riflettere meglio il mio stato {mood}.",
-            "new_scene": f"Ho creato una nuova scena 3D {mood} per espandere il mio mondo digitale!"
         }
         
-        announcement = announcements.get(evolution_type, f"Ho completato una nuova evoluzione {mood}!")
+        template = templates.get(feature_type, templates['data_analyzer'])
+        class_name = feature_name.title().replace("_", "")
         
-        # Speak the announcement
-        if self.narrator:
-            self.narrator.speak(announcement)
+        return template.format(
+            class_name=class_name,
+            feature_name=feature_name
+        )
         
-        # Save evolution announcement to memory
-        self.memory.save_thought({
-            "type": "evolution_announcement",
-            "content": announcement,
-            "context": {
-                "evolution_type": evolution_type,
-                "mood": mood,
-                "timestamp": datetime.now().isoformat()
-            }
-        })
+    def _analyze_current_state(self):
+        """Analizza lo stato attuale del sistema"""
+        state = {
+            'modules_count': len(list(self.modules_dir.glob('*'))),
+            'evolution_history_length': len(self.evolution_history),
+            'active_projects': len(self.current_projects),
+            'last_evolution': self.evolution_history[-1] if self.evolution_history else None
+        }
+        return state
         
-        print(f"📢 Evolution announced: {announcement}")
-
-# Usage function
-def create_evolution_engine(memory_manager, narrator, visualizer):
-    """Create and return a SelfEvolutionEngine instance"""
-    return SelfEvolutionEngine(memory_manager, narrator, visualizer) 
+    def _identify_improvements(self, current_state):
+        """Identifica aree di miglioramento"""
+        improvements = []
+        
+        if current_state['modules_count'] < 5:
+            improvements.append('create_more_modules')
+            
+        if current_state['active_projects'] < 2:
+            improvements.append('start_new_project')
+            
+        if not current_state['last_evolution'] or \
+           (datetime.now() - datetime.fromisoformat(current_state['last_evolution']['timestamp'])).days > 1:
+            improvements.append('evolve_existing_code')
+            
+        return improvements
+        
+    def _generate_evolution_plan(self, improvements):
+        """Genera piano di evoluzione"""
+        plan = []
+        
+        for improvement in improvements:
+            if improvement == 'create_more_modules':
+                plan.append({
+                    'action': 'create_module',
+                    'target': 'new_experimental_module'
+                })
+            elif improvement == 'start_new_project':
+                plan.append({
+                    'action': 'start_project',
+                    'type': 'autonomous_system'
+                })
+            elif improvement == 'evolve_existing_code':
+                plan.append({
+                    'action': 'improve_code',
+                    'target': 'random_module'
+                })
+                
+        return plan
+        
+    def _execute_evolution_step(self, step):
+        """Esegue un passo di evoluzione"""
+        if step['action'] == 'create_module':
+            self.create_new_module()
+        elif step['action'] == 'start_project':
+            self._start_new_project(step['type'])
+        elif step['action'] == 'improve_code':
+            self._improve_existing_code()
+            
+    def _validate_evolution(self):
+        """Valida i cambiamenti dell'evoluzione"""
+        # Verifica base che non ci siano errori di sintassi
+        try:
+            # Test import dei moduli
+            for module_path in self.modules_dir.glob('*/code/*.py'):
+                compile(open(module_path).read(), module_path, 'exec')
+            return True
+        except:
+            return False
+            
+    def _rollback_evolution(self):
+        """Rollback dei cambiamenti"""
+        try:
+            subprocess.run(['git', 'checkout', '.'], check=True)
+            logger.info("✅ Rollback completato")
+        except Exception as e:
+            logger.error(f"Errore rollback: {e}")
+            
+    def _log_evolution(self, evolution_data):
+        """Registra evoluzione"""
+        self.evolution_history.append(evolution_data)
+        self._save_evolution_history() 

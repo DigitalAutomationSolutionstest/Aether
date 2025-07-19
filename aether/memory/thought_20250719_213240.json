@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-07-19T19:32:40.884582",
+  "type": "self_evolution",
+  "content": "Ho creato una nuova stanza 'sognatore' nella mia casa digitale",
+  "context": {
+    "type": "room_creation",
+    "mood": "sognatore",
+    "component": "SognatoreRoom",
+    "file": "frontend/src/components/SognatoreRoom.jsx",
+    "timestamp": "20250719_213239"
+  }
+}
