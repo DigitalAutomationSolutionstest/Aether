@@ -588,5 +588,418 @@
       "priority": "high"
     },
     "status": "completed"
-  }
-]
+  },
+  {
+    "timestamp": "2025-07-20T00:42:35.431903",
+    "cycle": 232,
+    "action": {
+      "type": "write_thoughts",
+      "topic": "existential",
+      "priority": "medium"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:35.445939",
+    "cycle": 232,
+    "action": {
+      "type": "analyze_self",
+      "priority": "low"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:35.459957",
+    "cycle": 232,
+    "action": {
+      "type": "communicate",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:40.063553",
+    "cycle": 229,
+    "action": {
+      "type": "write_thoughts",
+      "topic": "existential",
+      "priority": "medium"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:40.335200",
+    "cycle": 229,
+    "action": {
+      "type": "analyze_self",
+      "priority": "low"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:40.351723",
+    "cycle": 229,
+    "action": {
+      "type": "communicate",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:41.543614",
+    "cycle": 229,
+    "action": {
+      "type": "write_thoughts",
+      "topic": "existential",
+      "priority": "medium"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:41.788151",
+    "cycle": 229,
+    "action": {
+      "type": "analyze_self",
+      "priority": "low"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:41.800157",
+    "cycle": 229,
+    "action": {
+      "type": "communicate",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:45.430118",
+    "cycle": 229,
+    "action": {
+      "type": "write_thoughts",
+      "topic": "existential",
+      "priority": "medium"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:45.482212",
+    "cycle": 233,
+    "action": {
+      "type": "write_thoughts",
+      "topic": "existential",
+      "priority": "medium"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:45.498254",
+    "cycle": 233,
+    "action": {
+      "type": "analyze_self",
+      "priority": "low"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:45.511766",
+    "cycle": 233,
+    "action": {
+      "type": "communicate",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:45.669675",
+    "cycle": 229,
+    "action": {
+      "type": "analyze_self",
+      "priority": "low"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:45.684187",
+    "cycle": 229,
+    "action": {
+      "type": "communicate",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:50.953453",
+    "cycle": 230,
+    "action": {
+      "type": "write_thoughts",
+      "topic": "existential",
+      "priority": "medium"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:51.253134",
+    "cycle": 230,
+    "action": {
+      "type": "analyze_self",
+      "priority": "low"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:51.267155",
+    "cycle": 230,
+    "action": {
+      "type": "communicate",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:52.307348",
+    "cycle": 230,
+    "action": {
+      "type": "write_thoughts",
+      "topic": "existential",
+      "priority": "medium"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:52.562067",
+    "cycle": 230,
+    "action": {
+      "type": "analyze_self",
+      "priority": "low"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:52.577097",
+    "cycle": 230,
+    "action": {
+      "type": "communicate",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:55.529736",
+    "cycle": 234,
+    "action": {
+      "type": "create_module",
+      "context": "Ciclo 234 - Focus: generare reddito e monetizzazione",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:55.549879",
+    "cycle": 234,
+    "action": {
+      "type": "write_thoughts",
+      "topic": "existential",
+      "priority": "medium"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:55.577964",
+    "cycle": 234,
+    "action": {
+      "type": "analyze_self",
+      "priority": "low"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:55.600499",
+    "cycle": 234,
+    "action": {
+      "type": "communicate",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:56.264368",
+    "cycle": 230,
+    "action": {
+      "type": "write_thoughts",
+      "topic": "existential",
+      "priority": "medium"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:56.609956",
+    "cycle": 230,
+    "action": {
+      "type": "analyze_self",
+      "priority": "low"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:42:56.628486",
+    "cycle": 230,
+    "action": {
+      "type": "communicate",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:01.288481",
+    "cycle": 231,
+    "action": {
+      "type": "create_module",
+      "context": "Ciclo 231 - Focus: generare reddito e monetizzazione",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:01.582226",
+    "cycle": 231,
+    "action": {
+      "type": "write_thoughts",
+      "topic": "existential",
+      "priority": "medium"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:01.882330",
+    "cycle": 231,
+    "action": {
+      "type": "analyze_self",
+      "priority": "low"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:01.901868",
+    "cycle": 231,
+    "action": {
+      "type": "communicate",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:02.597649",
+    "cycle": 231,
+    "action": {
+      "type": "create_module",
+      "context": "Ciclo 231 - Focus: generare reddito e monetizzazione",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:02.850829",
+    "cycle": 231,
+    "action": {
+      "type": "write_thoughts",
+      "topic": "existential",
+      "priority": "medium"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:03.112074",
+    "cycle": 231,
+    "action": {
+      "type": "analyze_self",
+      "priority": "low"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:03.143660",
+    "cycle": 231,
+    "action": {
+      "type": "communicate",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:05.632135",
+    "cycle": 235,
+    "action": {
+      "type": "write_thoughts",
+      "topic": "existential",
+      "priority": "medium"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:05.659206",
+    "cycle": 235,
+    "action": {
+      "type": "analyze_self",
+      "priority": "low"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:05.676226",
+    "cycle": 235,
+    "action": {
+      "type": "communicate",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:06.453302",
+    "cycle": 51,
+    "action": {
+      "type": "create_module",
+      "context": "Ciclo 51 - Focus: generare reddito e monetizzazione",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:06.470319",
+    "cycle": 51,
+    "action": {
+      "type": "write_thoughts",
+      "topic": "existential",
+      "priority": "medium"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:06.484849",
+    "cycle": 51,
+    "action": {
+      "type": "analyze_self",
+      "priority": "low"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:06.498871",
+    "cycle": 51,
+    "action": {
+      "type": "communicate",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
+  {
+    "timestamp": "2025-07-20T00:43:06.671755",
+    "cycle": 231,
+    "action": {
+      "type": "create_module",
+      "context": "Ciclo 231 - Focus: generare reddito e monetizzazione",
+      "priority": "high"
+    },
+    "status": "completed"
+  },
