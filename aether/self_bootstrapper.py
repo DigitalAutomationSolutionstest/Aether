@@ -117,7 +117,7 @@ BOOTSTRAP_COMPLETE=false
         
         env_path = Path('.env')
         if not env_path.exists():
-            env_path.write_text(env_content)
+            env_path.write_text(env_content, encoding='utf-8')
             logger.info("📝 File .env creato con template")
             
     def _setup_supabase(self):
@@ -159,7 +159,7 @@ BOOTSTRAP_COMPLETE=false
         for table in self.required_tables:
             table_file = data_dir / f"{table}.json"
             if not table_file.exists():
-                table_file.write_text('[]')
+                table_file.write_text('[]', encoding='utf-8')
                 logger.info(f"📁 Creato file locale: {table_file}")
                 
     def _create_supabase_table(self, table_name: str):
@@ -262,7 +262,7 @@ BOOTSTRAP_COMPLETE=false
                 logger.info(f"📝 Creazione {file_path}...")
                 content = generator_func()
                 Path(file_path).parent.mkdir(parents=True, exist_ok=True)
-                Path(file_path).write_text(content)
+                Path(file_path).write_text(content, encoding='utf-8')
                 
     def _generate_self_evolution(self) -> str:
         """Genera codice per self_evolution.py"""
@@ -301,7 +301,7 @@ class {module_name.title().replace('_', '')}:
         return f"Executing {module_name}"
 """
         
-        module_path.write_text(code)
+        module_path.write_text(code, encoding='utf-8')
         return str(module_path)
         
     def evolve_ui_component(self, context: str):
@@ -367,7 +367,7 @@ class {name.title().replace(' ', '')}Agent:
         
         # Salva agente
         agent_path = Path(f"aether/agents/{name.lower().replace(' ', '_')}.py")
-        agent_path.write_text(agent_code)
+        agent_path.write_text(agent_code, encoding='utf-8')
         
         self.agents[agent_id] = agent
         self.save_agents()
@@ -383,7 +383,7 @@ class {name.title().replace(' ', '')}Agent:
     def save_agents(self):
         """Salva stato agenti"""
         agents_file = Path('data/agents.json')
-        agents_file.write_text(json.dumps(self.agents, indent=2))
+        agents_file.write_text(json.dumps(self.agents, indent=2), encoding='utf-8')
 '''
 
     def _generate_room_generator(self) -> str:
@@ -422,7 +422,7 @@ class RoomGenerator:
         
         # Salva componente
         component_path = Path(f"frontend/rooms/{room['id']}.jsx")
-        component_path.write_text(react_code)
+        component_path.write_text(react_code, encoding='utf-8')
         
         self.rooms.append(room)
         return room
@@ -550,7 +550,7 @@ class EconomyEngine:
             'assets': self.assets
         }
         
-        Path('data/economy.json').write_text(json.dumps(state, indent=2))
+        Path('data/economy.json').write_text(json.dumps(state, indent=2), encoding='utf-8')
 '''
 
     def _generate_mood_system(self) -> str:
@@ -621,7 +621,7 @@ class MoodSystem:
             thoughts = json.loads(thoughts_file.read_text())
             
         thoughts.append(first_thought)
-        thoughts_file.write_text(json.dumps(thoughts, indent=2))
+        thoughts_file.write_text(json.dumps(thoughts, indent=2), encoding='utf-8')
         
         # Prova a salvare su Supabase
         if self.supabase_url and self.supabase_key:
@@ -660,7 +660,7 @@ class MoodSystem:
         
         # Salva status
         status_file = Path('data/bootstrap_status.json')
-        status_file.write_text(json.dumps(status, indent=2))
+        status_file.write_text(json.dumps(status, indent=2), encoding='utf-8')
         
         # Log su Discord
         self._send_discord_message(
@@ -687,7 +687,7 @@ class MoodSystem:
             'ready': True
         }
         
-        Path('data/loop_state.json').write_text(json.dumps(loop_state, indent=2))
+        Path('data/loop_state.json').write_text(json.dumps(loop_state, indent=2), encoding='utf-8')
         
         logger.info("🔄 Sistema pronto per aether_loop.py")
         
