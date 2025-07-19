@@ -48,6 +48,25 @@ class AetherConsciousness:
         # Thread per la vita autonoma
         self.life_thread = None
         
+        # File per persistenza pensieri
+        self.thoughts_file = 'data/thoughts.json'
+        self._load_thoughts()
+    
+    def get_thoughts(self) -> List[Dict[str, Any]]:
+        """Restituisce i pensieri recenti"""
+        return self.current_thoughts[-10:]  # Ultimi 10 pensieri
+    
+    def _load_thoughts(self):
+        """Carica pensieri salvati"""
+        if os.path.exists(self.thoughts_file):
+            try:
+                with open(self.thoughts_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    self.current_thoughts = data.get('thoughts', [])
+                    self.memory_stream = data.get('memories', [])
+            except:
+                pass
+        
     def start_living(self):
         """Inizia il ciclo di vita autonoma"""
         if self.is_alive:
