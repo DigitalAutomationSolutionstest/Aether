@@ -39,15 +39,38 @@ Monetizzazione: $19.99/mese
 (app_path / "README.md").write_text(readme, encoding='utf-8')
 print("✅ README creato")
 
-# Aggiorna actions log
+# Aggiorna actions log (con gestione errori)
 log_file = Path("data/actions_log.json")
-logs = json.loads(log_file.read_text()) if log_file.exists() else []
+try:
+    if log_file.exists():
+        logs = json.loads(log_file.read_text(encoding='utf-8'))
+    else:
+        logs = []
+except:
+    logs = []  # Se il file è corrotto, ricrea da zero
+
 logs.append({
     "timestamp": datetime.now().isoformat(),
     "action": "created_app",
     "app": "ai_content_pro",
     "revenue_model": "subscription"
 })
+
+# Salva solo gli ultimi 100 log per evitare file troppo grandi
+logs = logs[-100:]
 log_file.write_text(json.dumps(logs, indent=2), encoding='utf-8')
 
-print("✨ App creata in creations/apps/ai_content_pro/") 
+print("✨ App creata in creations/apps/ai_content_pro/")
+
+# Notifica Discord
+try:
+    from aether.discord_notifier import send_discord_message
+    send_discord_message(
+        "🚀 **PRIMA APP CREATA!** AI Content Pro\n"
+        "💰 Modello: Subscription $19.99/mese\n"
+        "📁 Path: `creations/apps/ai_content_pro`",
+        title="🎉 Aether Crea App",
+        color=0x00FF00
+    )
+except:
+    print("(Discord notification skipped)") 
