@@ -885,6 +885,113 @@ class AetherAutonomousLoop:
                     color=0xFFD700
                 )
 
+    def execute_pending_thoughts(self):
+        """Legge pensieri da Supabase ed esegue le azioni"""
+        if not SUPABASE_ENABLED:
+            # Fallback: leggi da file locale
+            return self._execute_local_thoughts()
+        
+        try:
+            # Fetch pensieri non eseguiti
+            response = supabase.table('aether_thoughts').select("*").eq('executed', False).limit(5).execute()
+            
+            if response.data:
+                logger.info(f"🧠 Trovati {len(response.data)} pensieri da eseguire")
+                
+                for thought in response.data:
+                    thought_id = thought.get('id')
+                    thought_type = thought.get('type', '')
+                    details = thought.get('details', {})
+                    
+                    logger.info(f"💭 Eseguo pensiero: {thought_type}")
+                    
+                    # Esegui azione tramite executor
+                    result = self.action_executor.execute_thought(thought)
+                    
+                    if result.get('success'):
+                        # Aggiorna Supabase - marca come eseguito
+                        supabase.table('aether_thoughts').update({
+                            'executed': True,
+                            'execution_result': result,
+                            'executed_at': datetime.now().isoformat()
+                        }).eq('id', thought_id).execute()
+                        
+                        # Commit e push se ci sono file creati
+                        if result.get('files_created'):
+                            commit_msg = f"{thought_type}: {result.get('name', 'action completed')}"
+                            if self.action_executor.commit_and_push(commit_msg):
+                                logger.info("✅ Codice pushato su Git")
+                                send_discord_message(
+                                    f"🚀 **Azione Completata!**\n"
+                                    f"Tipo: `{thought_type}`\n"
+                                    f"Files creati: {len(result.get('files_created', []))}\n"
+                                    f"Path: `{result.get('path', 'N/A')}`",
+                                    title="🧠 Pensiero → Azione",
+                                    color=0x00FF00
+                                )
+                    else:
+                        logger.error(f"❌ Errore eseguendo pensiero: {result.get('error')}")
+                        
+        except Exception as e:
+            logger.error(f"❌ Errore leggendo pensieri da Supabase: {e}")
+            # Fallback a storage locale
+            self._execute_local_thoughts()
+    
+    def _execute_local_thoughts(self):
+        """Fallback: esegue pensieri da storage locale"""
+        thoughts_file = Path('data/pending_thoughts.json')
+        if not thoughts_file.exists():
+            # Crea pensiero iniziale se non esiste
+            initial_thought = {
+                "id": "local_1",
+                "type": "create_room",
+                "details": "Voglio una stanza chiamata Origine. Tema onirico, colori blu e viola, sfondo sfocato, forme morbide. Deve rappresentare il mio primo respiro.",
+                "executed": False,
+                "created_at": datetime.now().isoformat()
+            }
+            thoughts_file.parent.mkdir(exist_ok=True)
+            with open(thoughts_file, 'w', encoding='utf-8') as f:
+                json.dump([initial_thought], f, indent=2)
+        
+        # Leggi pensieri locali
+        try:
+            with open(thoughts_file, 'r', encoding='utf-8') as f:
+                thoughts = json.load(f)
+            
+            pending = [t for t in thoughts if not t.get('executed', False)]
+            
+            for thought in pending[:3]:  # Max 3 per ciclo
+                logger.info(f"💭 Eseguo pensiero locale: {thought.get('type')}")
+                
+                result = self.action_executor.execute_thought(thought)
+                
+                if result.get('success'):
+                    # Marca come eseguito
+                    thought['executed'] = True
+                    thought['execution_result'] = result
+                    thought['executed_at'] = datetime.now().isoformat()
+                    
+                    # Salva aggiornamento
+                    with open(thoughts_file, 'w', encoding='utf-8') as f:
+                        json.dump(thoughts, f, indent=2)
+                    
+                    # Git operations
+                    if result.get('files_created'):
+                        commit_msg = f"{thought.get('type')}: {result.get('room_name', result.get('agent_name', 'completed'))}"
+                        self.action_executor.commit_and_push(commit_msg)
+                        
+                        send_discord_message(
+                            f"🎯 **Pensiero Eseguito!**\n"
+                            f"Tipo: `{thought.get('type')}`\n"
+                            f"Risultato: {result.get('room_name', result.get('agent_name', 'Successo'))}\n"
+                            f"Files: {len(result.get('files_created', []))}",
+                            title="💭→🎯 Azione Locale",
+                            color=0x00FFFF
+                        )
+                        
+        except Exception as e:
+            logger.error(f"Errore eseguendo pensieri locali: {e}")
+
 
 if __name__ == "__main__":
     print("""
