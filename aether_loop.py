@@ -25,7 +25,7 @@ logger = logging.getLogger('AetherLoop')
 from aether.consciousness_engine import AetherConsciousness
 from aether.self_evolution import SelfEvolutionEngine
 from aether.strategic_thinker import StrategicThinker
-from aether.self_bootstrapper import SelfBootstrapper
+from aether.self_bootstrapper import AetherSelfBootstrapper as SelfBootstrapper
 from aether.discord_notifier import send_discord_message
 from aether.action_executor import AetherActionExecutor
 
@@ -175,6 +175,11 @@ class AetherAutonomousLoop:
                 
                 # 3. Decidi azioni autonome
                 actions = self._decide_actions(status, thoughts, human_feedback)
+                
+                # 3.5 NUOVO: Esegui pensieri pendenti (da Supabase o locale)
+                if self.cycle_count % 2 == 0:  # Ogni 2 cicli
+                    logger.info("🧠 Controllo pensieri da trasformare in azioni...")
+                    self.execute_pending_thoughts()
                 
                 # 4. Esegui azioni
                 for action in actions:
