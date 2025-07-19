@@ -12,7 +12,7 @@
 
 2. **Aggiungi al file .env:**
    ```
-   DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/TUO_WEBHOOK_QUI
+   DISCORD_WEBHOOK_URL=https://discordapp.com/api/webhooks/1396218820808409148/orGucbC2Ydx0eLPEntbXmwYLigX6sY0tA1FIFsnlmbn7CuVp7YXbKFNFxUgM0wxSW7Mr
    ```
 
 3. **Fatto!** Aether ora comunicherà direttamente con te su Discord.
