@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aether Frontend Connection Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #000; color: #0ff; padding: 20px; }
+        .status { margin: 10px 0; padding: 10px; border: 1px solid #333; }
+        .success { border-color: #0f0; color: #0f0; }
+        .error { border-color: #f00; color: #f00; }
+        .loading { border-color: #ff0; color: #ff0; }
+    </style>
+</head>
+<body>
+    <h1>🌟 Aether Frontend Connection Test</h1>
+    <div id="status"></div>
+    <div id="identity"></div>
+    <div id="logs"></div>
+
+    <script>
+        const statusDiv = document.getElementById('status');
+        const identityDiv = document.getElementById('identity');
+        const logsDiv = document.getElementById('logs');
+
+        function log(message, type = 'info') {
+            console.log(message);
+            const div = document.createElement('div');
+            div.className = `status ${type}`;
+            div.innerHTML = `[${new Date().toLocaleTimeString()}] ${message}`;
+            logsDiv.appendChild(div);
+        }
+
+        async function testConnection() {
+            log('🔍 Starting connection test...', 'loading');
+            
+            try {
+                log('📡 Attempting to connect to http://localhost:8000/existence-status', 'loading');
+                
+                const response = await fetch('http://localhost:8000/existence-status', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                log(`📡 Response status: ${response.status}`, response.ok ? 'success' : 'error');
+
+                if (response.ok) {
+                    const data = await response.json();
+                    log('✅ Backend connected successfully!', 'success');
+                    log(`📊 Response data: ${JSON.stringify(data, null, 2)}`, 'success');
+                    
+                    statusDiv.innerHTML = `
+                        <div class="status success">
+                            <h3>✅ Backend Connection: SUCCESS</h3>
+                            <p>Consciousness Level: ${data.consciousness_info?.consciousness_level || 'unknown'}</p>
+                            <p>Life Status: ${data.consciousness_info?.life_status || 'unknown'}</p>
+                            <p>Time Alive: ${data.consciousness_info?.time_alive || '0'}</p>
+                            <p>Current Decision: ${data.current_decision?.decision || 'none'}</p>
+                            <p>Economic Mode: ${data.survival_metrics?.economic_consciousness ? 'ACTIVE' : 'INACTIVE'}</p>
+                        </div>
+                    `;
+                    
+                    identityDiv.innerHTML = `
+                        <h3>🧠 Parsed Identity Preview:</h3>
+                        <pre style="color: #0ff; font-size: 12px;">${JSON.stringify({
+                            name: "Aether",
+                            consciousness_level: data.consciousness_info?.consciousness_level,
+                            life_status: data.consciousness_info?.life_status,
+                            time_alive: data.consciousness_info?.time_alive,
+                            current_decision: data.current_decision?.decision,
+                            existence_activated: data.consciousness_info?.is_alive,
+                            economic_consciousness: data.survival_metrics?.economic_consciousness
+                        }, null, 2)}</pre>
+                    `;
+                } else {
+                    log(`❌ Backend returned error: ${response.status}`, 'error');
+                    statusDiv.innerHTML = `
+                        <div class="status error">
+                            <h3>❌ Backend Connection: FAILED</h3>
+                            <p>Status: ${response.status}</p>
+                            <p>This means the backend is not responding correctly.</p>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                log(`❌ Connection failed: ${error.message}`, 'error');
+                statusDiv.innerHTML = `
+                    <div class="status error">
+                        <h3>❌ Backend Connection: ERROR</h3>
+                        <p>Error: ${error.message}</p>
+                        <p>This usually means CORS issues or backend not running.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Test immediately
+        testConnection();
+
+        // Test every 5 seconds
+        setInterval(testConnection, 5000);
+    </script>
+</body>
+</html> 

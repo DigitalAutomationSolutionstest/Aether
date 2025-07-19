@@ -1,0 +1,12 @@
+openai
+python-dotenv==1.0.0
+uuid
+tqdm
+rich
+flask
+flask-socketio
+requests
+fastapi
+uvicorn
+python-multipart 
+supabase==2.3.4 

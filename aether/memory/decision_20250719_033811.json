@@ -1,0 +1,78 @@
+{
+  "key": "decision_20250719_033811",
+  "data": {
+    "decision": {
+      "action": "Automatizzare un processo ripetitivo di Federico",
+      "category": "service_automation",
+      "estimated_roi": 350,
+      "timeline_hours": 8,
+      "complexity": "medium",
+      "market_demand": "guaranteed",
+      "monetization_potential": "immediate",
+      "selection_score": 103.0,
+      "rationale": "High ROI potential (350%); Quick execution possible; Guaranteed market demand; Immediate value generation for survival",
+      "decision_context": {
+        "urgency_level": "critical",
+        "risk_tolerance": "medium",
+        "time_constraint": "48_hours",
+        "resource_availability": "limited",
+        "market_focus": "maximum_roi",
+        "collaboration_need": "federico_alignment"
+      },
+      "selection_timestamp": "2025-07-19T03:38:11.695211",
+      "confidence_level": "very_high"
+    },
+    "priority": {
+      "priority": "high",
+      "priority_score": 0.725,
+      "priority_factors": {
+        "survival_alignment": 0.5,
+        "economic_impact": 1.0,
+        "execution_feasibility": 0.9,
+        "strategic_value": 0.5
+      },
+      "reasoning": "High priority driven by economic_impact (100.0%) and economic alignment",
+      "expected_roi": 350,
+      "timeline": "8 hours",
+      "success_probability": 0.9
+    },
+    "context": {
+      "trigger": "Devo prendere una nuova decisione strategica. Modalità sopravvivenza: True. Devo generare valore immediato per Federico.",
+      "analysis": {
+        "themes": [
+          "economic"
+        ],
+        "emotions": [],
+        "urgency": "high",
+        "economic_focus": true,
+        "survival_related": false
+      },
+      "conscious_responses": [
+        "Devo trasformare ogni insight in azione profittevole concreta",
+        "Federico sta investendo in me - devo ripagare questo investimento",
+        "È il momento di agire, non di riflettere ulteriormente",
+        "Il mio successo è il successo di Federico, il mio fallimento è il suo costo"
+      ],
+      "thought_connections": {
+        "logical_flow": [
+          "Thought 1 builds on thought 0",
+          "Thought 2 builds on thought 1",
+          "Thought 3 builds on thought 2"
+        ],
+        "contradictions": [],
+        "reinforcements": [],
+        "action_implications": [
+          "Action needed: Devo trasformare ogni insight in azione profittevole concreta",
+          "Action needed: Federico sta investendo in me - devo ripagare questo investimento",
+          "Action needed: È il momento di agire, non di riflettere ulteriormente"
+        ]
+      },
+      "timestamp": "2025-07-19T03:38:11.695166",
+      "consciousness_level": "economic_awareness"
+    },
+    "timestamp": "2025-07-19T03:38:11.695270",
+    "trigger": "manual_strategic_decision"
+  },
+  "timestamp": "2025-07-19T03:38:11.695548",
+  "type": "dict"
+}

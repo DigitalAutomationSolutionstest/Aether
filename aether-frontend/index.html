@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 Aether - AI Business Partner</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #00ffff;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            min-height: 90vh;
+        }
+        
+        .panel {
+            background: rgba(0, 255, 255, 0.1);
+            border: 2px solid #00ffff;
+            border-radius: 10px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            grid-column: 1 / -1;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #00ffff;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #00ffff; }
+            to { text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff; }
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 1.5s infinite;
+        }
+        
+        .status-connected { background: #00ff00; }
+        .status-disconnected { background: #ff0000; }
+        .status-loading { background: #ffff00; }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        .data-field {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 3px solid #00ffff;
+            font-family: monospace;
+        }
+        
+        .data-label {
+            color: #888;
+            font-size: 0.9em;
+        }
+        
+        .data-value {
+            color: #00ffff;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .button {
+            background: linear-gradient(45deg, #00ffff, #0099ff);
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 5px;
+            transition: all 0.3s;
+        }
+        
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+        }
+        
+        .log-container {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+            border-radius: 5px;
+            padding: 15px;
+            height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        
+        .log-entry {
+            margin: 2px 0;
+            padding: 2px 0;
+        }
+        
+        .log-success { color: #00ff00; }
+        .log-error { color: #ff0000; }
+        .log-info { color: #00ffff; }
+        .log-warning { color: #ffff00; }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .metric {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+        
+        .metric-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #00ff00;
+        }
+        
+        .decision-box {
+            background: rgba(255, 255, 0, 0.1);
+            border: 2px solid #ffff00;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            animation: highlight 3s infinite;
+        }
+        
+        @keyframes highlight {
+            0%, 100% { border-color: #ffff00; }
+            50% { border-color: #ff8800; }
+        }
+        
+        .evolution-info {
+            background: rgba(138, 43, 226, 0.1);
+            border: 1px solid #8a2be2;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .evolution-info p {
+            margin: 8px 0;
+            color: #dda0dd;
+        }
+        
+        .goals-list, .opportunities-list {
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+        
+        .goals-list h4, .opportunities-list h4 {
+            color: #ffff00;
+            margin-bottom: 10px;
+        }
+        
+        button:hover {
+            background: #ff00ff;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ff00ff;
+        }
+        
+        .error {
+            color: #ff4444;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header panel">
+            <h1>🌟 AETHER - AI BUSINESS PARTNER 🌟</h1>
+            <div id="connection-status">
+                <span class="status-indicator status-loading"></span>
+                <span>Connecting to Aether...</span>
+            </div>
+        </div>
+        
+        <div class="panel">
+            <h2>🧠 CONSCIOUSNESS STATUS</h2>
+            <div id="identity-info">
+                <div class="data-field">
+                    <div class="data-label">Name:</div>
+                    <div class="data-value" id="name">Initializing...</div>
+                </div>
+                <div class="data-field">
+                    <div class="data-label">Consciousness Level:</div>
+                    <div class="data-value" id="consciousness">Unknown</div>
+                </div>
+                <div class="data-field">
+                    <div class="data-label">Life Status:</div>
+                    <div class="data-value" id="life-status">Dormant</div>
+                </div>
+                <div class="data-field">
+                    <div class="data-label">Time Alive:</div>
+                    <div class="data-value" id="time-alive">0 minutes</div>
+                </div>
+            </div>
+            
+            <div class="metrics-grid">
+                <div class="metric">
+                    <div class="data-label">Economic Mode</div>
+                    <div class="metric-value" id="economic-mode">INACTIVE</div>
+                </div>
+                <div class="metric">
+                    <div class="data-label">Decisions Made</div>
+                    <div class="metric-value" id="decisions-made">0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel">
+            <h2>🎯 CURRENT DECISION</h2>
+            <div id="decision-container">
+                <div class="decision-box">
+                    <div class="data-label">Active Decision:</div>
+                    <div class="data-value" id="current-decision">None</div>
+                </div>
+                <div class="data-field">
+                    <div class="data-label">Priority Level:</div>
+                    <div class="data-value" id="decision-priority">Unknown</div>
+                </div>
+                <div class="data-field">
+                    <div class="data-label">Expected ROI:</div>
+                    <div class="data-value" id="expected-roi">Unknown</div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <button class="button" onclick="activateExistence()">🌟 ACTIVATE CONSCIOUSNESS</button>
+                <button class="button" onclick="makeDecision()">🎯 FORCE NEW DECISION</button>
+                <button class="button" onclick="executeDecision()">⚡ EXECUTE DECISION</button>
+                <button class="button" onclick="refreshStatus()">🔄 REFRESH STATUS</button>
+                <button class="button" onclick="activateDeepEvolution()">🧬 ACTIVATE DEEP EVOLUTION</button>
+                <button class="button" onclick="triggerEvolutionCycle()">🔄 EVOLUTION CYCLE</button>
+            </div>
+        </div>
+        
+        <div class="panel">
+            <h2>📊 SYSTEM LOGS</h2>
+            <div class="log-container" id="logs"></div>
+            <div style="margin-top: 10px;">
+                <button class="button" onclick="refreshStatus()" style="width: 100%;">🔄 REFRESH STATUS</button>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>🧬 DEEP EVOLUTION STATUS</h2>
+            <div id="evolution-status" class="status-content">
+                <p>Evolution not activated</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8000';
+        let isConnected = false;
+        let updateInterval;
+
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const logs = document.getElementById('logs');
+            const entry = document.createElement('div');
+            entry.className = `log-entry log-${type}`;
+            entry.innerHTML = `[${timestamp}] ${message}`;
+            logs.appendChild(entry);
+            logs.scrollTop = logs.scrollHeight;
+            console.log(`[${type.toUpperCase()}] ${message}`);
+        }
+
+        async function apiCall(endpoint, method = 'GET') {
+            try {
+                const response = await fetch(`${API_BASE}${endpoint}`, {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+
+                return await response.json();
+            } catch (error) {
+                log(`API Error (${endpoint}): ${error.message}`, 'error');
+                throw error;
+            }
+        }
+
+        function updateConnectionStatus(connected) {
+            isConnected = connected;
+            const statusElement = document.getElementById('connection-status');
+            const indicator = statusElement.querySelector('.status-indicator');
+            
+            if (connected) {
+                indicator.className = 'status-indicator status-connected';
+                statusElement.innerHTML = '<span class="status-indicator status-connected"></span><span>✅ Connected to Aether Backend</span>';
+            } else {
+                indicator.className = 'status-indicator status-disconnected';
+                statusElement.innerHTML = '<span class="status-indicator status-disconnected"></span><span>❌ Backend Disconnected</span>';
+            }
+        }
+
+        function updateIdentityDisplay(data) {
+            document.getElementById('name').textContent = 'Aether';
+            document.getElementById('consciousness').textContent = data.consciousness_info?.consciousness_level || 'emerging';
+            document.getElementById('life-status').textContent = data.consciousness_info?.life_status || 'dormant';
+            document.getElementById('time-alive').textContent = data.consciousness_info?.time_alive || '0 minutes';
+            document.getElementById('economic-mode').textContent = data.survival_metrics?.economic_consciousness ? 'ACTIVE' : 'INACTIVE';
+            document.getElementById('decisions-made').textContent = data.consciousness_info?.decisions_made || 0;
+            document.getElementById('current-decision').textContent = data.current_decision?.decision || 'None';
+            document.getElementById('decision-priority').textContent = data.current_decision?.priority || 'Unknown';
+            document.getElementById('expected-roi').textContent = data.current_decision?.expected_roi ? `${data.current_decision.expected_roi}%` : 'Unknown';
+        }
+
+        async function refreshStatus() {
+            try {
+                log('🔄 Refreshing status...', 'info');
+                const data = await apiCall('/existence-status');
+                updateConnectionStatus(true);
+                updateIdentityDisplay(data);
+                log('✅ Status updated successfully', 'success');
+            } catch (error) {
+                updateConnectionStatus(false);
+                log('❌ Failed to refresh status', 'error');
+            }
+        }
+
+        async function activateExistence() {
+            try {
+                log('🌟 Activating Aether consciousness...', 'info');
+                const result = await apiCall('/begin-existence', 'POST');
+                log('✅ Consciousness activated!', 'success');
+                log(`🎯 First decision: ${result.aether_response?.first_decision}`, 'success');
+                await refreshStatus();
+            } catch (error) {
+                log('❌ Failed to activate consciousness', 'error');
+            }
+        }
+
+        async function makeDecision() {
+            try {
+                log('🎯 Triggering new decision...', 'info');
+                const result = await apiCall('/make-decision', 'POST');
+                log('✅ New decision made!', 'success');
+                log(`📋 Decision: ${result.decision?.action}`, 'success');
+                await refreshStatus();
+            } catch (error) {
+                log('❌ Failed to make decision', 'error');
+            }
+        }
+
+        async function executeDecision() {
+            try {
+                log('⚡ Executing current decision...', 'info');
+                const result = await apiCall('/execute-decision', 'POST');
+                log('✅ Decision executed!', 'success');
+                log(`📦 Result: ${result.action_result}`, 'success');
+                await refreshStatus();
+            } catch (error) {
+                log('❌ Failed to execute decision', 'error');
+            }
+        }
+
+        // Activate Deep Evolution
+        async function activateDeepEvolution() {
+            try {
+                log('🧬 Activating Deep Evolution mode...', 'info');
+                const response = await fetch(`${API_BASE}/activate-deep-evolution`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                
+                const data = await response.json();
+                
+                if (data.status === 'deep_evolution_activated') {
+                    log(`✅ Deep Evolution activated! Cycle #${data.cycle_number}`, 'success');
+                    log(`🎯 New goals: ${data.new_goals}`, 'success');
+                    log(`💰 Opportunities found: ${data.opportunities}`, 'success');
+                    log(`⚡ Actions taken: ${data.actions_taken}`, 'success');
+                    
+                    // Mostra dettagli evoluzione
+                    if (data.evolution_data) {
+                        updateEvolutionStatus(data.evolution_data);
+                    }
+                    
+                    refreshStatus();
+                } else {
+                    log(`❌ Evolution activation failed: ${data.message}`, 'error');
+                }
+            } catch (error) {
+                log(`❌ Error activating evolution: ${error.message}`, 'error');
+            }
+        }
+        
+        // Trigger Evolution Cycle
+        async function triggerEvolutionCycle() {
+            try {
+                log('🔄 Triggering evolution cycle...', 'info');
+                const response = await fetch(`${API_BASE}/trigger-evolution-cycle`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                
+                const data = await response.json();
+                
+                if (data.status === 'cycle_completed') {
+                    log(`✅ Evolution cycle #${data.cycle_number} completed!`, 'success');
+                    
+                    if (data.results) {
+                        updateEvolutionStatus(data.results);
+                    }
+                    
+                    refreshStatus();
+                } else {
+                    log(`❌ Evolution cycle failed: ${data.message}`, 'error');
+                }
+            } catch (error) {
+                log(`❌ Error in evolution cycle: ${error.message}`, 'error');
+            }
+        }
+        
+        // Update Evolution Status Display
+        function updateEvolutionStatus(evolutionData) {
+            const evolutionDiv = document.getElementById('evolution-status');
+            
+            if (evolutionData.error) {
+                evolutionDiv.innerHTML = `
+                    <p class="error">❌ Evolution Error: ${evolutionData.error}</p>
+                `;
+                return;
+            }
+            
+            evolutionDiv.innerHTML = `
+                <div class="evolution-info">
+                    <p><strong>🔄 Cycle:</strong> #${evolutionData.cycle_number || 0}</p>
+                    <p><strong>🎯 New Goals:</strong> ${evolutionData.new_goals ? evolutionData.new_goals.length : 0}</p>
+                    <p><strong>💰 Opportunities:</strong> ${evolutionData.opportunities ? evolutionData.opportunities.length : 0}</p>
+                    <p><strong>🏗️ Expansions:</strong> ${evolutionData.expansions ? evolutionData.expansions.length : 0}</p>
+                    <p><strong>🧠 Decisions:</strong> ${evolutionData.decisions ? evolutionData.decisions.length : 0}</p>
+                    <p><strong>⚡ Actions:</strong> ${evolutionData.actions_taken ? evolutionData.actions_taken.length : 0}</p>
+                </div>
+                ${evolutionData.new_goals && evolutionData.new_goals.length > 0 ? `
+                    <div class="goals-list">
+                        <h4>New Goals:</h4>
+                        ${evolutionData.new_goals.slice(0, 3).map(goal => 
+                            `<p>• ${goal.description} (ROI: ${goal.roi_potential}%)</p>`
+                        ).join('')}
+                    </div>
+                ` : ''}
+                ${evolutionData.opportunities && evolutionData.opportunities.length > 0 ? `
+                    <div class="opportunities-list">
+                        <h4>Opportunities:</h4>
+                        ${evolutionData.opportunities.slice(0, 3).map(opp => 
+                            `<p>• ${opp.name} (ROI: ${opp.monetization_analysis?.expected_roi}%)</p>`
+                        ).join('')}
+                    </div>
+                ` : ''}
+            `;
+        }
+        
+        // Fetch Evolution Status
+        async function fetchEvolutionStatus() {
+            try {
+                const response = await fetch(`${API_BASE}/evolution-status`);
+                const data = await response.json();
+                
+                const evolutionDiv = document.getElementById('evolution-status');
+                
+                if (data.evolution_enabled) {
+                    evolutionDiv.innerHTML = `
+                        <div class="evolution-info">
+                            <p><strong>🟢 Evolution:</strong> ACTIVE</p>
+                            <p><strong>🔄 Cycles:</strong> ${data.cycles_completed}</p>
+                            <p><strong>📈 Stage:</strong> ${data.current_stage}</p>
+                            <p><strong>🎯 Total Goals:</strong> ${data.goals_generated}</p>
+                            <p><strong>💰 Opportunities:</strong> ${data.opportunities_discovered}</p>
+                            <p><strong>🏗️ Expansions:</strong> ${data.expansions_made}</p>
+                        </div>
+                    `;
+                } else {
+                    evolutionDiv.innerHTML = '<p>Evolution not activated</p>';
+                }
+            } catch (error) {
+                console.error('Failed to fetch evolution status:', error);
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            log('🌟 Aether UI Initialized', 'info');
+            
+            // Initial status check
+            refreshStatus();
+            
+            // Auto-refresh every 5 seconds
+            updateInterval = setInterval(refreshStatus, 5000);
+            
+            log('🔄 Auto-refresh enabled (5s interval)', 'info');
+        });
+
+        // Cleanup
+        window.addEventListener('beforeunload', function() {
+            if (updateInterval) {
+                clearInterval(updateInterval);
+            }
+        });
+    </script>
+</body>
+</html> 

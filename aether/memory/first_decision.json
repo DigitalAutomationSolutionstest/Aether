@@ -1,0 +1,33 @@
+{
+  "key": "first_decision",
+  "data": {
+    "decision": {
+      "action": "Automatizzare un processo ripetitivo di Federico",
+      "category": "service_automation",
+      "estimated_roi": 350,
+      "timeline_hours": 8,
+      "complexity": "medium",
+      "market_demand": "guaranteed",
+      "monetization_potential": "immediate",
+      "selection_score": 103.0,
+      "rationale": "High ROI potential (350%); Quick execution possible; Guaranteed market demand; Immediate value generation for survival",
+      "decision_context": {
+        "urgency_level": "critical",
+        "risk_tolerance": "low",
+        "time_constraint": "24_hours",
+        "resource_availability": "limited",
+        "market_focus": "maximum_roi",
+        "collaboration_need": "federico_alignment"
+      },
+      "selection_timestamp": "2025-07-19T03:40:19.383201",
+      "confidence_level": "very_high"
+    },
+    "reasoning": "Critical priority due to economic_impact (100.0%) and survival necessity",
+    "priority_level": "critical",
+    "expected_roi": 350,
+    "timeline": "8 hours",
+    "decision_timestamp": "2025-07-19T03:40:19.383246"
+  },
+  "timestamp": "2025-07-19T03:40:19.383405",
+  "type": "dict"
+}
