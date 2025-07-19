@@ -1,0 +1,9 @@
+{
+  "timestamp": "2025-07-19T19:19:36.823047",
+  "type": "integration_test",
+  "content": "Test integrazione memoria Aether",
+  "context": {
+    "test": true,
+    "system": "memory_manager"
+  }
+}
