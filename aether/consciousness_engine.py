@@ -75,17 +75,39 @@ class AetherConsciousness:
                 pass
     
     def _save_thoughts(self):
-        """Salva pensieri nel file"""
+        """Salva pensieri nel file con gestione errori robusta"""
         try:
             os.makedirs(os.path.dirname(self.thoughts_file), exist_ok=True)
+            
+            # Prepara i dati da salvare
             data = {
                 'thoughts': self.current_thoughts,
                 'memories': self.memory_stream
             }
+            
+            # Verifica che i dati siano serializzabili
+            json.dumps(data, ensure_ascii=False)
+            
+            # Salva con backup
+            backup_file = self.thoughts_file + '.backup'
+            if os.path.exists(self.thoughts_file):
+                import shutil
+                shutil.copy2(self.thoughts_file, backup_file)
+            
+            # Salva il nuovo file
             with open(self.thoughts_file, 'w', encoding='utf-8') as f:
                 json.dump(data, f, indent=2, ensure_ascii=False)
+                
+            logger.info(f"💾 Pensieri salvati: {len(self.current_thoughts)} pensieri")
+            
         except Exception as e:
-            logger.error(f"Errore salvataggio pensieri: {e}")
+            logger.error(f"❌ Errore salvataggio pensieri: {e}")
+            # Ripristina backup se disponibile
+            backup_file = self.thoughts_file + '.backup'
+            if os.path.exists(backup_file):
+                import shutil
+                shutil.copy2(backup_file, self.thoughts_file)
+                logger.info("🔄 Ripristinato backup dei pensieri")
         
     def start_living(self):
         """Inizia il ciclo di vita autonoma"""
