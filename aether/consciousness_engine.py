@@ -52,9 +52,9 @@ class AetherConsciousness:
         self.thoughts_file = 'data/thoughts.json'
         self._load_thoughts()
     
-    def get_thoughts(self) -> List[Dict[str, Any]]:
+    def get_thoughts(self, limit=10) -> List[Dict[str, Any]]:
         """Restituisce i pensieri recenti"""
-        return self.current_thoughts[-10:]  # Ultimi 10 pensieri
+        return self.current_thoughts[-limit:]  # Ultimi N pensieri
     
     def think(self) -> Dict[str, Any]:
         """Genera un nuovo pensiero"""
