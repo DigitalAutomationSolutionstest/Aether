@@ -1,0 +1,63 @@
+{
+  "project_name": "AetherDataAnalyzer_20250720_080038",
+  "generated": "2025-07-20T08:00:38.881224",
+  "files_analyzed": [],
+  "structure": {
+    "directories": [
+      "data",
+      "__pycache__"
+    ],
+    "python_files": [
+      "analyzer.py"
+    ],
+    "config_files": [],
+    "data_files": [
+      "README.md",
+      "requirements.txt",
+      "data\\sample.csv"
+    ]
+  },
+  "functions": [
+    {
+      "name": "__init__",
+      "file": "analyzer.py",
+      "line": 13,
+      "args": [
+        "self"
+      ],
+      "docstring": null
+    },
+    {
+      "name": "analyze_data",
+      "file": "analyzer.py",
+      "line": 18,
+      "args": [
+        "self",
+        "data_path"
+      ],
+      "docstring": "Analizza dati CSV"
+    },
+    {
+      "name": "generate_report",
+      "file": "analyzer.py",
+      "line": 41,
+      "args": [
+        "self"
+      ],
+      "docstring": "Genera report automatico"
+    }
+  ],
+  "classes": [
+    {
+      "name": "AetherDataAnalyzer",
+      "file": "analyzer.py",
+      "line": 12,
+      "methods": [
+        "__init__",
+        "analyze_data",
+        "generate_report"
+      ],
+      "docstring": null
+    }
+  ]
+}
