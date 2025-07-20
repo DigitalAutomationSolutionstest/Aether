@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-20T07:45:57.566332",
+  "timestamp": "2025-07-20T07:45:58.131160",
   "consciousness_level": 0.999,
   "thoughts": [
     {
@@ -854,27 +854,6 @@
     }
   ],
   "completed_tasks": [
-    {
-      "task_type": "create_sandbox",
-      "started": "2025-07-20T07:14:41.093566",
-      "sandbox_created": {
-        "name": "aether_sandbox_20250720_071441",
-        "path": "sandboxes\\aether_sandbox_20250720_071441",
-        "created": "2025-07-20T07:14:42.517503",
-        "type": "python",
-        "status": "active",
-        "files_created": [
-          "sandboxes\\aether_sandbox_20250720_071441\\main.py",
-          "sandboxes\\aether_sandbox_20250720_071441\\README.md",
-          "sandboxes\\aether_sandbox_20250720_071441\\requirements.txt"
-        ]
-      },
-      "sandbox_path": "sandboxes\\aether_sandbox_20250720_071441",
-      "success": true,
-      "completed": "2025-07-20T07:14:42.517503",
-      "duration_seconds": 1.423937,
-      "task_id": 343
-    },
     {
       "task_type": "create_project",
       "started": "2025-07-20T07:15:01.172967",
@@ -2500,6 +2479,23 @@
       "completed": "2025-07-20T07:45:39.340324",
       "duration_seconds": 0.002999,
       "task_id": 442
+    },
+    {
+      "task_type": "create_sandbox",
+      "started": "2025-07-20T07:45:58.129162",
+      "sandbox_created": {
+        "name": "aether_sandbox_20250720_074558",
+        "path": "sandboxes\\aether_sandbox_20250720_074558",
+        "created": "2025-07-20T07:45:58.131160",
+        "type": "web",
+        "status": "active",
+        "url": "file://C:\\Users\\UTENTE\\Documents\\invader-core-agent\\sandboxes\\aether_sandbox_20250720_074558/index.html"
+      },
+      "sandbox_path": "sandboxes\\aether_sandbox_20250720_074558",
+      "success": true,
+      "completed": "2025-07-20T07:45:58.131160",
+      "duration_seconds": 0.001998,
+      "task_id": 443
     }
   ],
   "created_projects": [
