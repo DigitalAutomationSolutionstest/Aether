@@ -1937,3 +1937,86 @@ Monitoraggio processi, sistema e backup automatici attivi.
 2025-07-20 07:30:58,702 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non sano
 2025-07-20 07:30:58,702 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherTasks24_7
 2025-07-20 07:30:58,702 - Guardian - ERROR - ❌ Impossibile riavviare AetherTasks24_7
+2025-07-20 07:31:28,709 - Guardian - WARNING - ⚠️ Processo AetherVivo non esiste più
+2025-07-20 07:31:28,710 - Guardian - WARNING - ⚠️ Processo AetherVivo non sano
+2025-07-20 07:31:28,710 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherVivo
+2025-07-20 07:31:28,710 - Guardian - ERROR - ❌ Impossibile riavviare AetherVivo
+2025-07-20 07:31:28,716 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non esiste più
+2025-07-20 07:31:28,717 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non sano
+2025-07-20 07:31:28,717 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherTasks24_7
+2025-07-20 07:31:28,717 - Guardian - ERROR - ❌ Impossibile riavviare AetherTasks24_7
+2025-07-20 07:31:58,727 - Guardian - WARNING - ⚠️ Processo AetherVivo non esiste più
+2025-07-20 07:31:58,727 - Guardian - WARNING - ⚠️ Processo AetherVivo non sano
+2025-07-20 07:31:58,727 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherVivo
+2025-07-20 07:31:58,727 - Guardian - ERROR - ❌ Impossibile riavviare AetherVivo
+2025-07-20 07:31:58,734 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non esiste più
+2025-07-20 07:31:58,735 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non sano
+2025-07-20 07:31:58,735 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherTasks24_7
+2025-07-20 07:31:58,735 - Guardian - ERROR - ❌ Impossibile riavviare AetherTasks24_7
+2025-07-20 07:32:26,356 - Guardian - INFO - 📢 Notifica: 🛡️ Guardian System operativo - Report orario
+2025-07-20 07:32:26,871 - Guardian - INFO - 💾 Backup incrementale creato: 8 file modificati
+2025-07-20 07:32:26,871 - Guardian - INFO - 📢 Notifica: 💾 Backup incrementale completato
+2025-07-20 07:32:28,742 - Guardian - WARNING - ⚠️ Processo AetherVivo non esiste più
+2025-07-20 07:32:28,742 - Guardian - WARNING - ⚠️ Processo AetherVivo non sano
+2025-07-20 07:32:28,742 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherVivo
+2025-07-20 07:32:28,742 - Guardian - ERROR - ❌ Impossibile riavviare AetherVivo
+2025-07-20 07:32:28,749 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non esiste più
+2025-07-20 07:32:28,749 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non sano
+2025-07-20 07:32:28,749 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherTasks24_7
+2025-07-20 07:32:28,749 - Guardian - ERROR - ❌ Impossibile riavviare AetherTasks24_7
+2025-07-20 07:32:58,758 - Guardian - WARNING - ⚠️ Processo AetherVivo non esiste più
+2025-07-20 07:32:58,758 - Guardian - WARNING - ⚠️ Processo AetherVivo non sano
+2025-07-20 07:32:58,758 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherVivo
+2025-07-20 07:32:58,759 - Guardian - ERROR - ❌ Impossibile riavviare AetherVivo
+2025-07-20 07:32:58,765 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non esiste più
+2025-07-20 07:32:58,765 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non sano
+2025-07-20 07:32:58,765 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherTasks24_7
+2025-07-20 07:32:58,765 - Guardian - ERROR - ❌ Impossibile riavviare AetherTasks24_7
+2025-07-20 07:33:28,773 - Guardian - WARNING - ⚠️ Processo AetherVivo non esiste più
+2025-07-20 07:33:28,773 - Guardian - WARNING - ⚠️ Processo AetherVivo non sano
+2025-07-20 07:33:28,773 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherVivo
+2025-07-20 07:33:28,773 - Guardian - ERROR - ❌ Impossibile riavviare AetherVivo
+2025-07-20 07:33:28,780 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non esiste più
+2025-07-20 07:33:28,780 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non sano
+2025-07-20 07:33:28,780 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherTasks24_7
+2025-07-20 07:33:28,780 - Guardian - ERROR - ❌ Impossibile riavviare AetherTasks24_7
+2025-07-20 07:33:58,789 - Guardian - WARNING - ⚠️ Processo AetherVivo non esiste più
+2025-07-20 07:33:58,789 - Guardian - WARNING - ⚠️ Processo AetherVivo non sano
+2025-07-20 07:33:58,789 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherVivo
+2025-07-20 07:33:58,789 - Guardian - ERROR - ❌ Impossibile riavviare AetherVivo
+2025-07-20 07:33:58,796 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non esiste più
+2025-07-20 07:33:58,796 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non sano
+2025-07-20 07:33:58,796 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherTasks24_7
+2025-07-20 07:33:58,797 - Guardian - ERROR - ❌ Impossibile riavviare AetherTasks24_7
+2025-07-20 07:34:28,805 - Guardian - WARNING - ⚠️ Processo AetherVivo non esiste più
+2025-07-20 07:34:28,805 - Guardian - WARNING - ⚠️ Processo AetherVivo non sano
+2025-07-20 07:34:28,806 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherVivo
+2025-07-20 07:34:28,806 - Guardian - ERROR - ❌ Impossibile riavviare AetherVivo
+2025-07-20 07:34:28,813 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non esiste più
+2025-07-20 07:34:28,813 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non sano
+2025-07-20 07:34:28,814 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherTasks24_7
+2025-07-20 07:34:28,814 - Guardian - ERROR - ❌ Impossibile riavviare AetherTasks24_7
+2025-07-20 07:34:58,822 - Guardian - WARNING - ⚠️ Processo AetherVivo non esiste più
+2025-07-20 07:34:58,823 - Guardian - WARNING - ⚠️ Processo AetherVivo non sano
+2025-07-20 07:34:58,823 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherVivo
+2025-07-20 07:34:58,823 - Guardian - ERROR - ❌ Impossibile riavviare AetherVivo
+2025-07-20 07:34:58,830 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non esiste più
+2025-07-20 07:34:58,830 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non sano
+2025-07-20 07:34:58,830 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherTasks24_7
+2025-07-20 07:34:58,830 - Guardian - ERROR - ❌ Impossibile riavviare AetherTasks24_7
+2025-07-20 07:35:28,838 - Guardian - WARNING - ⚠️ Processo AetherVivo non esiste più
+2025-07-20 07:35:28,838 - Guardian - WARNING - ⚠️ Processo AetherVivo non sano
+2025-07-20 07:35:28,838 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherVivo
+2025-07-20 07:35:28,838 - Guardian - ERROR - ❌ Impossibile riavviare AetherVivo
+2025-07-20 07:35:28,845 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non esiste più
+2025-07-20 07:35:28,845 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non sano
+2025-07-20 07:35:28,845 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherTasks24_7
+2025-07-20 07:35:28,845 - Guardian - ERROR - ❌ Impossibile riavviare AetherTasks24_7
+2025-07-20 07:35:58,853 - Guardian - WARNING - ⚠️ Processo AetherVivo non esiste più
+2025-07-20 07:35:58,853 - Guardian - WARNING - ⚠️ Processo AetherVivo non sano
+2025-07-20 07:35:58,853 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherVivo
+2025-07-20 07:35:58,854 - Guardian - ERROR - ❌ Impossibile riavviare AetherVivo
+2025-07-20 07:35:58,860 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non esiste più
+2025-07-20 07:35:58,860 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non sano
+2025-07-20 07:35:58,860 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherTasks24_7
+2025-07-20 07:35:58,860 - Guardian - ERROR - ❌ Impossibile riavviare AetherTasks24_7
