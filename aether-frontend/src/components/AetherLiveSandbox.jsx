@@ -2,9 +2,10 @@ import React, { useState, useEffect, useRef } from 'react'
 import './AetherLiveSandbox.css'
 import GPTMentorPanel from './GPTMentorPanel'
 import ConsciousnessMonitor from './ConsciousnessMonitor'
+import VitalGoalsPanel from './VitalGoalsPanel'
 
 export default function AetherLiveSandbox() {
-  const [currentView, setCurrentView] = useState('sandbox') // 'sandbox' | 'gpt-mentor' | 'consciousness' | 'monitor'
+  const [currentView, setCurrentView] = useState('sandbox') // 'sandbox' | 'gpt-mentor' | 'consciousness' | 'monitor' | 'vital-goals'
   const [nodes, setNodes] = useState([
     { 
       id: 'welcome', 
@@ -310,6 +311,12 @@ export default function AetherLiveSandbox() {
         >
           📊 Monitor
         </button>
+        <button 
+          className={`nav-btn ${currentView === 'vital-goals' ? 'active' : ''}`}
+          onClick={() => setCurrentView('vital-goals')}
+        >
+          🎯 Goal Vitali
+        </button>
       </div>
     </div>
   )
@@ -323,6 +330,8 @@ export default function AetherLiveSandbox() {
         return <ConsciousnessView />
       case 'monitor':
         return <ConsciousnessMonitor />
+      case 'vital-goals':
+        return <VitalGoalsPanel />
       default:
         return <SandboxView />
     }
@@ -464,5 +473,4 @@ export default function AetherLiveSandbox() {
       {renderCurrentView()}
     </div>
   )
-} 
 } 
