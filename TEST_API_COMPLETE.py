@@ -52,7 +52,9 @@ def test_openrouter():
     try:
         headers = {
             "Authorization": f"Bearer {API_CONFIG['OPENROUTER_API_KEY']}",
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://github.com/DigitalAutomationSolutionstest/Aether",
+            "X-Title": "Aether AI System"
         }
         
         response = requests.post(
