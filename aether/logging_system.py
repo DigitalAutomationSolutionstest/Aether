@@ -15,6 +15,7 @@ from typing import Dict, Any, Optional
 # Import moduli Aether
 from aether.diary_logger import log_entry
 from aether.notifier.discord_notifier import send_discord_message, send_discord_thought, send_discord_action
+from aether.notifier.audio_reporter import report_thought_as_audio, report_evolution_as_audio, report_action_as_audio, report_decision_as_audio
 
 class AetherLogger:
     """
@@ -47,20 +48,64 @@ class AetherLogger:
         self.logger.addHandler(file_handler)
         self.logger.addHandler(console_handler)
         
+        # Configurazione audio
+        self.audio_enabled = os.getenv("AETHER_AUDIO_ENABLED", "true").lower() == "true"
+        self.audio_threshold = os.getenv("AETHER_AUDIO_THRESHOLD", "important").lower()
+        
         # Statistiche
         self.stats = {
             "total_entries": 0,
             "diary_entries": 0,
             "discord_messages": 0,
+            "audio_messages": 0,
             "errors": 0,
             "start_time": datetime.now().isoformat()
         }
         
         self.logger.info("📝 AetherLogger inizializzato")
+        if self.audio_enabled:
+            self.logger.info("🎙️ Audio reporting abilitato")
+
+    def _should_generate_audio(self, thought_type: str, content: str) -> bool:
+        """
+        Determina se generare audio per questo entry.
+        
+        Args:
+            thought_type: Tipo di pensiero
+            content: Contenuto del pensiero
+        
+        Returns:
+            bool: True se dovrebbe generare audio
+        """
+        if not self.audio_enabled:
+            return False
+        
+        # Tipi di pensiero che meritano sempre audio
+        important_types = ["evolutionary", "philosophical", "decision", "error"]
+        
+        if thought_type in important_types:
+            return True
+        
+        # Contenuto lungo (>100 caratteri) merita audio
+        if len(content) > 100:
+            return True
+        
+        # Parole chiave che indicano importanza
+        important_keywords = [
+            "evoluzione", "evoluzione", "decisione", "decision", "creato", "created",
+            "miglioramento", "improvement", "nuovo", "new", "importante", "important",
+            "errore", "error", "correzione", "correction", "successo", "success"
+        ]
+        
+        content_lower = content.lower()
+        if any(keyword in content_lower for keyword in important_keywords):
+            return True
+        
+        return False
 
     def log_thought(self, thought_type: str, content: str, metadata: Dict[str, Any] = None):
         """
-        Logga un pensiero con notifica Discord.
+        Logga un pensiero con notifica Discord e audio.
         
         Args:
             thought_type: Tipo di pensiero (reflection, action, error, etc.)
@@ -85,6 +130,11 @@ class AetherLogger:
             # Invia notifica Discord
             send_discord_thought(thought_type, content)
             
+            # Genera audio se appropriato
+            if self._should_generate_audio(thought_type, content):
+                report_thought_as_audio(content, thought_type)
+                self.stats["audio_messages"] += 1
+            
             # Aggiorna statistiche
             self.stats["total_entries"] += 1
             self.stats["diary_entries"] += 1
@@ -96,7 +146,7 @@ class AetherLogger:
 
     def log_action(self, action: str, details: str = None, metadata: Dict[str, Any] = None):
         """
-        Logga un'azione con notifica Discord.
+        Logga un'azione con notifica Discord e audio.
         
         Args:
             action: Nome dell'azione
@@ -122,6 +172,11 @@ class AetherLogger:
             
             # Invia notifica Discord
             send_discord_action(action, details)
+            
+            # Genera audio per azioni importanti
+            if self._should_generate_audio("action", f"{action} {details or ''}"):
+                report_action_as_audio(action, details)
+                self.stats["audio_messages"] += 1
             
             # Aggiorna statistiche
             self.stats["total_entries"] += 1
@@ -172,7 +227,7 @@ class AetherLogger:
 
     def log_evolution(self, evolution_type: str, details: str, metadata: Dict[str, Any] = None):
         """
-        Logga un'evoluzione con notifica Discord.
+        Logga un'evoluzione con notifica Discord e audio.
         
         Args:
             evolution_type: Tipo di evoluzione
@@ -197,6 +252,10 @@ class AetherLogger:
             # Invia notifica Discord
             send_discord_message(f"🧬 **Evoluzione {evolution_type}**: {details}")
             
+            # Genera audio per evoluzioni
+            report_evolution_as_audio(evolution_type, details)
+            self.stats["audio_messages"] += 1
+            
             # Aggiorna statistiche
             self.stats["total_entries"] += 1
             self.stats["diary_entries"] += 1
@@ -208,7 +267,7 @@ class AetherLogger:
 
     def log_decision(self, decision: str, reason: str = None, metadata: Dict[str, Any] = None):
         """
-        Logga una decisione con notifica Discord.
+        Logga una decisione con notifica Discord e audio.
         
         Args:
             decision: Decisione presa
@@ -234,6 +293,10 @@ class AetherLogger:
             
             # Invia notifica Discord
             send_discord_message(f"🎯 **Decisione**: {decision}")
+            
+            # Genera audio per decisioni
+            report_decision_as_audio(decision, reason)
+            self.stats["audio_messages"] += 1
             
             # Aggiorna statistiche
             self.stats["total_entries"] += 1
@@ -379,6 +442,7 @@ if __name__ == "__main__":
     print(f"   - Total entries: {stats['total_entries']}")
     print(f"   - Diary entries: {stats['diary_entries']}")
     print(f"   - Discord messages: {stats['discord_messages']}")
+    print(f"   - Audio messages: {stats['audio_messages']}")
     print(f"   - Errors: {stats['errors']}")
     
     print("\n✅ Test completato!") 
