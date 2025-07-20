@@ -8,11 +8,13 @@ import os
 import sys
 import json
 import time
-import logging
-import subprocess
-from pathlib import Path
-from datetime import datetime
 import random
+import logging
+import threading
+import subprocess
+from datetime import datetime, timedelta
+from pathlib import Path
+from typing import Dict, List, Any
 
 # Setup logging
 logging.basicConfig(
@@ -28,6 +30,7 @@ from aether.strategic_thinker import StrategicThinker
 from aether.self_bootstrapper import AetherSelfBootstrapper as SelfBootstrapper
 from aether.discord_notifier import send_discord_message
 from aether.action_executor import AetherActionExecutor
+from aether.mentor import get_mentor, start_mentoring, provide_guidance
 
 # Import Supabase se disponibile
 try:
