@@ -401,5 +401,15 @@
       ]
     },
     "executed_at": "2025-07-20T02:27:22.376268"
+  },
+  {
+    "id": "gen_20250720_022922",
+    "type": "create_room",
+    "details": {
+      "name": "CyberSpace",
+      "theme": "Ambiente cyber futuristico"
+    },
+    "executed": false,
+    "created_at": "2025-07-20T02:29:22.937000"
   }
 ]
