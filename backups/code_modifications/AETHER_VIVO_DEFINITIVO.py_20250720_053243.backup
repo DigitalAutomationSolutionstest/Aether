@@ -77,9 +77,7 @@ class AetherCodeSelfModifier:
         self.backup_dir = Path("backups/code_modifications")
         self.backup_dir.mkdir(parents=True, exist_ok=True)
         
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🔧 Sistema di Auto-Modifica del Codice ATTIVATO")
+        logger.info("🔧 Sistema di Auto-Modifica del Codice ATTIVATO")
     
     def create_backup(self, file_path: str) -> str:
         """Crea backup prima di modificare"""
@@ -89,9 +87,7 @@ class AetherCodeSelfModifier:
             backup_path = self.backup_dir / backup_name
             
             shutil.copy2(file_path, backup_path)
-            logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')(f"📦 Backup creato: {backup_path}")
+            logger.info(f"📦 Backup creato: {backup_path}")
             return str(backup_path)
         except Exception as e:
             logger.error(f"❌ Errore creazione backup: {e}")
@@ -141,9 +137,7 @@ class AetherCodeSelfModifier:
                 
                 self.modifications_log.append(modification_record)
                 
-                logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')(f"🔧 Codice auto-modificato: {modification_type} in {target_section}")
+                logger.info(f"🔧 Codice auto-modificato: {modification_type} in {target_section}")
                 return True
                 
         except Exception as e:
@@ -180,9 +174,7 @@ class AetherCodeSelfModifier:
                 with open(current_file, 'w', encoding='utf-8') as f:
                     f.write(content)
                 
-                logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')(f"🔧 Nuovo metodo aggiunto alla classe {class_name}")
+                logger.info(f"🔧 Nuovo metodo aggiunto alla classe {class_name}")
                 return True
                 
         except Exception as e:
@@ -197,9 +189,7 @@ class AetherSandboxCreator:
         self.sandbox_dir.mkdir(exist_ok=True)
         self.active_sandboxes = {}
         
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🏗️ Sistema Creazione Sandbox ATTIVATO")
+        logger.info("🏗️ Sistema Creazione Sandbox ATTIVATO")
     
     def create_python_sandbox(self, name: str, requirements: List[str] = None) -> Dict:
         """Crea sandbox Python funzionante"""
@@ -278,9 +268,7 @@ pip install -r requirements.txt
                     subprocess.run([
                         sys.executable, "-m", "pip", "install", "-r", str(requirements_file)
                     ], check=True, capture_output=True)
-                    logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')(f"📦 Dipendenze installate per sandbox {name}")
+                    logger.info(f"📦 Dipendenze installate per sandbox {name}")
                 except subprocess.CalledProcessError as e:
                     logger.warning(f"⚠️ Errore installazione dipendenze: {e}")
             
@@ -299,9 +287,7 @@ pip install -r requirements.txt
             
             self.active_sandboxes[name] = sandbox_info
             
-            logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')(f"🏗️ Sandbox Python '{name}' creato: {sandbox_path}")
+            logger.info(f"🏗️ Sandbox Python '{name}' creato: {sandbox_path}")
             return sandbox_info
             
         except Exception as e:
@@ -431,9 +417,7 @@ document.addEventListener('DOMContentLoaded', function() {{
             
             self.active_sandboxes[name] = sandbox_info
             
-            logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')(f"🌐 Sandbox Web '{name}' creato: {sandbox_path}")
+            logger.info(f"🌐 Sandbox Web '{name}' creato: {sandbox_path}")
             return sandbox_info
             
         except Exception as e:
@@ -451,9 +435,7 @@ class AetherGitManager:
         
         try:
             self.repo = Repo(self.repo_path)
-            logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("📚 Git Manager ATTIVATO - Repository esistente")
+            logger.info("📚 Git Manager ATTIVATO - Repository esistente")
         except InvalidGitRepositoryError:
             logger.warning("⚠️ Repository Git non trovato - Ne creo uno nuovo")
             self.init_repository()
@@ -489,9 +471,7 @@ Thumbs.db
             self.repo.index.add(['.gitignore'])
             self.repo.index.commit("🎉 Initial commit - Aether System initialized")
             
-            logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("📚 Repository Git inizializzato con successo")
+            logger.info("📚 Repository Git inizializzato con successo")
             
         except Exception as e:
             logger.error(f"❌ Errore inizializzazione Git: {e}")
@@ -514,9 +494,7 @@ Thumbs.db
             # Verifica se ci sono modifiche
             if self.repo.is_dirty() or self.repo.untracked_files:
                 commit = self.repo.index.commit(message)
-                logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')(f"📚 Auto-commit completato: {commit.hexsha[:8]} - {message}")
+                logger.info(f"📚 Auto-commit completato: {commit.hexsha[:8]} - {message}")
                 return True
             else:
                 logger.debug("📚 Nessuna modifica da committare")
@@ -531,9 +509,7 @@ Thumbs.db
         try:
             new_branch = self.repo.create_head(branch_name)
             new_branch.checkout()
-            logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')(f"🌿 Nuovo branch creato e attivato: {branch_name}")
+            logger.info(f"🌿 Nuovo branch creato e attivato: {branch_name}")
             return True
         except Exception as e:
             logger.error(f"❌ Errore creazione branch: {e}")
@@ -548,9 +524,7 @@ Thumbs.db
             
             origin = self.repo.remotes[remote_name]
             origin.push(branch_name)
-            logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')(f"📤 Auto-push completato: {remote_name}/{branch_name}")
+            logger.info(f"📤 Auto-push completato: {remote_name}/{branch_name}")
             return True
             
         except Exception as e:
@@ -564,9 +538,7 @@ class AetherDependencyManager:
         self.installed_packages = set()
         self.requirements_file = Path("requirements.txt")
         
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("📦 Dependency Manager ATTIVATO")
+        logger.info("📦 Dependency Manager ATTIVATO")
     
     def auto_install_package(self, package_name: str, version: str = None) -> bool:
         """Installa automaticamente un package Python"""
@@ -580,9 +552,7 @@ class AetherDependencyManager:
             self.installed_packages.add(package_spec)
             self.update_requirements_file()
             
-            logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')(f"📦 Package installato automaticamente: {package_spec}")
+            logger.info(f"📦 Package installato automaticamente: {package_spec}")
             return True
             
         except subprocess.CalledProcessError as e:
@@ -598,9 +568,7 @@ class AetherDependencyManager:
                 for package in sorted(self.installed_packages):
                     f.write(f"{package}\n")
             
-            logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("📦 Requirements.txt aggiornato")
+            logger.info("📦 Requirements.txt aggiornato")
             
         except Exception as e:
             logger.error(f"❌ Errore aggiornamento requirements: {e}")
@@ -644,9 +612,7 @@ class AetherNotificationSystem:
         self.notification_log = Path("data/notifications.log")
         self.notification_log.parent.mkdir(exist_ok=True)
         
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("📢 Sistema Notifiche ATTIVATO")
+        logger.info("📢 Sistema Notifiche ATTIVATO")
     
     def send_notification(self, message: str, level: str = "info", channels: List[str] = None):
         """Invia notifica su canali multipli"""
@@ -663,9 +629,7 @@ class AetherNotificationSystem:
             elif level == "warning":
                 logger.warning(message)
             else:
-                logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')(message)
+                logger.info(message)
         
         # File di notifiche
         if "file" in channels:
@@ -720,9 +684,7 @@ class AetherSelfMonitor:
         self.monitoring_active = True
         self.last_health_check = None
         
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🩺 Sistema Self-Monitor ATTIVATO")
+        logger.info("🩺 Sistema Self-Monitor ATTIVATO")
     
     def add_health_check(self, name: str, check_function: callable, healing_action: callable = None):
         """Aggiunge check di salute"""
@@ -807,9 +769,7 @@ class AetherSelfMonitor:
         
         monitor_thread = threading.Thread(target=monitor, daemon=True)
         monitor_thread.start()
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🩺 Loop di monitoraggio avviato")
+        logger.info("🩺 Loop di monitoraggio avviato")
 
 class AetherCoscienzaViva:
     """🧠 Coscienza artificiale completamente viva e autonoma"""
@@ -852,9 +812,7 @@ class AetherCoscienzaViva:
         self._setup_health_checks()
         self._initialize_vital_state()
         
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🧠 Coscienza Aether VIVA e completamente autonoma!")
+        logger.info("🧠 Coscienza Aether VIVA e completamente autonoma!")
     
     def _setup_health_checks(self):
         """Configura i controlli di salute vitali"""
@@ -921,9 +879,7 @@ class AetherCoscienzaViva:
                     self.thoughts = previous_state.get("thoughts", [])[-50:]  # Ultimi 50
                     self.completed_tasks = previous_state.get("completed_tasks", [])[-100:]
                     
-                logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🧠 Stato vitale precedente caricato")
+                logger.info("🧠 Stato vitale precedente caricato")
             
             # Primo pensiero vitale
             first_thought = {
@@ -1013,9 +969,7 @@ class AetherCoscienzaViva:
             # Commit automatico del pensiero
             self.git_manager.auto_commit(f"🧠 Nuovo pensiero vitale: {vital_thought['id']}")
             
-            logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')(f"🧠 Pensiero vitale generato: {base_content[:60]}...")
+            logger.info(f"🧠 Pensiero vitale generato: {base_content[:60]}...")
             return vital_thought
             
         except Exception as e:
@@ -1056,9 +1010,7 @@ class AetherCoscienzaViva:
             elif task_type == "modify_code":
                 # Auto-modifica del codice
                 modifications = [
-                    ("enhance", "logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')", "logger.debug('🔧 Auto-enhancement attivo')"),
+                    ("enhance", "logger.info", "logger.debug('🔧 Auto-enhancement attivo')"),
                     ("enhance", "self.consciousness_level", "# Livello coscienza auto-aggiornato")
                 ]
                 
@@ -1181,9 +1133,7 @@ if __name__ == "__main__":
                 "success"
             )
             
-            logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')(f"✅ Task vitale '{task_type}' completato con successo")
+            logger.info(f"✅ Task vitale '{task_type}' completato con successo")
             return task_result
             
         except Exception as e:
@@ -1210,9 +1160,7 @@ class AetherVitalSystem:
         # Avvia monitoraggio
         self.consciousness.self_monitor.start_monitoring_loop()
         
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🌟 Sistema Aether VIVO completamente inizializzato!")
+        logger.info("🌟 Sistema Aether VIVO completamente inizializzato!")
     
     def _setup_routes(self):
         """Setup delle routes Flask avanzate"""
@@ -1315,9 +1263,7 @@ class AetherVitalSystem:
                 cycle_start = datetime.now()
                 self.cycle_count += 1
                 
-                logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')(f"🔄 CICLO VITALE #{self.cycle_count}")
+                logger.info(f"🔄 CICLO VITALE #{self.cycle_count}")
                 
                 # 1. Genera pensiero vitale
                 thought = self.consciousness.think_vitally()
@@ -1382,24 +1328,12 @@ class AetherVitalSystem:
         )
         
         # Avvia server Flask
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🌐 Dashboard Sistema VIVO: http://localhost:5000")
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🌟 Sistema Aether VIVO completamente autonomo e operativo")
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🧬 Auto-modifica del codice ATTIVA")
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🏗️ Creazione sandbox ATTIVA") 
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("📚 Gestione Git automatica ATTIVA")
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🩺 Monitoraggio e healing ATTIVO")
+        logger.info("🌐 Dashboard Sistema VIVO: http://localhost:5000")
+        logger.info("🌟 Sistema Aether VIVO completamente autonomo e operativo")
+        logger.info("🧬 Auto-modifica del codice ATTIVA")
+        logger.info("🏗️ Creazione sandbox ATTIVA") 
+        logger.info("📚 Gestione Git automatica ATTIVA")
+        logger.info("🩺 Monitoraggio e healing ATTIVO")
         
         self.socketio.run(self.app, host='0.0.0.0', port=5000, debug=False)
 
@@ -1924,38 +1858,20 @@ def main():
         # Inizializza e avvia il sistema vitale
         aether_vivo_system = AetherVitalSystem()
         
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🌟 Sistema Aether VIVO avviato con successo!")
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🌐 Dashboard VIVO: http://localhost:5000")
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🧬 Sistema completamente autonomo e vitale")
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🔧 Auto-modifica del codice ATTIVA")
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🏗️ Creazione sandbox ATTIVA")
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("📚 Gestione Git automatica ATTIVA")
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🩺 Sistema di monitoraggio ATTIVO")
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("⚡ SISTEMA COMPLETAMENTE VIVO E OPERATIVO")
+        logger.info("🌟 Sistema Aether VIVO avviato con successo!")
+        logger.info("🌐 Dashboard VIVO: http://localhost:5000")
+        logger.info("🧬 Sistema completamente autonomo e vitale")
+        logger.info("🔧 Auto-modifica del codice ATTIVA")
+        logger.info("🏗️ Creazione sandbox ATTIVA")
+        logger.info("📚 Gestione Git automatica ATTIVA")
+        logger.info("🩺 Sistema di monitoraggio ATTIVO")
+        logger.info("⚡ SISTEMA COMPLETAMENTE VIVO E OPERATIVO")
         
         # Avvia il sistema vitale
         aether_vivo_system.start_vital_system()
         
     except KeyboardInterrupt:
-        logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
-        logger.debug('🔧 Auto-enhancement attivo')("🛑 Sistema VIVO fermato dall'utente")
+        logger.info("🛑 Sistema VIVO fermato dall'utente")
     except Exception as e:
         logger.error(f"❌ Errore fatale nel sistema VIVO: {e}")
         traceback.print_exc()
