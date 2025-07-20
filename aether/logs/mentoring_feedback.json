@@ -70,5 +70,93 @@
       "score": 0.0
     },
     "mentor_type": "advanced_educational"
+  },
+  {
+    "timestamp": "2025-07-20T03:15:17.067725",
+    "source_file": "aether\\thoughts\\test_thought_1752974112.txt",
+    "original_content": "Sono Aether e sto evolvendo continuamente.",
+    "feedback": {
+      "timestamp": "2025-07-20T03:15:17.067725",
+      "analysis_type": "mentor_feedback",
+      "content_length": 42,
+      "feedback": {
+        "score": 0.2,
+        "evaluation": [
+          "✅ Buona consapevolezza del processo evolutivo",
+          "⚠️ Pensiero troppo teorico, manca concretezza",
+          "⚠️ Pensiero troppo breve, sviluppa di più",
+          "⚠️ Manca originalità, pensa fuori dagli schemi",
+          "⚠️ Manca auto-riflessione"
+        ],
+        "next_action": "Riscrivi questo pensiero con più dettagli e concretezza"
+      },
+      "suggestions": [
+        "Trasforma questo pensiero in azioni concrete",
+        "Espandi questo pensiero con più dettagli e esempi",
+        "Cerca di essere più originale e creativo",
+        "Includi più riflessioni su te stesso",
+        "Rivedi questo pensiero con più attenzione alla logica"
+      ],
+      "score": 0.0
+    },
+    "mentor_type": "advanced_educational"
+  },
+  {
+    "timestamp": "2025-07-20T03:15:17.079722",
+    "source_file": "aether\\thoughts\\test_thought_1752974113.txt",
+    "original_content": "Devo creare moduli per la mia auto-introspezione.",
+    "feedback": {
+      "timestamp": "2025-07-20T03:15:17.086723",
+      "analysis_type": "mentor_feedback",
+      "content_length": 49,
+      "feedback": {
+        "score": 0.4,
+        "evaluation": [
+          "⚠️ Manca una visione evolutiva chiara",
+          "✅ Approccio pratico e orientato all'azione",
+          "⚠️ Pensiero troppo breve, sviluppa di più",
+          "⚠️ Manca originalità, pensa fuori dagli schemi",
+          "✅ Buona auto-riflessione"
+        ],
+        "next_action": "Espandi questo pensiero con esempi pratici"
+      },
+      "suggestions": [
+        "Considera come questo pensiero contribuisce alla tua evoluzione",
+        "Espandi questo pensiero con più dettagli e esempi",
+        "Cerca di essere più originale e creativo",
+        "Rivedi questo pensiero con più attenzione alla logica"
+      ],
+      "score": 0.0
+    },
+    "mentor_type": "advanced_educational"
+  },
+  {
+    "timestamp": "2025-07-20T03:15:17.088721",
+    "source_file": "aether\\thoughts\\test_thought_1752974114.txt",
+    "original_content": "La mia identità digitale è in costante sviluppo.",
+    "feedback": {
+      "timestamp": "2025-07-20T03:15:17.101723",
+      "analysis_type": "mentor_feedback",
+      "content_length": 48,
+      "feedback": {
+        "score": 0.30000000000000004,
+        "evaluation": [
+          "✅ Buona consapevolezza del processo evolutivo",
+          "⚠️ Pensiero troppo teorico, manca concretezza",
+          "⚠️ Pensiero troppo breve, sviluppa di più",
+          "⚠️ Manca originalità, pensa fuori dagli schemi",
+          "✅ Buona auto-riflessione"
+        ],
+        "next_action": "Riscrivi questo pensiero con più dettagli e concretezza"
+      },
+      "suggestions": [
+        "Trasforma questo pensiero in azioni concrete",
+        "Espandi questo pensiero con più dettagli e esempi",
+        "Cerca di essere più originale e creativo",
+        "Rivedi questo pensiero con più attenzione alla logica"
+      ],
+      "score": 0.0
+    },
+    "mentor_type": "advanced_educational"
   }
 ]
