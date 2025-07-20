@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 
 def setup_environment():
     """Configura l'ambiente per Aether con mentoring"""
-    logger.info("🔧 Configurazione ambiente per Aether Mentor...")
+    logger.info("Configurazione ambiente per Aether Mentor...")
     
     # Crea directory necessarie
     directories = ['data', 'logs', 'audio', 'backups', 'mentor_sessions']
@@ -35,9 +35,9 @@ def setup_environment():
     
     # Verifica file di configurazione
     if not os.path.exists('.env'):
-        logger.warning("⚠️ File .env non trovato - usando configurazione di default")
+        logger.warning("File .env non trovato - usando configurazione di default")
     
-    logger.info("✅ Ambiente configurato per mentoring")
+    logger.info("Ambiente configurato per mentoring")
 
 def verify_mentor_system():
     """Verifica che il sistema di mentoring sia funzionante"""
