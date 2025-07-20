@@ -6396,3 +6396,11 @@ Monitoraggio processi, sistema e backup automatici attivi.
 2025-07-20 12:09:38,977 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non sano
 2025-07-20 12:09:38,977 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherTasks24_7
 2025-07-20 12:09:38,977 - Guardian - ERROR - ❌ Impossibile riavviare AetherTasks24_7
+2025-07-20 12:10:08,985 - Guardian - WARNING - ⚠️ Processo AetherVivo non esiste più
+2025-07-20 12:10:08,985 - Guardian - WARNING - ⚠️ Processo AetherVivo non sano
+2025-07-20 12:10:08,986 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherVivo
+2025-07-20 12:10:08,986 - Guardian - ERROR - ❌ Impossibile riavviare AetherVivo
+2025-07-20 12:10:08,992 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non esiste più
+2025-07-20 12:10:08,993 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non sano
+2025-07-20 12:10:08,993 - Guardian - ERROR - ❌ Limite restart raggiunto per AetherTasks24_7
+2025-07-20 12:10:08,993 - Guardian - ERROR - ❌ Impossibile riavviare AetherTasks24_7
