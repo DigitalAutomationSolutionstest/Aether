@@ -948,3 +948,16 @@
 2025-07-20 05:56:20,999 - AetherVivo - INFO - 📚 Auto-commit completato: d0bcd556 - 🧠 Nuovo pensiero vitale: 184
 2025-07-20 05:56:20,999 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 📚 Il mio sistema Git sta tracciando perfettamente ogni evolu...
 2025-07-20 05:56:29,585 - AetherVivo - INFO - 🔄 CICLO VITALE #184
+2025-07-20 05:56:30,289 - AetherVivo - INFO - 📚 Auto-commit completato: f71b56db - 🧠 Nuovo pensiero vitale: 185
+2025-07-20 05:56:30,290 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 📦 Gestisco autonomamente tutte le mie dipendenze e requireme...
+2025-07-20 05:56:30,337 - AetherVivo - ERROR - ❌ Errore auto-commit: Cmd('git') failed due to: exit code(128)
+  cmdline: git add .
+  stderr: 'fatal: Unable to create 'C:/Users/UTENTE/Documents/invader-core-agent/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.'
+2025-07-20 05:56:30,337 - AetherVivo - INFO - ✅ Task vitale completato: health_check
+2025-07-20 05:56:30,597 - AetherVivo - INFO - ✅ Task vitale 'health_check' completato con successo
