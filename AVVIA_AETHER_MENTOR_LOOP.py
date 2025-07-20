@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-🎓 AVVIA AETHER MENTOR LOOP 🎓
+AVVIA AETHER MENTOR LOOP
 Sistema completo con mentoring integrato nel loop principale
 """
 
@@ -41,7 +41,7 @@ def setup_environment():
 
 def verify_mentor_system():
     """Verifica che il sistema di mentoring sia funzionante"""
-    logger.info("🎓 Verifica sistema di mentoring...")
+    logger.info("Verifica sistema di mentoring...")
     
     try:
         from aether.mentor import get_mentor, start_mentoring
@@ -58,19 +58,19 @@ def verify_mentor_system():
         session_result = start_mentoring(test_state)
         
         if session_result and 'session_id' in session_result:
-            logger.info("✅ Sistema di mentoring funzionante")
+            logger.info("Sistema di mentoring funzionante")
             return True
         else:
-            logger.error("❌ Sistema di mentoring non funzionante")
+            logger.error("Sistema di mentoring non funzionante")
             return False
             
     except Exception as e:
-        logger.error(f"❌ Errore verifica mentoring: {e}")
+        logger.error(f"Errore verifica mentoring: {e}")
         return False
 
 def start_aether_with_mentor():
     """Avvia Aether con sistema di mentoring integrato"""
-    logger.info("🚀 Avvio Aether con mentoring integrato...")
+    logger.info("Avvio Aether con mentoring integrato...")
     
     try:
         # Importa il loop principale
@@ -87,29 +87,29 @@ def start_aether_with_mentor():
         }
         
         # Mostra stato componenti
-        print("\n📊 STATO COMPONENTI:")
+        print("\nSTATO COMPONENTI:")
         for component, status in components_status.items():
-            status_icon = "✅" if status else "❌"
-            print(f"   {status_icon} {component}")
+            status_icon = "OK" if status else "ERROR"
+            print(f"   [{status_icon}] {component}")
         
         success_rate = sum(components_status.values()) / len(components_status) * 100
-        print(f"\n🎯 Tasso di successo: {success_rate:.1f}%")
+        print(f"\nTasso di successo: {success_rate:.1f}%")
         
         if success_rate >= 80:
-            print("🎉 AETHER CON MENTOR È PRONTO!")
-            print("\n🔄 Avvio loop autonomo con mentoring...")
-            print("💡 Aether ora vive con guida continua del mentore!")
-            print("🛑 Premi Ctrl+C per fermare il sistema")
+            print("AETHER CON MENTOR E' PRONTO!")
+            print("\nAvvio loop autonomo con mentoring...")
+            print("Aether ora vive con guida continua del mentore!")
+            print("Premi Ctrl+C per fermare il sistema")
             
             # Avvia il loop
             loop.run()
             
         else:
-            print("⚠️ Alcuni componenti non sono disponibili")
-            print("🔧 Controlla i log per dettagli")
+            print("Alcuni componenti non sono disponibili")
+            print("Controlla i log per dettagli")
             
     except Exception as e:
-        logger.error(f"❌ Errore avvio Aether con mentor: {e}")
+        logger.error(f"Errore avvio Aether con mentor: {e}")
         return False
     
     return True
@@ -117,12 +117,12 @@ def start_aether_with_mentor():
 def main():
     """Funzione principale"""
     print("""
-    ╔═══════════════════════════════════════╗
-    ║     🎓 AETHER MENTOR LOOP 🎓         ║
-    ║                                       ║
-    ║   Sistema completo con mentoring      ║
-    ║   integrato nel loop principale       ║
-    ╚═══════════════════════════════════════╝
+    ===================================
+         AETHER MENTOR LOOP         
+                                       
+   Sistema completo con mentoring      
+   integrato nel loop principale       
+    ===================================
     """)
     
     # Setup iniziale
@@ -130,17 +130,17 @@ def main():
     
     # Verifica sistema mentoring
     if not verify_mentor_system():
-        print("❌ Sistema di mentoring non disponibile")
-        print("🔧 Verifica che tutti i moduli siano installati correttamente")
+        print("Sistema di mentoring non disponibile")
+        print("Verifica che tutti i moduli siano installati correttamente")
         return
     
     # Avvia Aether con mentoring
     success = start_aether_with_mentor()
     
     if success:
-        print("\n🎉 AETHER CON MENTOR È VIVO E OPERATIVO!")
+        print("\nAETHER CON MENTOR E' VIVO E OPERATIVO!")
     else:
-        print("\n❌ Errore nell'avvio di Aether con mentor")
+        print("\nErrore nell'avvio di Aether con mentor")
 
 if __name__ == "__main__":
     main() 
