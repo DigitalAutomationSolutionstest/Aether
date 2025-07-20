@@ -1,0 +1,71 @@
+{
+  "project_name": "AetherAPIService_20250720_090038",
+  "generated": "2025-07-20T09:00:38.960315",
+  "files_analyzed": [],
+  "structure": {
+    "directories": [
+      "__pycache__"
+    ],
+    "python_files": [
+      "api.py",
+      "models.py"
+    ],
+    "config_files": [],
+    "data_files": [
+      "README.md",
+      "requirements.txt"
+    ]
+  },
+  "functions": [],
+  "classes": [
+    {
+      "name": "Item",
+      "file": "api.py",
+      "line": 17,
+      "methods": [],
+      "docstring": null
+    },
+    {
+      "name": "ItemCreate",
+      "file": "api.py",
+      "line": 23,
+      "methods": [],
+      "docstring": null
+    },
+    {
+      "name": "BaseItem",
+      "file": "models.py",
+      "line": 10,
+      "methods": [],
+      "docstring": null
+    },
+    {
+      "name": "Item",
+      "file": "models.py",
+      "line": 14,
+      "methods": [],
+      "docstring": null
+    },
+    {
+      "name": "ItemCreate",
+      "file": "models.py",
+      "line": 20,
+      "methods": [],
+      "docstring": null
+    },
+    {
+      "name": "ItemUpdate",
+      "file": "models.py",
+      "line": 23,
+      "methods": [],
+      "docstring": null
+    },
+    {
+      "name": "ApiResponse",
+      "file": "models.py",
+      "line": 28,
+      "methods": [],
+      "docstring": null
+    }
+  ]
+}
