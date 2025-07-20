@@ -15,7 +15,8 @@ THOUGHTS_DIR = "aether/thoughts"
 os.makedirs("aether/logs", exist_ok=True)
 os.makedirs("aether/thoughts", exist_ok=True)
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+# Configura OpenAI con la nuova API
+client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def load_latest_thought():
     """Carica il pensiero più recente di Aether"""
@@ -68,7 +69,7 @@ Formato di output:
 """
     
     try:
-        response = openai.ChatCompletion.create(
+        response = client.chat.completions.create(
             model="gpt-4",
             messages=[{"role": "user", "content": prompt}],
             max_tokens=500,
