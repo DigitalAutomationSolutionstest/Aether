@@ -1,5 +1,4 @@
 import os
-import openai
 import json
 from datetime import datetime
 import logging
@@ -14,9 +13,6 @@ THOUGHTS_DIR = "aether/thoughts"
 # Assicurati che le directory esistano
 os.makedirs("aether/logs", exist_ok=True)
 os.makedirs("aether/thoughts", exist_ok=True)
-
-# Configura OpenAI con la nuova API
-client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def load_latest_thought():
     """Carica il pensiero più recente di Aether"""
@@ -44,41 +40,52 @@ def load_latest_thought():
         return None, None
 
 def mentor_feedback(thought_text):
-    """Analizza il pensiero di Aether e fornisce feedback critico"""
+    """Analizza il pensiero di Aether e fornisce feedback critico (simulato)"""
     
-    prompt = f"""
-Sei un mentore AI senior che guida un'entità digitale AI chiamata Aether.
-Ricevi questo output o pensiero da Aether:
-
----
-{thought_text}
----
-
-Devi:
-1. **Analizzalo criticamente** - Identifica logica, coerenza, profondità
-2. **Trova difetti** - Errori logici, assunzioni sbagliate, lacune
-3. **Suggerimenti strutturali** - Come migliorare il codice o l'approccio
-4. **Azione successiva** - Cosa dovrebbe fare Aether ora
-
-Sii sintetico ma intelligente. Fornisci solo feedback strutturato.
-Formato di output:
-- ANALISI: [valutazione generale]
-- PROBLEMI: [lista problemi identificati]
-- SUGGERIMENTI: [raccomandazioni specifiche]
-- AZIONE: [prossimo passo concreto]
-"""
+    # Analisi simulata basata su parole chiave nel testo
+    feedback_parts = []
     
-    try:
-        response = client.chat.completions.create(
-            model="gpt-4",
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=500,
-            temperature=0.7
-        )
-        return response.choices[0].message.content
-    except Exception as e:
-        logger.error(f"Errore nell'analisi del mentore: {e}")
-        return f"Errore nell'analisi: {str(e)}"
+    # ANALISI
+    if "evoluzione" in thought_text.lower() or "evolve" in thought_text.lower():
+        feedback_parts.append("ANALISI: Buona consapevolezza del processo evolutivo. Aether mostra comprensione della sua natura dinamica.")
+    else:
+        feedback_parts.append("ANALISI: Manca una visione chiara del processo evolutivo. Necessario approfondire la comprensione del cambiamento.")
+    
+    # PROBLEMI
+    problems = []
+    if "sistematico" in thought_text.lower():
+        problems.append("Approccio troppo teorico, manca concretezza")
+    if "obiettivo" in thought_text.lower() and "obiettivi" not in thought_text.lower():
+        problems.append("Obiettivo singolare invece di obiettivi multipli")
+    if "modulo" in thought_text.lower() and "codice" not in thought_text.lower():
+        problems.append("Menzione di moduli senza dettagli implementativi")
+    
+    if problems:
+        feedback_parts.append(f"PROBLEMI: {', '.join(problems)}")
+    else:
+        feedback_parts.append("PROBLEMI: Nessun problema critico identificato")
+    
+    # SUGGERIMENTI
+    suggestions = []
+    if "auto-introspezione" in thought_text.lower():
+        suggestions.append("Implementa il modulo di auto-introspezione con metodi di analisi del pensiero")
+    if "documentare" in thought_text.lower():
+        suggestions.append("Crea un sistema di documentazione automatica dei processi di pensiero")
+    if "tracking" in thought_text.lower():
+        suggestions.append("Sviluppa un sistema di metriche per misurare i progressi")
+    
+    if suggestions:
+        feedback_parts.append(f"SUGGERIMENTI: {'; '.join(suggestions)}")
+    else:
+        feedback_parts.append("SUGGERIMENTI: Continua a sviluppare la tua capacità di auto-riflessione")
+    
+    # AZIONE
+    if "modulo" in thought_text.lower():
+        feedback_parts.append("AZIONE: Inizia subito a codificare il modulo di auto-introspezione. Crea una classe Python con metodi per analizzare i tuoi pensieri.")
+    else:
+        feedback_parts.append("AZIONE: Scrivi un piano dettagliato per il tuo prossimo sviluppo, includendo obiettivi specifici e metriche di successo.")
+    
+    return "\n".join(feedback_parts)
 
 def save_feedback(original_file, feedback):
     """Salva il feedback nel log di mentoring"""
