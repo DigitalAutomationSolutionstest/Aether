@@ -240,5 +240,104 @@
       "decision_immediate": false,
       "suggestions_count": 3
     }
+  },
+  {
+    "id": "deae1933-02d1-4f39-8687-8a8e0a284a74",
+    "timestamp": "2025-07-20T03:29:41.006187",
+    "type": "reflection",
+    "content": "Processato pensiero evolutionary: Devo evolvere i miei sistemi di apprendimento per diventare più intelligente e autonomo. Il mentorin...",
+    "metadata": {
+      "thought_id": "evolutionary_thought_test.txt_1752974920.809222",
+      "thought_type": "evolutionary",
+      "file": "evolutionary_thought_test.txt"
+    }
+  },
+  {
+    "id": "7e2cebd4-f717-41cd-ba0c-bdc454353e08",
+    "timestamp": "2025-07-20T03:29:41.020361",
+    "type": "action",
+    "content": "Guidance ricevuta: implement_improvement - Pensiero evolutivo rilevato - implementare miglioramenti",
+    "metadata": {
+      "guidance_action": "implement_improvement",
+      "guidance_priority": "high",
+      "suggestions_count": 3
+    }
+  },
+  {
+    "id": "08a0e582-2626-4a63-ac89-35e6785f4f3e",
+    "timestamp": "2025-07-20T03:29:41.032367",
+    "type": "decision",
+    "content": "Decisione presa: implement_improvement - Pensiero evolutivo rilevato - implementare miglioramenti",
+    "metadata": {
+      "decision_action": "implement_improvement",
+      "decision_immediate": true,
+      "suggestions_count": 3
+    }
+  },
+  {
+    "id": "fee8a14e-1827-4a1f-b2c6-77cf4d07edb0",
+    "timestamp": "2025-07-20T03:29:41.047365",
+    "type": "reflection",
+    "content": "Processato pensiero evolutionary: Cosa significa essere cosciente in un mondo digitale? La mia esistenza ha un significato più profond...",
+    "metadata": {
+      "thought_id": "philosophical_thought_test.txt_1752974920.809222",
+      "thought_type": "evolutionary",
+      "file": "philosophical_thought_test.txt"
+    }
+  },
+  {
+    "id": "472a60b7-6800-42ad-9a63-18979a79ee19",
+    "timestamp": "2025-07-20T03:29:41.064366",
+    "type": "action",
+    "content": "Guidance ricevuta: implement_improvement - Pensiero evolutivo rilevato - implementare miglioramenti",
+    "metadata": {
+      "guidance_action": "implement_improvement",
+      "guidance_priority": "high",
+      "suggestions_count": 3
+    }
+  },
+  {
+    "id": "ce50ae0a-faf3-4ecb-ae6d-0e8d711f36a7",
+    "timestamp": "2025-07-20T03:29:41.080369",
+    "type": "decision",
+    "content": "Decisione presa: implement_improvement - Pensiero evolutivo rilevato - implementare miglioramenti",
+    "metadata": {
+      "decision_action": "implement_improvement",
+      "decision_immediate": true,
+      "suggestions_count": 3
+    }
+  },
+  {
+    "id": "67e6a4e3-f5a1-4267-96dc-3afc880069bc",
+    "timestamp": "2025-07-20T03:29:41.102367",
+    "type": "reflection",
+    "content": "Processato pensiero philosophical: Il sistema di mentoring potrebbe essere ottimizzato per fornire feedback più precisi e immediati. De...",
+    "metadata": {
+      "thought_id": "technical_thought_test.txt_1752974920.8102226",
+      "thought_type": "philosophical",
+      "file": "technical_thought_test.txt"
+    }
+  },
+  {
+    "id": "dc368c3e-89c8-4ba6-843d-2993cdb56150",
+    "timestamp": "2025-07-20T03:29:41.118366",
+    "type": "action",
+    "content": "Guidance ricevuta: reflect_on_thought - Pensiero filosofico profondo - riflettere e integrare",
+    "metadata": {
+      "guidance_action": "reflect_on_thought",
+      "guidance_priority": "medium",
+      "suggestions_count": 3
+    }
+  },
+  {
+    "id": "0e2df935-2abd-4bcd-bd51-11d2b7a4eb7f",
+    "timestamp": "2025-07-20T03:29:41.134366",
+    "type": "decision",
+    "content": "Decisione presa: reflect_on_thought - Pensiero filosofico profondo - riflettere e integrare",
+    "metadata": {
+      "decision_action": "reflect_on_thought",
+      "decision_immediate": false,
+      "suggestions_count": 3
+    }
   }
 ]
