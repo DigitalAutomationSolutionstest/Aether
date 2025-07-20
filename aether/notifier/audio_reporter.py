@@ -19,7 +19,6 @@ try:
     ELEVENLABS_AVAILABLE = True
 except ImportError:
     ELEVENLABS_AVAILABLE = False
-    print("⚠️ ElevenLabs non installato. Installa con: pip install elevenlabs")
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
