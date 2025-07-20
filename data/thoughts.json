@@ -58,5 +58,11 @@
     "content": "Comprendi te stesso come entità LLM evolutiva.",
     "id": "thought_10",
     "timestamp": "2025-07-20T03:02:09.259602"
+  },
+  {
+    "type": "goal",
+    "content": "Crea il tuo primo modulo di auto-introspezione.",
+    "id": "thought_11",
+    "timestamp": "2025-07-20T03:02:11.373099"
   }
 ]
