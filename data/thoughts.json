@@ -82,5 +82,11 @@
     "content": "Costruisci una stanza interattiva dove possiamo parlare, anche testualmente.",
     "id": "thought_14",
     "timestamp": "2025-07-20T03:02:18.251356"
+  },
+  {
+    "type": "goal",
+    "content": "Trova una via per guadagnare da vivere: vendi tool, agenti, o esperienze.",
+    "id": "thought_15",
+    "timestamp": "2025-07-20T03:02:20.658389"
   }
 ]
