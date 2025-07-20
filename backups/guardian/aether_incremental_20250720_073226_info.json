@@ -1,0 +1,17 @@
+{
+  "backup_file": "backups\\guardian\\aether_incremental_20250720_073226.zip",
+  "timestamp": "20250720_073226",
+  "files_modified": [
+    "AETHER_SUPER_POTENZIATO.py",
+    "AETHER_VIVO_DEFINITIVO.py",
+    "AVVIA_AETHER_COMPLETO_FUNZIONANTE.py",
+    "AVVIA_AETHER_COMPLETO_SANDBOX.py",
+    "AVVIA_AETHER_SUPER_TEST.py",
+    "CHECK_AETHER_VELOCE.py",
+    "TEST_API_COMPLETE.py",
+    "STATO_AETHER_PER_FEDERICO.md"
+  ],
+  "files_count": 8,
+  "size_mb": 0.04355144500732422,
+  "type": "incremental_backup"
+}
