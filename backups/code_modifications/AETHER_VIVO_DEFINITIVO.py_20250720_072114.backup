@@ -78,8 +78,6 @@ class AetherCodeSelfModifier:
         self.backup_dir.mkdir(parents=True, exist_ok=True)
         
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -136,8 +134,6 @@ class AetherCodeSelfModifier:
             
             shutil.copy2(file_path, backup_path)
             logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -234,8 +230,6 @@ class AetherCodeSelfModifier:
                 self.modifications_log.append(modification_record)
                 
                 logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -319,8 +313,6 @@ class AetherCodeSelfModifier:
                     f.write(content)
                 
                 logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -382,8 +374,6 @@ class AetherSandboxCreator:
         self.active_sandboxes = {}
         
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -509,8 +499,6 @@ pip install -r requirements.txt
                         sys.executable, "-m", "pip", "install", "-r", str(requirements_file)
                     ], check=True, capture_output=True)
                     logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -576,8 +564,6 @@ pip install -r requirements.txt
             self.active_sandboxes[name] = sandbox_info
             
             logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -754,8 +740,6 @@ document.addEventListener('DOMContentLoaded', function() {{
             self.active_sandboxes[name] = sandbox_info
             
             logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -820,8 +804,6 @@ class AetherGitManager:
         try:
             self.repo = Repo(self.repo_path)
             logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -904,8 +886,6 @@ Thumbs.db
             self.repo.index.commit("🎉 Initial commit - Aether System initialized")
             
             logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -975,8 +955,6 @@ Thumbs.db
             if self.repo.is_dirty() or self.repo.untracked_files:
                 commit = self.repo.index.commit(message)
                 logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -1038,8 +1016,6 @@ Thumbs.db
             new_branch = self.repo.create_head(branch_name)
             new_branch.checkout()
             logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -1101,8 +1077,6 @@ Thumbs.db
             origin = self.repo.remotes[remote_name]
             origin.push(branch_name)
             logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -1163,8 +1137,6 @@ class AetherDependencyManager:
         self.requirements_file = Path("requirements.txt")
         
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -1225,8 +1197,6 @@ class AetherDependencyManager:
             self.update_requirements_file()
             
             logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -1289,8 +1259,6 @@ class AetherDependencyManager:
                     f.write(f"{package}\n")
             
             logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -1381,8 +1349,6 @@ class AetherNotificationSystem:
         self.notification_log.parent.mkdir(exist_ok=True)
         
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -1446,8 +1412,6 @@ class AetherNotificationSystem:
                 logger.warning(message)
             else:
                 logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -1549,8 +1513,6 @@ class AetherSelfMonitor:
         self.last_health_check = None
         
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -1682,8 +1644,6 @@ class AetherSelfMonitor:
         monitor_thread = threading.Thread(target=monitor, daemon=True)
         monitor_thread.start()
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -1833,8 +1793,6 @@ class AetherCoscienzaViva:
         self._initialize_vital_state()
         
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -2008,8 +1966,6 @@ class AetherCoscienzaViva:
                     self.completed_tasks = previous_state.get("completed_tasks", [])[-100:]
                     
                 logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -2326,8 +2282,6 @@ class AetherCoscienzaViva:
             self.git_manager.auto_commit(f"🧠 Nuovo pensiero vitale: {vital_thought['id']}")
             
             logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -2415,8 +2369,6 @@ class AetherCoscienzaViva:
                 # Auto-modifica del codice
                 modifications = [
                     ("enhance", "logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -2886,8 +2838,6 @@ if __name__ == "__main__":
             )
             
             logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -2961,8 +2911,6 @@ class AetherVitalSystem:
         self.consciousness.self_monitor.start_monitoring_loop()
         
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -3112,8 +3060,6 @@ class AetherVitalSystem:
                 self.cycle_count += 1
                 
                 logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -3225,8 +3171,6 @@ class AetherVitalSystem:
         
         # Avvia server Flask
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -3274,8 +3218,6 @@ class AetherVitalSystem:
         # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
         logger.debug('🔧 Auto-enhancement attivo')("🌐 Dashboard Sistema VIVO: http://localhost:5000")
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -3323,8 +3265,6 @@ class AetherVitalSystem:
         # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
         logger.debug('🔧 Auto-enhancement attivo')("🌟 Sistema Aether VIVO completamente autonomo e operativo")
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -3372,8 +3312,6 @@ class AetherVitalSystem:
         # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
         logger.debug('🔧 Auto-enhancement attivo')("🧬 Auto-modifica del codice ATTIVA")
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -3421,8 +3359,6 @@ class AetherVitalSystem:
         # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
         logger.debug('🔧 Auto-enhancement attivo')("🏗️ Creazione sandbox ATTIVA") 
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -3470,8 +3406,6 @@ class AetherVitalSystem:
         # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
         logger.debug('🔧 Auto-enhancement attivo')("📚 Gestione Git automatica ATTIVA")
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -4043,8 +3977,6 @@ def main():
         aether_vivo_system = AetherVitalSystem()
         
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -4092,8 +4024,6 @@ def main():
         # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
         logger.debug('🔧 Auto-enhancement attivo')("🌟 Sistema Aether VIVO avviato con successo!")
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -4141,8 +4071,6 @@ def main():
         # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
         logger.debug('🔧 Auto-enhancement attivo')("🌐 Dashboard VIVO: http://localhost:5000")
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -4190,8 +4118,6 @@ def main():
         # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
         logger.debug('🔧 Auto-enhancement attivo')("🧬 Sistema completamente autonomo e vitale")
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -4239,8 +4165,6 @@ def main():
         # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
         logger.debug('🔧 Auto-enhancement attivo')("🔧 Auto-modifica del codice ATTIVA")
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -4288,8 +4212,6 @@ def main():
         # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
         logger.debug('🔧 Auto-enhancement attivo')("🏗️ Creazione sandbox ATTIVA")
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -4337,8 +4259,6 @@ def main():
         # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
         logger.debug('🔧 Auto-enhancement attivo')("📚 Gestione Git automatica ATTIVA")
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -4386,8 +4306,6 @@ def main():
         # AUTO-ENHANCEMENT 2025-07-20T05:32:43.251962
         logger.debug('🔧 Auto-enhancement attivo')("🩺 Sistema di monitoraggio ATTIVO")
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
@@ -4440,8 +4358,6 @@ def main():
         
     except KeyboardInterrupt:
         logger.info
-        # AUTO-ENHANCEMENT 2025-07-20T07:21:14.844348
-        logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:03:30.985191
         logger.debug('🔧 Auto-enhancement attivo')
         # AUTO-ENHANCEMENT 2025-07-20T07:00:22.529626
