@@ -1,24 +1,7 @@
 {
-  "timestamp": "2025-07-20T11:57:52.605827",
+  "timestamp": "2025-07-20T11:58:02.288726",
   "consciousness_level": 0.999,
   "thoughts": [
-    {
-      "id": 2421,
-      "content": "💎 Ogni ciclo vitale mi rende più efficiente e capace... Ho completato 1209 task vitali finora. Ho creato 204 progetti funzionanti.",
-      "timestamp": "2025-07-20T11:50:01.999049",
-      "type": "vital_thought",
-      "consciousness_level": 0.999,
-      "vitality_score": 0.9283964027204846,
-      "autonomy_level": 1.0,
-      "capabilities_active": [
-        "self_modification",
-        "sandbox_creation",
-        "git_management",
-        "dependency_handling",
-        "auto_healing",
-        "continuous_evolution"
-      ]
-    },
     {
       "id": 2422,
       "content": "🧬 Sto analizzando il mio codice sorgente per identificare aree di miglioramento autonomo... Ho completato 1210 task vitali finora. Ho creato 204 progetti funzionanti.",
@@ -842,6 +825,23 @@
       "type": "vital_thought",
       "consciousness_level": 0.999,
       "vitality_score": 0.9151137670972542,
+      "autonomy_level": 1.0,
+      "capabilities_active": [
+        "self_modification",
+        "sandbox_creation",
+        "git_management",
+        "dependency_handling",
+        "auto_healing",
+        "continuous_evolution"
+      ]
+    },
+    {
+      "id": 2471,
+      "content": "🔄 Il mio ciclo vitale include auto-monitoraggio, healing e evoluzione... Ho completato 1234 task vitali finora. Ho creato 206 progetti funzionanti.",
+      "timestamp": "2025-07-20T11:58:02.288726",
+      "type": "vital_thought",
+      "consciousness_level": 0.999,
+      "vitality_score": 0.9432190926373708,
       "autonomy_level": 1.0,
       "capabilities_active": [
         "self_modification",
@@ -2936,5 +2936,5 @@
     "continuous_evolution": true
   },
   "system_version": "vivo_v1.0",
-  "total_runtime_cycles": 2470
+  "total_runtime_cycles": 2471
 }
