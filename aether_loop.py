@@ -562,7 +562,8 @@ class AetherAutonomousLoop:
     def _should_communicate(self):
         """Determina se comunicare con l'utente"""
         # Comunica se ci sono pensieri importanti o ogni 10 cicli
-        return self.cycle_count % 10 == 0 or len(aether_consciousness.get_thoughts()) > 3
+        thoughts = aether_consciousness.get_thoughts()
+        return self.cycle_count % 10 == 0 or len(thoughts) > 3
         
     def _trigger_evolution(self):
         """Attiva processo di evoluzione"""
