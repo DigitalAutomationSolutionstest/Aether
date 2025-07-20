@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-07-20T07:59:52.988929",
-  "cpu_percent": 11.0,
-  "memory_percent": 53.3,
-  "memory_available_gb": 14.921558380126953,
-  "disk_percent": 54.00377081146834,
-  "disk_free_gb": 428.1134948730469,
+  "timestamp": "2025-07-20T08:00:54.003474",
+  "cpu_percent": 5.3,
+  "memory_percent": 54.0,
+  "memory_available_gb": 14.69943618774414,
+  "disk_percent": 54.00320645003234,
+  "disk_free_gb": 428.11874771118164,
   "disk_total_gb": 930.7578086853027,
   "process_count": 545,
   "load_average": [
