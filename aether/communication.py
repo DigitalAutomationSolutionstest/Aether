@@ -229,7 +229,16 @@ class AetherCommunicator:
             
     def _analyze_intent(self, message):
         """Analizza l'intento del messaggio"""
-        message_lower = message.lower()
+        # Gestisci diversi tipi di input
+        if isinstance(message, dict):
+            # Se è un dizionario, cerca il campo con il testo
+            message_text = message.get('content') or message.get('text') or message.get('message') or str(message)
+        elif isinstance(message, str):
+            message_text = message
+        else:
+            message_text = str(message)
+            
+        message_lower = message_text.lower()
         
         if any(q in message_lower for q in ['cosa', 'come', 'perché', 'quando', 'dove', 'chi', '?']):
             return 'question'
