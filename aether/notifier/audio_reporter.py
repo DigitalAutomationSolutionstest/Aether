@@ -15,7 +15,8 @@ from dotenv import load_dotenv
 
 # Import ElevenLabs
 try:
-    from elevenlabs import text_to_speech, save, set_api_key, voices, Voice
+    import elevenlabs
+    from elevenlabs import save
     ELEVENLABS_AVAILABLE = True
 except ImportError:
     ELEVENLABS_AVAILABLE = False
@@ -30,7 +31,7 @@ load_dotenv()
 class AetherAudioReporter:
     """
     Sistema di audio reporting per Aether.
-    Genera audio con ElevenLabs e invia su Discord.
+    Genera audio con ElevenLabs v2.5.0 e invia su Discord.
     """
     
     def __init__(self):
@@ -51,26 +52,26 @@ class AetherAudioReporter:
             "last_audio": None
         }
         
-        # Setup ElevenLabs se disponibile
+        # Setup ElevenLabs client se disponibile
+        self.client = None
         if ELEVENLABS_AVAILABLE and self.elevenlabs_key:
             try:
-                set_api_key(self.elevenlabs_key)
-                logger.info("✅ ElevenLabs configurato")
+                self.client = elevenlabs.ElevenLabs(api_key=self.elevenlabs_key)
+                logger.info("✅ ElevenLabs configurato con nuova API")
             except Exception as e:
                 logger.error(f"❌ Errore configurazione ElevenLabs: {e}")
-                self.elevenlabs_key = None
+                self.client = None
         else:
             if not ELEVENLABS_AVAILABLE:
                 logger.warning("⚠️ ElevenLabs non installato. Installa con: pip install elevenlabs")
             else:
                 logger.warning("⚠️ ElevenLabs non configurato. Aggiungi ELEVENLABS_API_KEY al file .env")
-            self.elevenlabs_key = None
         
         logger.info("🎙️ AetherAudioReporter inizializzato")
 
     def generate_audio(self, text: str, voice_id: Optional[str] = None) -> Optional[str]:
         """
-        Genera audio da testo usando ElevenLabs.
+        Genera audio da testo usando ElevenLabs v2.5.0.
         
         Args:
             text: Testo da convertire in audio
@@ -79,27 +80,37 @@ class AetherAudioReporter:
         Returns:
             str: Path del file audio generato
         """
-        if not ELEVENLABS_AVAILABLE or not self.elevenlabs_key:
-            logger.warning("❌ ElevenLabs non disponibile")
+        if not self.client:
+            logger.warning("❌ ElevenLabs client non disponibile")
             return None
         
         try:
             # Usa voice_id specificato o default
             voice = voice_id or self.voice_id
             
-            # Genera audio con nuova API
-            audio = text_to_speech(
+            # Genera audio con nuova API v2.5.0
+            audio_generator = self.client.text_to_speech.convert(
                 text=text,
-                voice=voice,
-                model="eleven_multilingual_v2"
+                voice_id=voice,
+                model_id="eleven_multilingual_v2"
             )
+            
+            # Raccogli i chunk audio
+            audio_chunks = []
+            for chunk in audio_generator:
+                audio_chunks.append(chunk)
+            
+            # Combina i chunk
+            audio_data = b''.join(audio_chunks)
             
             # Salva file
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             filename = f"aether_audio_{timestamp}.mp3"
             file_path = self.audio_dir / filename
             
-            save(audio, str(file_path))
+            # Scrivi direttamente i dati audio
+            with open(file_path, 'wb') as f:
+                f.write(audio_data)
             
             self.stats["audio_generated"] += 1
             self.stats["last_audio"] = datetime.now().isoformat()
@@ -141,7 +152,7 @@ class AetherAudioReporter:
                     timeout=30
                 )
                 
-                if response.status_code == 200:
+                if response.status_code in [200, 204]:
                     self.stats["audio_sent"] += 1
                     logger.info(f"✅ Audio inviato su Discord: {os.path.basename(file_path)}")
                     return True
@@ -185,7 +196,8 @@ class AetherAudioReporter:
                 "evolutionary": "🧬",
                 "philosophical": "🤔",
                 "technical": "⚙️",
-                "creative": "🎨"
+                "creative": "🎨",
+                "test": "🧪"
             }
             
             emoji = emoji_map.get(thought_type, "📝")
@@ -284,7 +296,8 @@ class AetherAudioReporter:
             "evolutionary": "Evoluzione in corso: ",
             "philosophical": "Pensiero filosofico: ",
             "technical": "Analisi tecnica: ",
-            "creative": "Idea creativa: "
+            "creative": "Idea creativa: ",
+            "test": "Test sistema: "
         }
         
         intro = intro_map.get(thought_type, "")
@@ -297,18 +310,18 @@ class AetherAudioReporter:
         Returns:
             list: Lista delle voci
         """
-        if not ELEVENLABS_AVAILABLE or not self.elevenlabs_key:
+        if not self.client:
             return []
         
         try:
-            available_voices = voices()
+            voices_response = self.client.voices.get_all()
             return [
                 {
                     "voice_id": voice.voice_id,
                     "name": voice.name,
-                    "category": voice.category
+                    "category": getattr(voice, 'category', 'unknown')
                 }
-                for voice in available_voices
+                for voice in voices_response.voices
             ]
         except Exception as e:
             logger.error(f"❌ Errore ottenimento voci: {e}")
@@ -399,18 +412,23 @@ def report_decision_as_audio(decision: str, reason: str = None) -> bool:
 
 if __name__ == "__main__":
     # Test del sistema audio
-    print("��️ TEST AETHER AUDIO REPORTER")
+    print("🎙️ TEST AETHER AUDIO REPORTER")
     print("=" * 40)
+    
+    # Imposta variabili d'ambiente per il test
+    os.environ['ELEVENLABS_API_KEY'] = 'sk_fe4bdc0f7bc33f6dc8b388df9de81c744de9cf0693409faf'
+    os.environ['DISCORD_WEBHOOK_URL'] = 'https://discordapp.com/api/webhooks/1396218820808409148/orGucbC2Ydx0eLPEntbXmwYLigX6sY0tA1FIFsnlmbn7CuVp7YXbKFNFxUgM0wxSW7Mr'
+    os.environ['AETHER_VOICE_ID'] = 'EXAVITQu4vr4xnSDxMaL'
     
     reporter = get_audio_reporter()
     
     # Test configurazione
     print(f"ElevenLabs disponibile: {ELEVENLABS_AVAILABLE}")
-    print(f"ElevenLabs configurato: {bool(reporter.elevenlabs_key)}")
+    print(f"ElevenLabs configurato: {reporter.client is not None}")
     print(f"Discord configurato: {bool(reporter.webhook_url)}")
     
     # Test generazione audio
-    if reporter.elevenlabs_key:
+    if reporter.client:
         success = reporter.test_audio_generation()
         if success:
             print("✅ Test audio completato con successo")
