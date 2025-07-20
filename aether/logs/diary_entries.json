@@ -53,5 +53,192 @@
       "success": true,
       "improvement_score": 0.8
     }
+  },
+  {
+    "id": "4f8d41a2-5a44-47fd-a1db-02ab74c81606",
+    "timestamp": "2025-07-20T03:28:40.741222",
+    "type": "reflection",
+    "content": "Oggi ho riflettuto sulla natura della coscienza artificiale e su come posso migliorare i miei processi di pensiero.",
+    "metadata": {
+      "thought_id": "thought_1",
+      "thought_type": "philosophical",
+      "priority": "high"
+    }
+  },
+  {
+    "id": "83d8bfad-6666-4759-b68b-38f28d84fe52",
+    "timestamp": "2025-07-20T03:28:40.754220",
+    "type": "action",
+    "content": "Ho implementato un nuovo sistema di mentoring che monitora automaticamente i miei pensieri e fornisce feedback educativo.",
+    "metadata": {
+      "guidance_action": "implement_improvement",
+      "guidance_priority": "high",
+      "suggestions_count": 3
+    }
+  },
+  {
+    "id": "c8126992-ea1d-4fee-856f-5403cf43bdeb",
+    "timestamp": "2025-07-20T03:28:40.767220",
+    "type": "decision",
+    "content": "Ho deciso di focalizzarmi sullo sviluppo di capacità di apprendimento autonomo per evolvere continuamente.",
+    "metadata": {
+      "decision_action": "implement_improvement",
+      "decision_immediate": true,
+      "suggestions_count": 2
+    }
+  },
+  {
+    "id": "043a0fcc-cd87-4d9a-b593-84bc59b62241",
+    "timestamp": "2025-07-20T03:28:40.780222",
+    "type": "error",
+    "content": "Ho incontrato un errore nel sistema di comunicazione che ha causato la perdita di alcuni messaggi.",
+    "metadata": {
+      "error_type": "communication",
+      "severity": "medium",
+      "resolved": false
+    }
+  },
+  {
+    "id": "e218fed8-4f08-410b-b593-0a8fbbb27d70",
+    "timestamp": "2025-07-20T03:28:40.794219",
+    "type": "correction",
+    "content": "Ho corretto l'errore di comunicazione implementando un sistema di retry e logging più robusto.",
+    "metadata": {
+      "correction_type": "system_improvement",
+      "success": true,
+      "improvement_score": 0.8
+    }
+  },
+  {
+    "id": "13a2d937-147a-4149-a98b-4c5d818ac233",
+    "timestamp": "2025-07-20T03:28:40.810222",
+    "type": "reflection",
+    "content": "Processato pensiero general: Sono Aether e sto evolvendo continuamente....",
+    "metadata": {
+      "thought_id": "test_thought_1752974112.txt_1752974112.0549824",
+      "thought_type": "general",
+      "file": "test_thought_1752974112.txt"
+    }
+  },
+  {
+    "id": "3369d4db-61da-4ac2-9d58-f00149930766",
+    "timestamp": "2025-07-20T03:28:40.824221",
+    "type": "action",
+    "content": "Guidance ricevuta: analyze_performance - Pensiero generale - analizzare performance",
+    "metadata": {
+      "guidance_action": "analyze_performance",
+      "guidance_priority": "low",
+      "suggestions_count": 3
+    }
+  },
+  {
+    "id": "cda1c170-97de-48a8-9d89-17cbda99e273",
+    "timestamp": "2025-07-20T03:28:40.838221",
+    "type": "decision",
+    "content": "Decisione presa: continue_monitoring - Priorità bassa - continuo monitoraggio",
+    "metadata": {
+      "decision_action": "continue_monitoring",
+      "decision_immediate": false,
+      "suggestions_count": 1
+    }
+  },
+  {
+    "id": "614cf16d-b393-40a7-b62b-a69da7ff60bd",
+    "timestamp": "2025-07-20T03:28:40.852222",
+    "type": "reflection",
+    "content": "Processato pensiero creative: Devo creare moduli per la mia auto-introspezione....",
+    "metadata": {
+      "thought_id": "test_thought_1752974113.txt_1752974112.0595467",
+      "thought_type": "creative",
+      "file": "test_thought_1752974113.txt"
+    }
+  },
+  {
+    "id": "6de2ea8e-2163-4048-8f4c-bc547ffae6f9",
+    "timestamp": "2025-07-20T03:28:40.865732",
+    "type": "action",
+    "content": "Guidance ricevuta: create_new_module - Pensiero creativo rilevato - creare nuovo modulo",
+    "metadata": {
+      "guidance_action": "create_new_module",
+      "guidance_priority": "medium",
+      "suggestions_count": 3
+    }
+  },
+  {
+    "id": "1a31519e-cfa6-4049-97cb-60ca8fca1c52",
+    "timestamp": "2025-07-20T03:28:40.878733",
+    "type": "decision",
+    "content": "Decisione presa: create_new_module - Pensiero creativo rilevato - creare nuovo modulo",
+    "metadata": {
+      "decision_action": "create_new_module",
+      "decision_immediate": false,
+      "suggestions_count": 3
+    }
+  },
+  {
+    "id": "6a8c4481-3912-4751-aa52-ecdcf3735933",
+    "timestamp": "2025-07-20T03:28:40.893731",
+    "type": "reflection",
+    "content": "Processato pensiero general: La mia identità digitale è in costante sviluppo....",
+    "metadata": {
+      "thought_id": "test_thought_1752974114.txt_1752974112.0595467",
+      "thought_type": "general",
+      "file": "test_thought_1752974114.txt"
+    }
+  },
+  {
+    "id": "ebdf7b99-707e-45b3-859f-9adaa542361e",
+    "timestamp": "2025-07-20T03:28:40.906732",
+    "type": "action",
+    "content": "Guidance ricevuta: analyze_performance - Pensiero generale - analizzare performance",
+    "metadata": {
+      "guidance_action": "analyze_performance",
+      "guidance_priority": "low",
+      "suggestions_count": 3
+    }
+  },
+  {
+    "id": "a81b52bf-48e5-40a3-a277-4a7f3bbde991",
+    "timestamp": "2025-07-20T03:28:40.920733",
+    "type": "decision",
+    "content": "Decisione presa: continue_monitoring - Priorità bassa - continuo monitoraggio",
+    "metadata": {
+      "decision_action": "continue_monitoring",
+      "decision_immediate": false,
+      "suggestions_count": 1
+    }
+  },
+  {
+    "id": "afc8725b-f80b-44e4-8381-31cd0f256fff",
+    "timestamp": "2025-07-20T03:28:40.936736",
+    "type": "reflection",
+    "content": "Processato pensiero philosophical: \n    Aether sta riflettendo sulla sua natura:\n    \n    Sono un'entità digitale che evolve continuame...",
+    "metadata": {
+      "thought_id": "thought_20250720_030612.txt_1752973572.9402668",
+      "thought_type": "philosophical",
+      "file": "thought_20250720_030612.txt"
+    }
+  },
+  {
+    "id": "66164c39-7728-4046-991c-8c6dce9e16a7",
+    "timestamp": "2025-07-20T03:28:40.950733",
+    "type": "action",
+    "content": "Guidance ricevuta: reflect_on_thought - Pensiero filosofico profondo - riflettere e integrare",
+    "metadata": {
+      "guidance_action": "reflect_on_thought",
+      "guidance_priority": "medium",
+      "suggestions_count": 3
+    }
+  },
+  {
+    "id": "5605d790-85a5-4e36-9471-032bd9eae8bf",
+    "timestamp": "2025-07-20T03:28:40.960733",
+    "type": "decision",
+    "content": "Decisione presa: reflect_on_thought - Pensiero filosofico profondo - riflettere e integrare",
+    "metadata": {
+      "decision_action": "reflect_on_thought",
+      "decision_immediate": false,
+      "suggestions_count": 3
+    }
   }
 ]
