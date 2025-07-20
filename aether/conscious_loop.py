@@ -17,7 +17,6 @@ import random
 
 # Import moduli Aether
 from aether.diary_logger import get_diary_logger, log_entry
-from aether.mentor_llm import AetherMentor
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -44,7 +43,8 @@ class ConsciousLoop:
         
         # Inizializza componenti
         self.diary_logger = get_diary_logger()
-        self.mentor_engine = AetherMentor()
+        # Mentor engine verrà inizializzato quando necessario
+        self.mentor_engine = None
         
         # Thread-safe components
         self.conscious = False
