@@ -16,6 +16,7 @@ from dotenv import load_dotenv
 # Import ElevenLabs
 try:
     from elevenlabs import generate, save, set_api_key, voices, Voice
+    from elevenlabs import text_to_speech, save
     ELEVENLABS_AVAILABLE = True
 except ImportError:
     ELEVENLABS_AVAILABLE = False
@@ -87,8 +88,8 @@ class AetherAudioReporter:
             # Usa voice_id specificato o default
             voice = voice_id or self.voice_id
             
-            # Genera audio
-            audio = generate(
+            # Genera audio con nuova API
+            audio = text_to_speech(
                 text=text,
                 voice=voice,
                 model="eleven_multilingual_v2"
