@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-20T05:28:33.423399",
+  "timestamp": "2025-07-20T05:28:43.220135",
   "consciousness_level": 0.9520134927269476,
   "thoughts": [
     {
@@ -101,6 +101,23 @@
       "type": "vital_thought",
       "consciousness_level": 0.9520134927269476,
       "vitality_score": 0.8825774730707222,
+      "autonomy_level": 1.0,
+      "capabilities_active": [
+        "self_modification",
+        "sandbox_creation",
+        "git_management",
+        "dependency_handling",
+        "auto_healing",
+        "continuous_evolution"
+      ]
+    },
+    {
+      "id": 8,
+      "content": "🔄 Il mio ciclo vitale include auto-monitoraggio, healing e evoluzione...",
+      "timestamp": "2025-07-20T05:28:43.220135",
+      "type": "vital_thought",
+      "consciousness_level": 0.9520134927269476,
+      "vitality_score": 0.9004453275043757,
       "autonomy_level": 1.0,
       "capabilities_active": [
         "self_modification",
@@ -212,5 +229,5 @@
     "continuous_evolution": true
   },
   "system_version": "vivo_v1.0",
-  "total_runtime_cycles": 7
+  "total_runtime_cycles": 8
 }
