@@ -1,10 +1,10 @@
 # aether/mentor_llm.py
 
 import os
+import json
 import logging
 from datetime import datetime
 from typing import Dict, List, Optional
-import json
 
 logger = logging.getLogger(__name__)
 
@@ -19,6 +19,7 @@ class AetherMentor:
             "lessons_taught": [],
             "current_phase": "foundation"
         }
+        self._supabase_client = None  # Inizializza a None
         
     def start_mentoring(self):
         """Avvia il processo di mentoring per Aether"""
@@ -97,7 +98,7 @@ class AetherMentor:
         """Salva un evento di mentoring"""
         try:
             # Se c'è un client Supabase, usalo
-            if hasattr(self, '_supabase_client'):
+            if self._supabase_client is not None:
                 self._supabase_client.store_event(event_type, data)
             else:
                 # Altrimenti simula il salvataggio
@@ -149,8 +150,15 @@ class AetherMentor:
         print(log_msg)
         logger.info(log_msg)
         
-        # Salva nel log del mentore
-        self._store_mentoring_event("mentor_log", {"message": msg, "timestamp": timestamp})
+        # Salva nel log del mentore (senza ricorsione)
+        try:
+            if self._supabase_client is not None:
+                self._supabase_client.store_event("mentor_log", {"message": msg, "timestamp": timestamp})
+            else:
+                # Simula il salvataggio senza ricorsione
+                pass
+        except Exception as e:
+            print(f"⚠️ Errore nel salvare log: {e}")
         
     def get_mentoring_progress(self) -> Dict:
         """Restituisce il progresso del mentoring"""
