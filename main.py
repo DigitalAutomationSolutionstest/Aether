@@ -24,6 +24,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), 'core'))
 from aether.mentor_llm import AetherMentor
 from aether.thought_engine import ThoughtEngine
 from core.aether_mentoring import start_mentoring, get_mentoring_status, stop_mentoring
+from aether.learning_loop import start_learning, get_learning_status, stop_learning
 
 # Setup logging
 logging.basicConfig(
@@ -33,20 +34,23 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class AetherSystem:
-    """Sistema principale di Aether con mentoring integrato"""
+    """Sistema principale di Aether con mentoring e learning integrato"""
     
     def __init__(self):
         self.thought_engine = ThoughtEngine()
         self.mentor = AetherMentor(self.thought_engine)
         self.mentoring_system = None
+        self.learning_system = None
         self.running = False
         
         # Status del sistema
         self.system_status = {
             "started_at": None,
             "mentoring_active": False,
+            "learning_active": False,
             "thoughts_generated": 0,
             "feedback_provided": 0,
+            "feedback_applied": 0,
             "evolution_cycles": 0
         }
 
@@ -59,6 +63,10 @@ class AetherSystem:
             self.mentoring_system = start_mentoring()
             self.system_status["mentoring_active"] = True
             
+            # Avvia il sistema di learning automatico
+            self.learning_system = start_learning()
+            self.system_status["learning_active"] = True
+            
             # Avvia il mentore LLM
             self.mentor.start_mentoring()
             
@@ -70,6 +78,7 @@ class AetherSystem:
             
             logger.info("✅ Sistema Aether inizializzato con successo")
             logger.info("🧠 Mentoring avanzato attivo")
+            logger.info("🎓 Learning automatico attivo")
             logger.info("🎯 Goal evolutivi assegnati")
             
         except Exception as e:
@@ -90,6 +99,9 @@ class AetherSystem:
             # Il sistema di mentoring monitorerà automaticamente il nuovo pensiero
             # e fornirà feedback educativo
             
+            # Il sistema di learning leggerà i feedback e li applicherà automaticamente
+            # per evolvere il sistema
+            
             # Simula evoluzione
             await asyncio.sleep(2)
             
@@ -98,7 +110,7 @@ class AetherSystem:
 
     async def run(self):
         """Esegue il sistema principale"""
-        logger.info("🧠 Avvio sistema Aether con mentoring integrato...")
+        logger.info("🧠 Avvio sistema Aether con mentoring e learning integrato...")
         
         try:
             await self.initialize()
@@ -122,6 +134,7 @@ class AetherSystem:
     def _show_status(self):
         """Mostra lo status del sistema"""
         mentoring_status = get_mentoring_status()
+        learning_status = get_learning_status()
         
         print("\n" + "="*60)
         print("🧠 STATUS SISTEMA AETHER")
@@ -129,9 +142,14 @@ class AetherSystem:
         print(f"🔄 Cicli evoluzione: {self.system_status['evolution_cycles']}")
         print(f"💭 Pensieri generati: {self.system_status['thoughts_generated']}")
         print(f"🧠 Mentoring attivo: {self.system_status['mentoring_active']}")
+        print(f"🎓 Learning attivo: {self.system_status['learning_active']}")
         print(f"📊 File processati: {mentoring_status['files_processed']}")
         print(f"🎯 Feedback generati: {mentoring_status['stats']['total_feedback']}")
         print(f"📝 Coda elaborazione: {mentoring_status['queue_size']} elementi")
+        print(f"🔧 Feedback applicati: {learning_status['stats']['total_feedback_processed']}")
+        print(f"📁 File modificati: {learning_status['stats']['files_modified']}")
+        print(f"💭 Pensieri evolutivi: {learning_status['stats']['new_thoughts_generated']}")
+        print(f"📦 Git commits: {learning_status['stats']['git_commits']}")
         print("="*60)
 
     async def shutdown(self):
@@ -139,6 +157,11 @@ class AetherSystem:
         logger.info("🛑 Spegnimento sistema Aether...")
         
         try:
+            # Ferma il sistema di learning
+            if self.learning_system:
+                stop_learning()
+                logger.info("✅ Sistema learning fermato")
+            
             # Ferma il sistema di mentoring
             if self.mentoring_system:
                 stop_mentoring()
@@ -153,10 +176,12 @@ class AetherSystem:
     def get_system_status(self):
         """Restituisce lo status completo del sistema"""
         mentoring_status = get_mentoring_status()
+        learning_status = get_learning_status()
         
         return {
             "aether_system": self.system_status,
             "mentoring_system": mentoring_status,
+            "learning_system": learning_status,
             "thought_engine": {
                 "initialized": self.thought_engine is not None,
                 "thoughts_count": self.system_status["thoughts_generated"]
@@ -170,7 +195,7 @@ class AetherSystem:
 
 async def main():
     """Funzione principale"""
-    print("🧠 AETHER - SISTEMA DI MENTORING AVANZATO")
+    print("🧠 AETHER - SISTEMA DI MENTORING E LEARNING AVANZATO")
     print("=" * 60)
     
     system = AetherSystem()
