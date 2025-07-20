@@ -339,5 +339,21 @@
       "decision_immediate": false,
       "suggestions_count": 3
     }
+  },
+  {
+    "id": "67d3d1a3-006c-4c73-a711-2ca05ecf4a48",
+    "timestamp": "2025-07-20T03:53:38.371198",
+    "type": "reflection",
+    "content": "Riflessione profonda: L'audio permette una connessione più umana con gli utenti.",
+    "metadata": {
+      "test": true
+    }
+  },
+  {
+    "id": "045c38de-840e-461d-ab2a-6d57fd262701",
+    "timestamp": "2025-07-20T03:53:38.678170",
+    "type": "decision",
+    "content": "Implementare sistema audio - Per migliorare l'interazione e l'engagement degli utenti",
+    "metadata": {}
   }
 ]
