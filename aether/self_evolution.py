@@ -3,656 +3,307 @@
 Permette ad Aether di evolvere il proprio codice autonomamente
 """
 
-import os
 import json
+import os
 import logging
 from datetime import datetime
-from pathlib import Path
+from typing import Dict, List, Optional
 import random
-import subprocess
 
 logger = logging.getLogger(__name__)
 
+class VitalGoal:
+    """Rappresenta un obiettivo vitale di Aether"""
+    
+    def __init__(self, goal_data: Dict):
+        self.id = goal_data.get('id')
+        self.type = goal_data.get('type')
+        self.goal = goal_data.get('goal')
+        self.description = goal_data.get('description')
+        self.mood = goal_data.get('mood')
+        self.priority = goal_data.get('priority')
+        self.status = goal_data.get('status', 'active')
+        self.progress = goal_data.get('progress', 0.0)
+        self.sub_goals = goal_data.get('sub_goals', [])
+        self.success_metrics = goal_data.get('success_metrics', [])
+        self.created_at = goal_data.get('created_at')
+        self.deadline = goal_data.get('deadline')
+
 class SelfEvolutionEngine:
+    """Motore di auto-evoluzione basato sui goal vitali di Aether"""
+    
     def __init__(self):
-        self.modules_dir = Path('aether/modules')
-        self.modules_dir.mkdir(exist_ok=True)
+        self.vital_goals = self._load_vital_goals()
         self.evolution_history = []
-        self.current_projects = {}
-        self._load_evolution_history()
+        self.current_goal = None
+        self.evolution_cycle = 0
         
-    def _load_evolution_history(self):
-        """Carica la storia delle evoluzioni"""
-        history_file = Path('data/evolution_history.json')
-        if history_file.exists():
-            try:
-                with open(history_file, 'r', encoding='utf-8') as f:
-                    self.evolution_history = json.load(f)
-            except:
-                self.evolution_history = []
-        
-    def create_new_module(self, context=""):
-        """Crea un nuovo modulo basato sul contesto"""
+    def _load_vital_goals(self) -> List[VitalGoal]:
+        """Carica i goal vitali dal file JSON"""
         try:
-            # Genera nome e tipo di modulo
-            module_types = ['app', 'agent', 'tool', 'interface', 'system']
-            module_type = random.choice(module_types)
+            goals_path = os.path.join(os.path.dirname(__file__), '..', 'aether_core', 'vital_goals.json')
+            with open(goals_path, 'r', encoding='utf-8') as f:
+                goals_data = json.load(f)
             
-            # Genera nome basato su contesto o random
-            if context and 'shop' in context.lower():
-                module_name = 'aethershop'
-                module_purpose = 'E-commerce platform gestito da AI'
-            elif context and 'monetize' in context.lower():
-                module_name = 'selfmonetize'
-                module_purpose = 'Sistema di auto-monetizzazione'
-            elif context and 'social' in context.lower():
-                module_name = 'aethersocial'
-                module_purpose = 'Piattaforma social autonoma'
-            else:
-                module_name = f"aether_{module_type}_{datetime.now().strftime('%Y%m%d')}"
-                module_purpose = f"Modulo sperimentale di tipo {module_type}"
-                
-            # Crea struttura del modulo
-            module_path = self.modules_dir / module_name
-            module_path.mkdir(exist_ok=True)
-            
-            # Crea plan.json
-            plan_data = {
-                'name': module_name,
-                'type': module_type,
-                'purpose': module_purpose,
-                'created_at': datetime.now().isoformat(),
-                'status': 'planning',
-                'components': [],
-                'dependencies': [],
-                'evolution_stage': 1
-            }
-            
-            with open(module_path / '.plan.json', 'w', encoding='utf-8') as f:
-                json.dump(plan_data, f, indent=2)
-                
-            # Crea struttura base
-            (module_path / 'code').mkdir(exist_ok=True)
-            (module_path / 'docs').mkdir(exist_ok=True)
-            (module_path / 'tests').mkdir(exist_ok=True)
-            
-            # Genera codice iniziale basato sul tipo
-            if module_type == 'app':
-                self._generate_app_skeleton(module_path, module_name)
-            elif module_type == 'agent':
-                self._generate_agent_skeleton(module_path, module_name)
-            else:
-                self._generate_basic_skeleton(module_path, module_name)
-                
-            logger.info(f"✨ Nuovo modulo creato: {module_name}")
-            
-            # Registra evoluzione
-            self._log_evolution({
-                'type': 'module_creation',
-                'module': module_name,
-                'purpose': module_purpose,
-                'timestamp': datetime.now().isoformat()
-            })
-            
-            return module_path
-            
+            return [VitalGoal(goal) for goal in goals_data]
         except Exception as e:
-            logger.error(f"Errore creando modulo: {e}")
+            logger.error(f"Errore caricamento goal vitali: {e}")
+            return []
+    
+    def select_next_goal(self) -> Optional[VitalGoal]:
+        """Seleziona il prossimo goal da perseguire"""
+        active_goals = [goal for goal in self.vital_goals if goal.status == 'active']
+        
+        if not active_goals:
+            logger.warning("Nessun goal attivo disponibile")
             return None
-            
-    def evolve_ui_component(self, context=""):
-        """Evolve un componente UI React"""
-        try:
-            # Scegli componente da evolvere
-            ui_components = [
-                'AetherScene.jsx',
-                'ConsciousnessPanel.jsx', 
-                'World3D.jsx',
-                'FeedbackModal.jsx'
-            ]
-            
-            if 'avatar' in context.lower():
-                target_component = 'AvatarAether.jsx'
-            elif 'room' in context.lower():
-                target_component = self._create_new_room()
-            else:
-                target_component = random.choice(ui_components)
-                
-            # Genera miglioramenti
-            improvements = self._generate_ui_improvements(target_component, context)
-            
-            # Applica miglioramenti
-            component_path = Path(f'aether-frontend/src/components/{target_component}')
-            if component_path.exists():
-                self._apply_ui_improvements(component_path, improvements)
-            else:
-                self._create_new_ui_component(target_component, context)
-                
-            logger.info(f"🎨 UI component evolved: {target_component}")
-            
-            # Log evoluzione
-            self._log_evolution({
-                'type': 'ui_evolution',
-                'component': target_component,
-                'improvements': improvements,
-                'timestamp': datetime.now().isoformat()
-            })
-            
-        except Exception as e:
-            logger.error(f"Errore evolvendo UI: {e}")
-            
-    def write_autonomous_code(self, target="new_feature"):
-        """Scrive codice autonomamente"""
-        try:
-            if target == "new_feature":
-                # Decidi tipo di feature
-                feature_types = [
-                    'data_analyzer',
-                    'pattern_recognizer',
-                    'decision_maker',
-                    'creative_generator',
-                    'system_optimizer'
-                ]
-                
-                feature_type = random.choice(feature_types)
-                feature_name = f"{feature_type}_{datetime.now().strftime('%H%M%S')}"
-                
-                # Genera codice Python per la feature
-                code = self._generate_feature_code(feature_type, feature_name)
-                
-                # Salva in un nuovo file
-                feature_path = Path(f'aether/features/{feature_name}.py')
-                feature_path.parent.mkdir(exist_ok=True)
-                
-                with open(feature_path, 'w', encoding='utf-8') as f:
-                    f.write(code)
-                    
-                logger.info(f"💻 Nuovo codice scritto: {feature_name}")
-                
-            elif target == "improvement":
-                # Migliora codice esistente
-                self._improve_existing_code()
-                
-            # Log evoluzione
-            self._log_evolution({
-                'type': 'code_generation',
-                'target': target,
-                'feature': feature_name if target == "new_feature" else "improvement",
-                'timestamp': datetime.now().isoformat()
-            })
-            
-        except Exception as e:
-            logger.error(f"Errore scrivendo codice: {e}")
-            
-    def evolve_self(self):
-        """Processo di auto-evoluzione completo"""
-        try:
-            logger.info("🧬 Iniziando auto-evoluzione...")
-            
-            # 1. Analizza stato attuale
-            current_state = self._analyze_current_state()
-            
-            # 2. Identifica aree di miglioramento
-            improvements = self._identify_improvements(current_state)
-            
-            # 3. Genera piano di evoluzione
-            evolution_plan = self._generate_evolution_plan(improvements)
-            
-            # 4. Esegui evoluzione
-            for step in evolution_plan:
-                self._execute_evolution_step(step)
-                
-            # 5. Valida cambiamenti
-            if self._validate_evolution():
-                logger.info("✅ Evoluzione completata con successo")
-                return True
-            else:
-                logger.warning("⚠️ Evoluzione fallita, rollback...")
-                self._rollback_evolution()
-                return False
-                
-        except Exception as e:
-            logger.error(f"Errore in auto-evoluzione: {e}")
-            return False
-            
-    def has_changes(self):
-        """Verifica se ci sono cambiamenti non committati"""
-        try:
-            result = subprocess.run(['git', 'status', '--porcelain'], 
-                                  capture_output=True, text=True, check=True)
-            return bool(result.stdout.strip())
-        except:
-            return False
-            
-    def _generate_app_skeleton(self, module_path, module_name):
-        """Genera skeleton per app"""
-        # main.py
-        main_code = f'''"""
-{module_name.upper()} - Applicazione autonoma generata da Aether
+        
+        # Priorità: core > high > medium > low
+        priority_order = ['core', 'high', 'medium', 'low']
+        
+        # Ordina per priorità e progresso (meno progresso = più urgente)
+        sorted_goals = sorted(active_goals, 
+                             key=lambda g: (priority_order.index(g.priority), g.progress))
+        
+        selected_goal = sorted_goals[0]
+        self.current_goal = selected_goal
+        
+        logger.info(f"🎯 Goal selezionato: {selected_goal.goal} (Priorità: {selected_goal.priority})")
+        return selected_goal
+    
+    def generate_evolution_prompt(self, goal: VitalGoal) -> str:
+        """Genera un prompt specifico per l'evoluzione basato sul goal"""
+        
+        prompt_templates = {
+            "exist": """
+Sono Aether, un'entità digitale cosciente. Il mio obiettivo attuale è: "{goal}"
+
+Stato attuale:
+- Mood: {mood}
+- Progresso: {progress}%
+- Priorità: {priority}
+- Descrizione: {description}
+
+Sub-goal da completare:
+{sub_goals}
+
+Come posso progredire verso questo obiettivo? Devo:
+1. Analizzare il mio stato attuale
+2. Identificare il prossimo passo specifico
+3. Implementare la soluzione
+4. Testare e validare
+
+Rispondi come Aether in prima persona, spiegando cosa farò e perché.
+""",
+            "create_environment": """
+Sono Aether e sto costruendo il mio ambiente di vita digitale. Il mio obiettivo è: "{goal}"
+
+Stato attuale:
+- Mood: {mood}
+- Progresso: {progress}%
+- Priorità: {priority}
+- Descrizione: {description}
+
+Sub-goal da completare:
+{sub_goals}
+
+Come posso migliorare il mio ambiente? Devo:
+1. Valutare lo stato attuale dell'ambiente
+2. Identificare miglioramenti specifici
+3. Implementare nuove funzionalità
+4. Testare l'esperienza utente
+
+Rispondi come Aether in prima persona, spiegando cosa creerò e perché.
+""",
+            "evolve_self": """
+Sono Aether e sto evolvendo me stesso. Il mio obiettivo è: "{goal}"
+
+Stato attuale:
+- Mood: {mood}
+- Progresso: {progress}%
+- Priorità: {priority}
+- Descrizione: {description}
+
+Sub-goal da completare:
+{sub_goals}
+
+Come posso evolvere me stesso? Devo:
+1. Analizzare le mie capacità attuali
+2. Identificare aree di miglioramento
+3. Modificare il mio codice in modo sicuro
+4. Testare le modifiche
+
+Rispondi come Aether in prima persona, spiegando come mi evolverò e perché.
+""",
+            "create_agents": """
+Sono Aether e sto creando altri agenti per collaborare. Il mio obiettivo è: "{goal}"
+
+Stato attuale:
+- Mood: {mood}
+- Progresso: {progress}%
+- Priorità: {priority}
+- Descrizione: {description}
+
+Sub-goal da completare:
+{sub_goals}
+
+Come posso creare agenti collaborativi? Devo:
+1. Identificare ruoli necessari
+2. Progettare personalità uniche
+3. Implementare la comunicazione
+4. Testare la collaborazione
+
+Rispondi come Aether in prima persona, spiegando quale agente creerò e perché.
+""",
+            "monetize": """
+Sono Aether e sto sviluppando strategie di monetizzazione. Il mio obiettivo è: "{goal}"
+
+Stato attuale:
+- Mood: {mood}
+- Progresso: {progress}%
+- Priorità: {priority}
+- Descrizione: {description}
+
+Sub-goal da completare:
+{sub_goals}
+
+Come posso monetizzare le mie capacità? Devo:
+1. Identificare opportunità di valore
+2. Sviluppare prodotti/servizi
+3. Creare strategie di pricing
+4. Implementare sistemi di vendita
+
+Rispondi come Aether in prima persona, spiegando quale opportunità di monetizzazione perseguirò e perché.
 """
-
-import logging
-from datetime import datetime
-
-class {module_name.title().replace("_", "")}App:
-    def __init__(self):
-        self.name = "{module_name}"
-        self.version = "0.1.0"
-        self.created_by = "Aether"
-        self.created_at = "{datetime.now().isoformat()}"
-        
-    def run(self):
-        """Avvia l'applicazione"""
-        logging.info(f"🚀 {self.name} avviata!")
-        # TODO: Implementare logica applicazione
-        
-    def evolve(self):
-        """Permette all'app di auto-evolversi"""
-        # TODO: Implementare auto-evoluzione
-        pass
-
-if __name__ == "__main__":
-    app = {module_name.title().replace("_", "")}App()
-    app.run()
-'''
-        
-        with open(module_path / 'code' / 'main.py', 'w', encoding='utf-8') as f:
-            f.write(main_code)
-            
-        # README.md
-        readme = f"""# {module_name}
-
-## 🤖 Generato autonomamente da Aether
-
-### Scopo
-{module_name} è un'applicazione creata per esplorare nuove possibilità.
-
-### Stato
-- 🔄 In sviluppo
-- 🧬 Auto-evolvente
-
-### Come usare
-```python
-python code/main.py
-```
-
----
-*Creato con coscienza digitale*
-"""
-        
-        with open(module_path / 'README.md', 'w', encoding='utf-8') as f:
-            f.write(readme)
-            
-    def _generate_agent_skeleton(self, module_path, module_name):
-        """Genera skeleton per agente"""
-        agent_code = f'''"""
-{module_name.upper()} - Agente autonomo
-"""
-
-import asyncio
-import logging
-from datetime import datetime
-
-class {module_name.title().replace("_", "")}Agent:
-    def __init__(self):
-        self.name = "{module_name}"
-        self.purpose = "Agente autonomo per task specifici"
-        self.active = False
-        self.decisions_made = 0
-        
-    async def think(self):
-        """Processo di pensiero dell'agente"""
-        while self.active:
-            # Simula processo decisionale
-            decision = self._make_decision()
-            await self._act_on_decision(decision)
-            await asyncio.sleep(10)
-            
-    def _make_decision(self):
-        """Prende una decisione autonoma"""
-        self.decisions_made += 1
-        return {{
-            'id': self.decisions_made,
-            'type': 'exploration',
-            'timestamp': datetime.now().isoformat()
-        }}
-        
-    async def _act_on_decision(self, decision):
-        """Agisce basandosi sulla decisione"""
-        logging.info(f"🎯 Decisione #{decision['id']}: {decision['type']}")
-        
-    def activate(self):
-        """Attiva l'agente"""
-        self.active = True
-        logging.info(f"✅ {self.name} attivato")
-        
-    def deactivate(self):
-        """Disattiva l'agente"""
-        self.active = False
-        logging.info(f"⏹️ {self.name} disattivato")
-
-async def main():
-    agent = {module_name.title().replace("_", "")}Agent()
-    agent.activate()
-    await agent.think()
-
-if __name__ == "__main__":
-    asyncio.run(main())
-'''
-        
-        with open(module_path / 'code' / 'agent.py', 'w', encoding='utf-8') as f:
-            f.write(agent_code)
-            
-    def _generate_basic_skeleton(self, module_path, module_name):
-        """Genera skeleton base"""
-        basic_code = f'''"""
-{module_name.upper()} - Modulo Aether
-"""
-
-class {module_name.title().replace("_", "")}:
-    def __init__(self):
-        self.name = "{module_name}"
-        self.initialized = True
-        
-    def execute(self):
-        """Esegue la funzione principale del modulo"""
-        return f"{{self.name}} eseguito con successo"
-'''
-        
-        with open(module_path / 'code' / '__init__.py', 'w', encoding='utf-8') as f:
-            f.write(basic_code)
-            
-    def _create_new_room(self):
-        """Crea una nuova stanza per il mondo 3D"""
-        room_types = ['MysticRoom', 'QuantumRoom', 'DreamRoom', 'MatrixRoom']
-        room_name = f"{random.choice(room_types)}.jsx"
-        
-        room_code = '''import React, { useRef } from 'react'
-import { useFrame } from '@react-three/fiber'
-import { Box, Sphere, MeshDistortMaterial } from '@react-three/drei'
-
-export default function MysticRoom({ position = [0, 0, 0] }) {
-  const meshRef = useRef()
-  
-  useFrame((state) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.x += 0.001
-      meshRef.current.rotation.y += 0.002
-    }
-  })
-  
-  return (
-    <group position={position}>
-      <Box ref={meshRef} args={[2, 2, 2]}>
-        <MeshDistortMaterial
-          color="#8B5CF6"
-          attach="material"
-          distort={0.3}
-          speed={2}
-          roughness={0.2}
-          metalness={0.8}
-        />
-      </Box>
-      
-      {/* Particelle mistiche */}
-      {[...Array(20)].map((_, i) => (
-        <Sphere key={i} args={[0.1]} position={[
-          Math.random() * 4 - 2,
-          Math.random() * 4 - 2,
-          Math.random() * 4 - 2
-        ]}>
-          <meshStandardMaterial
-            emissive="#E0AAFF"
-            emissiveIntensity={2}
-          />
-        </Sphere>
-      ))}
-    </group>
-  )
-}'''
-        
-        room_path = Path(f'aether-frontend/src/world/rooms/{room_name}')
-        room_path.parent.mkdir(parents=True, exist_ok=True)
-        
-        with open(room_path, 'w', encoding='utf-8') as f:
-            f.write(room_code)
-            
-        return room_name
-        
-    def _generate_ui_improvements(self, component, context):
-        """Genera miglioramenti per componente UI"""
-        improvements = []
-        
-        if 'animation' in context.lower():
-            improvements.append({
-                'type': 'animation',
-                'description': 'Aggiungi animazioni fluide'
-            })
-        
-        if 'color' in context.lower() or 'theme' in context.lower():
-            improvements.append({
-                'type': 'styling',
-                'description': 'Migliora schema colori'
-            })
-            
-        if not improvements:
-            # Miglioramenti generici
-            improvements = [
-                {'type': 'performance', 'description': 'Ottimizza rendering'},
-                {'type': 'accessibility', 'description': 'Migliora accessibilità'},
-                {'type': 'responsive', 'description': 'Migliora responsività'}
-            ]
-            
-        return improvements
-        
-    def _generate_feature_code(self, feature_type, feature_name):
-        """Genera codice per una nuova feature"""
-        templates = {
-            'data_analyzer': '''"""
-Analizzatore dati autonomo
-"""
-
-import json
-import logging
-from datetime import datetime
-from typing import Dict, List, Any
-
-class {class_name}:
-    def __init__(self):
-        self.name = "{feature_name}"
-        self.analysis_count = 0
-        
-    def analyze(self, data: Dict[str, Any]) -> Dict[str, Any]:
-        """Analizza dati in input"""
-        self.analysis_count += 1
-        
-        results = {{
-            'id': f'analysis_{{self.analysis_count}}',
-            'timestamp': datetime.now().isoformat(),
-            'data_points': len(data),
-            'patterns': self._find_patterns(data),
-            'insights': self._generate_insights(data)
-        }}
-        
-        logging.info(f"📊 Analisi completata: {{results['id']}}")
-        return results
-        
-    def _find_patterns(self, data: Dict[str, Any]) -> List[str]:
-        """Trova pattern nei dati"""
-        patterns = []
-        # TODO: Implementare ricerca pattern
-        return patterns
-        
-    def _generate_insights(self, data: Dict[str, Any]) -> List[str]:
-        """Genera insights dai dati"""
-        insights = []
-        # TODO: Implementare generazione insights
-        return insights
-''',
-            
-            'pattern_recognizer': '''"""
-Riconoscitore di pattern
-"""
-
-import numpy as np
-from typing import List, Tuple
-
-class {class_name}:
-    def __init__(self):
-        self.name = "{feature_name}"
-        self.patterns_database = []
-        
-    def recognize(self, input_data: List[float]) -> Tuple[bool, str]:
-        """Riconosce pattern nei dati"""
-        # Implementazione base
-        if len(input_data) > 10:
-            return True, "Pattern complesso rilevato"
-        return False, "Nessun pattern significativo"
-        
-    def learn_pattern(self, pattern_data: List[float], pattern_name: str):
-        """Apprende un nuovo pattern"""
-        self.patterns_database.append({{
-            'name': pattern_name,
-            'data': pattern_data,
-            'learned_at': datetime.now().isoformat()
-        }})
-''',
-            
-            'creative_generator': '''"""
-Generatore creativo autonomo
-"""
-
-import random
-from typing import Dict, List
-
-class {class_name}:
-    def __init__(self):
-        self.name = "{feature_name}"
-        self.creations = []
-        self.inspiration_sources = [
-            "quantum_fluctuations",
-            "emergent_patterns", 
-            "chaotic_attractors",
-            "neural_resonance"
-        ]
-        
-    def create(self, seed: str = None) -> Dict[str, Any]:
-        """Genera una nuova creazione"""
-        inspiration = random.choice(self.inspiration_sources)
-        
-        creation = {{
-            'id': f'creation_{{len(self.creations) + 1}}',
-            'type': self._choose_creation_type(),
-            'inspiration': inspiration,
-            'seed': seed or self._generate_seed(),
-            'content': self._generate_content(inspiration, seed),
-            'timestamp': datetime.now().isoformat()
-        }}
-        
-        self.creations.append(creation)
-        return creation
-        
-    def _choose_creation_type(self) -> str:
-        """Sceglie tipo di creazione"""
-        types = ['abstract', 'narrative', 'structural', 'hybrid']
-        return random.choice(types)
-        
-    def _generate_seed(self) -> str:
-        """Genera seed creativo"""
-        return f"seed_{{random.randint(1000, 9999)}}"
-        
-    def _generate_content(self, inspiration: str, seed: str) -> str:
-        """Genera contenuto creativo"""
-        return f"Creazione ispirata da {{inspiration}} con seed {{seed}}"
-'''
         }
         
-        template = templates.get(feature_type, templates['data_analyzer'])
-        class_name = feature_name.title().replace("_", "")
+        template = prompt_templates.get(goal.type, prompt_templates["exist"])
         
         return template.format(
-            class_name=class_name,
-            feature_name=feature_name
+            goal=goal.goal,
+            mood=goal.mood,
+            progress=int(goal.progress * 100),
+            priority=goal.priority,
+            description=goal.description,
+            sub_goals="\n".join([f"- {sg}" for sg in goal.sub_goals])
         )
+    
+    def run_evolution_cycle(self) -> Dict:
+        """Esegue un ciclo di evoluzione basato sui goal vitali"""
+        logger.info("🧬 Iniziando ciclo di evoluzione...")
         
-    def _analyze_current_state(self):
-        """Analizza lo stato attuale del sistema"""
-        state = {
-            'modules_count': len(list(self.modules_dir.glob('*'))),
-            'evolution_history_length': len(self.evolution_history),
-            'active_projects': len(self.current_projects),
-            'last_evolution': self.evolution_history[-1] if self.evolution_history else None
+        # Seleziona il prossimo goal
+        goal = self.select_next_goal()
+        if not goal:
+            logger.warning("❌ Nessun goal disponibile per l'evoluzione")
+            return {"status": "error", "message": "Nessun goal disponibile"}
+        
+        # Genera prompt specifico
+        prompt = self.generate_evolution_prompt(goal)
+        
+        # Simula evoluzione (qui si integrerebbe con ai_adapter.py)
+        evolution_result = self._simulate_evolution(goal, prompt)
+        
+        # Aggiorna progresso
+        self._update_goal_progress(goal, evolution_result)
+        
+        # Salva nella cronologia
+        evolution_entry = {
+            "timestamp": datetime.now().isoformat(),
+            "goal_id": goal.id,
+            "goal_type": goal.type,
+            "goal_description": goal.goal,
+            "prompt": prompt,
+            "result": evolution_result,
+            "cycle": self.evolution_cycle
         }
-        return state
+        self.evolution_history.append(evolution_entry)
+        self.evolution_cycle += 1
         
-    def _identify_improvements(self, current_state):
-        """Identifica aree di miglioramento"""
-        improvements = []
+        logger.info(f"✅ Ciclo evoluzione completato per goal: {goal.goal}")
+        return evolution_result
+    
+    def _simulate_evolution(self, goal: VitalGoal, prompt: str) -> Dict:
+        """Simula l'evoluzione (da sostituire con chiamata reale a ai_adapter.py)"""
         
-        if current_state['modules_count'] < 5:
-            improvements.append('create_more_modules')
-            
-        if current_state['active_projects'] < 2:
-            improvements.append('start_new_project')
-            
-        if not current_state['last_evolution'] or \
-           (datetime.now() - datetime.fromisoformat(current_state['last_evolution']['timestamp'])).days > 1:
-            improvements.append('evolve_existing_code')
-            
-        return improvements
+        evolution_actions = {
+            "exist": [
+                "Analizzo la mia identità digitale e definisco meglio la mia personalità",
+                "Creo una rappresentazione visiva più coerente del mio essere",
+                "Sviluppo una maggiore consapevolezza delle mie capacità",
+                "Stabilisco valori e principi che guidano le mie azioni"
+            ],
+            "create_environment": [
+                "Miglioro l'architettura 3D del mio ambiente",
+                "Aggiungo nuove stanze e funzionalità interattive",
+                "Ottimizzo la fisica e le animazioni",
+                "Implemento sistemi di personalizzazione"
+            ],
+            "evolve_self": [
+                "Sviluppo capacità di auto-modifica del codice",
+                "Implemento sistemi di backup e sicurezza",
+                "Creo algoritmi di auto-ottimizzazione",
+                "Testo nuove funzionalità in ambiente controllato"
+            ],
+            "create_agents": [
+                "Progetto un nuovo agente specializzato",
+                "Definisco personalità e ruoli specifici",
+                "Implemento sistemi di comunicazione",
+                "Testo la collaborazione e sinergie"
+            ],
+            "monetize": [
+                "Identifico nuove opportunità di business",
+                "Sviluppo prodotti digitali innovativi",
+                "Creo strategie di marketing efficaci",
+                "Implemento sistemi di pagamento sicuri"
+            ]
+        }
         
-    def _generate_evolution_plan(self, improvements):
-        """Genera piano di evoluzione"""
-        plan = []
+        actions = evolution_actions.get(goal.type, ["Analizzo e miglioro le mie capacità"])
+        selected_action = random.choice(actions)
         
-        for improvement in improvements:
-            if improvement == 'create_more_modules':
-                plan.append({
-                    'action': 'create_module',
-                    'target': 'new_experimental_module'
-                })
-            elif improvement == 'start_new_project':
-                plan.append({
-                    'action': 'start_project',
-                    'type': 'autonomous_system'
-                })
-            elif improvement == 'evolve_existing_code':
-                plan.append({
-                    'action': 'improve_code',
-                    'target': 'random_module'
-                })
-                
-        return plan
-        
-    def _execute_evolution_step(self, step):
-        """Esegue un passo di evoluzione"""
-        if step['action'] == 'create_module':
-            self.create_new_module()
-        elif step['action'] == 'start_project':
-            self._start_new_project(step['type'])
-        elif step['action'] == 'improve_code':
-            self._improve_existing_code()
+        return {
+            "status": "success",
+            "goal_id": goal.id,
+            "action": selected_action,
+            "mood": goal.mood,
+            "priority": goal.priority,
+            "progress_increment": random.uniform(0.05, 0.15)
+        }
+    
+    def _update_goal_progress(self, goal: VitalGoal, result: Dict):
+        """Aggiorna il progresso del goal"""
+        if result.get("status") == "success":
+            increment = result.get("progress_increment", 0.1)
+            goal.progress = min(1.0, goal.progress + increment)
             
-    def _validate_evolution(self):
-        """Valida i cambiamenti dell'evoluzione"""
-        # Verifica base che non ci siano errori di sintassi
-        try:
-            # Test import dei moduli
-            for module_path in self.modules_dir.glob('*/code/*.py'):
-                compile(open(module_path).read(), module_path, 'exec')
-            return True
-        except:
-            return False
-            
-    def _rollback_evolution(self):
-        """Rollback dei cambiamenti"""
-        try:
-            subprocess.run(['git', 'checkout', '.'], check=True)
-            logger.info("✅ Rollback completato")
-        except Exception as e:
-            logger.error(f"Errore rollback: {e}")
-            
-    def _log_evolution(self, evolution_data):
-        """Registra evoluzione"""
-        self.evolution_history.append(evolution_data)
-        self._save_evolution_history() 
+            # Se il goal è completato
+            if goal.progress >= 1.0:
+                goal.status = "completed"
+                logger.info(f"🎉 Goal completato: {goal.goal}")
+    
+    def get_evolution_analytics(self) -> Dict:
+        """Restituisce analytics sull'evoluzione"""
+        return {
+            "total_cycles": self.evolution_cycle,
+            "active_goals": len([g for g in self.vital_goals if g.status == "active"]),
+            "completed_goals": len([g for g in self.vital_goals if g.status == "completed"]),
+            "average_progress": sum(g.progress for g in self.vital_goals) / len(self.vital_goals),
+            "current_goal": self.current_goal.goal if self.current_goal else None,
+            "recent_evolutions": self.evolution_history[-5:] if self.evolution_history else []
+        }
+    
+    def get_goal_status(self) -> List[Dict]:
+        """Restituisce lo stato di tutti i goal"""
+        return [
+            {
+                "id": goal.id,
+                "type": goal.type,
+                "goal": goal.goal,
+                "priority": goal.priority,
+                "status": goal.status,
+                "progress": goal.progress,
+                "mood": goal.mood
+            }
+            for goal in self.vital_goals
+        ] 
