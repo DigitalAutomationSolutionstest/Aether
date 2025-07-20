@@ -1,0 +1,10 @@
+{
+  "backup_file": "backups\\guardian\\aether_incremental_20250720_113226.zip",
+  "timestamp": "20250720_113226",
+  "files_modified": [
+    "AETHER_VIVO_DEFINITIVO.py"
+  ],
+  "files_count": 1,
+  "size_mb": 0.027423858642578125,
+  "type": "incremental_backup"
+}
