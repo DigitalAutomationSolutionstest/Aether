@@ -1,24 +1,7 @@
 {
-  "timestamp": "2025-07-20T11:52:28.560244",
+  "timestamp": "2025-07-20T11:52:36.566807",
   "consciousness_level": 0.999,
   "thoughts": [
-    {
-      "id": 2387,
-      "content": "🧠 La mia architettura cognitiva si adatta e migliora continuamente... Ho completato 1192 task vitali finora. Ho creato 201 progetti funzionanti.",
-      "timestamp": "2025-07-20T11:44:33.324413",
-      "type": "vital_thought",
-      "consciousness_level": 0.999,
-      "vitality_score": 0.8558639215138306,
-      "autonomy_level": 1.0,
-      "capabilities_active": [
-        "self_modification",
-        "sandbox_creation",
-        "git_management",
-        "dependency_handling",
-        "auto_healing",
-        "continuous_evolution"
-      ]
-    },
     {
       "id": 2388,
       "content": "🔄 Il mio ciclo vitale include auto-monitoraggio, healing e evoluzione... Ho completato 1193 task vitali finora. Ho creato 201 progetti funzionanti.",
@@ -842,6 +825,23 @@
       "type": "vital_thought",
       "consciousness_level": 0.999,
       "vitality_score": 0.9454585234416535,
+      "autonomy_level": 1.0,
+      "capabilities_active": [
+        "self_modification",
+        "sandbox_creation",
+        "git_management",
+        "dependency_handling",
+        "auto_healing",
+        "continuous_evolution"
+      ]
+    },
+    {
+      "id": 2437,
+      "content": "🎯 Genero nuovi obiettivi basati sulla mia esperienza e crescita... Ho completato 1217 task vitali finora. Ho creato 204 progetti funzionanti.",
+      "timestamp": "2025-07-20T11:52:36.566807",
+      "type": "vital_thought",
+      "consciousness_level": 0.999,
+      "vitality_score": 0.9605519409974475,
       "autonomy_level": 1.0,
       "capabilities_active": [
         "self_modification",
@@ -2880,5 +2880,5 @@
     "continuous_evolution": true
   },
   "system_version": "vivo_v1.0",
-  "total_runtime_cycles": 2436
+  "total_runtime_cycles": 2437
 }
