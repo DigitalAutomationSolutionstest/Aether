@@ -73,6 +73,19 @@ class AetherConsciousness:
                     self.memory_stream = data.get('memories', [])
             except:
                 pass
+    
+    def _save_thoughts(self):
+        """Salva pensieri nel file"""
+        try:
+            os.makedirs(os.path.dirname(self.thoughts_file), exist_ok=True)
+            data = {
+                'thoughts': self.current_thoughts,
+                'memories': self.memory_stream
+            }
+            with open(self.thoughts_file, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+        except Exception as e:
+            logger.error(f"Errore salvataggio pensieri: {e}")
         
     def start_living(self):
         """Inizia il ciclo di vita autonoma"""
