@@ -82,21 +82,43 @@ def test_openrouter_debug():
             "https://openrouter.ai/api/v1/chat/completions",
             headers=headers,
             json={
-                "model": "openai/gpt-3.5-turbo",  # Modello più semplice
+                "model": "meta-llama/llama-3.2-3b-instruct:free",  # Modello GRATUITO
                 "messages": [{"role": "user", "content": "Test"}],
                 "max_tokens": 5
             },
             timeout=30
         )
         
-        print(f"🧪 Test GPT-3.5: {response.status_code}")
+        print(f"🧪 Test Llama-3.2 Free: {response.status_code}")
         if response.status_code != 200:
             print(f"   ❌ Errore: {response.text[:200]}")
         else:
-            print("   ✅ GPT-3.5 funziona!")
+            print("   ✅ Llama-3.2 Free funziona!")
             
     except Exception as e:
-        print(f"❌ Errore test GPT-3.5: {e}")
+        print(f"❌ Errore test Llama: {e}")
+    
+    # Test 3: Prova modello OpenAI gratuito
+    try:
+        response = requests.post(
+            "https://openrouter.ai/api/v1/chat/completions", 
+            headers=headers,
+            json={
+                "model": "openai/gpt-3.5-turbo-0125",  # Modello stabile
+                "messages": [{"role": "user", "content": "Ciao"}],
+                "max_tokens": 10
+            },
+            timeout=30
+        )
+        
+        print(f"🧪 Test GPT-3.5-turbo-0125: {response.status_code}")
+        if response.status_code != 200:
+            print(f"   ❌ Errore: {response.text[:200]}")
+        else:
+            print("   ✅ GPT-3.5-turbo-0125 funziona!")
+            
+    except Exception as e:
+        print(f"❌ Errore test GPT-3.5-turbo-0125: {e}")
 
 def test_openrouter():
     """Test OpenRouter AI"""
