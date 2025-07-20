@@ -17,7 +17,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('data/aether_mentor_loop.log'),
+        logging.FileHandler('data/aether_mentor_loop.log', encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
