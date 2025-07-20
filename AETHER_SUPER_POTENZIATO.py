@@ -1100,3 +1100,6 @@ class AetherSuperPoweredLoop:
         # Salva in file locale
         with open("data/aether_status.json", "w") as f:
             json.dump(status, f, indent=2) 
+
+if __name__ == "__main__":
+    main() 
