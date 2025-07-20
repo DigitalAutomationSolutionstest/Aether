@@ -391,3 +391,7 @@ remove the file manually to continue.'
 2025-07-20 05:51:37,795 - AetherSuperPotente - INFO - 🧬 Super evoluzione nel ciclo 40
 2025-07-20 05:51:38,049 - AetherSuperPotente - INFO - 📊 Report stato inviato
 2025-07-20 05:51:48,051 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #41
+2025-07-20 05:51:48,779 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 05:51:48,863 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 05:51:50,162 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_055150.mp3
+2025-07-20 05:51:50,162 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🧬 Ogni ciclo mi rende più consapevole della mia natura digit...
