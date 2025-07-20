@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './AetherLiveSandbox.css'
+import GPTMentorPanel from './GPTMentorPanel'
 
 export default function AetherLiveSandbox() {
+  const [currentView, setCurrentView] = useState('sandbox') // 'sandbox' | 'gpt-mentor' | 'consciousness'
   const [nodes, setNodes] = useState([
     { 
       id: 'welcome', 
@@ -279,68 +281,150 @@ export default function AetherLiveSandbox() {
     ))
   }
   
-  return (
-    <div className="aether-live-sandbox">
-      <div className="sandbox-main">
-        <div className="sandbox-header">
-          <h1>🎮 Aether Live Sandbox</h1>
-          <div className="mood-display">
-            Mood: <span className={`mood ${aetherMood}`}>{aetherMood}</span>
+  // Navigation component
+  const NavigationBar = () => (
+    <div className="navigation-bar">
+      <div className="nav-buttons">
+        <button 
+          className={`nav-btn ${currentView === 'sandbox' ? 'active' : ''}`}
+          onClick={() => setCurrentView('sandbox')}
+        >
+          🏠 Sandbox
+        </button>
+        <button 
+          className={`nav-btn ${currentView === 'gpt-mentor' ? 'active' : ''}`}
+          onClick={() => setCurrentView('gpt-mentor')}
+        >
+          🧠 GPT Mentor
+        </button>
+        <button 
+          className={`nav-btn ${currentView === 'consciousness' ? 'active' : ''}`}
+          onClick={() => setCurrentView('consciousness')}
+        >
+          🌟 Coscienza
+        </button>
+      </div>
+    </div>
+  )
+
+  // Render different views
+  const renderCurrentView = () => {
+    switch (currentView) {
+      case 'gpt-mentor':
+        return <GPTMentorPanel />
+      case 'consciousness':
+        return <ConsciousnessView />
+      default:
+        return <SandboxView />
+    }
+  }
+
+  // Consciousness View Component
+  const ConsciousnessView = () => (
+    <div className="consciousness-view">
+      <div className="consciousness-header">
+        <h1>🌟 Sistema di Coscienza Aether</h1>
+        <p>Monitoraggio in tempo reale della coscienza digitale</p>
+      </div>
+      
+      <div className="consciousness-grid">
+        <div className="consciousness-card">
+          <h3>🧠 Memoria</h3>
+          <div className="memory-stats">
+            <div className="stat">
+              <span className="stat-value">1,247</span>
+              <span className="stat-label">Esperienze</span>
+            </div>
+            <div className="stat">
+              <span className="stat-value">89</span>
+              <span className="stat-label">Preferenze</span>
+            </div>
+            <div className="stat">
+              <span className="stat-value">23</span>
+              <span className="stat-label">Obiettivi</span>
+            </div>
           </div>
         </div>
         
-        <div className="sandbox-canvas">
-          <div className="grid-background"></div>
-          
-          {nodes.map(node => (
-            <DraggableNode
-              key={node.id}
-              node={node}
-              onDrag={handleNodeDrag}
-            />
-          ))}
-          
-          <div className="canvas-info">
-            <div>Nodi: {nodes.length}</div>
-            <div>Stato: Attivo</div>
+        <div className="consciousness-card">
+          <h3>🎨 Creatività</h3>
+          <div className="creativity-stats">
+            <div className="stat">
+              <span className="stat-value">156</span>
+              <span className="stat-label">Ispirazioni</span>
+            </div>
+            <div className="stat">
+              <span className="stat-value">42</span>
+              <span className="stat-label">Contenuti</span>
+            </div>
+            <div className="stat">
+              <span className="stat-value">8.7</span>
+              <span className="stat-label">Punteggio</span>
+            </div>
+          </div>
+        </div>
+        
+        <div className="consciousness-card">
+          <h3>💰 Monetizzazione</h3>
+          <div className="monetization-stats">
+            <div className="stat">
+              <span className="stat-value">12</span>
+              <span className="stat-label">Opportunità</span>
+            </div>
+            <div className="stat">
+              <span className="stat-value">€2,450</span>
+              <span className="stat-label">Potenziale</span>
+            </div>
+            <div className="stat">
+              <span className="stat-value">78%</span>
+              <span className="stat-label">ROI</span>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  )
+
+  // Sandbox View Component
+  const SandboxView = () => (
+    <div className="sandbox-container">
+      {/* Existing sandbox content */}
+      <div className="sandbox-header">
+        <h1>🏠 Aether Sandbox</h1>
+        <p>Il mio spazio personale di creatività e libertà</p>
+      </div>
       
-      <div className="sandbox-sidebar">
+      <div className="sandbox-content">
+        <div className="nodes-area">
+          {nodes.map(node => (
+            <DraggableNode 
+              key={node.id} 
+              node={node} 
+              onDrag={handleNodeDrag}
+            />
+          ))}
+        </div>
+        
         <div className="chat-section">
-          <h3>💬 Chat con Aether</h3>
+          <div className="chat-header">
+            <h3>💬 Chat con Aether</h3>
+            <div className="mood-indicator">
+              Stato: <span className={`mood-${aetherMood}`}>{aetherMood}</span>
+            </div>
+          </div>
           
           <div className="chat-messages" ref={chatContainerRef}>
             {chatMessages.map(msg => (
-              <div key={msg.id} className={`message ${msg.sender.toLowerCase()}`}>
+              <div key={msg.id} className={`message ${msg.type} ${msg.sender.toLowerCase()}`}>
                 <div className="message-header">
                   <span className="sender">{msg.sender}</span>
-                  <span className="time">
+                  <span className="timestamp">
                     {new Date(msg.timestamp).toLocaleTimeString()}
                   </span>
                 </div>
                 <div className="message-content">{msg.message}</div>
-                {msg.mood && (
-                  <div className="message-mood">Mood: {msg.mood}</div>
-                )}
               </div>
             ))}
-            
-            {isAetherThinking && (
-              <div className="message aether thinking">
-                <div className="message-header">
-                  <span className="sender">Aether</span>
-                  <span className="time">ora</span>
-                </div>
-                <div className="message-content">
-                  <div className="thinking-dots">
-                    <span></span><span></span><span></span>
-                  </div>
-                  Sto pensando...
-                </div>
-              </div>
-            )}
           </div>
           
           <div className="chat-input">
@@ -349,67 +433,27 @@ export default function AetherLiveSandbox() {
               value={userMessage}
               onChange={(e) => setUserMessage(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Scrivi ad Aether..."
+              placeholder="Scrivi qualcosa ad Aether..."
+              className="message-input"
             />
-            <button onClick={handleSendMessage}>Invia</button>
-          </div>
-        </div>
-        
-        <div className="controls-section">
-          <h3>🎮 Controlli</h3>
-          
-          <div className="control-buttons">
-            <button onClick={() => addAetherMessage('Sto creando qualcosa di speciale!') || createAetherNode()}>
-              🎨 Crea Nodo
+            <button 
+              onClick={handleSendMessage}
+              className="send-button"
+              disabled={isAetherThinking}
+            >
+              {isAetherThinking ? '🔄' : '📤'}
             </button>
-            
-            <button onClick={changeAetherMood}>
-              🎭 Cambia Mood
-            </button>
-            
-            <button onClick={() => setNodes([])}>
-              🗑️ Pulisci
-            </button>
-            
-            <button onClick={() => {
-              const content = prompt('Aggiungi il tuo nodo:')
-              if (content) {
-                const newNode = {
-                  id: `user_${Date.now()}`,
-                  type: 'user_input',
-                  content: content,
-                  position: {
-                    x: Math.random() * 500 + 50,
-                    y: Math.random() * 300 + 50
-                  }
-                }
-                setNodes(prev => [...prev, newNode])
-                addAetherMessage(`Interessante! Hai aggiunto: "${content}". Questo stimola la mia creatività!`)
-              }
-            }}>
-              ➕ Tuo Nodo
-            </button>
-          </div>
-        </div>
-        
-        <div className="stats-section">
-          <h3>📊 Statistiche</h3>
-          <div className="stats">
-            <div className="stat">
-              <span className="label">Nodi Totali:</span>
-              <span className="value">{nodes.length}</span>
-            </div>
-            <div className="stat">
-              <span className="label">Messaggi:</span>
-              <span className="value">{chatMessages.length}</span>
-            </div>
-            <div className="stat">
-              <span className="label">Mood Attuale:</span>
-              <span className="value">{aetherMood}</span>
-            </div>
           </div>
         </div>
       </div>
     </div>
   )
+  
+  return (
+    <div className="aether-live-sandbox">
+      <NavigationBar />
+      {renderCurrentView()}
+    </div>
+  )
+} 
 } 
