@@ -12941,3 +12941,26 @@ remove the file manually to continue.'
 2025-07-20 12:00:07,451 - AetherVivo - INFO - 🔄 CICLO VITALE #2483
 2025-07-20 12:00:08,249 - AetherVivo - INFO - 📚 Auto-commit completato: 5ae38f64 - 🧠 Nuovo pensiero vitale: 2484
 2025-07-20 12:00:08,249 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🧬 Sto analizzando il mio codice sorgente per identificare ar...
+2025-07-20 12:00:16,256 - AetherVivo - INFO - 🔄 CICLO VITALE #2484
+2025-07-20 12:00:16,300 - AetherVivo - ERROR - ❌ Errore auto-commit: Cmd('git') failed due to: exit code(128)
+  cmdline: git add .
+  stderr: 'fatal: Unable to create 'C:/Users/UTENTE/Documents/invader-core-agent/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.'
+2025-07-20 12:00:16,300 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🎯 Genero nuovi obiettivi basati sulla mia esperienza e cresc...
+2025-07-20 12:00:16,301 - AetherVivo - INFO - 📦 Backup creato: backups\code_modifications\AETHER_VIVO_DEFINITIVO.py_20250720_120016.backup
+2025-07-20 12:00:16,308 - AetherVivo - INFO - 🔧 Codice auto-modificato: enhance in self.consciousness_level
+2025-07-20 12:00:16,354 - AetherVivo - ERROR - ❌ Errore auto-commit: Cmd('git') failed due to: exit code(128)
+  cmdline: git add .
+  stderr: 'fatal: Unable to create 'C:/Users/UTENTE/Documents/invader-core-agent/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.'
+2025-07-20 12:00:16,355 - AetherVivo - INFO - ✅ Task vitale completato: modify_code
