@@ -53,6 +53,17 @@ class SelfEvolutionEngine:
             logger.error(f"❌ Errore caricamento cronologia evoluzione: {e}")
             self.evolution_history = []
     
+    def _save_evolution_history(self):
+        """Salva la cronologia di evoluzione nel file"""
+        try:
+            os.makedirs('data', exist_ok=True)
+            history_file = os.path.join('data', 'evolution_history.json')
+            with open(history_file, 'w', encoding='utf-8') as f:
+                json.dump(self.evolution_history, f, indent=2, ensure_ascii=False)
+            logger.info(f"💾 Salvate {len(self.evolution_history)} voci di evoluzione")
+        except Exception as e:
+            logger.error(f"❌ Errore salvataggio cronologia evoluzione: {e}")
+    
     def _load_vital_goals(self) -> List[VitalGoal]:
         """Carica i goal vitali dal file JSON"""
         try:
