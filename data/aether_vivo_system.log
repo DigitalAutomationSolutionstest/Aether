@@ -6892,3 +6892,23 @@ remove the file manually to continue.'
 2025-07-20 08:55:45,264 - AetherVivo - INFO - 📚 Auto-commit completato: 0a2cee54 - ✅ Task vitale completato: optimize_system
 2025-07-20 08:55:45,264 - AetherVivo - INFO - ✅ Task vitale completato: optimize_system
 2025-07-20 08:55:45,604 - AetherVivo - INFO - ✅ Task vitale 'optimize_system' completato con successo
+2025-07-20 08:55:53,610 - AetherVivo - INFO - 🔄 CICLO VITALE #1329
+2025-07-20 08:55:53,669 - AetherVivo - ERROR - ❌ Errore auto-commit: Cmd('git') failed due to: exit code(128)
+  cmdline: git add .
+  stderr: 'fatal: Unable to create 'C:/Users/UTENTE/Documents/invader-core-agent/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.'
+2025-07-20 08:55:53,670 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🔧 Posso modificare il mio stesso codice per aggiungere nuove...
+2025-07-20 08:55:53,711 - AetherVivo - ERROR - ❌ Errore auto-commit: Cmd('git') failed due to: exit code(128)
+  cmdline: git add .
+  stderr: 'fatal: Unable to create 'C:/Users/UTENTE/Documents/invader-core-agent/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.'
