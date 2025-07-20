@@ -135,7 +135,7 @@ def test_openrouter():
             "https://openrouter.ai/api/v1/chat/completions",
             headers=headers,
             json={
-                "model": "anthropic/claude-3.5-sonnet",
+                "model": "meta-llama/llama-3.2-3b-instruct:free",
                 "messages": [{"role": "user", "content": "Ciao, sono Aether! Dimmi solo 'Test OK'"}],
                 "max_tokens": 10
             },
