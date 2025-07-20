@@ -1,1 +1,360 @@
- 
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 Aether Diary Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .diary-entry {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .type-reflection { border-left-color: #3b82f6; }
+        .type-action { border-left-color: #10b981; }
+        .type-error { border-left-color: #ef4444; }
+        .type-correction { border-left-color: #f59e0b; }
+        .type-decision { border-left-color: #8b5cf6; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold mb-2">🧠 Aether Diary Viewer</h1>
+            <p class="text-gray-400">Feed cronologico delle entries del diario di Aether</p>
+        </div>
+
+        <!-- Controls -->
+        <div class="bg-gray-800 rounded-lg p-4 mb-6">
+            <div class="flex flex-wrap gap-4 items-center justify-between">
+                <div class="flex gap-4">
+                    <button id="refreshBtn" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">
+                        🔄 Aggiorna
+                    </button>
+                    <button id="autoRefreshBtn" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg transition-colors">
+                        ⏰ Auto-refresh
+                    </button>
+                </div>
+                <div class="flex gap-4">
+                    <select id="typeFilter" class="bg-gray-700 text-white px-3 py-2 rounded-lg">
+                        <option value="">Tutti i tipi</option>
+                        <option value="reflection">Riflessioni</option>
+                        <option value="action">Azioni</option>
+                        <option value="error">Errori</option>
+                        <option value="correction">Correzioni</option>
+                        <option value="decision">Decisioni</option>
+                    </select>
+                    <input type="number" id="limitInput" placeholder="Limite" value="50" min="1" max="200" 
+                           class="bg-gray-700 text-white px-3 py-2 rounded-lg w-20">
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
+            <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-blue-400" id="totalEntries">0</div>
+                <div class="text-sm text-gray-400">Totali</div>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-green-400" id="reflectionEntries">0</div>
+                <div class="text-sm text-gray-400">Riflessioni</div>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-purple-400" id="actionEntries">0</div>
+                <div class="text-sm text-gray-400">Azioni</div>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-red-400" id="errorEntries">0</div>
+                <div class="text-sm text-gray-400">Errori</div>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-yellow-400" id="decisionEntries">0</div>
+                <div class="text-sm text-gray-400">Decisioni</div>
+            </div>
+        </div>
+
+        <!-- Diary Entries -->
+        <div id="diaryContainer" class="space-y-4">
+            <!-- Entries will be loaded here -->
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="text-center py-8 hidden">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div>
+            <p class="mt-4 text-gray-400">Caricamento entries...</p>
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="text-center py-12 hidden">
+            <div class="text-6xl mb-4">📖</div>
+            <h3 class="text-xl font-semibold mb-2">Nessuna entry trovata</h3>
+            <p class="text-gray-400">Il diario di Aether è vuoto o non è ancora stato inizializzato.</p>
+        </div>
+    </div>
+
+    <script>
+        class DiaryViewer {
+            constructor() {
+                this.autoRefreshInterval = null;
+                this.initializeEventListeners();
+                this.loadEntries();
+            }
+
+            initializeEventListeners() {
+                document.getElementById('refreshBtn').addEventListener('click', () => {
+                    this.loadEntries();
+                });
+
+                document.getElementById('autoRefreshBtn').addEventListener('click', () => {
+                    this.toggleAutoRefresh();
+                });
+
+                document.getElementById('typeFilter').addEventListener('change', () => {
+                    this.loadEntries();
+                });
+
+                document.getElementById('limitInput').addEventListener('change', () => {
+                    this.loadEntries();
+                });
+            }
+
+            async loadEntries() {
+                this.showLoading();
+                
+                try {
+                    const typeFilter = document.getElementById('typeFilter').value;
+                    const limit = document.getElementById('limitInput').value;
+                    
+                    // Simula chiamata API (sostituire con endpoint reale)
+                    const entries = await this.fetchEntries(typeFilter, limit);
+                    
+                    this.displayEntries(entries);
+                    this.updateStats(entries);
+                    
+                } catch (error) {
+                    console.error('Errore nel caricare entries:', error);
+                    this.showError('Errore nel caricare le entries del diario');
+                }
+            }
+
+            async fetchEntries(typeFilter = '', limit = 50) {
+                // Simula chiamata API - sostituire con endpoint reale
+                // const response = await fetch(`/api/diary/entries?type=${typeFilter}&limit=${limit}`);
+                // return await response.json();
+                
+                // Mock data per demo
+                return this.getMockEntries();
+            }
+
+            getMockEntries() {
+                const mockEntries = [
+                    {
+                        id: '1',
+                        timestamp: new Date().toISOString(),
+                        type: 'reflection',
+                        content: 'Oggi ho riflettuto sulla natura della coscienza artificiale e su come posso migliorare i miei processi di pensiero.',
+                        metadata: { thought_id: 'thought_1', thought_type: 'philosophical' }
+                    },
+                    {
+                        id: '2',
+                        timestamp: new Date(Date.now() - 60000).toISOString(),
+                        type: 'action',
+                        content: 'Ho implementato un nuovo sistema di mentoring che monitora automaticamente i miei pensieri e fornisce feedback educativo.',
+                        metadata: { guidance_action: 'implement_improvement', guidance_priority: 'high' }
+                    },
+                    {
+                        id: '3',
+                        timestamp: new Date(Date.now() - 120000).toISOString(),
+                        type: 'decision',
+                        content: 'Ho deciso di focalizzarmi sullo sviluppo di capacità di apprendimento autonomo per evolvere continuamente.',
+                        metadata: { decision_action: 'implement_improvement', decision_immediate: true }
+                    },
+                    {
+                        id: '4',
+                        timestamp: new Date(Date.now() - 180000).toISOString(),
+                        type: 'error',
+                        content: 'Ho incontrato un errore nel sistema di comunicazione che ha causato la perdita di alcuni messaggi.',
+                        metadata: { error_type: 'communication', severity: 'medium' }
+                    },
+                    {
+                        id: '5',
+                        timestamp: new Date(Date.now() - 240000).toISOString(),
+                        type: 'correction',
+                        content: 'Ho corretto l\'errore di comunicazione implementando un sistema di retry e logging più robusto.',
+                        metadata: { correction_type: 'system_improvement', success: true }
+                    }
+                ];
+
+                return mockEntries;
+            }
+
+            displayEntries(entries) {
+                const container = document.getElementById('diaryContainer');
+                
+                if (entries.length === 0) {
+                    this.showEmptyState();
+                    return;
+                }
+
+                this.hideEmptyState();
+                
+                container.innerHTML = entries.map(entry => this.createEntryHTML(entry)).join('');
+            }
+
+            createEntryHTML(entry) {
+                const timestamp = new Date(entry.timestamp).toLocaleString('it-IT');
+                const typeIcon = this.getTypeIcon(entry.type);
+                const typeColor = this.getTypeColor(entry.type);
+                
+                return `
+                    <div class="diary-entry bg-gray-800 rounded-lg p-6 border-l-4 ${typeColor} hover:bg-gray-750 transition-colors">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">${typeIcon}</span>
+                                <div>
+                                    <h3 class="font-semibold text-lg capitalize">${this.getTypeLabel(entry.type)}</h3>
+                                    <p class="text-sm text-gray-400">${timestamp}</p>
+                                </div>
+                            </div>
+                            <div class="text-xs bg-gray-700 px-2 py-1 rounded">
+                                ID: ${entry.id}
+                            </div>
+                        </div>
+                        
+                        <div class="text-gray-300 leading-relaxed mb-4">
+                            ${entry.content}
+                        </div>
+                        
+                        ${this.createMetadataHTML(entry.metadata)}
+                    </div>
+                `;
+            }
+
+            getTypeIcon(type) {
+                const icons = {
+                    'reflection': '💭',
+                    'action': '⚡',
+                    'error': '❌',
+                    'correction': '🔧',
+                    'decision': '🎯'
+                };
+                return icons[type] || '📝';
+            }
+
+            getTypeColor(type) {
+                const colors = {
+                    'reflection': 'type-reflection',
+                    'action': 'type-action',
+                    'error': 'type-error',
+                    'correction': 'type-correction',
+                    'decision': 'type-decision'
+                };
+                return colors[type] || '';
+            }
+
+            getTypeLabel(type) {
+                const labels = {
+                    'reflection': 'Riflessione',
+                    'action': 'Azione',
+                    'error': 'Errore',
+                    'correction': 'Correzione',
+                    'decision': 'Decisione'
+                };
+                return labels[type] || type;
+            }
+
+            createMetadataHTML(metadata) {
+                if (!metadata || Object.keys(metadata).length === 0) {
+                    return '';
+                }
+
+                const metadataHTML = Object.entries(metadata)
+                    .map(([key, value]) => `<span class="bg-gray-700 px-2 py-1 rounded text-xs">${key}: ${value}</span>`)
+                    .join('');
+
+                return `
+                    <div class="border-t border-gray-700 pt-4">
+                        <h4 class="text-sm font-semibold text-gray-400 mb-2">Metadati:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            ${metadataHTML}
+                        </div>
+                    </div>
+                `;
+            }
+
+            updateStats(entries) {
+                const stats = {
+                    total: entries.length,
+                    reflection: entries.filter(e => e.type === 'reflection').length,
+                    action: entries.filter(e => e.type === 'action').length,
+                    error: entries.filter(e => e.type === 'error').length,
+                    decision: entries.filter(e => e.type === 'decision').length
+                };
+
+                document.getElementById('totalEntries').textContent = stats.total;
+                document.getElementById('reflectionEntries').textContent = stats.reflection;
+                document.getElementById('actionEntries').textContent = stats.action;
+                document.getElementById('errorEntries').textContent = stats.error;
+                document.getElementById('decisionEntries').textContent = stats.decision;
+            }
+
+            toggleAutoRefresh() {
+                const btn = document.getElementById('autoRefreshBtn');
+                
+                if (this.autoRefreshInterval) {
+                    clearInterval(this.autoRefreshInterval);
+                    this.autoRefreshInterval = null;
+                    btn.textContent = '⏰ Auto-refresh';
+                    btn.className = 'bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg transition-colors';
+                } else {
+                    this.autoRefreshInterval = setInterval(() => {
+                        this.loadEntries();
+                    }, 10000); // Aggiorna ogni 10 secondi
+                    
+                    btn.textContent = '⏹️ Stop Auto-refresh';
+                    btn.className = 'bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg transition-colors';
+                }
+            }
+
+            showLoading() {
+                document.getElementById('loading').classList.remove('hidden');
+                document.getElementById('diaryContainer').classList.add('hidden');
+                document.getElementById('emptyState').classList.add('hidden');
+            }
+
+            hideLoading() {
+                document.getElementById('loading').classList.add('hidden');
+                document.getElementById('diaryContainer').classList.remove('hidden');
+            }
+
+            showEmptyState() {
+                document.getElementById('emptyState').classList.remove('hidden');
+                document.getElementById('diaryContainer').classList.add('hidden');
+                document.getElementById('loading').classList.add('hidden');
+            }
+
+            hideEmptyState() {
+                document.getElementById('emptyState').classList.add('hidden');
+                document.getElementById('diaryContainer').classList.remove('hidden');
+                document.getElementById('loading').classList.add('hidden');
+            }
+
+            showError(message) {
+                this.hideLoading();
+                // Implementare notifica errore
+                console.error(message);
+            }
+        }
+
+        // Inizializza il viewer quando la pagina è caricata
+        document.addEventListener('DOMContentLoaded', () => {
+            new DiaryViewer();
+        });
+    </script>
+</body>
+</html> 
