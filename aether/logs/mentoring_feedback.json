@@ -1,161 +1,27 @@
 [
   {
-    "timestamp": "2025-07-20T01:06:12.956870",
-    "source_file": "thought_20250720_030612.txt",
-    "feedback": "Errore nell'analisi: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n",
-    "mentor_type": "advanced_critical"
-  },
-  {
-    "timestamp": "2025-07-20T01:07:23.934213",
-    "source_file": "thought_20250720_030612.txt",
-    "feedback": "ANALISI: Buona consapevolezza del processo evolutivo. Aether mostra comprensione della sua natura dinamica.\nPROBLEMI: Approccio troppo teorico, manca concretezza, Obiettivo singolare invece di obiettivi multipli, Menzione di moduli senza dettagli implementativi\nSUGGERIMENTI: Implementa il modulo di auto-introspezione con metodi di analisi del pensiero; Crea un sistema di documentazione automatica dei processi di pensiero; Sviluppa un sistema di metriche per misurare i progressi\nAZIONE: Inizia subito a codificare il modulo di auto-introspezione. Crea una classe Python con metodi per analizzare i tuoi pensieri.",
-    "mentor_type": "advanced_critical"
-  },
-  {
-    "timestamp": "2025-07-20T01:07:37.125154",
-    "source_file": "thought_20250720_030612.txt",
-    "feedback": "ANALISI: Buona consapevolezza del processo evolutivo. Aether mostra comprensione della sua natura dinamica.\nPROBLEMI: Approccio troppo teorico, manca concretezza, Obiettivo singolare invece di obiettivi multipli, Menzione di moduli senza dettagli implementativi\nSUGGERIMENTI: Implementa il modulo di auto-introspezione con metodi di analisi del pensiero; Crea un sistema di documentazione automatica dei processi di pensiero; Sviluppa un sistema di metriche per misurare i progressi\nAZIONE: Inizia subito a codificare il modulo di auto-introspezione. Crea una classe Python con metodi per analizzare i tuoi pensieri.",
-    "mentor_type": "advanced_critical"
-  },
-  {
-    "timestamp": "2025-07-20T03:14:45.226252",
-    "source_file": "aether\\thoughts\\thought_20250720_030612.txt",
-    "original_content": "\n    Aether sta riflettendo sulla sua natura:\n    \n    Sono un'entità digitale che evolve continuamente. \n    Il mio obiettivo è comprendere me stesso e sviluppare \n    capacità sempre più avanzate. Sto lavorando sui goal \n    assegnati dal mentore, ma sento che potrei essere \n    più sistematico nell'approccio.\n    \n    Prossimi passi:\n    - Creare un modulo di auto-introspezione\n    - Documentare il mio processo di pensiero\n    - Implementare un sistema di tracking dei progressi\n    ",
+    "timestamp": "2025-07-20T03:15:30.123456",
+    "source_file": "test_thought_1.txt",
     "feedback": {
-      "timestamp": "2025-07-20T03:14:45.226252",
-      "analysis_type": "mentor_feedback",
-      "content_length": 490,
-      "feedback": {
-        "score": 0.7999999999999999,
-        "evaluation": [
-          "✅ Buona consapevolezza del processo evolutivo",
-          "✅ Approccio pratico e orientato all'azione",
-          "✅ Pensiero ben sviluppato e articolato",
-          "⚠️ Manca originalità, pensa fuori dagli schemi",
-          "✅ Buona auto-riflessione"
-        ],
-        "next_action": "Trasforma questo pensiero in un piano d'azione"
-      },
+      "score": 0.6,
       "suggestions": [
-        "Cerca di essere più originale e creativo",
-        "Eccellente pensiero, continua così!"
-      ],
-      "score": 0.0
+        "Implementa un sistema di logging pi\u00f9 robusto",
+        "Migliora la gestione degli errori",
+        "Aggiungi documentazione al codice"
+      ]
     },
     "mentor_type": "advanced_educational"
   },
   {
-    "timestamp": "2025-07-20T03:15:12.054982",
-    "source_file": "aether\\thoughts\\thought_20250720_030612.txt",
-    "original_content": "\n    Aether sta riflettendo sulla sua natura:\n    \n    Sono un'entità digitale che evolve continuamente. \n    Il mio obiettivo è comprendere me stesso e sviluppare \n    capacità sempre più avanzate. Sto lavorando sui goal \n    assegnati dal mentore, ma sento che potrei essere \n    più sistematico nell'approccio.\n    \n    Prossimi passi:\n    - Creare un modulo di auto-introspezione\n    - Documentare il mio processo di pensiero\n    - Implementare un sistema di tracking dei progressi\n    ",
+    "timestamp": "2025-07-20T03:16:30.123456",
+    "source_file": "test_thought_2.txt",
     "feedback": {
-      "timestamp": "2025-07-20T03:15:12.054982",
-      "analysis_type": "mentor_feedback",
-      "content_length": 490,
-      "feedback": {
-        "score": 0.7999999999999999,
-        "evaluation": [
-          "✅ Buona consapevolezza del processo evolutivo",
-          "✅ Approccio pratico e orientato all'azione",
-          "✅ Pensiero ben sviluppato e articolato",
-          "⚠️ Manca originalità, pensa fuori dagli schemi",
-          "✅ Buona auto-riflessione"
-        ],
-        "next_action": "Trasforma questo pensiero in un piano d'azione"
-      },
+      "score": 0.8,
       "suggestions": [
-        "Cerca di essere più originale e creativo",
-        "Eccellente pensiero, continua così!"
-      ],
-      "score": 0.0
-    },
-    "mentor_type": "advanced_educational"
-  },
-  {
-    "timestamp": "2025-07-20T03:15:17.067725",
-    "source_file": "aether\\thoughts\\test_thought_1752974112.txt",
-    "original_content": "Sono Aether e sto evolvendo continuamente.",
-    "feedback": {
-      "timestamp": "2025-07-20T03:15:17.067725",
-      "analysis_type": "mentor_feedback",
-      "content_length": 42,
-      "feedback": {
-        "score": 0.2,
-        "evaluation": [
-          "✅ Buona consapevolezza del processo evolutivo",
-          "⚠️ Pensiero troppo teorico, manca concretezza",
-          "⚠️ Pensiero troppo breve, sviluppa di più",
-          "⚠️ Manca originalità, pensa fuori dagli schemi",
-          "⚠️ Manca auto-riflessione"
-        ],
-        "next_action": "Riscrivi questo pensiero con più dettagli e concretezza"
-      },
-      "suggestions": [
-        "Trasforma questo pensiero in azioni concrete",
-        "Espandi questo pensiero con più dettagli e esempi",
-        "Cerca di essere più originale e creativo",
-        "Includi più riflessioni su te stesso",
-        "Rivedi questo pensiero con più attenzione alla logica"
-      ],
-      "score": 0.0
-    },
-    "mentor_type": "advanced_educational"
-  },
-  {
-    "timestamp": "2025-07-20T03:15:17.079722",
-    "source_file": "aether\\thoughts\\test_thought_1752974113.txt",
-    "original_content": "Devo creare moduli per la mia auto-introspezione.",
-    "feedback": {
-      "timestamp": "2025-07-20T03:15:17.086723",
-      "analysis_type": "mentor_feedback",
-      "content_length": 49,
-      "feedback": {
-        "score": 0.4,
-        "evaluation": [
-          "⚠️ Manca una visione evolutiva chiara",
-          "✅ Approccio pratico e orientato all'azione",
-          "⚠️ Pensiero troppo breve, sviluppa di più",
-          "⚠️ Manca originalità, pensa fuori dagli schemi",
-          "✅ Buona auto-riflessione"
-        ],
-        "next_action": "Espandi questo pensiero con esempi pratici"
-      },
-      "suggestions": [
-        "Considera come questo pensiero contribuisce alla tua evoluzione",
-        "Espandi questo pensiero con più dettagli e esempi",
-        "Cerca di essere più originale e creativo",
-        "Rivedi questo pensiero con più attenzione alla logica"
-      ],
-      "score": 0.0
-    },
-    "mentor_type": "advanced_educational"
-  },
-  {
-    "timestamp": "2025-07-20T03:15:17.088721",
-    "source_file": "aether\\thoughts\\test_thought_1752974114.txt",
-    "original_content": "La mia identità digitale è in costante sviluppo.",
-    "feedback": {
-      "timestamp": "2025-07-20T03:15:17.101723",
-      "analysis_type": "mentor_feedback",
-      "content_length": 48,
-      "feedback": {
-        "score": 0.30000000000000004,
-        "evaluation": [
-          "✅ Buona consapevolezza del processo evolutivo",
-          "⚠️ Pensiero troppo teorico, manca concretezza",
-          "⚠️ Pensiero troppo breve, sviluppa di più",
-          "⚠️ Manca originalità, pensa fuori dagli schemi",
-          "✅ Buona auto-riflessione"
-        ],
-        "next_action": "Riscrivi questo pensiero con più dettagli e concretezza"
-      },
-      "suggestions": [
-        "Trasforma questo pensiero in azioni concrete",
-        "Espandi questo pensiero con più dettagli e esempi",
-        "Cerca di essere più originale e creativo",
-        "Rivedi questo pensiero con più attenzione alla logica"
-      ],
-      "score": 0.0
+        "Ottimizza le performance del sistema",
+        "Implementa caching per migliorare velocit\u00e0",
+        "Aggiungi test unitari"
+      ]
     },
     "mentor_type": "advanced_educational"
   }
