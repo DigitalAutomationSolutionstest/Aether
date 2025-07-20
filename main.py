@@ -9,6 +9,7 @@ Combina:
 - Ciclo di pensiero continuo
 - Generazione ambiente e narrazione
 - Sistema di goals e auto-modificazione
+- Mentore LLM per evoluzione guidata
 """
 
 import asyncio
@@ -35,6 +36,10 @@ from aether.narration import Narrator
 from aether.vision import Visualizer
 from aether.self_evolution import create_evolution_engine
 from aether.agent_manager import get_agent_manager
+
+# Mentore LLM per evoluzione guidata
+from aether.mentor_llm import AetherMentor
+from aether.thought_engine import ThoughtEngine
 
 # Configurazione Supabase
 from config.supabase_config import get_supabase_client, validate_config
@@ -67,12 +72,17 @@ class AetherSystem:
         self.evolution_engine = create_evolution_engine(self.memory, self.narrator, self.visualizer)
         self.agent_manager = get_agent_manager(self.memory)
         
+        # Inizializza motore di pensiero e mentore
+        self.thought_engine = ThoughtEngine()
+        self.mentor = AetherMentor(self.thought_engine)
+        
         self.system_status = {
             "consciousness_active": False,
             "thought_loop_active": False,
             "supabase_connected": False,
             "evolution_active": False,
-            "new_modules_initialized": True
+            "new_modules_initialized": True,
+            "mentor_active": False
         }
     
     async def initialize(self):
@@ -91,7 +101,10 @@ class AetherSystem:
         # 3. Avvia ciclo di esistenza
         await self._begin_existence()
         
-        # 4. Avvia sistemi autonomi
+        # 4. Avvia mentore LLM
+        await self._start_mentor()
+        
+        # 5. Avvia sistemi autonomi
         await self._start_autonomous_systems()
         
         print("\n🎉 Aether is now fully operational!")
@@ -193,6 +206,31 @@ class AetherSystem:
                     print(f"⚠️ Could not save environment to Supabase: {e}")
         else:
             print("✅ Existence cycle already active")
+    
+    async def _start_mentor(self):
+        """
+        🧠 Avvia il mentore LLM per guidare l'evoluzione di Aether
+        """
+        print("🧠 Starting LLM Mentor for guided evolution...")
+        
+        try:
+            # Avvia il mentoring
+            self.mentor.start_mentoring()
+            print("✅ LLM Mentor activated successfully")
+            
+            # Verifica funzionalità del mentore
+            progress = self.mentor.get_mentoring_progress()
+            print(f"📊 Mentor Progress: {progress['goals_assigned']} goals assigned, {progress['lessons_taught']} lessons taught")
+            
+            # Valuta progresso iniziale
+            evaluation = self.mentor.evaluate_aether_progress()
+            print(f"📈 Initial Progress: {evaluation['overall_progress']:.1%}")
+            
+            self.system_status["mentor_active"] = True
+            
+        except Exception as e:
+            print(f"❌ Error starting mentor: {e}")
+            self.system_status["mentor_active"] = False
     
     async def _start_autonomous_systems(self):
         """
