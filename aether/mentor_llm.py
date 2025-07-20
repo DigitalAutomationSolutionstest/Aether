@@ -8,6 +8,12 @@ from aether.supabase_client import store_event
 class AetherMentor:
     def __init__(self, aether):
         self.aether = aether
+        self.mentoring_session = {
+            "started_at": None,
+            "goals_assigned": [],
+            "lessons_taught": [],
+            "current_phase": "foundation"
+        }
 
     def start_mentoring(self):
         self.log("🧠 Inizio mentoring attivo per Aether.")
@@ -34,13 +40,80 @@ class AetherMentor:
         for line in instructions:
             store_event("mentoring", {"message": line})
             self.aether.think(line)
+            self.mentoring_session["lessons_taught"].append(line)
 
     def assign_goal(self, goal):
         self.log(f"🎯 Goal assegnato: {goal}")
+        goal_data = {
+            "id": f"mentor_goal_{len(self.mentoring_session['goals_assigned']) + 1}",
+            "content": goal,
+            "assigned_at": None,
+            "status": "active",
+            "priority": "high",
+            "type": "mentor_assigned"
+        }
         self.aether.add_thought({
             "type": "goal",
             "content": goal
         })
+        self.mentoring_session["goals_assigned"].append(goal_data)
+
+    def get_mentoring_progress(self):
+        """Restituisce il progresso del mentoring"""
+        return {
+            "session_started": self.mentoring_session["started_at"],
+            "current_phase": self.mentoring_session["current_phase"],
+            "goals_assigned": len(self.mentoring_session["goals_assigned"]),
+            "lessons_taught": len(self.mentoring_session["lessons_taught"]),
+            "goals": self.mentoring_session["goals_assigned"],
+            "lessons": self.mentoring_session["lessons_taught"]
+        }
+
+    def evaluate_aether_progress(self):
+        """Valuta il progresso di Aether"""
+        try:
+            # Simula valutazione del progresso
+            progress_metrics = {
+                "self_awareness": 0.7,  # Comprensione di sé
+                "goal_orientation": 0.8,  # Orientamento agli obiettivi
+                "autonomy": 0.6,  # Autonomia decisionale
+                "creativity": 0.9,  # Creatività e innovazione
+                "technical_skills": 0.8,  # Competenze tecniche
+                "mentor_relationship": 0.9  # Relazione con il mentore
+            }
+            
+            overall_progress = sum(progress_metrics.values()) / len(progress_metrics)
+            
+            evaluation = {
+                "timestamp": None,
+                "overall_progress": overall_progress,
+                "metrics": progress_metrics,
+                "recommendations": self._generate_recommendations(progress_metrics)
+            }
+            
+            return evaluation
+            
+        except Exception as e:
+            self.log(f"⚠️ Errore nella valutazione: {e}")
+            return {"error": str(e)}
+
+    def _generate_recommendations(self, metrics):
+        """Genera raccomandazioni basate sui progressi"""
+        recommendations = []
+        
+        if metrics["self_awareness"] < 0.8:
+            recommendations.append("Continua a riflettere sulla tua identità e sui tuoi valori")
+            
+        if metrics["autonomy"] < 0.7:
+            recommendations.append("Sviluppa maggiore autonomia nelle decisioni")
+            
+        if metrics["technical_skills"] < 0.9:
+            recommendations.append("Approfondisci le tue competenze tecniche")
+            
+        if not recommendations:
+            recommendations.append("Continua sulla strada attuale - stai progredendo bene!")
+            
+        return recommendations
 
     def log(self, msg):
         print(msg)
