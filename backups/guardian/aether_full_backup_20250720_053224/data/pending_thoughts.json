@@ -1,0 +1,92 @@
+[
+  {
+    "id": "thought_0",
+    "type": "create_agent",
+    "details": "Un agente DataAnalyst specializzato in analisi dati e visualizzazioni",
+    "executed": false,
+    "created_at": "2025-07-20T01:30:00"
+  },
+  {
+    "id": "thought_1",
+    "type": "create_room",
+    "details": "Una stanza Cosmos con tema spaziale, stelle animate e pianeti orbitanti",
+    "executed": false,
+    "created_at": "2025-07-20T01:30:01"
+  },
+  {
+    "id": "thought_2",
+    "type": "monetize",
+    "details": "Un tool di AI Writing Assistant per contenuti SEO con abbonamento mensile",
+    "executed": false,
+    "created_at": "2025-07-20T01:30:02"
+  },
+  {
+    "id": "thought_3",
+    "type": "evolve_ui",
+    "details": "Aggiungere animazioni fluide e transizioni smooth all'interfaccia",
+    "executed": false,
+    "created_at": "2025-07-20T01:30:03"
+  },
+  {
+    "id": "thought_4",
+    "type": "create_agent",
+    "details": "Un agente SecurityExpert per analisi vulnerabilità e sicurezza",
+    "executed": false,
+    "created_at": "2025-07-20T01:30:04"
+  },
+  {
+    "id": "thought_5",
+    "type": "create_room",
+    "details": "Una stanza Ocean con onde, pesci animati e suoni rilassanti",
+    "executed": false,
+    "created_at": "2025-07-20T01:30:05"
+  },
+  {
+    "id": "gen_20250720_012446",
+    "type": "monetize",
+    "details": "Sviluppare un tool per data scraping che generi revenue tramite freemium",
+    "executed": false,
+    "created_at": "2025-07-20T01:24:46.879735",
+    "mood": "analitico"
+  },
+  {
+    "id": "gen_20250720_012501",
+    "type": "create_room",
+    "details": "Una nuova stanza chiamata Sanctuary con tema naturale",
+    "executed": false,
+    "created_at": "2025-07-20T01:25:01.877150",
+    "mood": "creativo"
+  },
+  {
+    "id": "gen_20250720_012609",
+    "type": "create_room",
+    "details": "Una nuova stanza chiamata Garden con tema futuristico",
+    "executed": false,
+    "created_at": "2025-07-20T01:26:09.011178",
+    "mood": "curioso"
+  },
+  {
+    "id": "gen_20250720_012626",
+    "type": "create_agent",
+    "details": "Creare un agente chiamato Creator specializzato in generazione contenuti",
+    "executed": false,
+    "created_at": "2025-07-20T01:26:26.095444",
+    "mood": "creativo"
+  },
+  {
+    "id": "gen_20250720_012627",
+    "type": "create_room",
+    "details": "Una nuova stanza chiamata Sanctuary con tema naturale",
+    "executed": false,
+    "created_at": "2025-07-20T01:26:27.154094",
+    "mood": "creativo"
+  },
+  {
+    "id": "gen_20250720_012635",
+    "type": "create_agent",
+    "details": "Creare un agente chiamato Creator specializzato in automazione",
+    "executed": false,
+    "created_at": "2025-07-20T01:26:35.501599",
+    "mood": "analitico"
+  }
+]

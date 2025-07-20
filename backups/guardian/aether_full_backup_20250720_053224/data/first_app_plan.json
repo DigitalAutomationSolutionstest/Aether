@@ -1,0 +1,22 @@
+{
+  "name": "AI Content Generator Pro",
+  "description": "Genera contenuti SEO-optimized con AI",
+  "features": [
+    "Generazione articoli blog",
+    "Ottimizzazione SEO automatica",
+    "Supporto multi-lingua",
+    "Export in vari formati"
+  ],
+  "pricing": {
+    "basic": 19.99,
+    "pro": 49.99,
+    "enterprise": 99.99
+  },
+  "tech_stack": {
+    "frontend": "React + Tailwind",
+    "backend": "FastAPI",
+    "ai": "OpenAI API",
+    "payments": "Stripe"
+  },
+  "timeline": "2 settimane per MVP"
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "clean_1",
+    "type": "create_agent",
+    "details": {
+      "name": "Helper",
+      "purpose": "Assistente AI specializzato in customer support e risoluzione problemi"
+    },
+    "executed": false,
+    "created_at": "2025-07-20T01:30:00"
+  },
+  {
+    "id": "clean_2",
+    "type": "create_room",
+    "details": "Una stanza chiamata Nexus con tema futuristico, colori neon, geometrie complesse",
+    "executed": false,
+    "created_at": "2025-07-20T01:30:01"
+  },
+  {
+    "id": "clean_3",
+    "type": "monetize",
+    "details": {
+      "name": "SEO_Analyzer",
+      "purpose": "Tool per analisi SEO e ottimizzazione siti web"
+    },
+    "executed": false,
+    "created_at": "2025-07-20T01:30:02"
+  },
+  {
+    "id": "clean_4",
+    "type": "evolve_ui",
+    "details": {
+      "type": "dark_mode",
+      "target": "AetherUI"
+    },
+    "executed": false,
+    "created_at": "2025-07-20T01:30:03"
+  }
+] 

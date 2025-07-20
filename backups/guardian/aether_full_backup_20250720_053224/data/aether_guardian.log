@@ -1,0 +1,24 @@
+2025-07-20 05:32:24,301 - Guardian - INFO - 👁️ Process Monitor ATTIVATO
+2025-07-20 05:32:24,301 - Guardian - INFO - 💾 Backup Manager ATTIVATO
+2025-07-20 05:32:24,301 - Guardian - INFO - 📊 System Monitor ATTIVATO
+2025-07-20 05:32:24,302 - Guardian - INFO - 📢 Notification Manager ATTIVATO
+2025-07-20 05:32:24,302 - Guardian - INFO - 🛡️ Aether Guardian System INIZIALIZZATO
+2025-07-20 05:32:24,302 - Guardian - INFO - 👁️ Processo aggiunto al monitoring: AetherVivo
+2025-07-20 05:32:24,302 - Guardian - INFO - 👁️ Processo aggiunto al monitoring: AetherTasks24_7
+2025-07-20 05:32:24,303 - Guardian - INFO - 👁️ Processi Aether configurati per monitoring
+2025-07-20 05:32:24,303 - Guardian - WARNING - ⚠️ Processo AetherVivo non sano
+2025-07-20 05:32:24,304 - Guardian - INFO - 🔄 Riavvio processo: AetherVivo
+2025-07-20 05:32:24,305 - Guardian - INFO - 🛡️ Tutti i servizi Guardian avviati
+2025-07-20 05:32:24,305 - Guardian - INFO - 📢 Notifica: 🛡️ Guardian System avviato e operativo!
+Monitoraggio processi, sistema e backup automatici attivi.
+2025-07-20 05:32:24,306 - Guardian - INFO - 🛡️ Guardian System completamente operativo
+2025-07-20 05:32:24,311 - Guardian - INFO - 🚀 Processo avviato: AetherVivo (PID: 28748)
+2025-07-20 05:32:24,312 - Guardian - INFO - ✅ Processo riavviato: AetherVivo (restart #1)
+2025-07-20 05:32:24,312 - Guardian - INFO - ✅ Processo AetherVivo riavviato con successo
+2025-07-20 05:32:24,312 - Guardian - WARNING - ⚠️ Processo AetherTasks24_7 non sano
+2025-07-20 05:32:24,312 - Guardian - INFO - 🔄 Riavvio processo: AetherTasks24_7
+2025-07-20 05:32:24,318 - Guardian - INFO - 🚀 Processo avviato: AetherTasks24_7 (PID: 30128)
+2025-07-20 05:32:24,318 - Guardian - INFO - ✅ Processo riavviato: AetherTasks24_7 (restart #1)
+2025-07-20 05:32:24,318 - Guardian - INFO - ✅ Processo AetherTasks24_7 riavviato con successo
+2025-07-20 05:32:24,719 - Guardian - INFO - 💾 Backup incrementale creato: 29 file modificati
+2025-07-20 05:32:24,719 - Guardian - INFO - 📢 Notifica: 💾 Backup incrementale completato
