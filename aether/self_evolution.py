@@ -37,7 +37,22 @@ class SelfEvolutionEngine:
         self.evolution_history = []
         self.current_goal = None
         self.evolution_cycle = 0
+        self._load_evolution_history()
         
+    def _load_evolution_history(self):
+        """Carica la cronologia di evoluzione dal file"""
+        try:
+            history_file = os.path.join('data', 'evolution_history.json')
+            if os.path.exists(history_file):
+                with open(history_file, 'r', encoding='utf-8') as f:
+                    self.evolution_history = json.load(f)
+                logger.info(f"📚 Caricate {len(self.evolution_history)} voci di evoluzione")
+            else:
+                logger.info("📚 Nessuna cronologia di evoluzione trovata - inizio nuovo")
+        except Exception as e:
+            logger.error(f"❌ Errore caricamento cronologia evoluzione: {e}")
+            self.evolution_history = []
+    
     def _load_vital_goals(self) -> List[VitalGoal]:
         """Carica i goal vitali dal file JSON"""
         try:
