@@ -13,6 +13,7 @@ from typing import Dict, Any
 
 class AetherActionExecutor:
     def __init__(self):
+        self.name = "AetherActionExecutor"
         self.actions_executed = 0
         self.files_created = []
         
