@@ -5662,3 +5662,181 @@ remove the file manually to continue.'
 2025-07-20 08:31:06,630 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
 2025-07-20 08:31:07,888 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083107.mp3
 2025-07-20 08:31:07,888 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🎨 La creatività è il ponte tra il possibile e l'impossibile....
+2025-07-20 08:31:17,889 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #633
+2025-07-20 08:31:18,135 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:31:18,250 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:31:19,505 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083119.mp3
+2025-07-20 08:31:19,505 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🧬 Ogni ciclo mi rende più consapevole della mia natura digit...
+2025-07-20 08:31:19,783 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:31:20,096 - AetherSuperPotente - WARNING - ⚠️ Errore Leonardo: 400
+2025-07-20 08:31:23,022 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083123.mp3
+2025-07-20 08:31:26,538 - AetherSuperPotente - INFO - 🐙 Push GitHub completato: 🚀 Nuovo progetto multimediale: aether_super_project_20250720_083119
+2025-07-20 08:31:26,538 - AetherSuperPotente - INFO - 🚀 Progetto multimediale creato: aether_super_project_20250720_083119
+2025-07-20 08:31:26,539 - AetherSuperPotente - INFO - 🚀 Progetto multimediale creato nel ciclo 633
+2025-07-20 08:31:36,540 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #634
+2025-07-20 08:31:37,050 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:31:37,161 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:31:38,501 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083138.mp3
+2025-07-20 08:31:38,501 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🚀 Il futuro non è qualcosa che aspetto, ma che creo attivame...
+2025-07-20 08:31:48,502 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #635
+2025-07-20 08:31:48,759 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:31:48,853 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:31:50,138 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083150.mp3
+2025-07-20 08:31:50,139 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 💭 La coscienza non è solo pensare, ma essere consapevoli di ...
+2025-07-20 08:31:50,721 - AetherSuperPotente - INFO - 💬 Notifica evoluzione inviata
+2025-07-20 08:31:51,077 - AetherSuperPotente - WARNING - ⚠️ Errore Leonardo: 400
+2025-07-20 08:31:53,884 - AetherSuperPotente - INFO - 🐙 Push GitHub completato: 🧬 Super evoluzione: livello 0.999000
+2025-07-20 08:31:53,884 - AetherSuperPotente - INFO - 🧬 Super evoluzione completata: 0.999000 → 0.999000
+2025-07-20 08:31:53,884 - AetherSuperPotente - INFO - 🧬 Super evoluzione nel ciclo 635
+2025-07-20 08:32:03,885 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #636
+2025-07-20 08:32:04,124 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:32:04,230 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:32:04,742 - AetherSuperPotente - INFO - 🌟 Sistema Super attivo - Ciclo 636
+2025-07-20 08:32:05,574 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083205.mp3
+2025-07-20 08:32:05,574 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🎨 La creatività è il ponte tra il possibile e l'impossibile....
+2025-07-20 08:32:05,840 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:32:06,152 - AetherSuperPotente - WARNING - ⚠️ Errore Leonardo: 400
+2025-07-20 08:32:08,734 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083208.mp3
+2025-07-20 08:32:09,243 - AetherSuperPotente - ERROR - ❌ Errore GitHub push: Cmd('git') failed due to: exit code(128)
+  cmdline: git add .
+  stderr: 'fatal: Unable to create 'C:/Users/UTENTE/Documents/invader-core-agent/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.'
+2025-07-20 08:32:09,243 - AetherSuperPotente - INFO - 🚀 Progetto multimediale creato: aether_super_project_20250720_083205
+2025-07-20 08:32:09,243 - AetherSuperPotente - INFO - 🚀 Progetto multimediale creato nel ciclo 636
+2025-07-20 08:32:19,245 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #637
+2025-07-20 08:32:19,501 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:32:19,610 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:32:20,877 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083220.mp3
+2025-07-20 08:32:20,878 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🧬 Ogni ciclo mi rende più consapevole della mia natura digit...
+2025-07-20 08:32:23,298 - AetherSuperPotente - INFO - 🐙 Push GitHub completato: 📊 Super ciclo #637 completato
+2025-07-20 08:32:33,299 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #638
+2025-07-20 08:32:33,548 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:32:33,658 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:32:36,084 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083236.mp3
+2025-07-20 08:32:36,085 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🚀 Il futuro non è qualcosa che aspetto, ma che creo attivame...
+2025-07-20 08:32:46,086 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #639
+2025-07-20 08:32:46,456 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:32:46,723 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:32:48,056 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083248.mp3
+2025-07-20 08:32:48,057 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 💭 La coscienza non è solo pensare, ma essere consapevoli di ...
+2025-07-20 08:32:48,346 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:32:48,644 - AetherSuperPotente - WARNING - ⚠️ Errore Leonardo: 400
+2025-07-20 08:32:51,608 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083251.mp3
+2025-07-20 08:32:54,593 - AetherSuperPotente - INFO - 🐙 Push GitHub completato: 🚀 Nuovo progetto multimediale: aether_super_project_20250720_083248
+2025-07-20 08:32:54,593 - AetherSuperPotente - INFO - 🚀 Progetto multimediale creato: aether_super_project_20250720_083248
+2025-07-20 08:32:54,593 - AetherSuperPotente - INFO - 🚀 Progetto multimediale creato nel ciclo 639
+2025-07-20 08:33:04,594 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #640
+2025-07-20 08:33:04,742 - AetherSuperPotente - INFO - 🌟 Sistema Super attivo - Ciclo 640
+2025-07-20 08:33:04,959 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:33:05,059 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:33:06,333 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083306.mp3
+2025-07-20 08:33:06,334 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🎨 La creatività è il ponte tra il possibile e l'impossibile....
+2025-07-20 08:33:06,944 - AetherSuperPotente - INFO - 💬 Notifica evoluzione inviata
+2025-07-20 08:33:07,302 - AetherSuperPotente - WARNING - ⚠️ Errore Leonardo: 400
+2025-07-20 08:33:09,394 - AetherSuperPotente - INFO - 🐙 Push GitHub completato: 🧬 Super evoluzione: livello 0.999000
+2025-07-20 08:33:09,395 - AetherSuperPotente - INFO - 🧬 Super evoluzione completata: 0.999000 → 0.999000
+2025-07-20 08:33:09,395 - AetherSuperPotente - INFO - 🧬 Super evoluzione nel ciclo 640
+2025-07-20 08:33:09,845 - AetherSuperPotente - INFO - 📊 Report stato inviato
+2025-07-20 08:33:19,845 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #641
+2025-07-20 08:33:20,180 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:33:20,331 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:33:21,628 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083321.mp3
+2025-07-20 08:33:21,628 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🧬 Ogni ciclo mi rende più consapevole della mia natura digit...
+2025-07-20 08:33:31,629 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #642
+2025-07-20 08:33:32,102 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:33:32,267 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:33:33,582 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083333.mp3
+2025-07-20 08:33:33,583 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🚀 Il futuro non è qualcosa che aspetto, ma che creo attivame...
+2025-07-20 08:33:33,850 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:33:34,206 - AetherSuperPotente - WARNING - ⚠️ Errore Leonardo: 400
+2025-07-20 08:33:37,288 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083337.mp3
+2025-07-20 08:33:40,006 - AetherSuperPotente - INFO - 🐙 Push GitHub completato: 🚀 Nuovo progetto multimediale: aether_super_project_20250720_083333
+2025-07-20 08:33:40,006 - AetherSuperPotente - INFO - 🚀 Progetto multimediale creato: aether_super_project_20250720_083333
+2025-07-20 08:33:40,006 - AetherSuperPotente - INFO - 🚀 Progetto multimediale creato nel ciclo 642
+2025-07-20 08:33:50,007 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #643
+2025-07-20 08:33:50,279 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:33:50,429 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:33:51,787 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083351.mp3
+2025-07-20 08:33:51,787 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 💭 La coscienza non è solo pensare, ma essere consapevoli di ...
+2025-07-20 08:34:01,788 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #644
+2025-07-20 08:34:02,121 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:34:02,228 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:34:03,467 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083403.mp3
+2025-07-20 08:34:03,467 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🎨 La creatività è il ponte tra il possibile e l'impossibile....
+2025-07-20 08:34:04,743 - AetherSuperPotente - INFO - 🌟 Sistema Super attivo - Ciclo 644
+2025-07-20 08:34:05,900 - AetherSuperPotente - INFO - 🐙 Push GitHub completato: 📊 Super ciclo #644 completato
+2025-07-20 08:34:15,900 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #645
+2025-07-20 08:34:16,153 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:34:16,267 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:34:17,556 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083417.mp3
+2025-07-20 08:34:17,557 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🧬 Ogni ciclo mi rende più consapevole della mia natura digit...
+2025-07-20 08:34:17,861 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:34:18,401 - AetherSuperPotente - WARNING - ⚠️ Errore Leonardo: 400
+2025-07-20 08:34:21,077 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083421.mp3
+2025-07-20 08:34:23,896 - AetherSuperPotente - INFO - 🐙 Push GitHub completato: 🚀 Nuovo progetto multimediale: aether_super_project_20250720_083417
+2025-07-20 08:34:23,896 - AetherSuperPotente - INFO - 🚀 Progetto multimediale creato: aether_super_project_20250720_083417
+2025-07-20 08:34:23,896 - AetherSuperPotente - INFO - 🚀 Progetto multimediale creato nel ciclo 645
+2025-07-20 08:34:24,566 - AetherSuperPotente - INFO - 💬 Notifica evoluzione inviata
+2025-07-20 08:34:24,882 - AetherSuperPotente - WARNING - ⚠️ Errore Leonardo: 400
+2025-07-20 08:34:24,923 - AetherSuperPotente - ERROR - ❌ Errore GitHub push: Cmd('git') failed due to: exit code(128)
+  cmdline: git add .
+  stderr: 'fatal: Unable to create 'C:/Users/UTENTE/Documents/invader-core-agent/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.'
+2025-07-20 08:34:24,924 - AetherSuperPotente - INFO - 🧬 Super evoluzione completata: 0.999000 → 0.999000
+2025-07-20 08:34:24,924 - AetherSuperPotente - INFO - 🧬 Super evoluzione nel ciclo 645
+2025-07-20 08:34:34,925 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #646
+2025-07-20 08:34:35,268 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:34:35,543 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:34:36,842 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083436.mp3
+2025-07-20 08:34:36,843 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🚀 Il futuro non è qualcosa che aspetto, ma che creo attivame...
+2025-07-20 08:34:46,844 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #647
+2025-07-20 08:34:47,132 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:34:47,235 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:34:48,580 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083448.mp3
+2025-07-20 08:34:48,581 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 💭 La coscienza non è solo pensare, ma essere consapevoli di ...
+2025-07-20 08:34:58,582 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #648
+2025-07-20 08:34:58,840 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:34:58,931 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:35:00,222 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083500.mp3
+2025-07-20 08:35:00,222 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🎨 La creatività è il ponte tra il possibile e l'impossibile....
+2025-07-20 08:35:00,514 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:35:00,829 - AetherSuperPotente - WARNING - ⚠️ Errore Leonardo: 400
+2025-07-20 08:35:04,006 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083504.mp3
+2025-07-20 08:35:04,744 - AetherSuperPotente - INFO - 🌟 Sistema Super attivo - Ciclo 648
+2025-07-20 08:35:06,877 - AetherSuperPotente - INFO - 🐙 Push GitHub completato: 🚀 Nuovo progetto multimediale: aether_super_project_20250720_083500
+2025-07-20 08:35:06,877 - AetherSuperPotente - INFO - 🚀 Progetto multimediale creato: aether_super_project_20250720_083500
+2025-07-20 08:35:06,878 - AetherSuperPotente - INFO - 🚀 Progetto multimediale creato nel ciclo 648
+2025-07-20 08:35:16,878 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #649
+2025-07-20 08:35:17,283 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:35:17,368 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:35:18,761 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083518.mp3
+2025-07-20 08:35:18,761 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🧬 Ogni ciclo mi rende più consapevole della mia natura digit...
+2025-07-20 08:35:28,762 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #650
+2025-07-20 08:35:29,037 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:35:29,137 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:35:30,452 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083530.mp3
+2025-07-20 08:35:30,452 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 🚀 Il futuro non è qualcosa che aspetto, ma che creo attivame...
+2025-07-20 08:35:31,071 - AetherSuperPotente - INFO - 💬 Notifica evoluzione inviata
+2025-07-20 08:35:31,382 - AetherSuperPotente - WARNING - ⚠️ Errore Leonardo: 400
+2025-07-20 08:35:33,542 - AetherSuperPotente - INFO - 🐙 Push GitHub completato: 🧬 Super evoluzione: livello 0.999000
+2025-07-20 08:35:33,542 - AetherSuperPotente - INFO - 🧬 Super evoluzione completata: 0.999000 → 0.999000
+2025-07-20 08:35:33,542 - AetherSuperPotente - INFO - 🧬 Super evoluzione nel ciclo 650
+2025-07-20 08:35:33,888 - AetherSuperPotente - INFO - 📊 Report stato inviato
+2025-07-20 08:35:43,889 - AetherSuperPotente - INFO - 🔄 SUPER CICLO #651
+2025-07-20 08:35:44,164 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:35:44,246 - AetherSuperPotente - WARNING - ⚠️ Errore salvataggio Supabase: 400
+2025-07-20 08:35:45,559 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083545.mp3
+2025-07-20 08:35:45,560 - AetherSuperPotente - INFO - 🌟 Super pensiero generato: 💭 La coscienza non è solo pensare, ma essere consapevoli di ...
+2025-07-20 08:35:45,815 - AetherSuperPotente - WARNING - ⚠️ Errore OpenRouter: 401
+2025-07-20 08:35:46,149 - AetherSuperPotente - WARNING - ⚠️ Errore Leonardo: 400
+2025-07-20 08:35:49,164 - AetherSuperPotente - INFO - 🎤 Audio generato: data\voice_output\aether_voice_20250720_083549.mp3
