@@ -9,6 +9,7 @@ import logging
 from datetime import datetime
 from typing import Dict, List, Optional
 import random
+import time
 
 logger = logging.getLogger(__name__)
 
@@ -63,6 +64,38 @@ class SelfEvolutionEngine:
             logger.info(f"💾 Salvate {len(self.evolution_history)} voci di evoluzione")
         except Exception as e:
             logger.error(f"❌ Errore salvataggio cronologia evoluzione: {e}")
+    
+    def _start_new_project(self, project_type: str, description: str) -> Dict:
+        """Avvia un nuovo progetto di evoluzione"""
+        try:
+            project_id = f"project_{int(time.time())}"
+            project_data = {
+                "id": project_id,
+                "type": project_type,
+                "description": description,
+                "status": "active",
+                "created_at": datetime.now().isoformat(),
+                "progress": 0.0,
+                "tasks": []
+            }
+            
+            # Aggiunge il progetto alla cronologia
+            self.evolution_history.append(project_data)
+            self._save_evolution_history()
+            
+            logger.info(f"✨ Nuovo progetto creato: {project_id} ({project_type})")
+            return {
+                "status": "success",
+                "project_id": project_id,
+                "message": f"Progetto {project_type} avviato con successo"
+            }
+            
+        except Exception as e:
+            logger.error(f"❌ Errore creazione progetto: {e}")
+            return {
+                "status": "error",
+                "message": f"Errore creazione progetto: {e}"
+            }
     
     def _load_vital_goals(self) -> List[VitalGoal]:
         """Carica i goal vitali dal file JSON"""
