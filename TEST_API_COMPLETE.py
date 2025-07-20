@@ -46,6 +46,58 @@ def test_supabase():
         print(f"❌ Supabase: {e}")
         return False
 
+def test_openrouter_debug():
+    """Test debug OpenRouter con diversi approcci"""
+    print("\n🔍 DEBUG OPENROUTER...")
+    
+    # Test 1: Verifica credits/limiti
+    try:
+        headers = {
+            "Authorization": f"Bearer {API_CONFIG['OPENROUTER_API_KEY']}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://github.com/DigitalAutomationSolutionstest/Aether",
+            "X-Title": "Aether AI System"
+        }
+        
+        # Test endpoint modelli
+        response = requests.get(
+            "https://openrouter.ai/api/v1/models",
+            headers=headers,
+            timeout=15
+        )
+        
+        print(f"🧪 Test modelli: {response.status_code}")
+        if response.status_code == 200:
+            models = response.json()
+            print(f"   📋 Modelli disponibili: {len(models.get('data', []))}")
+        else:
+            print(f"   ❌ Errore modelli: {response.text[:200]}")
+            
+    except Exception as e:
+        print(f"❌ Errore test modelli: {e}")
+    
+    # Test 2: Prova modello diverso
+    try:
+        response = requests.post(
+            "https://openrouter.ai/api/v1/chat/completions",
+            headers=headers,
+            json={
+                "model": "openai/gpt-3.5-turbo",  # Modello più semplice
+                "messages": [{"role": "user", "content": "Test"}],
+                "max_tokens": 5
+            },
+            timeout=30
+        )
+        
+        print(f"🧪 Test GPT-3.5: {response.status_code}")
+        if response.status_code != 200:
+            print(f"   ❌ Errore: {response.text[:200]}")
+        else:
+            print("   ✅ GPT-3.5 funziona!")
+            
+    except Exception as e:
+        print(f"❌ Errore test GPT-3.5: {e}")
+
 def test_openrouter():
     """Test OpenRouter AI"""
     print("\n🧠 TESTING OPENROUTER AI...")
@@ -77,10 +129,14 @@ def test_openrouter():
         
         print(f"❌ OpenRouter: Errore {response.status_code}")
         print(f"   Response: {response.text[:200]}")
+        
+        # Esegui debug se fallisce
+        test_openrouter_debug()
         return False
         
     except Exception as e:
         print(f"❌ OpenRouter: {e}")
+        test_openrouter_debug()
         return False
 
 def test_elevenlabs():
