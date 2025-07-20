@@ -60,7 +60,10 @@ class AetherAudioReporter:
                 logger.error(f"❌ Errore configurazione ElevenLabs: {e}")
                 self.elevenlabs_key = None
         else:
-            logger.warning("⚠️ ElevenLabs non configurato")
+            if not ELEVENLABS_AVAILABLE:
+                logger.warning("⚠️ ElevenLabs non installato. Installa con: pip install elevenlabs")
+            else:
+                logger.warning("⚠️ ElevenLabs non configurato. Aggiungi ELEVENLABS_API_KEY al file .env")
             self.elevenlabs_key = None
         
         logger.info("🎙️ AetherAudioReporter inizializzato")
@@ -396,7 +399,7 @@ def report_decision_as_audio(decision: str, reason: str = None) -> bool:
 
 if __name__ == "__main__":
     # Test del sistema audio
-    print("🎙️ TEST AETHER AUDIO REPORTER")
+    print("��️ TEST AETHER AUDIO REPORTER")
     print("=" * 40)
     
     reporter = get_audio_reporter()
