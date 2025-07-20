@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-07-20T15:11:26.648095",
+  "test_results": {
+    "file_structure": true,
+    "template_system": true,
+    "supabase_integration": true,
+    "git_automation": true,
+    "code_execution": false
+  },
+  "passed_tests": 4,
+  "total_tests": 5,
+  "success_rate": 0.8,
+  "execution_results": [
+    {
+      "execution_id": "exec_20250720_151126_1",
+      "thought": {
+        "type": "create_agent",
+        "details": {
+          "name": "TestAgent",
+          "purpose": "Test automation"
+        },
+        "priority": "high"
+      },
+      "error": "'datetime'",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\UTENTE\\Documents\\invader-core-agent\\executor\\code_executor.py\", line 103, in execute_thought\n    generated_code = self._generate_code_from_thought(thought)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\UTENTE\\Documents\\invader-core-agent\\executor\\code_executor.py\", line 170, in _generate_code_from_thought\n    code = template.format(\n           ^^^^^^^^^^^^^^^^\nKeyError: 'datetime'\n",
+      "timestamp": "2025-07-20T15:11:26.645094",
+      "success": false
+    },
+    {
+      "execution_id": "exec_20250720_151126_2",
+      "thought": {
+        "type": "create_tool",
+        "details": {
+          "name": "TestTool",
+          "category": "analysis"
+        },
+        "priority": "medium"
+      },
+      "error": "'datetime'",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\UTENTE\\Documents\\invader-core-agent\\executor\\code_executor.py\", line 103, in execute_thought\n    generated_code = self._generate_code_from_thought(thought)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\UTENTE\\Documents\\invader-core-agent\\executor\\code_executor.py\", line 170, in _generate_code_from_thought\n    code = template.format(\n           ^^^^^^^^^^^^^^^^\nKeyError: 'datetime'\n",
+      "timestamp": "2025-07-20T15:11:26.646094",
+      "success": false
+    },
+    {
+      "execution_id": "exec_20250720_151126_3",
+      "thought": {
+        "type": "data_analysis",
+        "details": {
+          "dataset": "test_data",
+          "type": "trends"
+        },
+        "priority": "medium"
+      },
+      "error": "'datetime'",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\UTENTE\\Documents\\invader-core-agent\\executor\\code_executor.py\", line 103, in execute_thought\n    generated_code = self._generate_code_from_thought(thought)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\UTENTE\\Documents\\invader-core-agent\\executor\\code_executor.py\", line 170, in _generate_code_from_thought\n    code = template.format(\n           ^^^^^^^^^^^^^^^^\nKeyError: 'datetime'\n",
+      "timestamp": "2025-07-20T15:11:26.647095",
+      "success": false
+    }
+  ]
+}

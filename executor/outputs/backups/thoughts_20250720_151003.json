@@ -1,0 +1,9 @@
+{
+  "type": "test_thought",
+  "content": "{\"type\": \"test_thought\", \"content\": \"Test integrazione Supabase executor\", \"priority\": \"low\"}",
+  "context": {
+    "executor": true,
+    "priority": "low",
+    "source": "code_executor"
+  }
+}

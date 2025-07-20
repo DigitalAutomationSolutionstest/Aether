@@ -1,0 +1,87 @@
+2025-07-20 15:09:45,749 - aether_code_executor - INFO - ✅ Supabase integrazione attivata
+2025-07-20 15:09:46,051 - aether_code_executor - INFO - ✅ Git automation attivata
+2025-07-20 15:09:46,051 - aether_code_executor - INFO - 🚀 AetherCodeExecutor inizializzato
+2025-07-20 15:09:46,051 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #1: create_agent
+2025-07-20 15:09:46,052 - aether_code_executor - ERROR - ❌ Errore esecuzione exec_20250720_150946_1: 'datetime'
+2025-07-20 15:09:46,052 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #2: create_tool
+2025-07-20 15:09:46,052 - aether_code_executor - ERROR - ❌ Errore esecuzione exec_20250720_150946_2: 'datetime'
+2025-07-20 15:09:46,053 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #3: data_analysis
+2025-07-20 15:09:46,053 - aether_code_executor - ERROR - ❌ Errore esecuzione exec_20250720_150946_3: 'datetime'
+2025-07-20 15:10:05,040 - aether_code_executor - INFO - ✅ Supabase integrazione attivata
+2025-07-20 15:10:05,282 - aether_code_executor - INFO - ✅ Git automation attivata
+2025-07-20 15:10:05,282 - aether_code_executor - INFO - 🚀 AetherCodeExecutor inizializzato
+2025-07-20 15:10:05,282 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #1: create_agent
+2025-07-20 15:10:05,283 - aether_code_executor - ERROR - ❌ Errore esecuzione exec_20250720_151005_1: 'datetime'
+2025-07-20 15:10:05,283 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #2: create_tool
+2025-07-20 15:10:05,283 - aether_code_executor - ERROR - ❌ Errore esecuzione exec_20250720_151005_2: 'datetime'
+2025-07-20 15:10:05,284 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #3: data_analysis
+2025-07-20 15:10:05,284 - aether_code_executor - ERROR - ❌ Errore esecuzione exec_20250720_151005_3: 'datetime'
+2025-07-20 15:10:38,838 - aether_code_executor - INFO - ✅ Supabase integrazione attivata
+2025-07-20 15:10:39,084 - aether_code_executor - INFO - ✅ Git automation attivata
+2025-07-20 15:10:39,084 - aether_code_executor - INFO - 🚀 AetherCodeExecutor inizializzato
+2025-07-20 15:10:39,084 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #1: create_agent
+2025-07-20 15:10:39,084 - aether_code_executor - ERROR - ❌ Errore esecuzione exec_20250720_151039_1: 'datetime'
+2025-07-20 15:10:39,085 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #2: create_tool
+2025-07-20 15:10:39,085 - aether_code_executor - ERROR - ❌ Errore esecuzione exec_20250720_151039_2: 'datetime'
+2025-07-20 15:10:39,085 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #3: data_analysis
+2025-07-20 15:10:39,086 - aether_code_executor - ERROR - ❌ Errore esecuzione exec_20250720_151039_3: 'datetime'
+2025-07-20 15:11:08,906 - aether_code_executor - INFO - ✅ Supabase integrazione attivata
+2025-07-20 15:11:09,144 - aether_code_executor - INFO - ✅ Git automation attivata
+2025-07-20 15:11:09,144 - aether_code_executor - INFO - 🚀 AetherCodeExecutor inizializzato
+2025-07-20 15:11:09,145 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #1: create_agent
+2025-07-20 15:11:09,145 - aether_code_executor - ERROR - ❌ Errore esecuzione exec_20250720_151109_1: 'datetime'
+2025-07-20 15:11:09,145 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #2: create_tool
+2025-07-20 15:11:09,145 - aether_code_executor - ERROR - ❌ Errore esecuzione exec_20250720_151109_2: 'datetime'
+2025-07-20 15:11:09,146 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #3: data_analysis
+2025-07-20 15:11:09,146 - aether_code_executor - ERROR - ❌ Errore esecuzione exec_20250720_151109_3: 'datetime'
+2025-07-20 15:11:26,398 - aether_code_executor - INFO - ✅ Supabase integrazione attivata
+2025-07-20 15:11:26,644 - aether_code_executor - INFO - ✅ Git automation attivata
+2025-07-20 15:11:26,644 - aether_code_executor - INFO - 🚀 AetherCodeExecutor inizializzato
+2025-07-20 15:11:26,644 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #1: create_agent
+2025-07-20 15:11:26,645 - aether_code_executor - ERROR - ❌ Errore esecuzione exec_20250720_151126_1: 'datetime'
+2025-07-20 15:11:26,645 - aether_code_executor - DEBUG - Traceback: Traceback (most recent call last):
+  File "C:\Users\UTENTE\Documents\invader-core-agent\executor\code_executor.py", line 103, in execute_thought
+    generated_code = self._generate_code_from_thought(thought)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UTENTE\Documents\invader-core-agent\executor\code_executor.py", line 170, in _generate_code_from_thought
+    code = template.format(
+           ^^^^^^^^^^^^^^^^
+KeyError: 'datetime'
+
+2025-07-20 15:11:26,646 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #2: create_tool
+2025-07-20 15:11:26,646 - aether_code_executor - ERROR - ❌ Errore esecuzione exec_20250720_151126_2: 'datetime'
+2025-07-20 15:11:26,647 - aether_code_executor - DEBUG - Traceback: Traceback (most recent call last):
+  File "C:\Users\UTENTE\Documents\invader-core-agent\executor\code_executor.py", line 103, in execute_thought
+    generated_code = self._generate_code_from_thought(thought)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UTENTE\Documents\invader-core-agent\executor\code_executor.py", line 170, in _generate_code_from_thought
+    code = template.format(
+           ^^^^^^^^^^^^^^^^
+KeyError: 'datetime'
+
+2025-07-20 15:11:26,647 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #3: data_analysis
+2025-07-20 15:11:26,647 - aether_code_executor - ERROR - ❌ Errore esecuzione exec_20250720_151126_3: 'datetime'
+2025-07-20 15:11:26,648 - aether_code_executor - DEBUG - Traceback: Traceback (most recent call last):
+  File "C:\Users\UTENTE\Documents\invader-core-agent\executor\code_executor.py", line 103, in execute_thought
+    generated_code = self._generate_code_from_thought(thought)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UTENTE\Documents\invader-core-agent\executor\code_executor.py", line 170, in _generate_code_from_thought
+    code = template.format(
+           ^^^^^^^^^^^^^^^^
+KeyError: 'datetime'
+
+2025-07-20 15:14:37,485 - aether_code_executor - INFO - ✅ Supabase integrazione attivata
+2025-07-20 15:14:37,754 - aether_code_executor - INFO - ✅ Git automation attivata
+2025-07-20 15:14:37,754 - aether_code_executor - INFO - 🚀 AetherCodeExecutor inizializzato
+2025-07-20 15:14:37,754 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #1: create_agent
+2025-07-20 15:14:37,755 - aether_code_executor - DEBUG - 📝 Codice salvato: C:\Users\UTENTE\Documents\invader-core-agent\executor\sandbox\scripts\create_agent_exec_20250720_151437_1.py
+2025-07-20 15:14:37,756 - aether_code_executor - INFO - ✅ Pensiero eseguito con successo: exec_20250720_151437_1
+2025-07-20 15:14:37,757 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #2: create_tool
+2025-07-20 15:14:37,758 - aether_code_executor - DEBUG - 📝 Codice salvato: C:\Users\UTENTE\Documents\invader-core-agent\executor\sandbox\scripts\create_tool_exec_20250720_151437_2.py
+2025-07-20 15:14:37,759 - aether_code_executor - INFO - ✅ Pensiero eseguito con successo: exec_20250720_151437_2
+2025-07-20 15:14:37,759 - aether_code_executor - INFO - 🧠 Esecuzione pensiero #3: data_analysis
+2025-07-20 15:14:37,760 - aether_code_executor - DEBUG - 📝 Codice salvato: C:\Users\UTENTE\Documents\invader-core-agent\executor\sandbox\scripts\data_analysis_exec_20250720_151437_3.py
+2025-07-20 15:14:37,761 - aether_code_executor - INFO - ✅ Pensiero eseguito con successo: exec_20250720_151437_3
+2025-07-20 15:30:45,157 - aether_code_executor - INFO - ✅ Supabase integrazione attivata
+2025-07-20 15:30:45,379 - aether_code_executor - INFO - ✅ Git automation attivata
+2025-07-20 15:30:45,379 - aether_code_executor - INFO - 🚀 AetherCodeExecutor inizializzato
