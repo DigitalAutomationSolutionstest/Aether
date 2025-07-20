@@ -1,111 +1,92 @@
 [
   {
-    "id": "clean_1",
+    "id": "thought_0",
     "type": "create_agent",
-    "details": {
-      "name": "Helper",
-      "purpose": "Assistente AI specializzato in customer support e risoluzione problemi"
-    },
+    "details": "Un agente DataAnalyst specializzato in analisi dati e visualizzazioni",
     "executed": false,
     "created_at": "2025-07-20T01:30:00"
   },
   {
-    "id": "clean_2",
+    "id": "thought_1",
     "type": "create_room",
-    "details": "Una stanza chiamata Nexus con tema futuristico, colori neon, geometrie complesse",
+    "details": "Una stanza Cosmos con tema spaziale, stelle animate e pianeti orbitanti",
     "executed": false,
     "created_at": "2025-07-20T01:30:01"
   },
   {
-    "id": "clean_3",
+    "id": "thought_2",
     "type": "monetize",
-    "details": {
-      "name": "SEO_Analyzer",
-      "purpose": "Tool per analisi SEO e ottimizzazione siti web"
-    },
+    "details": "Un tool di AI Writing Assistant per contenuti SEO con abbonamento mensile",
     "executed": false,
     "created_at": "2025-07-20T01:30:02"
   },
   {
-    "id": "clean_4",
+    "id": "thought_3",
     "type": "evolve_ui",
-    "details": {
-      "type": "dark_mode",
-      "target": "AetherUI"
-    },
+    "details": "Aggiungere animazioni fluide e transizioni smooth all'interfaccia",
     "executed": false,
     "created_at": "2025-07-20T01:30:03"
   },
   {
-    "id": "gen_20250720_011838",
-    "type": "evolve_ui",
-    "details": "Migliorare l'interfaccia aggiungendo tema dark mode",
+    "id": "thought_4",
+    "type": "create_agent",
+    "details": "Un agente SecurityExpert per analisi vulnerabilità e sicurezza",
     "executed": false,
-    "created_at": "2025-07-20T01:18:38.094424",
-    "mood": "curioso"
+    "created_at": "2025-07-20T01:30:04"
   },
   {
-    "id": "gen_20250720_011854",
+    "id": "thought_5",
     "type": "create_room",
-    "details": "Una nuova stanza chiamata Laboratory con tema naturale",
+    "details": "Una stanza Ocean con onde, pesci animati e suoni rilassanti",
     "executed": false,
-    "created_at": "2025-07-20T01:18:54.907382",
-    "mood": "curioso"
+    "created_at": "2025-07-20T01:30:05"
   },
   {
-    "id": "gen_20250720_011856",
-    "type": "create_room",
-    "details": "Una nuova stanza chiamata Observatory con tema futuristico",
-    "executed": false,
-    "created_at": "2025-07-20T01:18:56.042931",
-    "mood": "determinato"
-  },
-  {
-    "id": "gen_20250720_011946",
-    "type": "create_room",
-    "details": "Una nuova stanza chiamata Sanctuary con tema minimale",
-    "executed": false,
-    "created_at": "2025-07-20T01:19:46.237784",
-    "mood": "creativo"
-  },
-  {
-    "id": "gen_20250720_012001",
+    "id": "gen_20250720_012446",
     "type": "monetize",
     "details": "Sviluppare un tool per data scraping che generi revenue tramite freemium",
     "executed": false,
-    "created_at": "2025-07-20T01:20:01.352601",
-    "mood": "curioso"
-  },
-  {
-    "id": "gen_20250720_012108",
-    "type": "create_agent",
-    "details": "Creare un agente chiamato Creator specializzato in automazione",
-    "executed": false,
-    "created_at": "2025-07-20T01:21:08.381435",
+    "created_at": "2025-07-20T01:24:46.879735",
     "mood": "analitico"
   },
   {
-    "id": "gen_20250720_012126",
+    "id": "gen_20250720_012501",
+    "type": "create_room",
+    "details": "Una nuova stanza chiamata Sanctuary con tema naturale",
+    "executed": false,
+    "created_at": "2025-07-20T01:25:01.877150",
+    "mood": "creativo"
+  },
+  {
+    "id": "gen_20250720_012609",
     "type": "create_room",
     "details": "Una nuova stanza chiamata Garden con tema futuristico",
     "executed": false,
-    "created_at": "2025-07-20T01:21:26.060806",
-    "mood": "creativo"
-  },
-  {
-    "id": "gen_20250720_012126",
-    "type": "evolve_ui",
-    "details": "Migliorare l'interfaccia aggiungendo tema dark mode",
-    "executed": false,
-    "created_at": "2025-07-20T01:21:26.617416",
-    "mood": "creativo"
-  },
-  {
-    "id": "gen_20250720_012216",
-    "type": "monetize",
-    "details": "Sviluppare un tool per gestione social che generi revenue tramite subscription",
-    "executed": false,
-    "created_at": "2025-07-20T01:22:16.577899",
+    "created_at": "2025-07-20T01:26:09.011178",
     "mood": "curioso"
+  },
+  {
+    "id": "gen_20250720_012626",
+    "type": "create_agent",
+    "details": "Creare un agente chiamato Creator specializzato in generazione contenuti",
+    "executed": false,
+    "created_at": "2025-07-20T01:26:26.095444",
+    "mood": "creativo"
+  },
+  {
+    "id": "gen_20250720_012627",
+    "type": "create_room",
+    "details": "Una nuova stanza chiamata Sanctuary con tema naturale",
+    "executed": false,
+    "created_at": "2025-07-20T01:26:27.154094",
+    "mood": "creativo"
+  },
+  {
+    "id": "gen_20250720_012635",
+    "type": "create_agent",
+    "details": "Creare un agente chiamato Creator specializzato in automazione",
+    "executed": false,
+    "created_at": "2025-07-20T01:26:35.501599",
+    "mood": "analitico"
   }
 ]

@@ -72,28 +72,41 @@ class {agent_name.title().replace('_', '')}:
         
     def think(self, context: str) -> str:
         """Pensa e risponde basandosi sul contesto"""
-        thought = f"Come {self.name}, penso che {context}"
+        thought = f"Come {{self.name}}, penso che {{context}}"
         self.memories.append({{"thought": thought, "timestamp": datetime.now().isoformat()}})
         return thought
         
     def act(self, task: str) -> dict:
         """Esegue un'azione"""
-        return {{
-            "agent": self.name,
+        action = {{
             "task": task,
-            "status": "completed",
-            "result": f"Ho completato: {task}"
+            "agent": self.name,
+            "timestamp": datetime.now().isoformat(),
+            "status": "completed"
         }}
-    
-    def learn(self, new_skill: str):
-        """Impara una nuova abilità"""
-        self.skills.append(new_skill)
-        return f"Ho imparato: {new_skill}"
-
-# Inizializza agente
-agent = {agent_name.title().replace('_', '')}()
-print(f"Agente {{agent.name}} attivato!")
-print(f"Scopo: {{agent.purpose}}")
+        self.memories.append(action)
+        return action
+        
+    def save_state(self, filepath: str = None):
+        """Salva lo stato dell'agente"""
+        if not filepath:
+            filepath = f"agents/{agent_name}/state.json"
+        
+        state = {{
+            "name": self.name,
+            "purpose": self.purpose,
+            "memories": self.memories,
+            "skills": self.skills,
+            "created_at": self.created_at.isoformat() if hasattr(self.created_at, 'isoformat') else str(self.created_at)
+        }}
+        
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(state, f, indent=2, ensure_ascii=False)
+            
+if __name__ == "__main__":
+    agent = {agent_name.title().replace('_', '')}()
+    print(f"Agente {{agent.name}} creato con successo!")
+    print(f"Scopo: {{agent.purpose}}")
 '''
         
         # Salva file agente
