@@ -134,5 +134,13 @@
       "message": "🧠 Avvio mentoring avanzato con analisi critica..."
     },
     "timestamp": "2025-07-20T03:07:34.989575"
+  },
+  {
+    "id": "event_18",
+    "type": "mentor_log",
+    "data": {
+      "message": "✅ Mentoring avanzato attivato con successo"
+    },
+    "timestamp": "2025-07-20T03:07:37.128155"
   }
 ]
