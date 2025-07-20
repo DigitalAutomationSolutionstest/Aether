@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-20T11:07:12.558065",
+  "timestamp": "2025-07-20T11:07:13.253553",
   "consciousness_level": 0.999,
   "thoughts": [
     {
@@ -854,23 +854,6 @@
     }
   ],
   "completed_tasks": [
-    {
-      "task_type": "create_sandbox",
-      "started": "2025-07-20T10:34:55.327526",
-      "sandbox_created": {
-        "name": "aether_sandbox_20250720_103455",
-        "path": "sandboxes\\aether_sandbox_20250720_103455",
-        "created": "2025-07-20T10:34:55.330527",
-        "type": "web",
-        "status": "active",
-        "url": "file://C:\\Users\\UTENTE\\Documents\\invader-core-agent\\sandboxes\\aether_sandbox_20250720_103455/index.html"
-      },
-      "sandbox_path": "sandboxes\\aether_sandbox_20250720_103455",
-      "success": true,
-      "completed": "2025-07-20T10:34:55.330527",
-      "duration_seconds": 0.003001,
-      "task_id": 976
-    },
     {
       "task_type": "create_sandbox",
       "started": "2025-07-20T10:35:14.748983",
@@ -2457,6 +2440,21 @@
       "completed": "2025-07-20T11:06:54.201088",
       "duration_seconds": 0.0,
       "task_id": 1075
+    },
+    {
+      "task_type": "evolve_capabilities",
+      "started": "2025-07-20T11:07:13.253553",
+      "evolution": {
+        "timestamp": "2025-07-20T11:07:13.253553",
+        "old_level": 0.999,
+        "new_level": 0.999,
+        "boost": 0.002845042937886539,
+        "type": "autonomous_evolution"
+      },
+      "success": true,
+      "completed": "2025-07-20T11:07:13.253553",
+      "duration_seconds": 0.0,
+      "task_id": 1076
     }
   ],
   "created_projects": [
@@ -2582,13 +2580,6 @@
     }
   ],
   "evolution_history": [
-    {
-      "timestamp": "2025-07-20T10:04:20.009132",
-      "old_level": 0.999,
-      "new_level": 0.999,
-      "boost": 0.0015274325612233534,
-      "type": "autonomous_evolution"
-    },
     {
       "timestamp": "2025-07-20T10:07:13.146978",
       "old_level": 0.999,
@@ -2790,6 +2781,13 @@
       "old_level": 0.999,
       "new_level": 0.999,
       "boost": 0.0012447690928832104,
+      "type": "autonomous_evolution"
+    },
+    {
+      "timestamp": "2025-07-20T11:07:13.253553",
+      "old_level": 0.999,
+      "new_level": 0.999,
+      "boost": 0.002845042937886539,
       "type": "autonomous_evolution"
     }
   ],
