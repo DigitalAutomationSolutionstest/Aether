@@ -15,8 +15,7 @@ from dotenv import load_dotenv
 
 # Import ElevenLabs
 try:
-    from elevenlabs import generate, save, set_api_key, voices, Voice
-    from elevenlabs import text_to_speech, save
+    from elevenlabs import text_to_speech, save, set_api_key, voices, Voice
     ELEVENLABS_AVAILABLE = True
 except ImportError:
     ELEVENLABS_AVAILABLE = False
