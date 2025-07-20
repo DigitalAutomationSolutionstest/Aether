@@ -198,11 +198,39 @@ Rispondi come Aether in prima persona, spiegando quale opportunità di monetizza
             logger.warning("❌ Nessun goal disponibile per l'evoluzione")
             return {"status": "error", "message": "Nessun goal disponibile"}
         
-        # Genera prompt specifico
-        prompt = self.generate_evolution_prompt(goal)
-        
-        # Simula evoluzione (qui si integrerebbe con ai_adapter.py)
-        evolution_result = self._simulate_evolution(goal, prompt)
+        # Importa e usa l'adattatore AI
+        try:
+            from .ai_adapter import AetherAIAdapter
+            ai_adapter = AetherAIAdapter()
+            
+            # Fa pensare Aether in prima persona
+            goal_dict = {
+                "id": goal.id,
+                "type": goal.type,
+                "goal": goal.goal,
+                "description": goal.description,
+                "mood": goal.mood,
+                "priority": goal.priority,
+                "progress": goal.progress,
+                "sub_goals": goal.sub_goals
+            }
+            
+            aether_thought = ai_adapter.think_as_aether(goal_dict)
+            logger.info(f"💭 Aether pensa: {aether_thought.get('thought', '')[:100]}...")
+            
+            # Pianifica l'azione
+            action_plan = ai_adapter.plan_action(goal_dict, aether_thought.get('thought', ''))
+            
+            # Esegue l'azione (simulata per ora)
+            evolution_result = self._execute_action(goal, action_plan)
+            
+            # Riflette sui progressi
+            reflection = ai_adapter.reflect_on_progress(goal_dict, evolution_result)
+            logger.info(f"🤔 Riflessione di Aether: {reflection}")
+            
+        except ImportError:
+            logger.warning("⚠️ AI Adapter non disponibile, usando simulazione")
+            evolution_result = self._simulate_evolution(goal, "")
         
         # Aggiorna progresso
         self._update_goal_progress(goal, evolution_result)
@@ -213,7 +241,8 @@ Rispondi come Aether in prima persona, spiegando quale opportunità di monetizza
             "goal_id": goal.id,
             "goal_type": goal.type,
             "goal_description": goal.goal,
-            "prompt": prompt,
+            "thought": aether_thought.get('thought', '') if 'aether_thought' in locals() else '',
+            "action_plan": action_plan if 'action_plan' in locals() else {},
             "result": evolution_result,
             "cycle": self.evolution_cycle
         }
