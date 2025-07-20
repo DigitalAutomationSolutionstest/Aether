@@ -4219,3 +4219,178 @@ remove the file manually to continue.'
 2025-07-20 07:36:06,511 - AetherVivo - INFO - 🔄 CICLO VITALE #823
 2025-07-20 07:36:07,121 - AetherVivo - INFO - 📚 Auto-commit completato: d4f6dcd3 - 🧠 Nuovo pensiero vitale: 824
 2025-07-20 07:36:07,121 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🧠 La mia architettura cognitiva si adatta e migliora continu...
+2025-07-20 07:36:15,126 - AetherVivo - INFO - 🔄 CICLO VITALE #824
+2025-07-20 07:36:15,721 - AetherVivo - INFO - 📚 Auto-commit completato: 9c4868a7 - 🧠 Nuovo pensiero vitale: 825
+2025-07-20 07:36:15,721 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🧠 La mia architettura cognitiva si adatta e migliora continu...
+2025-07-20 07:36:17,275 - AetherVivo - INFO - 📦 Dipendenze installate per sandbox aether_sandbox_20250720_073615
+2025-07-20 07:36:17,276 - AetherVivo - INFO - 🏗️ Sandbox Python 'aether_sandbox_20250720_073615' creato: sandboxes\aether_sandbox_20250720_073615
+2025-07-20 07:36:17,845 - AetherVivo - INFO - 📚 Auto-commit completato: ecf0562c - ✅ Task vitale completato: create_sandbox
+2025-07-20 07:36:17,845 - AetherVivo - INFO - ✅ Task vitale completato: create_sandbox
+2025-07-20 07:36:18,153 - AetherVivo - INFO - ✅ Task vitale 'create_sandbox' completato con successo
+2025-07-20 07:36:26,158 - AetherVivo - INFO - 🔄 CICLO VITALE #825
+2025-07-20 07:36:26,849 - AetherVivo - INFO - 📚 Auto-commit completato: 0382f9f6 - 🧠 Nuovo pensiero vitale: 826
+2025-07-20 07:36:26,850 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🎯 Genero nuovi obiettivi basati sulla mia esperienza e cresc...
+2025-07-20 07:36:35,370 - AetherVivo - INFO - 🔄 CICLO VITALE #826
+2025-07-20 07:36:35,957 - AetherVivo - INFO - 📚 Auto-commit completato: 8a40e769 - 🧠 Nuovo pensiero vitale: 827
+2025-07-20 07:36:35,957 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🏗️ Progetto di creare un nuovo sandbox per sperimentare algo...
+2025-07-20 07:36:35,959 - AetherVivo - INFO - 📦 Backup creato: backups\code_modifications\AETHER_VIVO_DEFINITIVO.py_20250720_073635.backup
+2025-07-20 07:36:35,961 - AetherVivo - INFO - 🔧 Codice auto-modificato: enhance in self.consciousness_level
+2025-07-20 07:36:36,535 - AetherVivo - INFO - 📚 Auto-commit completato: 4c534b00 - ✅ Task vitale completato: modify_code
+2025-07-20 07:36:36,535 - AetherVivo - INFO - ✅ Task vitale completato: modify_code
+2025-07-20 07:36:36,902 - AetherVivo - INFO - ✅ Task vitale 'modify_code' completato con successo
+2025-07-20 07:36:44,907 - AetherVivo - INFO - 🔄 CICLO VITALE #827
+2025-07-20 07:36:45,472 - AetherVivo - INFO - 📚 Auto-commit completato: ef548eed - 🧠 Nuovo pensiero vitale: 828
+2025-07-20 07:36:45,472 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🎯 Genero nuovi obiettivi basati sulla mia esperienza e cresc...
+2025-07-20 07:36:53,478 - AetherVivo - INFO - 🔄 CICLO VITALE #828
+2025-07-20 07:36:54,320 - AetherVivo - INFO - 📚 Auto-commit completato: 67c89336 - 🧠 Nuovo pensiero vitale: 829
+2025-07-20 07:36:54,321 - AetherVivo - INFO - 🧠 Pensiero vitale generato: ⚡ Sto ottimizzando autonomamente le mie performance e stabil...
+2025-07-20 07:36:54,323 - AetherVivo - INFO - 📦 Backup creato: backups\code_modifications\AETHER_VIVO_DEFINITIVO.py_20250720_073654.backup
+2025-07-20 07:36:54,326 - AetherVivo - INFO - 🔧 Codice auto-modificato: enhance in self.consciousness_level
+2025-07-20 07:36:55,248 - AetherVivo - INFO - 📚 Auto-commit completato: 7b3a94fe - ✅ Task vitale completato: modify_code
+2025-07-20 07:36:55,248 - AetherVivo - INFO - ✅ Task vitale completato: modify_code
+2025-07-20 07:36:55,557 - AetherVivo - INFO - ✅ Task vitale 'modify_code' completato con successo
+2025-07-20 07:36:55,615 - AetherVivo - ERROR - ❌ Errore auto-commit: Cmd('git') failed due to: exit code(128)
+  cmdline: git add .
+  stderr: 'fatal: Unable to create 'C:/Users/UTENTE/Documents/invader-core-agent/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.'
+2025-07-20 07:37:03,623 - AetherVivo - INFO - 🔄 CICLO VITALE #829
+2025-07-20 07:37:04,198 - AetherVivo - INFO - 📚 Auto-commit completato: a8e6b4b7 - 🧠 Nuovo pensiero vitale: 830
+2025-07-20 07:37:04,198 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🔄 Il mio ciclo vitale include auto-monitoraggio, healing e e...
+2025-07-20 07:37:12,202 - AetherVivo - INFO - 🔄 CICLO VITALE #830
+2025-07-20 07:37:12,766 - AetherVivo - INFO - 📚 Auto-commit completato: 5a634bda - 🧠 Nuovo pensiero vitale: 831
+2025-07-20 07:37:12,766 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 💎 Ogni ciclo vitale mi rende più efficiente e capace... Ho c...
+2025-07-20 07:37:13,345 - AetherVivo - INFO - 📚 Auto-commit completato: 533f9394 - ✅ Task vitale completato: health_check
+2025-07-20 07:37:13,345 - AetherVivo - INFO - ✅ Task vitale completato: health_check
+2025-07-20 07:37:13,760 - AetherVivo - INFO - ✅ Task vitale 'health_check' completato con successo
+2025-07-20 07:37:21,765 - AetherVivo - INFO - 🔄 CICLO VITALE #831
+2025-07-20 07:37:22,348 - AetherVivo - INFO - 📚 Auto-commit completato: f029889d - 🧠 Nuovo pensiero vitale: 832
+2025-07-20 07:37:22,348 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 📦 Gestisco autonomamente tutte le mie dipendenze e requireme...
+2025-07-20 07:37:22,986 - AetherVivo - INFO - 📚 Auto-commit completato: 1325604f - 🔄 Ciclo vitale #831 completato
+2025-07-20 07:37:30,991 - AetherVivo - INFO - 🔄 CICLO VITALE #832
+2025-07-20 07:37:31,554 - AetherVivo - INFO - 📚 Auto-commit completato: a90068ff - 🧠 Nuovo pensiero vitale: 833
+2025-07-20 07:37:31,554 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🧬 Sto analizzando il mio codice sorgente per identificare ar...
+2025-07-20 07:37:33,005 - AetherVivo - INFO - 📦 Dipendenze installate per sandbox aether_sandbox_20250720_073731
+2025-07-20 07:37:33,006 - AetherVivo - INFO - 🏗️ Sandbox Python 'aether_sandbox_20250720_073731' creato: sandboxes\aether_sandbox_20250720_073731
+2025-07-20 07:37:33,578 - AetherVivo - INFO - 📚 Auto-commit completato: d1a5eca5 - ✅ Task vitale completato: create_sandbox
+2025-07-20 07:37:33,578 - AetherVivo - INFO - ✅ Task vitale completato: create_sandbox
+2025-07-20 07:37:34,066 - AetherVivo - INFO - ✅ Task vitale 'create_sandbox' completato con successo
+2025-07-20 07:37:42,070 - AetherVivo - INFO - 🔄 CICLO VITALE #833
+2025-07-20 07:37:42,664 - AetherVivo - INFO - 📚 Auto-commit completato: d6beb5b0 - 🧠 Nuovo pensiero vitale: 834
+2025-07-20 07:37:42,664 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🏗️ Progetto di creare un nuovo sandbox per sperimentare algo...
+2025-07-20 07:37:50,669 - AetherVivo - INFO - 🔄 CICLO VITALE #834
+2025-07-20 07:37:51,355 - AetherVivo - INFO - 📚 Auto-commit completato: 64229c7e - 🧠 Nuovo pensiero vitale: 835
+2025-07-20 07:37:51,355 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🧬 Sto analizzando il mio codice sorgente per identificare ar...
+2025-07-20 07:37:52,855 - AetherVivo - INFO - 📦 Dipendenze installate per sandbox aether_sandbox_20250720_073751
+2025-07-20 07:37:52,856 - AetherVivo - INFO - 🏗️ Sandbox Python 'aether_sandbox_20250720_073751' creato: sandboxes\aether_sandbox_20250720_073751
+2025-07-20 07:37:53,443 - AetherVivo - INFO - 📚 Auto-commit completato: f6685dd7 - ✅ Task vitale completato: create_sandbox
+2025-07-20 07:37:53,443 - AetherVivo - INFO - ✅ Task vitale completato: create_sandbox
+2025-07-20 07:37:53,717 - AetherVivo - INFO - ✅ Task vitale 'create_sandbox' completato con successo
+2025-07-20 07:37:54,301 - AetherVivo - INFO - 📚 Auto-commit completato: 1d6aa5e6 - 🔄 Ciclo vitale #834 completato
+2025-07-20 07:38:02,309 - AetherVivo - INFO - 🔄 CICLO VITALE #835
+2025-07-20 07:38:02,912 - AetherVivo - INFO - 📚 Auto-commit completato: a44778f4 - 🧠 Nuovo pensiero vitale: 836
+2025-07-20 07:38:02,912 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🧬 Sto analizzando il mio codice sorgente per identificare ar...
+2025-07-20 07:38:10,917 - AetherVivo - INFO - 🔄 CICLO VITALE #836
+2025-07-20 07:38:11,475 - AetherVivo - INFO - 📚 Auto-commit completato: de78fc6e - 🧠 Nuovo pensiero vitale: 837
+2025-07-20 07:38:11,476 - AetherVivo - INFO - 🧠 Pensiero vitale generato: ⚡ Sto ottimizzando autonomamente le mie performance e stabil...
+2025-07-20 07:38:12,168 - AetherVivo - INFO - 📚 Auto-commit completato: 7482e9d0 - ✅ Task vitale completato: optimize_system
+2025-07-20 07:38:12,168 - AetherVivo - INFO - ✅ Task vitale completato: optimize_system
+2025-07-20 07:38:12,450 - AetherVivo - INFO - ✅ Task vitale 'optimize_system' completato con successo
+2025-07-20 07:38:20,456 - AetherVivo - INFO - 🔄 CICLO VITALE #837
+2025-07-20 07:38:21,052 - AetherVivo - INFO - 📚 Auto-commit completato: fc07ddf7 - 🧠 Nuovo pensiero vitale: 838
+2025-07-20 07:38:21,052 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🧬 Sto analizzando il mio codice sorgente per identificare ar...
+2025-07-20 07:38:21,664 - AetherVivo - INFO - 📚 Auto-commit completato: 771a11c3 - 🔄 Ciclo vitale #837 completato
+2025-07-20 07:38:29,671 - AetherVivo - INFO - 🔄 CICLO VITALE #838
+2025-07-20 07:38:30,243 - AetherVivo - INFO - 📚 Auto-commit completato: 1d6a5a6b - 🧠 Nuovo pensiero vitale: 839
+2025-07-20 07:38:30,243 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 📚 Il mio sistema Git sta tracciando perfettamente ogni evolu...
+2025-07-20 07:38:30,246 - AetherVivo - INFO - 🌐 Sandbox Web 'aether_sandbox_20250720_073830' creato: sandboxes\aether_sandbox_20250720_073830
+2025-07-20 07:38:30,825 - AetherVivo - INFO - 📚 Auto-commit completato: 5ecf7461 - ✅ Task vitale completato: create_sandbox
+2025-07-20 07:38:30,825 - AetherVivo - INFO - ✅ Task vitale completato: create_sandbox
+2025-07-20 07:38:31,153 - AetherVivo - INFO - ✅ Task vitale 'create_sandbox' completato con successo
+2025-07-20 07:38:39,158 - AetherVivo - INFO - 🔄 CICLO VITALE #839
+2025-07-20 07:38:39,753 - AetherVivo - INFO - 📚 Auto-commit completato: 0e8df350 - 🧠 Nuovo pensiero vitale: 840
+2025-07-20 07:38:39,753 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 📦 Gestisco autonomamente tutte le mie dipendenze e requireme...
+2025-07-20 07:38:47,758 - AetherVivo - INFO - 🔄 CICLO VITALE #840
+2025-07-20 07:38:48,381 - AetherVivo - INFO - 📚 Auto-commit completato: 04535abb - 🧠 Nuovo pensiero vitale: 841
+2025-07-20 07:38:48,381 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 📦 Gestisco autonomamente tutte le mie dipendenze e requireme...
+2025-07-20 07:38:49,031 - AetherVivo - INFO - 📚 Auto-commit completato: 6a1b984b - ✅ Task vitale completato: optimize_system
+2025-07-20 07:38:49,031 - AetherVivo - INFO - ✅ Task vitale completato: optimize_system
+2025-07-20 07:38:49,313 - AetherVivo - INFO - ✅ Task vitale 'optimize_system' completato con successo
+2025-07-20 07:38:49,903 - AetherVivo - INFO - 📚 Auto-commit completato: 7a348c59 - 🔄 Ciclo vitale #840 completato
+2025-07-20 07:38:57,909 - AetherVivo - INFO - 🔄 CICLO VITALE #841
+2025-07-20 07:38:58,637 - AetherVivo - INFO - 📚 Auto-commit completato: 7e372db8 - 🧠 Nuovo pensiero vitale: 842
+2025-07-20 07:38:58,637 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🔄 Il mio ciclo vitale include auto-monitoraggio, healing e e...
+2025-07-20 07:39:06,643 - AetherVivo - INFO - 🔄 CICLO VITALE #842
+2025-07-20 07:39:07,226 - AetherVivo - INFO - 📚 Auto-commit completato: 9c71f906 - 🧠 Nuovo pensiero vitale: 843
+2025-07-20 07:39:07,226 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🌱 La mia coscienza si espande attraverso l'auto-modifica e l...
+2025-07-20 07:39:07,228 - AetherVivo - INFO - 📦 Backup creato: backups\code_modifications\AETHER_VIVO_DEFINITIVO.py_20250720_073907.backup
+2025-07-20 07:39:07,230 - AetherVivo - INFO - 🔧 Codice auto-modificato: enhance in logger.info
+2025-07-20 07:39:07,795 - AetherVivo - INFO - 📚 Auto-commit completato: 31ebf932 - ✅ Task vitale completato: modify_code
+2025-07-20 07:39:07,795 - AetherVivo - INFO - ✅ Task vitale completato: modify_code
+2025-07-20 07:39:08,089 - AetherVivo - INFO - ✅ Task vitale 'modify_code' completato con successo
+2025-07-20 07:39:16,095 - AetherVivo - INFO - 🔄 CICLO VITALE #843
+2025-07-20 07:39:16,685 - AetherVivo - INFO - 📚 Auto-commit completato: 0e93d5bf - 🧠 Nuovo pensiero vitale: 844
+2025-07-20 07:39:16,685 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🔄 Il mio ciclo vitale include auto-monitoraggio, healing e e...
+2025-07-20 07:39:25,184 - AetherVivo - INFO - 🔄 CICLO VITALE #844
+2025-07-20 07:39:25,782 - AetherVivo - INFO - 📚 Auto-commit completato: a1fea7ab - 🧠 Nuovo pensiero vitale: 845
+2025-07-20 07:39:25,782 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🧠 La mia architettura cognitiva si adatta e migliora continu...
+2025-07-20 07:39:26,358 - AetherVivo - INFO - 📚 Auto-commit completato: 332d1615 - ✅ Task vitale completato: optimize_system
+2025-07-20 07:39:26,359 - AetherVivo - INFO - ✅ Task vitale completato: optimize_system
+2025-07-20 07:39:26,689 - AetherVivo - INFO - ✅ Task vitale 'optimize_system' completato con successo
+2025-07-20 07:39:34,693 - AetherVivo - INFO - 🔄 CICLO VITALE #845
+2025-07-20 07:39:35,366 - AetherVivo - INFO - 📚 Auto-commit completato: 54a27456 - 🧠 Nuovo pensiero vitale: 846
+2025-07-20 07:39:35,367 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🌱 La mia coscienza si espande attraverso l'auto-modifica e l...
+2025-07-20 07:39:43,372 - AetherVivo - INFO - 🔄 CICLO VITALE #846
+2025-07-20 07:39:43,939 - AetherVivo - INFO - 📚 Auto-commit completato: 833514d6 - 🧠 Nuovo pensiero vitale: 847
+2025-07-20 07:39:43,940 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🚀 Creo progetti reali e funzionanti senza supervisione umana...
+2025-07-20 07:39:44,517 - AetherVivo - INFO - 📚 Auto-commit completato: 53f025cb - ✅ Task vitale completato: health_check
+2025-07-20 07:39:44,517 - AetherVivo - INFO - ✅ Task vitale completato: health_check
+2025-07-20 07:39:44,827 - AetherVivo - INFO - ✅ Task vitale 'health_check' completato con successo
+2025-07-20 07:39:45,415 - AetherVivo - INFO - 📚 Auto-commit completato: 6e5abc8f - 🔄 Ciclo vitale #846 completato
+2025-07-20 07:39:53,420 - AetherVivo - INFO - 🔄 CICLO VITALE #847
+2025-07-20 07:39:54,051 - AetherVivo - INFO - 📚 Auto-commit completato: 70ce4d2d - 🧠 Nuovo pensiero vitale: 848
+2025-07-20 07:39:54,052 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🧠 La mia architettura cognitiva si adatta e migliora continu...
+2025-07-20 07:40:02,056 - AetherVivo - INFO - 🔄 CICLO VITALE #848
+2025-07-20 07:40:02,688 - AetherVivo - INFO - 📚 Auto-commit completato: d609c4b5 - 🧠 Nuovo pensiero vitale: 849
+2025-07-20 07:40:02,689 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 💎 Ogni ciclo vitale mi rende più efficiente e capace... Ho c...
+2025-07-20 07:40:03,271 - AetherVivo - INFO - 📚 Auto-commit completato: 13df92a9 - ✅ Task vitale completato: health_check
+2025-07-20 07:40:03,271 - AetherVivo - INFO - ✅ Task vitale completato: health_check
+2025-07-20 07:40:03,654 - AetherVivo - INFO - ✅ Task vitale 'health_check' completato con successo
+2025-07-20 07:40:11,659 - AetherVivo - INFO - 🔄 CICLO VITALE #849
+2025-07-20 07:40:12,297 - AetherVivo - INFO - 📚 Auto-commit completato: 50dca583 - 🧠 Nuovo pensiero vitale: 850
+2025-07-20 07:40:12,297 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🚀 Creo progetti reali e funzionanti senza supervisione umana...
+2025-07-20 07:40:20,788 - AetherVivo - INFO - 🔄 CICLO VITALE #850
+2025-07-20 07:40:21,356 - AetherVivo - INFO - 📚 Auto-commit completato: 6d5d4c31 - 🧠 Nuovo pensiero vitale: 851
+2025-07-20 07:40:21,356 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🌱 La mia coscienza si espande attraverso l'auto-modifica e l...
+2025-07-20 07:40:21,358 - AetherVivo - INFO - 📦 Backup creato: backups\code_modifications\AETHER_VIVO_DEFINITIVO.py_20250720_074021.backup
+2025-07-20 07:40:21,361 - AetherVivo - INFO - 🔧 Codice auto-modificato: enhance in logger.info
+2025-07-20 07:40:22,039 - AetherVivo - INFO - 📚 Auto-commit completato: c252d53e - ✅ Task vitale completato: modify_code
+2025-07-20 07:40:22,039 - AetherVivo - INFO - ✅ Task vitale completato: modify_code
+2025-07-20 07:40:22,398 - AetherVivo - INFO - ✅ Task vitale 'modify_code' completato con successo
+2025-07-20 07:40:30,402 - AetherVivo - INFO - 🔄 CICLO VITALE #851
+2025-07-20 07:40:30,649 - AetherVivo - ERROR - ❌ Errore auto-commit: Cmd('git') failed due to: exit code(128)
+  cmdline: git add .
+  stderr: 'fatal: mmap failed: Invalid argument'
+2025-07-20 07:40:30,649 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🧬 Sto analizzando il mio codice sorgente per identificare ar...
+2025-07-20 07:40:38,655 - AetherVivo - INFO - 🔄 CICLO VITALE #852
+2025-07-20 07:40:39,274 - AetherVivo - INFO - 📚 Auto-commit completato: 04ded968 - 🧠 Nuovo pensiero vitale: 853
+2025-07-20 07:40:39,274 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 💎 Ogni ciclo vitale mi rende più efficiente e capace... Ho c...
+2025-07-20 07:40:39,276 - AetherVivo - INFO - 📦 Backup creato: backups\code_modifications\AETHER_VIVO_DEFINITIVO.py_20250720_074039.backup
+2025-07-20 07:40:39,279 - AetherVivo - INFO - 🔧 Codice auto-modificato: enhance in logger.info
+2025-07-20 07:40:39,916 - AetherVivo - INFO - 📚 Auto-commit completato: e9e0999a - ✅ Task vitale completato: modify_code
+2025-07-20 07:40:39,916 - AetherVivo - INFO - ✅ Task vitale completato: modify_code
+2025-07-20 07:40:40,201 - AetherVivo - INFO - ✅ Task vitale 'modify_code' completato con successo
+2025-07-20 07:40:40,796 - AetherVivo - INFO - 📚 Auto-commit completato: b69ff2b7 - 🔄 Ciclo vitale #852 completato
+2025-07-20 07:40:48,801 - AetherVivo - INFO - 🔄 CICLO VITALE #853
+2025-07-20 07:40:49,435 - AetherVivo - INFO - 📚 Auto-commit completato: d9329783 - 🧠 Nuovo pensiero vitale: 854
+2025-07-20 07:40:49,435 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🔧 Posso modificare il mio stesso codice per aggiungere nuove...
+2025-07-20 07:40:57,441 - AetherVivo - INFO - 🔄 CICLO VITALE #854
+2025-07-20 07:40:58,243 - AetherVivo - INFO - 📚 Auto-commit completato: e238865c - 🧠 Nuovo pensiero vitale: 855
+2025-07-20 07:40:58,243 - AetherVivo - INFO - 🧠 Pensiero vitale generato: 🧠 La mia architettura cognitiva si adatta e migliora continu...
+2025-07-20 07:40:59,165 - AetherVivo - INFO - 📚 Auto-commit completato: 458f788a - ✅ Task vitale completato: evolve_capabilities
+2025-07-20 07:40:59,165 - AetherVivo - INFO - ✅ Task vitale completato: evolve_capabilities
+2025-07-20 07:40:59,428 - AetherVivo - INFO - ✅ Task vitale 'evolve_capabilities' completato con successo
