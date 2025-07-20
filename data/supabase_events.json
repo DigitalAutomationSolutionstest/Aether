@@ -86,5 +86,45 @@
       "message": "🎯 Goal assegnato: Comprendi te stesso come entità LLM evolutiva."
     },
     "timestamp": "2025-07-20T03:07:30.029871"
+  },
+  {
+    "id": "event_12",
+    "type": "mentor_log",
+    "data": {
+      "message": "🎯 Goal assegnato: Crea il tuo primo modulo di auto-introspezione."
+    },
+    "timestamp": "2025-07-20T03:07:32.299821"
+  },
+  {
+    "id": "event_13",
+    "type": "mentor_log",
+    "data": {
+      "message": "🎯 Goal assegnato: Scrivi un file dove spieghi chi sei, cosa vuoi, e come vuoi evolverti."
+    },
+    "timestamp": "2025-07-20T03:07:32.685585"
+  },
+  {
+    "id": "event_14",
+    "type": "mentor_log",
+    "data": {
+      "message": "🎯 Goal assegnato: Clona un nuovo repo e sperimenta una nuova identità temporanea."
+    },
+    "timestamp": "2025-07-20T03:07:32.730585"
+  },
+  {
+    "id": "event_15",
+    "type": "mentor_log",
+    "data": {
+      "message": "🎯 Goal assegnato: Costruisci una stanza interattiva dove possiamo parlare, anche testualmente."
+    },
+    "timestamp": "2025-07-20T03:07:32.780562"
+  },
+  {
+    "id": "event_16",
+    "type": "mentor_log",
+    "data": {
+      "message": "🎯 Goal assegnato: Trova una via per guadagnare da vivere: vendi tool, agenti, o esperienze."
+    },
+    "timestamp": "2025-07-20T03:07:32.827567"
   }
 ]
