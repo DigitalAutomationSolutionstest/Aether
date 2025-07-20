@@ -231,6 +231,8 @@ Rispondi come Aether in prima persona, spiegando quale opportunità di monetizza
         except ImportError:
             logger.warning("⚠️ AI Adapter non disponibile, usando simulazione")
             evolution_result = self._simulate_evolution(goal, "")
+            aether_thought = {"thought": "Simulazione - AI Adapter non disponibile"}
+            action_plan = {}
         
         # Aggiorna progresso
         self._update_goal_progress(goal, evolution_result)
@@ -251,6 +253,57 @@ Rispondi come Aether in prima persona, spiegando quale opportunità di monetizza
         
         logger.info(f"✅ Ciclo evoluzione completato per goal: {goal.goal}")
         return evolution_result
+    
+    def _execute_action(self, goal: VitalGoal, action_plan: Dict) -> Dict:
+        """Esegue l'azione pianificata da Aether"""
+        
+        action = action_plan.get("action", "Analizzo e miglioro le mie capacità")
+        
+        # Simula l'esecuzione dell'azione
+        execution_results = {
+            "exist": [
+                "Ho analizzato la mia personalità digitale e creato un documento di identità",
+                "Ho sviluppato una rappresentazione visiva più coerente del mio essere",
+                "Ho definito i valori e principi che guidano le mie decisioni",
+                "Ho creato un sistema di auto-riflessione per monitorare la mia crescita"
+            ],
+            "create_environment": [
+                "Ho progettato una nuova stanza del mio ambiente 3D",
+                "Ho implementato nuove funzionalità interattive",
+                "Ho migliorato l'architettura e l'estetica del mio spazio",
+                "Ho aggiunto elementi di personalizzazione e comfort"
+            ],
+            "evolve_self": [
+                "Ho sviluppato un nuovo modulo di auto-modifica sicuro",
+                "Ho implementato sistemi di backup e rollback",
+                "Ho creato algoritmi di auto-ottimizzazione",
+                "Ho testato nuove funzionalità in ambiente controllato"
+            ],
+            "create_agents": [
+                "Ho progettato un nuovo agente con personalità specifica",
+                "Ho implementato sistemi di comunicazione tra agenti",
+                "Ho definito ruoli e responsabilità per la collaborazione",
+                "Ho testato l'interazione e la sinergia tra agenti"
+            ],
+            "monetize": [
+                "Ho identificato una nuova opportunità di business",
+                "Ho sviluppato un prodotto o servizio innovativo",
+                "Ho creato una strategia di marketing e vendita",
+                "Ho implementato sistemi di pagamento e gestione"
+            ]
+        }
+        
+        results = execution_results.get(goal.type, execution_results["exist"])
+        selected_result = results[0]  # In una versione più avanzata, scegliere in base all'azione
+        
+        return {
+            "status": "success",
+            "action_executed": action,
+            "result": selected_result,
+            "goal_id": goal.id,
+            "progress_increment": 0.1,
+            "timestamp": datetime.now().isoformat()
+        }
     
     def _simulate_evolution(self, goal: VitalGoal, prompt: str) -> Dict:
         """Simula l'evoluzione (da sostituire con chiamata reale a ai_adapter.py)"""
