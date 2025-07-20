@@ -984,5 +984,15 @@
       ]
     },
     "executed_at": "2025-07-20T03:42:33.732548"
+  },
+  {
+    "id": "gen_20250720_034434",
+    "type": "monetize",
+    "details": {
+      "name": "ProductivitySuite",
+      "purpose": "Suite produttività aziendale"
+    },
+    "executed": false,
+    "created_at": "2025-07-20T03:44:34.259550"
   }
 ]
