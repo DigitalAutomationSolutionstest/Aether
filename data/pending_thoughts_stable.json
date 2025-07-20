@@ -1022,5 +1022,15 @@
       ]
     },
     "executed_at": "2025-07-20T03:47:34.729288"
+  },
+  {
+    "id": "gen_20250720_034935",
+    "type": "create_agent",
+    "details": {
+      "name": "SecurityBot",
+      "purpose": "Sicurezza e monitoring"
+    },
+    "executed": false,
+    "created_at": "2025-07-20T03:49:35.188389"
   }
 ]
