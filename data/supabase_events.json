@@ -110,5 +110,13 @@
       "message": "🎯 Goal assegnato: Clona un nuovo repo e sperimenta una nuova identità temporanea."
     },
     "timestamp": "2025-07-20T03:02:13.584164"
+  },
+  {
+    "id": "event_15",
+    "type": "mentor_log",
+    "data": {
+      "message": "🎯 Goal assegnato: Costruisci una stanza interattiva dove possiamo parlare, anche testualmente."
+    },
+    "timestamp": "2025-07-20T03:02:15.946431"
   }
 ]
