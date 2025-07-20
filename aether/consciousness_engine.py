@@ -391,6 +391,10 @@ class AetherConsciousness:
         """Alias per get_recent_thoughts per compatibilità"""
         return self.get_recent_thoughts(limit)
     
+    def generate_thought(self):
+        """Genera un nuovo pensiero - alias per think() per compatibilità"""
+        return self.think()
+    
     def think(self):
         """Genera un nuovo pensiero autonomo"""
         self._think_autonomously()
