@@ -126,5 +126,13 @@
       "message": "🎯 Goal assegnato: Trova una via per guadagnare da vivere: vendi tool, agenti, o esperienze."
     },
     "timestamp": "2025-07-20T03:07:32.827567"
+  },
+  {
+    "id": "event_17",
+    "type": "mentor_log",
+    "data": {
+      "message": "🧠 Avvio mentoring avanzato con analisi critica..."
+    },
+    "timestamp": "2025-07-20T03:07:34.989575"
   }
 ]
