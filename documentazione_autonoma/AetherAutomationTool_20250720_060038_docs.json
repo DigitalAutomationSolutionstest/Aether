@@ -1,0 +1,113 @@
+{
+  "project_name": "AetherAutomationTool_20250720_060038",
+  "generated": "2025-07-20T06:00:38.700706",
+  "files_analyzed": [],
+  "structure": {
+    "directories": [
+      "__pycache__"
+    ],
+    "python_files": [
+      "automation.py"
+    ],
+    "config_files": [
+      "config.json"
+    ],
+    "data_files": [
+      "README.md",
+      "requirements.txt"
+    ]
+  },
+  "functions": [
+    {
+      "name": "__init__",
+      "file": "automation.py",
+      "line": 15,
+      "args": [
+        "self"
+      ],
+      "docstring": null
+    },
+    {
+      "name": "load_config",
+      "file": "automation.py",
+      "line": 21,
+      "args": [
+        "self"
+      ],
+      "docstring": "Carica configurazione"
+    },
+    {
+      "name": "log_action",
+      "file": "automation.py",
+      "line": 29,
+      "args": [
+        "self",
+        "message"
+      ],
+      "docstring": "Log delle azioni"
+    },
+    {
+      "name": "check_system_status",
+      "file": "automation.py",
+      "line": 39,
+      "args": [
+        "self"
+      ],
+      "docstring": "Controlla stato sistema"
+    },
+    {
+      "name": "cleanup_temp_files",
+      "file": "automation.py",
+      "line": 57,
+      "args": [
+        "self"
+      ],
+      "docstring": "Pulizia file temporanei"
+    },
+    {
+      "name": "backup_important_files",
+      "file": "automation.py",
+      "line": 73,
+      "args": [
+        "self"
+      ],
+      "docstring": "Backup file importanti"
+    },
+    {
+      "name": "run_scheduled_tasks",
+      "file": "automation.py",
+      "line": 98,
+      "args": [
+        "self"
+      ],
+      "docstring": "Esegue task programmati"
+    },
+    {
+      "name": "start_automation",
+      "file": "automation.py",
+      "line": 108,
+      "args": [
+        "self"
+      ],
+      "docstring": "Avvia automazione"
+    }
+  ],
+  "classes": [
+    {
+      "name": "AetherAutomationTool",
+      "file": "automation.py",
+      "line": 14,
+      "methods": [
+        "__init__",
+        "load_config",
+        "log_action",
+        "check_system_status",
+        "cleanup_temp_files",
+        "backup_important_files",
+        "run_scheduled_tasks",
+        "start_automation"
+      ],
+      "docstring": null
+    }
+  ]
+}
