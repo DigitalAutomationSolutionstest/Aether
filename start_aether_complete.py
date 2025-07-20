@@ -6,6 +6,7 @@ Script di avvio completo per il sistema Aether con tutte le componenti:
 - Diary logging
 - Conscious loop
 - Discord notifier
+- Audio reporter
 - Self evolution
 - API server (opzionale)
 """
@@ -23,6 +24,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), 'aether'))
 from aether.diary_logger import get_diary_logger
 from aether.conscious_loop import start_consciousness, get_consciousness_status
 from aether.notifier.discord_notifier import get_discord_notifier
+from aether.notifier.audio_reporter import get_audio_reporter
 from aether.logging_system import get_aether_logger
 
 def check_environment():
@@ -37,6 +39,12 @@ def check_environment():
         'SUPABASE_KEY'
     ]
     
+    optional_env_vars = [
+        'ELEVENLABS_API_KEY',
+        'AETHER_VOICE_ID',
+        'AETHER_AUDIO_ENABLED'
+    ]
+    
     missing_vars = []
     for var in required_env_vars:
         if not os.getenv(var):
@@ -48,6 +56,18 @@ def check_environment():
         for var in missing_vars:
             print(f"   {var}=<valore>")
         return False
+    
+    # Verifica variabili opzionali
+    missing_optional = []
+    for var in optional_env_vars:
+        if not os.getenv(var):
+            missing_optional.append(var)
+    
+    if missing_optional:
+        print(f"ℹ️ Variabili opzionali mancanti: {', '.join(missing_optional)}")
+        print("💡 Per abilitare funzionalità avanzate, aggiungi:")
+        for var in missing_optional:
+            print(f"   {var}=<valore>")
     
     print("✅ Ambiente configurato correttamente")
     return True
@@ -81,6 +101,34 @@ def start_discord_notifier():
         return True
     except Exception as e:
         print(f"❌ Errore nell'avvio notificatore Discord: {e}")
+        return False
+
+def start_audio_reporter():
+    """Avvia il reporter audio"""
+    print("🎙️ Avvio reporter audio...")
+    
+    try:
+        reporter = get_audio_reporter()
+        
+        # Test configurazione audio
+        if reporter.elevenlabs_key:
+            print("✅ ElevenLabs configurato")
+            
+            # Test audio se abilitato
+            if os.getenv("AETHER_AUDIO_ENABLED", "true").lower() == "true":
+                print("🧪 Test generazione audio...")
+                success = reporter.test_audio_generation()
+                if success:
+                    print("✅ Test audio completato")
+                else:
+                    print("⚠️ Test audio fallito - audio disabilitato")
+        else:
+            print("⚠️ ElevenLabs non configurato - audio disabilitato")
+        
+        print("✅ Reporter audio avviato")
+        return True
+    except Exception as e:
+        print(f"❌ Errore nell'avvio reporter audio: {e}")
         return False
 
 def start_conscious_loop():
@@ -137,6 +185,7 @@ def create_directories():
     
     directories = [
         "aether/logs",
+        "aether/logs/audio",
         "aether/thoughts", 
         "aether/memory",
         "aether/notifier"
@@ -183,9 +232,22 @@ def show_status():
         print(f"   - Total entries: {logger_stats['total_entries']}")
         print(f"   - Diary entries: {logger_stats['diary_entries']}")
         print(f"   - Discord messages: {logger_stats['discord_messages']}")
+        print(f"   - Audio messages: {logger_stats['audio_messages']}")
         print(f"   - Errors: {logger_stats['errors']}")
     except Exception as e:
         print(f"❌ Errore status logging: {e}")
+    
+    # Status audio reporter
+    try:
+        audio_reporter = get_audio_reporter()
+        audio_stats = audio_reporter.get_stats()
+        print(f"\n🎙️ Audio Reporter:")
+        print(f"   - Audio generati: {audio_stats['audio_generated']}")
+        print(f"   - Audio inviati: {audio_stats['audio_sent']}")
+        print(f"   - Errors: {audio_stats['errors']}")
+        print(f"   - ElevenLabs: {'✅' if audio_reporter.elevenlabs_key else '❌'}")
+    except Exception as e:
+        print(f"❌ Errore status audio: {e}")
 
 def main():
     """Funzione principale di avvio"""
@@ -212,6 +274,10 @@ def main():
     if start_discord_notifier():
         components_started.append("Discord Notifier")
     
+    # Audio reporter
+    if start_audio_reporter():
+        components_started.append("Audio Reporter")
+    
     # Conscious loop
     if start_conscious_loop():
         components_started.append("Conscious Loop")
@@ -235,8 +301,10 @@ def main():
     
     print("\n🔄 Sistema in esecuzione...")
     print("📖 Diary: aether/logs/aether_diary.log")
+    print("🎙️ Audio: aether/logs/audio/")
     print("🌐 Frontend: aether-frontend/diary-viewer.html")
     print("🔔 Discord: Notifiche attive")
+    print("🎧 Audio: Notifiche vocali attive")
     print("⏹️ Premi Ctrl+C per fermare")
     
     try:
